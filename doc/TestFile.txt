@@ -1,2 +1,44 @@
 " GoalsAndHabits" 
 This is an edit done by chiasson in her own branch
+
+Habit attributes
+-Add a new type of habit with brief title, reason, date to start
+-habits have plans for that days of the week it should regularly occur
+-view habit and details
+-can edit details of habit
+-can delete habit
+-limit title to 20 char, limit reason to 30 char
+-main screen(?) with habits needing done today
+-each habit has visual, statistical habit status to follow progress/plan
+
+Habit events
+-add habit event to habit history when done as planned
+-habit events have optional comment of max 20 char
+-habit events have optional photographs recording what happened
+-can view habit event and details
+-can edit habit event details
+-can delete habit events
+ADMIN: storage for each photo is max 65536B (64KB)
+
+Profile:
+unique
+
+History:
+-view habit history as a list, most recent at top
+-filter habit history to show particular habit
+-filter history to show habit events with comments containing certain word
+
+Following and Sharing:
+-request follow permission of other users (gives statuses of all habits, each habit's most recent event)
+-grant follow permission
+-can view list of habit statuses of participants (participant ID then habit title)
+
+Geolocation and maps
+-can attach current location to habit event
+-see map of habit events (with locations) from filtered habit history
+-see map of recent habit events (with locations) from followees
+-highlight own habit events or those of followees within 5km of current location
+
+Offline:
+-can add, edit, delete habit events, synchronize changes when connected again
+
