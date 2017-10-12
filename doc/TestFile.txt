@@ -18,6 +18,7 @@ Habit events
 -can view habit event and details
 -can edit habit event details
 -can delete habit events
+-note missed habit events
 ADMIN: storage for each photo is max 65536B (64KB)
 
 Profile:
