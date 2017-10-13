@@ -12,13 +12,13 @@ Habit attributes
 -each habit has visual, statistical habit status to follow progress/plan
 
 Habit events
-**-add habit event to habit history when done as planned
-**-habit events have optional comment of max 20 char
-**-habit events have optional photographs recording what happened
-**-can view habit event and details
-**-can edit habit event details
-**-can delete habit events
-**-note missed habit events
+-add habit event to habit history when done as planned
+-habit events have optional comment of max 20 char
+-habit events have optional photographs recording what happened
+-can view habit event and details
+-can edit habit event details
+-can delete habit events
+-note missed habit events
 ADMIN: storage for each photo is max 65536B (64KB)
 
 Profile:
@@ -35,7 +35,7 @@ Following and Sharing:
 **-can view list of habit statuses of participants (participant ID then habit title)
 
 Geolocation and maps
-**-can attach current location to habit event
+-can attach current location to habit event
 **-see map of habit events (with locations) from filtered habit history
 **-see map of recent habit events (with locations) from followees
 **-highlight own habit events or those of followees within 5km of current location
