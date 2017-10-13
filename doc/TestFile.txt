@@ -25,7 +25,7 @@ Profile:
 unique
 
 History:
-**-view habit history as a list, most recent at top
+-view habit history as a list, most recent at top
 **-filter habit history to show particular habit
 **-filter history to show habit events with comments containing certain word
 
@@ -36,9 +36,9 @@ Following and Sharing:
 
 Geolocation and maps
 -can attach current location to habit event
-**-see map of habit events (with locations) from filtered habit history
+-see map of habit events (with locations) from filtered habit history
 **-see map of recent habit events (with locations) from followees
-**-highlight own habit events or those of followees within 5km of current location
+-highlight own habit events or those of followees within 5km of current location
 
 Offline:
 -can add, edit, delete habit events, synchronize changes when connected again
