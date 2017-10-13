@@ -31,7 +31,7 @@ History:
 
 Following and Sharing:
 **-request follow permission of other users (gives statuses of all habits, each habit's most recent event)
-**-grant follow permission
+-grant follow permission
 **-can view list of habit statuses of participants (participant ID then habit title)
 
 Geolocation and maps
