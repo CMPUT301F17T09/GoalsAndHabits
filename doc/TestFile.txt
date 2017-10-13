@@ -32,12 +32,12 @@ History:
 Following and Sharing:
 **-request follow permission of other users (gives statuses of all habits, each habit's most recent event)
 -grant follow permission
-**-can view list of habit statuses of participants (participant ID then habit title)
+-can view list of habit statuses of participants (participant ID then habit title)
 
 Geolocation and maps
 -can attach current location to habit event
 -see map of habit events (with locations) from filtered habit history
-**-see map of recent habit events (with locations) from followees
+-see map of recent habit events (with locations) from followees
 -highlight own habit events or those of followees within 5km of current location
 
 Offline:
