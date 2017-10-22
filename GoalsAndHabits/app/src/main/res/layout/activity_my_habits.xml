@@ -6,4 +6,15 @@
     android:layout_height="match_parent"
     tools:context="cmput301f17t09.goalsandhabits.MyHabits">
 
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/Add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:clickable="true"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:srcCompat="@android:drawable/ic_input_add" />
 </android.support.constraint.ConstraintLayout>
