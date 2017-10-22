@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context="cmput301f17t09.goalsandhabits.MyHabits">
 
+    <ListView
+        android:id="@+id/habitsList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:scrollbars="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="8dp">
+
+    </ListView>
+
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/Add"
         android:layout_width="wrap_content"
@@ -16,5 +27,6 @@
         app:fabSize="mini"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:srcCompat="@android:drawable/ic_input_add" />
+        app:srcCompat="@android:drawable/ic_input_add"
+        android:layout_marginEnd="16dp" />
 </android.support.constraint.ConstraintLayout>

@@ -3,6 +3,7 @@ package cmput301f17t09.goalsandhabits;
 import android.app.Activity;
 import android.test.ActivityInstrumentationTestCase2;
 import android.text.Editable;
+import android.view.View;
 import android.widget.EditText;
 
 import com.robotium.solo.Solo;
@@ -28,10 +29,27 @@ public class MyHabitsTest extends ActivityInstrumentationTestCase2<MyHabits>{
         Activity activity = getActivity();
     }
 
-    public void testButton() {
+    public void testaddButton() {
         solo.assertCurrentActivity("Wrong Activity", MyHabits.class);
-        solo.clickOnButton("Add");
+        View Add = getActivity().findViewById(R.id.Add);
+        solo.clickOnView(Add);
+        solo.assertCurrentActivity("Wrong Activity", NewHabit.class);
 
-        //solo.assertCurrentActivity;
+    }
+
+    public void testclickableList() {
+        solo.assertCurrentActivity("Wrong Activity", MyHabits.class);
+        View Add = getActivity().findViewById(R.id.Add);
+        solo.clickOnView(Add);
+        solo.assertCurrentActivity("Wrong Activity", NewHabit.class);
+        //TODO: create new test habit and return to MyHabits
+
+        //solo.assertCurrentActivity("Wrong Activity", MyHabits.class);
+        //solo.clickInList(0);
+    }
+
+
+    public void tearDown() throws Exception{
+        solo.finishOpenedActivities();
     }
 }

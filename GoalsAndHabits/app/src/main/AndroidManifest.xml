@@ -19,7 +19,8 @@
         <activity android:name=".MyHabits" />
         <activity android:name=".FollowActivity" />
         <activity android:name=".MapFiltersActivity" />
-        <activity android:name=".HabitHistoryActivity"></activity>
+        <activity android:name=".HabitHistoryActivity" />
+        <activity android:name=".NewHabit"></activity>
     </application>
 
 </manifest>
