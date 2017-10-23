@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context="cmput301f17t09.goalsandhabits.LoginActivity">
+
+
+
+    <LinearLayout
+        android:id="@+id/linearlayout1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="144dp">
+
+
+
+        <EditText
+            android:id="@+id/loginid"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:hint="Log In ID"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:hint="password"
+            android:ems="10"
+            android:inputType="textPassword"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignBottom="@+id/linearlayout1"
+        android:gravity="center"
+
+
+        >
+        <Button
+            android:id="@+id/login_button"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="144dp"
+            android:layout_height="wrap_content"
+            android:text="Login" />
+
+        <Button
+            android:id="@+id/signup_button"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="144dp"
+            android:layout_height="wrap_content"
+            android:text="sign up!"
+            />
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

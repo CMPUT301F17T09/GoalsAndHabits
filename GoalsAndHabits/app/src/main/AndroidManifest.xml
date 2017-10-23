@@ -20,7 +20,9 @@
         <activity android:name=".FollowActivity" />
         <activity android:name=".MapFiltersActivity" />
         <activity android:name=".HabitHistoryActivity" />
-        <activity android:name=".NewHabit"></activity>
+        <activity android:name=".NewHabit" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".SignUpActivity"></activity>
     </application>
 
 </manifest>

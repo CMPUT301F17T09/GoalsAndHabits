@@ -7,6 +7,7 @@ public class MapFiltersActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTitle("MapFiltersActivity");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map_filters);
     }

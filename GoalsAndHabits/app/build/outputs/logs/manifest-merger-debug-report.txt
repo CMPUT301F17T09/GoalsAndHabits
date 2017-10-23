@@ -1,115 +1,159 @@
 -- Merging decision tree log ---
 manifest
-ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:2:1-26:12
+ADDED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:2:1-28:12
 	package
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:3:5-44
-		INJECTED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
-		INJECTED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:3:5-44
+		INJECTED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
-		INJECTED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:2:11-69
 	android:versionCode
-		INJECTED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
-		INJECTED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
 application
-ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:5:5-24:19
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Andrew\.android\build-cache\71f3ce621635cacdfd51537406409ae6e45e0d66\output\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:design:25.3.1] C:\Users\Andrew\.android\build-cache\050b5074df9229a047cb2c13b7844139d7db31cb\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Andrew\.android\build-cache\7d91ef4d7041a2161d90968f1058d025783a0e06\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Andrew\.android\build-cache\0d67cf9d4dbfcd333f9622315ba34621c072adb5\output\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:transition:25.3.1] C:\Users\Andrew\.android\build-cache\6890affb3ccd3a79a77b2e156ba977029cf5c8d4\output\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Andrew\.android\build-cache\d3f9fff5012fd0548285f7cfbc7cb407119f3441\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Andrew\.android\build-cache\55f27732127f4f06c1700f3a86f40bf8485057b9\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Andrew\.android\build-cache\994a92c75e7117df7e46ba50e995b49486c9ca95\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Andrew\.android\build-cache\39bddf465af7547142a5926b7854e77a1ddafd63\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Andrew\.android\build-cache\e34338b212a14001f0c79a013cc46bbc26a8d2c7\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Andrew\.android\build-cache\fdd33709a324f45d03a514b86ad1c626fcf5ab78\output\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Andrew\.android\build-cache\eb5d92712cee8212197a64343d1cdf66d84c2ec1\output\AndroidManifest.xml:29:5-20
+ADDED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:5:5-26:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Tony\.android\build-cache\66c696edec6015913c62769d61555e59eff5a930\output\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:design:25.3.1] C:\Users\Tony\.android\build-cache\830eae12f55c344c28816cea8aa3bb37e47e060b\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Tony\.android\build-cache\e10ed1f59118548b1fa73d6e0c549884167999ed\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Tony\.android\build-cache\e85b7c5ce8906e316761e58f155eddeaa08bbde6\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:25.3.1] C:\Users\Tony\.android\build-cache\94a89de77baa9efab1e63b7ff30109472d5fac08\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Tony\.android\build-cache\7c9cd557a9e649fb836f530272a93215f6465419\output\AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Tony\.android\build-cache\66c23c7b0f9e12a3907da642a7e6a48ac74dee3f\output\AndroidManifest.xml:24:5-19
+MERGED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Tony\.android\build-cache\5fec705b5a2d69d19493507df2dc10cea5d9cafb\output\AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-tasks:11.0.4] C:\Users\Tony\.android\build-cache\0e790996101732be72cb255dde09d895e56944ed\output\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\Tony\.android\build-cache\43d0d85d0b9b10118937272026a207530d603d2c\output\AndroidManifest.xml:19:5-21:19
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Tony\.android\build-cache\d73ef60ffe70f8ca24aeb9eebc4d67aa333004e5\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Tony\.android\build-cache\e577ad97bbf1ab7b1005c2fac983d42b1828d5f4\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Tony\.android\build-cache\21374a83bf17e8421160c721993b2f53be22b192\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Tony\.android\build-cache\9b337975c06fce54c5591bc823eb95a51fc93ff1\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Tony\.android\build-cache\14cbf785f1b6f412eaa1493b63627b713d2b183e\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Tony\.android\build-cache\900ed0d3f865e6e6ad842fee25af7ba2ff75c266\output\AndroidManifest.xml:29:5-20
 	android:label
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:8:9-41
+		ADDED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:8:9-41
 	android:supportsRtl
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:10:9-35
 	android:roundIcon
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:9:9-54
+		ADDED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:9:9-54
 	android:allowBackup
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:6:9-35
 	android:icon
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:7:9-43
+		ADDED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:7:9-43
 	android:theme
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:11:9-40
+		ADDED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:11:9-40
 activity#cmput301f17t09.goalsandhabits.MainActivity
-ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:12:9-18:20
+ADDED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:12:9-18:20
 	android:name
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:12:19-47
+		ADDED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:12:19-47
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:13:13-17:29
+ADDED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:13:13-17:29
 action#android.intent.action.MAIN
-ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:14:17-69
+ADDED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:14:17-69
 	android:name
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:14:25-66
+		ADDED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:14:25-66
 category#android.intent.category.LAUNCHER
-ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:16:17-77
+ADDED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:16:17-77
 	android:name
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:16:27-74
+		ADDED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:16:27-74
 activity#cmput301f17t09.goalsandhabits.MyHabits
-ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:19:9-46
+ADDED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:19:9-46
 	android:name
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:19:19-43
+		ADDED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:19:19-43
 activity#cmput301f17t09.goalsandhabits.FollowActivity
-ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:20:9-52
+ADDED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:20:9-52
 	android:name
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:20:19-49
+		ADDED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:20:19-49
 activity#cmput301f17t09.goalsandhabits.MapFiltersActivity
-ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:21:9-56
+ADDED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:21:9-56
 	android:name
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:21:19-53
+		ADDED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:21:19-53
 activity#cmput301f17t09.goalsandhabits.HabitHistoryActivity
-ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:22:9-58
+ADDED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:22:9-58
 	android:name
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:22:19-55
+		ADDED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:22:19-55
 activity#cmput301f17t09.goalsandhabits.NewHabit
-ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:23:9-55
+ADDED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:23:9-46
 	android:name
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:23:19-43
+		ADDED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:23:19-43
+activity#cmput301f17t09.goalsandhabits.LoginActivity
+ADDED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:24:9-51
+	android:name
+		ADDED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:24:19-48
+activity#cmput301f17t09.goalsandhabits.SignUpActivity
+ADDED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:25:9-61
+	android:name
+		ADDED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:25:19-49
 uses-sdk
-INJECTED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Andrew\.android\build-cache\71f3ce621635cacdfd51537406409ae6e45e0d66\output\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:design:25.3.1] C:\Users\Andrew\.android\build-cache\050b5074df9229a047cb2c13b7844139d7db31cb\output\AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Andrew\.android\build-cache\7d91ef4d7041a2161d90968f1058d025783a0e06\output\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Andrew\.android\build-cache\0d67cf9d4dbfcd333f9622315ba34621c072adb5\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\Andrew\.android\build-cache\395af2c6c750175ad672abb54fefb0adc09a1142\output\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:transition:25.3.1] C:\Users\Andrew\.android\build-cache\6890affb3ccd3a79a77b2e156ba977029cf5c8d4\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Andrew\.android\build-cache\d3f9fff5012fd0548285f7cfbc7cb407119f3441\output\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Andrew\.android\build-cache\55f27732127f4f06c1700f3a86f40bf8485057b9\output\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Andrew\.android\build-cache\994a92c75e7117df7e46ba50e995b49486c9ca95\output\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Andrew\.android\build-cache\39bddf465af7547142a5926b7854e77a1ddafd63\output\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Andrew\.android\build-cache\e34338b212a14001f0c79a013cc46bbc26a8d2c7\output\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Andrew\.android\build-cache\fdd33709a324f45d03a514b86ad1c626fcf5ab78\output\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Andrew\.android\build-cache\eb5d92712cee8212197a64343d1cdf66d84c2ec1\output\AndroidManifest.xml:21:5-23:58
+INJECTED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Tony\.android\build-cache\66c696edec6015913c62769d61555e59eff5a930\output\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:design:25.3.1] C:\Users\Tony\.android\build-cache\830eae12f55c344c28816cea8aa3bb37e47e060b\output\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Tony\.android\build-cache\e10ed1f59118548b1fa73d6e0c549884167999ed\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Tony\.android\build-cache\e85b7c5ce8906e316761e58f155eddeaa08bbde6\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\Tony\.android\build-cache\e6e6e04bdb5350fff6cddd518d2cf00cb3845f70\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.3.1] C:\Users\Tony\.android\build-cache\94a89de77baa9efab1e63b7ff30109472d5fac08\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Tony\.android\build-cache\7c9cd557a9e649fb836f530272a93215f6465419\output\AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Tony\.android\build-cache\66c23c7b0f9e12a3907da642a7e6a48ac74dee3f\output\AndroidManifest.xml:23:5-43
+MERGED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Tony\.android\build-cache\5fec705b5a2d69d19493507df2dc10cea5d9cafb\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tasks:11.0.4] C:\Users\Tony\.android\build-cache\0e790996101732be72cb255dde09d895e56944ed\output\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\Tony\.android\build-cache\43d0d85d0b9b10118937272026a207530d603d2c\output\AndroidManifest.xml:17:5-43
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Tony\.android\build-cache\d73ef60ffe70f8ca24aeb9eebc4d67aa333004e5\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Tony\.android\build-cache\e577ad97bbf1ab7b1005c2fac983d42b1828d5f4\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Tony\.android\build-cache\21374a83bf17e8421160c721993b2f53be22b192\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Tony\.android\build-cache\9b337975c06fce54c5591bc823eb95a51fc93ff1\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Tony\.android\build-cache\14cbf785f1b6f412eaa1493b63627b713d2b183e\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Tony\.android\build-cache\900ed0d3f865e6e6ad842fee25af7ba2ff75c266\output\AndroidManifest.xml:21:5-23:58
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:25.3.1] C:\Users\Andrew\.android\build-cache\050b5074df9229a047cb2c13b7844139d7db31cb\output\AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:design:25.3.1] C:\Users\Tony\.android\build-cache\830eae12f55c344c28816cea8aa3bb37e47e060b\output\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
-		INJECTED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
-		INJECTED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
-		INJECTED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Tony\AndroidStudioProjects\301\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
 meta-data#android.support.VERSION
-ADDED from [com.android.support:design:25.3.1] C:\Users\Andrew\.android\build-cache\050b5074df9229a047cb2c13b7844139d7db31cb\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Andrew\.android\build-cache\7d91ef4d7041a2161d90968f1058d025783a0e06\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Andrew\.android\build-cache\0d67cf9d4dbfcd333f9622315ba34621c072adb5\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\Andrew\.android\build-cache\395af2c6c750175ad672abb54fefb0adc09a1142\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:transition:25.3.1] C:\Users\Andrew\.android\build-cache\6890affb3ccd3a79a77b2e156ba977029cf5c8d4\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Andrew\.android\build-cache\d3f9fff5012fd0548285f7cfbc7cb407119f3441\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Andrew\.android\build-cache\55f27732127f4f06c1700f3a86f40bf8485057b9\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Andrew\.android\build-cache\994a92c75e7117df7e46ba50e995b49486c9ca95\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Andrew\.android\build-cache\39bddf465af7547142a5926b7854e77a1ddafd63\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Andrew\.android\build-cache\e34338b212a14001f0c79a013cc46bbc26a8d2c7\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Andrew\.android\build-cache\fdd33709a324f45d03a514b86ad1c626fcf5ab78\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Andrew\.android\build-cache\eb5d92712cee8212197a64343d1cdf66d84c2ec1\output\AndroidManifest.xml:25:5-27:34
+ADDED from [com.android.support:design:25.3.1] C:\Users\Tony\.android\build-cache\830eae12f55c344c28816cea8aa3bb37e47e060b\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Tony\.android\build-cache\e10ed1f59118548b1fa73d6e0c549884167999ed\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Tony\.android\build-cache\e85b7c5ce8906e316761e58f155eddeaa08bbde6\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\Tony\.android\build-cache\e6e6e04bdb5350fff6cddd518d2cf00cb3845f70\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] C:\Users\Tony\.android\build-cache\94a89de77baa9efab1e63b7ff30109472d5fac08\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Tony\.android\build-cache\7c9cd557a9e649fb836f530272a93215f6465419\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Tony\.android\build-cache\d73ef60ffe70f8ca24aeb9eebc4d67aa333004e5\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Tony\.android\build-cache\e577ad97bbf1ab7b1005c2fac983d42b1828d5f4\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Tony\.android\build-cache\21374a83bf17e8421160c721993b2f53be22b192\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Tony\.android\build-cache\9b337975c06fce54c5591bc823eb95a51fc93ff1\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Tony\.android\build-cache\14cbf785f1b6f412eaa1493b63627b713d2b183e\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Tony\.android\build-cache\900ed0d3f865e6e6ad842fee25af7ba2ff75c266\output\AndroidManifest.xml:25:5-27:34
 	android:value
-		ADDED from [com.android.support:design:25.3.1] C:\Users\Andrew\.android\build-cache\050b5074df9229a047cb2c13b7844139d7db31cb\output\AndroidManifest.xml:27:9-31
+		ADDED from [com.android.support:design:25.3.1] C:\Users\Tony\.android\build-cache\830eae12f55c344c28816cea8aa3bb37e47e060b\output\AndroidManifest.xml:27:9-31
 	android:name
-		ADDED from [com.android.support:design:25.3.1] C:\Users\Andrew\.android\build-cache\050b5074df9229a047cb2c13b7844139d7db31cb\output\AndroidManifest.xml:26:9-47
+		ADDED from [com.android.support:design:25.3.1] C:\Users\Tony\.android\build-cache\830eae12f55c344c28816cea8aa3bb37e47e060b\output\AndroidManifest.xml:26:9-47
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Tony\.android\build-cache\66c23c7b0f9e12a3907da642a7e6a48ac74dee3f\output\AndroidManifest.xml:19:5-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Tony\.android\build-cache\66c23c7b0f9e12a3907da642a7e6a48ac74dee3f\output\AndroidManifest.xml:19:22-76
+uses-permission#android.permission.INTERNET
+ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Tony\.android\build-cache\66c23c7b0f9e12a3907da642a7e6a48ac74dee3f\output\AndroidManifest.xml:20:5-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Tony\.android\build-cache\66c23c7b0f9e12a3907da642a7e6a48ac74dee3f\output\AndroidManifest.xml:20:22-64
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Tony\.android\build-cache\66c23c7b0f9e12a3907da642a7e6a48ac74dee3f\output\AndroidManifest.xml:21:5-77
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Tony\.android\build-cache\66c23c7b0f9e12a3907da642a7e6a48ac74dee3f\output\AndroidManifest.xml:21:19-51
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Tony\.android\build-cache\66c23c7b0f9e12a3907da642a7e6a48ac74dee3f\output\AndroidManifest.xml:21:52-75
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Tony\.android\build-cache\5fec705b5a2d69d19493507df2dc10cea5d9cafb\output\AndroidManifest.xml:19:9-172
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Tony\.android\build-cache\5fec705b5a2d69d19493507df2dc10cea5d9cafb\output\AndroidManifest.xml:19:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Tony\.android\build-cache\5fec705b5a2d69d19493507df2dc10cea5d9cafb\output\AndroidManifest.xml:19:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Tony\.android\build-cache\5fec705b5a2d69d19493507df2dc10cea5d9cafb\output\AndroidManifest.xml:19:19-85
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\Tony\.android\build-cache\43d0d85d0b9b10118937272026a207530d603d2c\output\AndroidManifest.xml:20:9-121
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\Tony\.android\build-cache\43d0d85d0b9b10118937272026a207530d603d2c\output\AndroidManifest.xml:20:66-119
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\Tony\.android\build-cache\43d0d85d0b9b10118937272026a207530d603d2c\output\AndroidManifest.xml:20:20-65
