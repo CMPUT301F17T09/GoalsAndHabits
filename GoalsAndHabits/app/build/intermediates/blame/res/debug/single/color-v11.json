@@ -12,6 +12,14 @@
         "source": "C:\\Users\\Ken\\.android\\build-cache\\5a26f401f2037eeaf96f0e7198786e779b85bf7d\\output\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
     },
     {
+        "merged": "F:\\UAlberta\\CMPUT301\\Project\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
+        "source": "C:\\Users\\Andrew\\.android\\build-cache\\7d91ef4d7041a2161d90968f1058d025783a0e06\\output\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
+        "merged": "F:\\UAlberta\\CMPUT301\\Project\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
+        "source": "C:\\Users\\Andrew\\.android\\build-cache\\7d91ef4d7041a2161d90968f1058d025783a0e06\\output\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
         "merged": "C:\\Users\\Ken\\Cmput301Workspace\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
         "source": "C:\\Users\\Ken\\.android\\build-cache\\5a26f401f2037eeaf96f0e7198786e779b85bf7d\\output\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
     }

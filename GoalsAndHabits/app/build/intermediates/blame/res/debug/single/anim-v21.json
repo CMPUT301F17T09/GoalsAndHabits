@@ -14,5 +14,13 @@
     {
         "merged": "C:\\Users\\Ken\\Cmput301Workspace\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_out.xml",
         "source": "C:\\Users\\Ken\\.android\\build-cache\\518aa4619c72a2bb100f40493dec14cd97faa2ec\\output\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "F:\\UAlberta\\CMPUT301\\Project\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_in.xml",
+        "source": "C:\\Users\\Andrew\\.android\\build-cache\\050b5074df9229a047cb2c13b7844139d7db31cb\\output\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "F:\\UAlberta\\CMPUT301\\Project\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_out.xml",
+        "source": "C:\\Users\\Andrew\\.android\\build-cache\\050b5074df9229a047cb2c13b7844139d7db31cb\\output\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
     }
 ]
