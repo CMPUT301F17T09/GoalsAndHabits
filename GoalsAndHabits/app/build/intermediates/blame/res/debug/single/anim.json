@@ -4,12 +4,16 @@
         "source": "C:\\Users\\chias\\.android\\build-cache\\14c0b45b38424a606c7ba583b0f8950d5bef5a62\\output\\res\\anim\\design_snackbar_in.xml"
     },
     {
+        "merged": "C:\\Users\\Ken\\Cmput301Workspace\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\Ken\\.android\\build-cache\\5a26f401f2037eeaf96f0e7198786e779b85bf7d\\output\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
         "merged": "C:\\Users\\chias\\Documents\\Year 4\\Fall\\CMPUT 301\\Projects\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_in.xml",
         "source": "C:\\Users\\chias\\.android\\build-cache\\14c0b45b38424a606c7ba583b0f8950d5bef5a62\\output\\res\\anim\\design_bottom_sheet_slide_in.xml"
     },
     {
-        "merged": "C:\\Users\\chias\\Documents\\Year 4\\Fall\\CMPUT 301\\Projects\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
-        "source": "C:\\Users\\chias\\.android\\build-cache\\3a7260e96c91c295b8d8f14ea7e8f188d4a01f20\\output\\res\\anim\\abc_slide_in_top.xml"
+        "merged": "C:\\Users\\Ken\\Cmput301Workspace\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
+        "source": "C:\\Users\\Ken\\.android\\build-cache\\518aa4619c72a2bb100f40493dec14cd97faa2ec\\output\\res\\anim\\design_snackbar_out.xml"
     },
     {
         "merged": "C:\\Users\\chias\\Documents\\Year 4\\Fall\\CMPUT 301\\Projects\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
@@ -18,6 +22,66 @@
     {
         "merged": "C:\\Users\\chias\\Documents\\Year 4\\Fall\\CMPUT 301\\Projects\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_out.xml",
         "source": "C:\\Users\\chias\\.android\\build-cache\\14c0b45b38424a606c7ba583b0f8950d5bef5a62\\output\\res\\anim\\design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ken\\Cmput301Workspace\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\Ken\\.android\\build-cache\\5a26f401f2037eeaf96f0e7198786e779b85bf7d\\output\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\chias\\Documents\\Year 4\\Fall\\CMPUT 301\\Projects\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\chias\\.android\\build-cache\\3a7260e96c91c295b8d8f14ea7e8f188d4a01f20\\output\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ken\\Cmput301Workspace\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
+        "source": "C:\\Users\\Ken\\.android\\build-cache\\518aa4619c72a2bb100f40493dec14cd97faa2ec\\output\\res\\anim\\design_snackbar_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\chias\\Documents\\Year 4\\Fall\\CMPUT 301\\Projects\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\chias\\.android\\build-cache\\3a7260e96c91c295b8d8f14ea7e8f188d4a01f20\\output\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ken\\Cmput301Workspace\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_out.xml",
+        "source": "C:\\Users\\Ken\\.android\\build-cache\\518aa4619c72a2bb100f40493dec14cd97faa2ec\\output\\res\\anim\\design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\chias\\Documents\\Year 4\\Fall\\CMPUT 301\\Projects\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",
+        "source": "C:\\Users\\chias\\.android\\build-cache\\14c0b45b38424a606c7ba583b0f8950d5bef5a62\\output\\res\\anim\\design_fab_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\chias\\Documents\\Year 4\\Fall\\CMPUT 301\\Projects\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_out.xml",
+        "source": "C:\\Users\\chias\\.android\\build-cache\\14c0b45b38424a606c7ba583b0f8950d5bef5a62\\output\\res\\anim\\design_fab_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\chias\\Documents\\Year 4\\Fall\\CMPUT 301\\Projects\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\chias\\.android\\build-cache\\3a7260e96c91c295b8d8f14ea7e8f188d4a01f20\\output\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ken\\Cmput301Workspace\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_in.xml",
+        "source": "C:\\Users\\Ken\\.android\\build-cache\\518aa4619c72a2bb100f40493dec14cd97faa2ec\\output\\res\\anim\\design_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ken\\Cmput301Workspace\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\Ken\\.android\\build-cache\\5a26f401f2037eeaf96f0e7198786e779b85bf7d\\output\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ken\\Cmput301Workspace\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\Ken\\.android\\build-cache\\5a26f401f2037eeaf96f0e7198786e779b85bf7d\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ken\\Cmput301Workspace\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\Ken\\.android\\build-cache\\5a26f401f2037eeaf96f0e7198786e779b85bf7d\\output\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\chias\\Documents\\Year 4\\Fall\\CMPUT 301\\Projects\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\chias\\.android\\build-cache\\3a7260e96c91c295b8d8f14ea7e8f188d4a01f20\\output\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ken\\Cmput301Workspace\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\Ken\\.android\\build-cache\\5a26f401f2037eeaf96f0e7198786e779b85bf7d\\output\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ken\\Cmput301Workspace\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\Ken\\.android\\build-cache\\5a26f401f2037eeaf96f0e7198786e779b85bf7d\\output\\res\\anim\\abc_popup_exit.xml"
     },
     {
         "merged": "C:\\Users\\chias\\Documents\\Year 4\\Fall\\CMPUT 301\\Projects\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
@@ -36,31 +100,31 @@
         "source": "C:\\Users\\chias\\.android\\build-cache\\3a7260e96c91c295b8d8f14ea7e8f188d4a01f20\\output\\res\\anim\\abc_popup_exit.xml"
     },
     {
-        "merged": "C:\\Users\\chias\\Documents\\Year 4\\Fall\\CMPUT 301\\Projects\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
-        "source": "C:\\Users\\chias\\.android\\build-cache\\3a7260e96c91c295b8d8f14ea7e8f188d4a01f20\\output\\res\\anim\\abc_fade_out.xml"
-    },
-    {
         "merged": "C:\\Users\\chias\\Documents\\Year 4\\Fall\\CMPUT 301\\Projects\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
         "source": "C:\\Users\\chias\\.android\\build-cache\\14c0b45b38424a606c7ba583b0f8950d5bef5a62\\output\\res\\anim\\design_snackbar_out.xml"
     },
     {
-        "merged": "C:\\Users\\chias\\Documents\\Year 4\\Fall\\CMPUT 301\\Projects\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
-        "source": "C:\\Users\\chias\\.android\\build-cache\\3a7260e96c91c295b8d8f14ea7e8f188d4a01f20\\output\\res\\anim\\abc_slide_in_bottom.xml"
+        "merged": "C:\\Users\\Ken\\Cmput301Workspace\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\Ken\\.android\\build-cache\\5a26f401f2037eeaf96f0e7198786e779b85bf7d\\output\\res\\anim\\abc_slide_in_top.xml"
     },
     {
         "merged": "C:\\Users\\chias\\Documents\\Year 4\\Fall\\CMPUT 301\\Projects\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
         "source": "C:\\Users\\chias\\.android\\build-cache\\3a7260e96c91c295b8d8f14ea7e8f188d4a01f20\\output\\res\\anim\\abc_popup_enter.xml"
     },
     {
-        "merged": "C:\\Users\\chias\\Documents\\Year 4\\Fall\\CMPUT 301\\Projects\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",
-        "source": "C:\\Users\\chias\\.android\\build-cache\\14c0b45b38424a606c7ba583b0f8950d5bef5a62\\output\\res\\anim\\design_fab_in.xml"
+        "merged": "C:\\Users\\Ken\\Cmput301Workspace\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\Ken\\.android\\build-cache\\5a26f401f2037eeaf96f0e7198786e779b85bf7d\\output\\res\\anim\\abc_slide_out_bottom.xml"
     },
     {
-        "merged": "C:\\Users\\chias\\Documents\\Year 4\\Fall\\CMPUT 301\\Projects\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_out.xml",
-        "source": "C:\\Users\\chias\\.android\\build-cache\\14c0b45b38424a606c7ba583b0f8950d5bef5a62\\output\\res\\anim\\design_fab_out.xml"
+        "merged": "C:\\Users\\Ken\\Cmput301Workspace\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\Ken\\.android\\build-cache\\5a26f401f2037eeaf96f0e7198786e779b85bf7d\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
     },
     {
-        "merged": "C:\\Users\\chias\\Documents\\Year 4\\Fall\\CMPUT 301\\Projects\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
-        "source": "C:\\Users\\chias\\.android\\build-cache\\3a7260e96c91c295b8d8f14ea7e8f188d4a01f20\\output\\res\\anim\\abc_fade_in.xml"
+        "merged": "C:\\Users\\Ken\\Cmput301Workspace\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_out.xml",
+        "source": "C:\\Users\\Ken\\.android\\build-cache\\518aa4619c72a2bb100f40493dec14cd97faa2ec\\output\\res\\anim\\design_fab_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ken\\Cmput301Workspace\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",
+        "source": "C:\\Users\\Ken\\.android\\build-cache\\518aa4619c72a2bb100f40493dec14cd97faa2ec\\output\\res\\anim\\design_fab_in.xml"
     }
 ]

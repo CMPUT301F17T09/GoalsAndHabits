@@ -4,6 +4,18 @@
         "source": "C:\\Users\\chias\\.android\\build-cache\\3a7260e96c91c295b8d8f14ea7e8f188d4a01f20\\output\\res\\color-v23\\abc_tint_default.xml"
     },
     {
+        "merged": "C:\\Users\\Ken\\Cmput301Workspace\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_btn_checkable.xml",
+        "source": "C:\\Users\\Ken\\.android\\build-cache\\5a26f401f2037eeaf96f0e7198786e779b85bf7d\\output\\res\\color-v23\\abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ken\\Cmput301Workspace\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_switch_thumb.xml",
+        "source": "C:\\Users\\Ken\\.android\\build-cache\\5a26f401f2037eeaf96f0e7198786e779b85bf7d\\output\\res\\color-v23\\abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ken\\Cmput301Workspace\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_btn_colored_borderless_text_material.xml",
+        "source": "C:\\Users\\Ken\\.android\\build-cache\\5a26f401f2037eeaf96f0e7198786e779b85bf7d\\output\\res\\color-v23\\abc_btn_colored_borderless_text_material.xml"
+    },
+    {
         "merged": "C:\\Users\\chias\\Documents\\Year 4\\Fall\\CMPUT 301\\Projects\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_btn_colored_borderless_text_material.xml",
         "source": "C:\\Users\\chias\\.android\\build-cache\\3a7260e96c91c295b8d8f14ea7e8f188d4a01f20\\output\\res\\color-v23\\abc_btn_colored_borderless_text_material.xml"
     },
@@ -14,6 +26,26 @@
     {
         "merged": "C:\\Users\\chias\\Documents\\Year 4\\Fall\\CMPUT 301\\Projects\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_btn_checkable.xml",
         "source": "C:\\Users\\chias\\.android\\build-cache\\3a7260e96c91c295b8d8f14ea7e8f188d4a01f20\\output\\res\\color-v23\\abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ken\\Cmput301Workspace\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_default.xml",
+        "source": "C:\\Users\\Ken\\.android\\build-cache\\5a26f401f2037eeaf96f0e7198786e779b85bf7d\\output\\res\\color-v23\\abc_tint_default.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ken\\Cmput301Workspace\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\design_tint_password_toggle.xml",
+        "source": "C:\\Users\\Ken\\.android\\build-cache\\518aa4619c72a2bb100f40493dec14cd97faa2ec\\output\\res\\color-v23\\design_tint_password_toggle.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ken\\Cmput301Workspace\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_btn_colored_text_material.xml",
+        "source": "C:\\Users\\Ken\\.android\\build-cache\\5a26f401f2037eeaf96f0e7198786e779b85bf7d\\output\\res\\color-v23\\abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ken\\Cmput301Workspace\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_edittext.xml",
+        "source": "C:\\Users\\Ken\\.android\\build-cache\\5a26f401f2037eeaf96f0e7198786e779b85bf7d\\output\\res\\color-v23\\abc_tint_edittext.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ken\\Cmput301Workspace\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_spinner.xml",
+        "source": "C:\\Users\\Ken\\.android\\build-cache\\5a26f401f2037eeaf96f0e7198786e779b85bf7d\\output\\res\\color-v23\\abc_tint_spinner.xml"
     },
     {
         "merged": "C:\\Users\\chias\\Documents\\Year 4\\Fall\\CMPUT 301\\Projects\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_switch_thumb.xml",
@@ -32,6 +64,10 @@
         "source": "C:\\Users\\chias\\.android\\build-cache\\3a7260e96c91c295b8d8f14ea7e8f188d4a01f20\\output\\res\\color-v23\\abc_tint_spinner.xml"
     },
     {
+        "merged": "C:\\Users\\Ken\\Cmput301Workspace\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_seek_thumb.xml",
+        "source": "C:\\Users\\Ken\\.android\\build-cache\\5a26f401f2037eeaf96f0e7198786e779b85bf7d\\output\\res\\color-v23\\abc_tint_seek_thumb.xml"
+    },
+    {
         "merged": "C:\\Users\\chias\\Documents\\Year 4\\Fall\\CMPUT 301\\Projects\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_seek_thumb.xml",
         "source": "C:\\Users\\chias\\.android\\build-cache\\3a7260e96c91c295b8d8f14ea7e8f188d4a01f20\\output\\res\\color-v23\\abc_tint_seek_thumb.xml"
     },
@@ -40,7 +76,15 @@
         "source": "C:\\Users\\chias\\.android\\build-cache\\14c0b45b38424a606c7ba583b0f8950d5bef5a62\\output\\res\\color-v23\\design_tint_password_toggle.xml"
     },
     {
+        "merged": "C:\\Users\\Ken\\Cmput301Workspace\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_color_highlight_material.xml",
+        "source": "C:\\Users\\Ken\\.android\\build-cache\\5a26f401f2037eeaf96f0e7198786e779b85bf7d\\output\\res\\color-v23\\abc_color_highlight_material.xml"
+    },
+    {
         "merged": "C:\\Users\\chias\\Documents\\Year 4\\Fall\\CMPUT 301\\Projects\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_color_highlight_material.xml",
         "source": "C:\\Users\\chias\\.android\\build-cache\\3a7260e96c91c295b8d8f14ea7e8f188d4a01f20\\output\\res\\color-v23\\abc_color_highlight_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ken\\Cmput301Workspace\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_switch_track.xml",
+        "source": "C:\\Users\\Ken\\.android\\build-cache\\5a26f401f2037eeaf96f0e7198786e779b85bf7d\\output\\res\\color-v23\\abc_tint_switch_track.xml"
     }
 ]

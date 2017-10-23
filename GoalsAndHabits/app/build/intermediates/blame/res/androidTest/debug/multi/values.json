@@ -1,5 +1,29 @@
 [
     {
+        "outputFile": "C:\\Users\\Ken\\Cmput301Workspace\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 45,
+                    "endOffset": 96
+                },
+                "from": {
+                    "file": "C:\\Users\\Ken\\.android\\build-cache\\c9c5a15930256e4f35e7a6444d45eb0e06f4a55b\\output\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 229,
+                        "endColumn": 45,
+                        "endOffset": 270
+                    }
+                }
+            }
+        ]
+    },
+    {
         "outputFile": "C:\\Users\\chias\\Documents\\Year 4\\Fall\\CMPUT 301\\Projects\\GoalsAndHabits\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
         "map": [
             {
