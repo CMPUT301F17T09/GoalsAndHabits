@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v18\\values-v18.xml",
+        "outputFile": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v18\\values-v18.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,31 @@
                     "endOffset": 99
                 },
                 "from": {
-                    "file": "C:\\Users\\Tony\\.android\\build-cache\\e10ed1f59118548b1fa73d6e0c549884167999ed\\output\\res\\values-v18\\values-v18.xml",
+                    "file": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\.android\\build-cache\\e10ed1f59118548b1fa73d6e0c549884167999ed\\output\\res\\values-v18\\values-v18.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 48,
+                        "endOffset": 99
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v18/values-v18.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 48,
+                    "endOffset": 99
+                },
+                "from": {
+                    "file": "/afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/bd26c753c8ffa3d9d73cb2f08b87119655f7a94b/output/res/values-v18/values-v18.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,

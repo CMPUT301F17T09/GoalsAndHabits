@@ -1,7 +1,524 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f1392bb6-5ea8-4bae-bade-5370ef3568c4" name="Default" comment="" />
+    <list default="true" id="f1392bb6-5ea8-4bae-bade-5370ef3568c4" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/.idea/runConfigurations.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_in.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_out.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/anim/abc_popup_exit.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/anim/abc_shrink_fade_out_from_bottom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/anim/design_bottom_sheet_slide_in.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/anim/design_bottom_sheet_slide_out.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/anim/design_fab_in.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/anim/design_fab_out.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/anim/design_snackbar_in.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/anim/design_snackbar_out.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/animator-v21/design_appbar_state_list_animator.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_borderless_text_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_text_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/color-v23/abc_tint_default.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/color-v23/abc_tint_edittext.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/color-v23/abc_tint_seek_thumb.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/color-v23/abc_tint_spinner.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_thumb.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_track.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/color-v23/design_tint_password_toggle.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/color/abc_btn_colored_borderless_text_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/color/abc_btn_colored_text_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_dark.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_light.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_light.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_dark.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_light.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/color/abc_search_url_text.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_dark.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_light.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/color/abc_tint_btn_checkable.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/color/abc_tint_default.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/color/abc_tint_edittext.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/color/abc_tint_seek_thumb.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/color/abc_tint_spinner.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/color/abc_tint_switch_thumb.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/color/abc_tint_switch_track.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_dark.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_light.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_tint.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/color/design_error.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/color/design_tint_password_toggle.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/color/switch_thumb_material_dark.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/color/switch_thumb_material_light.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/design_ic_visibility.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/design_ic_visibility_off.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_000.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_015.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_000.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_015.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_cab_background_top_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_menu_share_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_star_black_16dp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_star_black_36dp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_star_black_48dp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_star_half_black_16dp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_star_half_black_36dp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_star_half_black_48dp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_list_divider_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_list_focused_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_list_longpressed_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_list_pressed_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_list_pressed_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_list_selector_disabled_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_list_selector_disabled_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_popup_background_mtrl_mult.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_scrubber_control_off_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_scrubber_track_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_switch_track_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_tab_indicator_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_text_select_handle_left_mtrl_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_text_select_handle_left_mtrl_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_text_select_handle_middle_mtrl_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_text_select_handle_middle_mtrl_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_text_select_handle_right_mtrl_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_text_select_handle_right_mtrl_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_textfield_activated_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_textfield_default_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/common_full_open_on_phone.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/common_google_signin_btn_text_light_normal_background.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/design_ic_visibility.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/design_ic_visibility_off.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/googleg_disabled_color_18.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/googleg_standard_color_18.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/notification_bg_low_normal.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/notification_bg_low_pressed.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/notification_bg_normal.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/notification_bg_normal_pressed.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/notify_panel_notification_icon_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-ldrtl-hdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-ldrtl-hdpi-v17/abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-ldrtl-hdpi-v17/abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-ldrtl-mdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-ldrtl-mdpi-v17/abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-ldrtl-mdpi-v17/abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-ldrtl-xhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-ldrtl-xhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-ldrtl-xhdpi-v17/abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_btn_check_to_on_mtrl_000.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_btn_check_to_on_mtrl_015.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_btn_radio_to_on_mtrl_000.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_btn_radio_to_on_mtrl_015.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_cab_background_top_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_menu_share_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_star_black_16dp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_star_black_36dp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_star_black_48dp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_star_half_black_16dp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_star_half_black_36dp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_star_half_black_48dp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_list_divider_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_list_focused_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_list_longpressed_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_list_pressed_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_list_pressed_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_list_selector_disabled_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_list_selector_disabled_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_popup_background_mtrl_mult.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_scrubber_control_off_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_scrubber_track_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_switch_track_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_tab_indicator_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_text_select_handle_left_mtrl_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_text_select_handle_left_mtrl_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_text_select_handle_middle_mtrl_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_text_select_handle_middle_mtrl_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_text_select_handle_right_mtrl_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_text_select_handle_right_mtrl_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_textfield_activated_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_textfield_default_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_text_light_normal_background.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/design_ic_visibility.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/design_ic_visibility_off.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/googleg_disabled_color_18.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/googleg_standard_color_18.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/notification_bg_low_normal.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/notification_bg_low_pressed.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/notification_bg_normal.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/notification_bg_normal_pressed.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/notify_panel_notification_icon_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-v21/abc_action_bar_item_background_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-v21/abc_btn_colored_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-v21/abc_edit_text_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-v21/avd_hide_password.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-v21/avd_show_password.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-v21/design_bottom_navigation_item_background.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-v21/design_password_eye.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-v21/notification_action_background.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-v23/abc_control_background_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_btn_check_to_on_mtrl_000.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_btn_check_to_on_mtrl_015.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_btn_radio_to_on_mtrl_000.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_btn_radio_to_on_mtrl_015.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_cab_background_top_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_menu_share_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_star_black_16dp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_star_black_36dp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_star_black_48dp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_star_half_black_16dp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_star_half_black_36dp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_star_half_black_48dp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_list_divider_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_list_focused_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_list_longpressed_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_list_pressed_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_list_pressed_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_list_selector_disabled_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_list_selector_disabled_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_popup_background_mtrl_mult.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_scrubber_control_off_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_scrubber_track_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_switch_track_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_text_select_handle_left_mtrl_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_text_select_handle_left_mtrl_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_text_select_handle_middle_mtrl_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_text_select_handle_middle_mtrl_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_text_select_handle_right_mtrl_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_text_select_handle_right_mtrl_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_textfield_default_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/common_full_open_on_phone.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/common_google_signin_btn_text_light_normal_background.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/design_ic_visibility.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/design_ic_visibility_off.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/googleg_disabled_color_18.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/googleg_standard_color_18.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/notification_bg_low_normal.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/notification_bg_low_pressed.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/notification_bg_normal.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_000.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_015.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_cab_background_top_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_menu_share_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_star_black_16dp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_star_black_36dp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_star_black_48dp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_star_half_black_16dp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_star_half_black_36dp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_star_half_black_48dp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_list_divider_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_list_focused_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_list_longpressed_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_list_pressed_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_list_pressed_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_popup_background_mtrl_mult.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_scrubber_control_off_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_scrubber_track_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_switch_track_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_text_select_handle_left_mtrl_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_text_select_handle_left_mtrl_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_text_select_handle_middle_mtrl_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_text_select_handle_middle_mtrl_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_text_select_handle_right_mtrl_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_text_select_handle_right_mtrl_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_textfield_default_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_google_signin_btn_text_light_normal_background.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/design_ic_visibility.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/design_ic_visibility_off.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/googleg_disabled_color_18.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/googleg_standard_color_18.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_000.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_015.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_menu_share_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_star_black_16dp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_star_black_36dp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_star_black_48dp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_star_half_black_16dp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_star_half_black_36dp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_star_half_black_48dp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_switch_track_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_text_select_handle_left_mtrl_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_text_select_handle_left_mtrl_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_text_select_handle_right_mtrl_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_text_select_handle_right_mtrl_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/design_ic_visibility.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/design_ic_visibility_off.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/abc_btn_borderless_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/abc_btn_check_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/abc_btn_default_mtrl_shape.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_internal_bg.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_top_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/abc_ic_ab_back_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/abc_ic_arrow_drop_right_black_24dp.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/abc_ic_clear_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/abc_ic_go_search_api_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/abc_ic_menu_overflow_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/abc_ic_search_api_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/abc_ic_voice_search_api_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_light.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_dark.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_light.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_dark.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_light.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_indicator_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_small_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_thumb_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_tick_mark_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_track_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/abc_spinner_textfield_background_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/abc_text_cursor_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/abc_textfield_search_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/abc_vector_test.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark_focused.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark_normal.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_disabled.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light_focused.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light_normal.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark_focused.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark_normal.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_disabled.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light_focused.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light_normal.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/design_bottom_navigation_item_background.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/design_fab_background.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/design_password_eye.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/design_snackbar_background.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/ic_dashboard_black_24dp.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/ic_home_black_24dp.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/ic_notifications_black_24dp.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/navigation_empty_icon.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/notification_bg.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/notification_bg_low.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/notification_icon_background.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/drawable/notification_tile_bg.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout-v11/notification_media_action.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout-v11/notification_media_cancel_action.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_custom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow_custom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout-v16/notification_template_custom_big.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_button_bar_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_title_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_header_item_layout.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/abc_search_view.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/abc_select_dialog_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/activity_follow.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/activity_habit_history.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/activity_login.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/activity_main.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/activity_map_filters.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/activity_my_habits.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/activity_new_habit.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/activity_new_profile.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/activity_sign_up.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/design_bottom_navigation_item.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/design_bottom_sheet_dialog.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar_include.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/design_layout_tab_icon.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/design_layout_tab_text.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/design_menu_item_action_area.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/design_navigation_item.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/design_navigation_item_header.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/design_navigation_item_separator.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/design_navigation_item_subheader.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/design_navigation_menu.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/design_navigation_menu_item.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/design_text_input_password_icon.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/notification_action.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/notification_action_tombstone.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/notification_template_custom_big.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/notification_template_icon_group.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/notification_template_lines_media.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/notification_template_media.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/notification_template_media_custom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/select_dialog_item_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/menu/navigation.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher_round.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/mipmap-mdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/mipmap-mdpi/ic_launcher_round.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/mipmap-xhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/mipmap-xhdpi/ic_launcher_round.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ic_launcher_round.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/ic_launcher_round.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/values-af/values-af.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/values-am/values-am.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/values-ar/values-ar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/values-az-rAZ/values-az-rAZ.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/values-az/values-az.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/values-b+sr+Latn/values-b+sr+Latn.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/values-be-rBY/values-be-rBY.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/values-be/values-be.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/values-bg/values-bg.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/values-bn-rBD/values-bn-rBD.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/values-bn/values-bn.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/values-bs-rBA/values-bs-rBA.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/values-bs/values-bs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/values-ca/values-ca.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/values-cs/values-cs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/values-da/values-da.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GoalsAndHabits/app/build/intermediates/res/merged/debug/values-de/values-de.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GoalsAndHabits/.idea/misc.xml" afterPath="$PROJECT_DIR$/GoalsAndHabits/.idea/misc.xml" />
+    </list>
     <ignored path="GoalsAndHabits.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,7 +536,44 @@
     <favorites_list name="GoalsAndHabits" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="FollowActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/GoalsAndHabits/app/src/main/java/cmput301f17t09/goalsandhabits/FollowActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="34" column="11" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewHabit.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GoalsAndHabits/app/src/main/java/cmput301f17t09/goalsandhabits/NewHabit.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyHabits.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GoalsAndHabits/app/src/main/java/cmput301f17t09/goalsandhabits/MyHabits.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -30,10 +584,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-1" />
+    <option name="y" value="31" />
+    <option name="width" value="1922" />
+    <option name="height" value="1004" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -60,6 +614,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Local Unit Tests" />
       </pane>
@@ -105,17 +661,119 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="GoalsAndHabits" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GoalsAndHabits" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GoalsAndHabits" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GoalsAndHabits" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GoalsAndHabits" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GoalsAndHabits" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GoalsAndHabits" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GoalsAndHabits" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GoalsAndHabits" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GoalsAndHabits" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cmput301f17t09" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="goalsandhabits" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GoalsAndHabits" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GoalsAndHabits" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="doc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane />
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -125,14 +783,172 @@
     <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.49279162" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <method />
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
@@ -164,6 +980,34 @@
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
       <option name="OUTPUT_DIRECTORY" />
       <option name="ANNOTATION_TYPE" />
       <option name="ENV_VARIABLES" />
@@ -210,19 +1054,29 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-1" y="31" width="1922" height="1004" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32943925" sideWeight="0.49815693" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32943925" sideWeight="0.5018431" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32943925" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32943925" sideWeight="0.49815693" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31753555" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -233,7 +1087,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -261,5 +1114,120 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/GoalsAndHabits/app/src/main/java/cmput301f17t09/goalsandhabits/MyHabits.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GoalsAndHabits/app/src/main/java/cmput301f17t09/goalsandhabits/NewHabit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GoalsAndHabits/app/src/main/java/cmput301f17t09/goalsandhabits/FollowActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="34" column="11" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.49279162" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.49279162" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.49279162" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.49279162" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>GoalsAndHabits</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.49279162" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.49279162" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

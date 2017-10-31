@@ -45,23 +45,22 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_alignBottom="@+id/linearlayout1"
+        android:gravity="center"
 
 
         >
         <Button
             android:id="@+id/login_button"
             style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="0dp"
+            android:layout_width="144dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1.0"
             android:text="Login" />
 
         <Button
             android:id="@+id/signup_button"
             style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="0dp"
+            android:layout_width="144dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1.0"
             android:text="sign up!"
             />
 

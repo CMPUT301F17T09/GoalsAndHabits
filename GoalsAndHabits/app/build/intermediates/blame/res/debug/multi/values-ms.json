@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ms\\values-ms.xml",
+        "outputFile": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ms/values-ms.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 208
                 },
                 "from": {
-                    "file": "C:\\Users\\Tony\\.android\\build-cache\\5fec705b5a2d69d19493507df2dc10cea5d9cafb\\output\\res\\values-ms\\values.xml",
+                    "file": "/afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/1672b863282c09f8997e80ae9078a617b6b3a43b/output/res/values-ms/values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 0,
@@ -30,7 +30,7 @@
                     "endOffset": 413
                 },
                 "from": {
-                    "file": "C:\\Users\\Tony\\.android\\build-cache\\5fec705b5a2d69d19493507df2dc10cea5d9cafb\\output\\res\\values-ms\\values.xml",
+                    "file": "/afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/1672b863282c09f8997e80ae9078a617b6b3a43b/output/res/values-ms/values.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 0,
@@ -49,7 +49,7 @@
                     "endOffset": 545
                 },
                 "from": {
-                    "file": "C:\\Users\\Tony\\.android\\build-cache\\5fec705b5a2d69d19493507df2dc10cea5d9cafb\\output\\res\\values-ms\\values.xml",
+                    "file": "/afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/1672b863282c09f8997e80ae9078a617b6b3a43b/output/res/values-ms/values.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 0,
@@ -68,7 +68,7 @@
                     "endOffset": 653
                 },
                 "from": {
-                    "file": "C:\\Users\\Tony\\.android\\build-cache\\5fec705b5a2d69d19493507df2dc10cea5d9cafb\\output\\res\\values-ms\\values.xml",
+                    "file": "/afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/1672b863282c09f8997e80ae9078a617b6b3a43b/output/res/values-ms/values.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 0,
@@ -87,7 +87,7 @@
                     "endOffset": 884
                 },
                 "from": {
-                    "file": "C:\\Users\\Tony\\.android\\build-cache\\5fec705b5a2d69d19493507df2dc10cea5d9cafb\\output\\res\\values-ms\\values.xml",
+                    "file": "/afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/1672b863282c09f8997e80ae9078a617b6b3a43b/output/res/values-ms/values.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 0,
@@ -106,7 +106,7 @@
                     "endOffset": 1018
                 },
                 "from": {
-                    "file": "C:\\Users\\Tony\\.android\\build-cache\\5fec705b5a2d69d19493507df2dc10cea5d9cafb\\output\\res\\values-ms\\values.xml",
+                    "file": "/afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/1672b863282c09f8997e80ae9078a617b6b3a43b/output/res/values-ms/values.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 0,
@@ -125,7 +125,7 @@
                     "endOffset": 1154
                 },
                 "from": {
-                    "file": "C:\\Users\\Tony\\.android\\build-cache\\5fec705b5a2d69d19493507df2dc10cea5d9cafb\\output\\res\\values-ms\\values.xml",
+                    "file": "/afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/1672b863282c09f8997e80ae9078a617b6b3a43b/output/res/values-ms/values.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 0,
@@ -144,7 +144,7 @@
                     "endOffset": 1359
                 },
                 "from": {
-                    "file": "C:\\Users\\Tony\\.android\\build-cache\\43d0d85d0b9b10118937272026a207530d603d2c\\output\\res\\values-ms\\values.xml",
+                    "file": "/afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/c9544794bc09aef35e02b1941690bae4054835f7/output/res/values-ms/values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 0,
@@ -163,7 +163,7 @@
                     "endOffset": 1603
                 },
                 "from": {
-                    "file": "C:\\Users\\Tony\\.android\\build-cache\\5fec705b5a2d69d19493507df2dc10cea5d9cafb\\output\\res\\values-ms\\values.xml",
+                    "file": "/afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/1672b863282c09f8997e80ae9078a617b6b3a43b/output/res/values-ms/values.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 0,
@@ -182,7 +182,7 @@
                     "endOffset": 1714
                 },
                 "from": {
-                    "file": "C:\\Users\\Tony\\.android\\build-cache\\5fec705b5a2d69d19493507df2dc10cea5d9cafb\\output\\res\\values-ms\\values.xml",
+                    "file": "/afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/1672b863282c09f8997e80ae9078a617b6b3a43b/output/res/values-ms/values.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 0,
@@ -201,7 +201,7 @@
                     "endOffset": 1920
                 },
                 "from": {
-                    "file": "C:\\Users\\Tony\\.android\\build-cache\\5fec705b5a2d69d19493507df2dc10cea5d9cafb\\output\\res\\values-ms\\values.xml",
+                    "file": "/afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/1672b863282c09f8997e80ae9078a617b6b3a43b/output/res/values-ms/values.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 0,
@@ -220,7 +220,7 @@
                     "endOffset": 2057
                 },
                 "from": {
-                    "file": "C:\\Users\\Tony\\.android\\build-cache\\5fec705b5a2d69d19493507df2dc10cea5d9cafb\\output\\res\\values-ms\\values.xml",
+                    "file": "/afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/1672b863282c09f8997e80ae9078a617b6b3a43b/output/res/values-ms/values.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 0,
@@ -239,7 +239,7 @@
                     "endOffset": 2287
                 },
                 "from": {
-                    "file": "C:\\Users\\Tony\\.android\\build-cache\\5fec705b5a2d69d19493507df2dc10cea5d9cafb\\output\\res\\values-ms\\values.xml",
+                    "file": "/afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/1672b863282c09f8997e80ae9078a617b6b3a43b/output/res/values-ms/values.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 0,
@@ -258,7 +258,7 @@
                     "endOffset": 2492
                 },
                 "from": {
-                    "file": "C:\\Users\\Tony\\.android\\build-cache\\5fec705b5a2d69d19493507df2dc10cea5d9cafb\\output\\res\\values-ms\\values.xml",
+                    "file": "/afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/1672b863282c09f8997e80ae9078a617b6b3a43b/output/res/values-ms/values.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 0,
@@ -277,7 +277,7 @@
                     "endOffset": 2589
                 },
                 "from": {
-                    "file": "C:\\Users\\Tony\\.android\\build-cache\\5fec705b5a2d69d19493507df2dc10cea5d9cafb\\output\\res\\values-ms\\values.xml",
+                    "file": "/afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/1672b863282c09f8997e80ae9078a617b6b3a43b/output/res/values-ms/values.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 0,
@@ -296,7 +296,7 @@
                     "endOffset": 2683
                 },
                 "from": {
-                    "file": "C:\\Users\\Tony\\.android\\build-cache\\5fec705b5a2d69d19493507df2dc10cea5d9cafb\\output\\res\\values-ms\\values.xml",
+                    "file": "/afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/1672b863282c09f8997e80ae9078a617b6b3a43b/output/res/values-ms/values.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 0,
@@ -315,7 +315,335 @@
                     "endOffset": 2795
                 },
                 "from": {
-                    "file": "C:\\Users\\Tony\\.android\\build-cache\\5fec705b5a2d69d19493507df2dc10cea5d9cafb\\output\\res\\values-ms\\values.xml",
+                    "file": "/afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/1672b863282c09f8997e80ae9078a617b6b3a43b/output/res/values-ms/values.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 0,
+                        "startOffset": 2621,
+                        "endColumn": 107,
+                        "endOffset": 2728
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ms\\values-ms.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 105,
+                    "endColumn": 107,
+                    "endOffset": 208
+                },
+                "from": {
+                    "file": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\.android\\build-cache\\5fec705b5a2d69d19493507df2dc10cea5d9cafb\\output\\res\\values-ms\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 0,
+                        "startOffset": 283,
+                        "endColumn": 103,
+                        "endOffset": 386
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 213,
+                    "endColumn": 204,
+                    "endOffset": 413
+                },
+                "from": {
+                    "file": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\.android\\build-cache\\5fec705b5a2d69d19493507df2dc10cea5d9cafb\\output\\res\\values-ms\\values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 0,
+                        "startOffset": 387,
+                        "endColumn": 204,
+                        "endOffset": 591
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 418,
+                    "endColumn": 131,
+                    "endOffset": 545
+                },
+                "from": {
+                    "file": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\.android\\build-cache\\5fec705b5a2d69d19493507df2dc10cea5d9cafb\\output\\res\\values-ms\\values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 0,
+                        "startOffset": 592,
+                        "endColumn": 127,
+                        "endOffset": 719
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 550,
+                    "endColumn": 107,
+                    "endOffset": 653
+                },
+                "from": {
+                    "file": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\.android\\build-cache\\5fec705b5a2d69d19493507df2dc10cea5d9cafb\\output\\res\\values-ms\\values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 0,
+                        "startOffset": 720,
+                        "endColumn": 103,
+                        "endOffset": 823
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 658,
+                    "endColumn": 230,
+                    "endOffset": 884
+                },
+                "from": {
+                    "file": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\.android\\build-cache\\5fec705b5a2d69d19493507df2dc10cea5d9cafb\\output\\res\\values-ms\\values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 0,
+                        "startOffset": 824,
+                        "endColumn": 230,
+                        "endOffset": 1054
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 889,
+                    "endColumn": 133,
+                    "endOffset": 1018
+                },
+                "from": {
+                    "file": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\.android\\build-cache\\5fec705b5a2d69d19493507df2dc10cea5d9cafb\\output\\res\\values-ms\\values.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 0,
+                        "startOffset": 1055,
+                        "endColumn": 129,
+                        "endOffset": 1184
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 1023,
+                    "endColumn": 135,
+                    "endOffset": 1154
+                },
+                "from": {
+                    "file": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\.android\\build-cache\\5fec705b5a2d69d19493507df2dc10cea5d9cafb\\output\\res\\values-ms\\values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 0,
+                        "startOffset": 1185,
+                        "endColumn": 131,
+                        "endOffset": 1316
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 1159,
+                    "endColumn": 204,
+                    "endOffset": 1359
+                },
+                "from": {
+                    "file": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\.android\\build-cache\\43d0d85d0b9b10118937272026a207530d603d2c\\output\\res\\values-ms\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 0,
+                        "startOffset": 285,
+                        "endColumn": 204,
+                        "endOffset": 489
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 1364,
+                    "endColumn": 243,
+                    "endOffset": 1603
+                },
+                "from": {
+                    "file": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\.android\\build-cache\\5fec705b5a2d69d19493507df2dc10cea5d9cafb\\output\\res\\values-ms\\values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 0,
+                        "startOffset": 1317,
+                        "endColumn": 243,
+                        "endOffset": 1560
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 1608,
+                    "endColumn": 110,
+                    "endOffset": 1714
+                },
+                "from": {
+                    "file": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\.android\\build-cache\\5fec705b5a2d69d19493507df2dc10cea5d9cafb\\output\\res\\values-ms\\values.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 0,
+                        "startOffset": 1561,
+                        "endColumn": 106,
+                        "endOffset": 1667
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 1719,
+                    "endColumn": 205,
+                    "endOffset": 1920
+                },
+                "from": {
+                    "file": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\.android\\build-cache\\5fec705b5a2d69d19493507df2dc10cea5d9cafb\\output\\res\\values-ms\\values.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 0,
+                        "startOffset": 1668,
+                        "endColumn": 205,
+                        "endOffset": 1873
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 1925,
+                    "endColumn": 136,
+                    "endOffset": 2057
+                },
+                "from": {
+                    "file": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\.android\\build-cache\\5fec705b5a2d69d19493507df2dc10cea5d9cafb\\output\\res\\values-ms\\values.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 0,
+                        "startOffset": 1874,
+                        "endColumn": 132,
+                        "endOffset": 2006
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 2062,
+                    "endColumn": 229,
+                    "endOffset": 2287
+                },
+                "from": {
+                    "file": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\.android\\build-cache\\5fec705b5a2d69d19493507df2dc10cea5d9cafb\\output\\res\\values-ms\\values.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 0,
+                        "startOffset": 2007,
+                        "endColumn": 229,
+                        "endOffset": 2236
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 2292,
+                    "endColumn": 204,
+                    "endOffset": 2492
+                },
+                "from": {
+                    "file": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\.android\\build-cache\\5fec705b5a2d69d19493507df2dc10cea5d9cafb\\output\\res\\values-ms\\values.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 0,
+                        "startOffset": 2237,
+                        "endColumn": 200,
+                        "endOffset": 2437
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 2497,
+                    "endColumn": 96,
+                    "endOffset": 2589
+                },
+                "from": {
+                    "file": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\.android\\build-cache\\5fec705b5a2d69d19493507df2dc10cea5d9cafb\\output\\res\\values-ms\\values.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 0,
+                        "startOffset": 2438,
+                        "endColumn": 92,
+                        "endOffset": 2530
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 2594,
+                    "endColumn": 93,
+                    "endOffset": 2683
+                },
+                "from": {
+                    "file": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\.android\\build-cache\\5fec705b5a2d69d19493507df2dc10cea5d9cafb\\output\\res\\values-ms\\values.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 0,
+                        "startOffset": 2531,
+                        "endColumn": 89,
+                        "endOffset": 2620
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 2688,
+                    "endColumn": 111,
+                    "endOffset": 2795
+                },
+                "from": {
+                    "file": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\.android\\build-cache\\5fec705b5a2d69d19493507df2dc10cea5d9cafb\\output\\res\\values-ms\\values.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 0,

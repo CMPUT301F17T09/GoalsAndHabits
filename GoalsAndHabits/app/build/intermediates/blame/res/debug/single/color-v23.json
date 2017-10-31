@@ -1,46 +1,90 @@
 [
     {
-        "merged": "C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_switch_track.xml",
-        "source": "C:\\Users\\Tony\\.android\\build-cache\\e10ed1f59118548b1fa73d6e0c549884167999ed\\output\\res\\color-v23\\abc_tint_switch_track.xml"
+        "merged": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_switch_track.xml",
+        "source": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\.android\\build-cache\\e10ed1f59118548b1fa73d6e0c549884167999ed\\output\\res\\color-v23\\abc_tint_switch_track.xml"
     },
     {
-        "merged": "C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_btn_colored_borderless_text_material.xml",
-        "source": "C:\\Users\\Tony\\.android\\build-cache\\e10ed1f59118548b1fa73d6e0c549884167999ed\\output\\res\\color-v23\\abc_btn_colored_borderless_text_material.xml"
+        "merged": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/build/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
+        "source": "/afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/bd26c753c8ffa3d9d73cb2f08b87119655f7a94b/output/res/color-v23/abc_tint_btn_checkable.xml"
     },
     {
-        "merged": "C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\design_tint_password_toggle.xml",
-        "source": "C:\\Users\\Tony\\.android\\build-cache\\830eae12f55c344c28816cea8aa3bb37e47e060b\\output\\res\\color-v23\\design_tint_password_toggle.xml"
+        "merged": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_btn_colored_borderless_text_material.xml",
+        "source": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\.android\\build-cache\\e10ed1f59118548b1fa73d6e0c549884167999ed\\output\\res\\color-v23\\abc_btn_colored_borderless_text_material.xml"
     },
     {
-        "merged": "C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_btn_colored_text_material.xml",
-        "source": "C:\\Users\\Tony\\.android\\build-cache\\e10ed1f59118548b1fa73d6e0c549884167999ed\\output\\res\\color-v23\\abc_btn_colored_text_material.xml"
+        "merged": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\design_tint_password_toggle.xml",
+        "source": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\.android\\build-cache\\830eae12f55c344c28816cea8aa3bb37e47e060b\\output\\res\\color-v23\\design_tint_password_toggle.xml"
     },
     {
-        "merged": "C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_edittext.xml",
-        "source": "C:\\Users\\Tony\\.android\\build-cache\\e10ed1f59118548b1fa73d6e0c549884167999ed\\output\\res\\color-v23\\abc_tint_edittext.xml"
+        "merged": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/build/intermediates/res/merged/debug/color-v23/abc_tint_seek_thumb.xml",
+        "source": "/afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/bd26c753c8ffa3d9d73cb2f08b87119655f7a94b/output/res/color-v23/abc_tint_seek_thumb.xml"
     },
     {
-        "merged": "C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_btn_checkable.xml",
-        "source": "C:\\Users\\Tony\\.android\\build-cache\\e10ed1f59118548b1fa73d6e0c549884167999ed\\output\\res\\color-v23\\abc_tint_btn_checkable.xml"
+        "merged": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_track.xml",
+        "source": "/afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/bd26c753c8ffa3d9d73cb2f08b87119655f7a94b/output/res/color-v23/abc_tint_switch_track.xml"
     },
     {
-        "merged": "C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_switch_thumb.xml",
-        "source": "C:\\Users\\Tony\\.android\\build-cache\\e10ed1f59118548b1fa73d6e0c549884167999ed\\output\\res\\color-v23\\abc_tint_switch_thumb.xml"
+        "merged": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/build/intermediates/res/merged/debug/color-v23/abc_tint_edittext.xml",
+        "source": "/afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/bd26c753c8ffa3d9d73cb2f08b87119655f7a94b/output/res/color-v23/abc_tint_edittext.xml"
     },
     {
-        "merged": "C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_default.xml",
-        "source": "C:\\Users\\Tony\\.android\\build-cache\\e10ed1f59118548b1fa73d6e0c549884167999ed\\output\\res\\color-v23\\abc_tint_default.xml"
+        "merged": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_btn_colored_text_material.xml",
+        "source": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\.android\\build-cache\\e10ed1f59118548b1fa73d6e0c549884167999ed\\output\\res\\color-v23\\abc_btn_colored_text_material.xml"
     },
     {
-        "merged": "C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_seek_thumb.xml",
-        "source": "C:\\Users\\Tony\\.android\\build-cache\\e10ed1f59118548b1fa73d6e0c549884167999ed\\output\\res\\color-v23\\abc_tint_seek_thumb.xml"
+        "merged": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
+        "source": "/afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/bd26c753c8ffa3d9d73cb2f08b87119655f7a94b/output/res/color-v23/abc_color_highlight_material.xml"
     },
     {
-        "merged": "C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_color_highlight_material.xml",
-        "source": "C:\\Users\\Tony\\.android\\build-cache\\e10ed1f59118548b1fa73d6e0c549884167999ed\\output\\res\\color-v23\\abc_color_highlight_material.xml"
+        "merged": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/build/intermediates/res/merged/debug/color-v23/abc_tint_default.xml",
+        "source": "/afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/bd26c753c8ffa3d9d73cb2f08b87119655f7a94b/output/res/color-v23/abc_tint_default.xml"
     },
     {
-        "merged": "C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_spinner.xml",
-        "source": "C:\\Users\\Tony\\.android\\build-cache\\e10ed1f59118548b1fa73d6e0c549884167999ed\\output\\res\\color-v23\\abc_tint_spinner.xml"
+        "merged": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
+        "source": "/afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/bd26c753c8ffa3d9d73cb2f08b87119655f7a94b/output/res/color-v23/abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_thumb.xml",
+        "source": "/afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/bd26c753c8ffa3d9d73cb2f08b87119655f7a94b/output/res/color-v23/abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_text_material.xml",
+        "source": "/afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/bd26c753c8ffa3d9d73cb2f08b87119655f7a94b/output/res/color-v23/abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_edittext.xml",
+        "source": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\.android\\build-cache\\e10ed1f59118548b1fa73d6e0c549884167999ed\\output\\res\\color-v23\\abc_tint_edittext.xml"
+    },
+    {
+        "merged": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/build/intermediates/res/merged/debug/color-v23/abc_tint_spinner.xml",
+        "source": "/afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/bd26c753c8ffa3d9d73cb2f08b87119655f7a94b/output/res/color-v23/abc_tint_spinner.xml"
+    },
+    {
+        "merged": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/build/intermediates/res/merged/debug/color-v23/design_tint_password_toggle.xml",
+        "source": "/afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/115564912f09d6a43ea4bd0d6f100a5eab4ec854/output/res/color-v23/design_tint_password_toggle.xml"
+    },
+    {
+        "merged": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_btn_checkable.xml",
+        "source": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\.android\\build-cache\\e10ed1f59118548b1fa73d6e0c549884167999ed\\output\\res\\color-v23\\abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_switch_thumb.xml",
+        "source": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\.android\\build-cache\\e10ed1f59118548b1fa73d6e0c549884167999ed\\output\\res\\color-v23\\abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_default.xml",
+        "source": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\.android\\build-cache\\e10ed1f59118548b1fa73d6e0c549884167999ed\\output\\res\\color-v23\\abc_tint_default.xml"
+    },
+    {
+        "merged": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_seek_thumb.xml",
+        "source": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\.android\\build-cache\\e10ed1f59118548b1fa73d6e0c549884167999ed\\output\\res\\color-v23\\abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_color_highlight_material.xml",
+        "source": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\.android\\build-cache\\e10ed1f59118548b1fa73d6e0c549884167999ed\\output\\res\\color-v23\\abc_color_highlight_material.xml"
+    },
+    {
+        "merged": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_spinner.xml",
+        "source": "/afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/C:\\Users\\Tony\\.android\\build-cache\\e10ed1f59118548b1fa73d6e0c549884167999ed\\output\\res\\color-v23\\abc_tint_spinner.xml"
     }
 ]
