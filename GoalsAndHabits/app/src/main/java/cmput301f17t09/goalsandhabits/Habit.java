@@ -1,17 +1,23 @@
 package cmput301f17t09.goalsandhabits;
 
+import java.util.Calendar;
 import java.util.Date;
+import java.util.HashSet;
 
 /**
  * Created by atsmith on 10/31/17.
  */
 
 public class Habit {
+
+    private static final int titleLength = 20;
+    private static final int reasonLength = 30;
+
     private String title;
     private String reason;
     private Date startDate;
-    private static final int titleLength = 20;
-    private static final int reasonLength = 30;
+    private HashSet<Integer> schedule;
+
 
     /**
      * Habit constructor.
@@ -24,6 +30,16 @@ public class Habit {
         setTitle(title);
         setReason(reason);
         setStartDate(startDate);
+    }
+
+    /**
+     * Sets the schedule of the habit.
+     * The schedule is a hash set of integers which are fields
+     * from the Calendar class. IE Calendar.MONDAY, Calendar.TUESDAY, etc.
+     * @param schedule
+     */
+    public void setSchedule(HashSet<Integer> schedule){
+        this.schedule = schedule;
     }
 
     public String getTitle(){
@@ -54,5 +70,14 @@ public class Habit {
 
     public void setStartDate(Date startDate){
         this.startDate = startDate;
+    }
+
+    /**
+     * Gets the schedule of the habit.
+     * The schedule is a hash set of integers which are fields
+     * from the Calendar class. IE Calendar.MONDAY, Calendar.TUESDAY, etc.
+     */
+    public HashSet<Integer> getSchedule(){
+        return this.schedule;
     }
 }
