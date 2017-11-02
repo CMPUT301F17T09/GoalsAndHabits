@@ -3,7 +3,7 @@
     package="cmput301f17t09.goalsandhabits.test" >
 
     <uses-sdk
-        android:minSdkVersion="15"
+        android:minSdkVersion="23"
         android:targetSdkVersion="25" />
 
     <instrumentation

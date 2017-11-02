@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">GoalsAndHabits</string>
     <string name="title_activity_bottom_menu">BottomMenuActivity</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_my_habits">My Habits</string>
+    <string name="title_map">Map</string>
+    <string name="title_habit_history">Habit History</string>
+    <string name="cancel_activity">Cancel</string>
+    <string name="title_toolbar">Goals and Habits</string>
 </resources>

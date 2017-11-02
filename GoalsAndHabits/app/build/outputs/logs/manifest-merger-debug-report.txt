@@ -1,159 +1,159 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:2:1-28:12
+ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:2:1-28:12
 	package
-		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:3:5-44
-		INJECTED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml
-		INJECTED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml
+		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:3:5-44
+		INJECTED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
+		INJECTED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml
-		INJECTED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml
+		INJECTED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
+		INJECTED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:2:11-69
 	android:versionCode
-		INJECTED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml
-		INJECTED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml
+		INJECTED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
+		INJECTED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
 application
-ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:5:5-26:19
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/e2d1a0e454fc9b2e930f4240fbe1d24e6b8b9ca3/output/AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:design:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/115564912f09d6a43ea4bd0d6f100a5eab4ec854/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:appcompat-v7:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/bd26c753c8ffa3d9d73cb2f08b87119655f7a94b/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/7c4e7a26e04c4f4282eb4b5a3faebdf6c6e9b649/output/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:transition:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/2cd6dad1831e81a4536ed033822c82177d586369/output/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-vector-drawable:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/5f375bdf79eafe49fe878ca76f19ab7e24cc4202/output/AndroidManifest.xml:26:5-20
-MERGED from [com.google.android.gms:play-services-maps:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/4a852a6ce42579b971f759d9ae98a80d978a88cf/output/AndroidManifest.xml:24:5-19
-MERGED from [com.google.android.gms:play-services-base:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/1672b863282c09f8997e80ae9078a617b6b3a43b/output/AndroidManifest.xml:18:5-20:19
-MERGED from [com.google.android.gms:play-services-tasks:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/7009c33a7dd3220959811145b78febfac27ce82c/output/AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-basement:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/c9544794bc09aef35e02b1941690bae4054835f7/output/AndroidManifest.xml:19:5-21:19
-MERGED from [com.android.support:support-v4:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/533fb12b17949ee4f8eb0ba67ae5d6f9403b3540/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-fragment:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/d60e1960afe6bfa6cda8feb6ada37e601d191c6c/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-media-compat:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/c2b13e1e0d47cba6fee54c651bfa7ba25601946f/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-ui:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/71b648c7d29f5a04448833f5669fddb5d0fe224c/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/cd6d38313a9657e585e233222a07b573cbc85c44/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-compat:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/5f74d4347c69e6477a5848cbbc3456d94d196008/output/AndroidManifest.xml:29:5-20
+ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:5:5-26:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Andrew\.android\build-cache\71f3ce621635cacdfd51537406409ae6e45e0d66\output\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:design:25.3.1] C:\Users\Andrew\.android\build-cache\050b5074df9229a047cb2c13b7844139d7db31cb\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Andrew\.android\build-cache\7d91ef4d7041a2161d90968f1058d025783a0e06\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Andrew\.android\build-cache\0d67cf9d4dbfcd333f9622315ba34621c072adb5\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:25.3.1] C:\Users\Andrew\.android\build-cache\6890affb3ccd3a79a77b2e156ba977029cf5c8d4\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Andrew\.android\build-cache\fdd33709a324f45d03a514b86ad1c626fcf5ab78\output\AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Andrew\.android\build-cache\4ae922e5a857f3ccff424a8eff044970541d1e87\output\AndroidManifest.xml:24:5-19
+MERGED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Andrew\.android\build-cache\6d642605a4c2a1102a1c20afbd2e50eda73b92df\output\AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-tasks:11.0.4] C:\Users\Andrew\.android\build-cache\0bdea0c05781361d2d57127c2f276b4418e24705\output\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\Andrew\.android\build-cache\8a33812c511b1081f0e8992348b3016bbe5cc29a\output\AndroidManifest.xml:19:5-21:19
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Andrew\.android\build-cache\d3f9fff5012fd0548285f7cfbc7cb407119f3441\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Andrew\.android\build-cache\55f27732127f4f06c1700f3a86f40bf8485057b9\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Andrew\.android\build-cache\994a92c75e7117df7e46ba50e995b49486c9ca95\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Andrew\.android\build-cache\39bddf465af7547142a5926b7854e77a1ddafd63\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Andrew\.android\build-cache\e34338b212a14001f0c79a013cc46bbc26a8d2c7\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Andrew\.android\build-cache\eb5d92712cee8212197a64343d1cdf66d84c2ec1\output\AndroidManifest.xml:29:5-20
 	android:label
-		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:8:9-41
+		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:8:9-41
 	android:supportsRtl
-		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:10:9-35
+		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:10:9-35
 	android:roundIcon
-		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:9:9-54
+		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:9:9-54
 	android:allowBackup
-		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:6:9-35
+		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:6:9-35
 	android:icon
-		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:7:9-43
+		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:7:9-43
 	android:theme
-		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:11:9-40
+		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:11:9-40
 activity#cmput301f17t09.goalsandhabits.MainActivity
-ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:12:9-18:20
+ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:12:9-18:20
 	android:name
-		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:12:19-47
+		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:12:19-47
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:13:13-17:29
+ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:13:13-17:29
 action#android.intent.action.MAIN
-ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:14:17-69
+ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:14:17-69
 	android:name
-		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:14:25-66
+		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:14:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:16:17-77
+ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:16:17-77
 	android:name
-		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:16:27-74
-activity#cmput301f17t09.goalsandhabits.MyHabits
-ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:19:9-46
-	android:name
-		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:19:19-43
+		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:16:27-74
 activity#cmput301f17t09.goalsandhabits.FollowActivity
-ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:20:9-52
+ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:19:9-52
 	android:name
-		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:20:19-49
+		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:19:19-49
 activity#cmput301f17t09.goalsandhabits.MapFiltersActivity
-ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:21:9-56
+ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:20:9-56
 	android:name
-		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:21:19-53
+		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:20:19-53
 activity#cmput301f17t09.goalsandhabits.HabitHistoryActivity
-ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:22:9-58
+ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:21:9-58
 	android:name
-		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:22:19-55
+		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:21:19-55
 activity#cmput301f17t09.goalsandhabits.NewHabit
-ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:23:9-46
+ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:22:9-46
 	android:name
-		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:23:19-43
+		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:22:19-43
 activity#cmput301f17t09.goalsandhabits.LoginActivity
-ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:24:9-51
+ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:23:9-51
 	android:name
-		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:24:19-48
+		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:23:19-48
 activity#cmput301f17t09.goalsandhabits.SignUpActivity
-ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:25:9-61
+ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:24:9-51
 	android:name
-		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:25:19-49
+		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:24:19-49
+activity#cmput301f17t09.goalsandhabits.ProfileActivity
+ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:25:9-52
+	android:name
+		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:25:19-50
 uses-sdk
-INJECTED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/e2d1a0e454fc9b2e930f4240fbe1d24e6b8b9ca3/output/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:design:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/115564912f09d6a43ea4bd0d6f100a5eab4ec854/output/AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:appcompat-v7:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/bd26c753c8ffa3d9d73cb2f08b87119655f7a94b/output/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/7c4e7a26e04c4f4282eb4b5a3faebdf6c6e9b649/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/d0bb078faa1579924077f18502a602af6a405b4d/output/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:transition:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/2cd6dad1831e81a4536ed033822c82177d586369/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/5f375bdf79eafe49fe878ca76f19ab7e24cc4202/output/AndroidManifest.xml:20:5-43
-MERGED from [com.google.android.gms:play-services-maps:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/4a852a6ce42579b971f759d9ae98a80d978a88cf/output/AndroidManifest.xml:23:5-43
-MERGED from [com.google.android.gms:play-services-base:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/1672b863282c09f8997e80ae9078a617b6b3a43b/output/AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-tasks:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/7009c33a7dd3220959811145b78febfac27ce82c/output/AndroidManifest.xml:3:5-43
-MERGED from [com.google.android.gms:play-services-basement:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/c9544794bc09aef35e02b1941690bae4054835f7/output/AndroidManifest.xml:17:5-43
-MERGED from [com.android.support:support-v4:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/533fb12b17949ee4f8eb0ba67ae5d6f9403b3540/output/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/d60e1960afe6bfa6cda8feb6ada37e601d191c6c/output/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/c2b13e1e0d47cba6fee54c651bfa7ba25601946f/output/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/71b648c7d29f5a04448833f5669fddb5d0fe224c/output/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/cd6d38313a9657e585e233222a07b573cbc85c44/output/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/5f74d4347c69e6477a5848cbbc3456d94d196008/output/AndroidManifest.xml:21:5-23:58
+INJECTED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Andrew\.android\build-cache\71f3ce621635cacdfd51537406409ae6e45e0d66\output\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:design:25.3.1] C:\Users\Andrew\.android\build-cache\050b5074df9229a047cb2c13b7844139d7db31cb\output\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Andrew\.android\build-cache\7d91ef4d7041a2161d90968f1058d025783a0e06\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Andrew\.android\build-cache\0d67cf9d4dbfcd333f9622315ba34621c072adb5\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\Andrew\.android\build-cache\395af2c6c750175ad672abb54fefb0adc09a1142\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.3.1] C:\Users\Andrew\.android\build-cache\6890affb3ccd3a79a77b2e156ba977029cf5c8d4\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Andrew\.android\build-cache\fdd33709a324f45d03a514b86ad1c626fcf5ab78\output\AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Andrew\.android\build-cache\4ae922e5a857f3ccff424a8eff044970541d1e87\output\AndroidManifest.xml:23:5-43
+MERGED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Andrew\.android\build-cache\6d642605a4c2a1102a1c20afbd2e50eda73b92df\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tasks:11.0.4] C:\Users\Andrew\.android\build-cache\0bdea0c05781361d2d57127c2f276b4418e24705\output\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\Andrew\.android\build-cache\8a33812c511b1081f0e8992348b3016bbe5cc29a\output\AndroidManifest.xml:17:5-43
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Andrew\.android\build-cache\d3f9fff5012fd0548285f7cfbc7cb407119f3441\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Andrew\.android\build-cache\55f27732127f4f06c1700f3a86f40bf8485057b9\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Andrew\.android\build-cache\994a92c75e7117df7e46ba50e995b49486c9ca95\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Andrew\.android\build-cache\39bddf465af7547142a5926b7854e77a1ddafd63\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Andrew\.android\build-cache\e34338b212a14001f0c79a013cc46bbc26a8d2c7\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Andrew\.android\build-cache\eb5d92712cee8212197a64343d1cdf66d84c2ec1\output\AndroidManifest.xml:21:5-23:58
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/115564912f09d6a43ea4bd0d6f100a5eab4ec854/output/AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:design:25.3.1] C:\Users\Andrew\.android\build-cache\050b5074df9229a047cb2c13b7844139d7db31cb\output\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
-		INJECTED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml
-		INJECTED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml
+		INJECTED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
+		INJECTED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml
-		INJECTED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml
+		INJECTED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
+		INJECTED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
 meta-data#android.support.VERSION
-ADDED from [com.android.support:design:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/115564912f09d6a43ea4bd0d6f100a5eab4ec854/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:appcompat-v7:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/bd26c753c8ffa3d9d73cb2f08b87119655f7a94b/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/7c4e7a26e04c4f4282eb4b5a3faebdf6c6e9b649/output/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:recyclerview-v7:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/d0bb078faa1579924077f18502a602af6a405b4d/output/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:transition:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/2cd6dad1831e81a4536ed033822c82177d586369/output/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-vector-drawable:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/5f375bdf79eafe49fe878ca76f19ab7e24cc4202/output/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-v4:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/533fb12b17949ee4f8eb0ba67ae5d6f9403b3540/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-fragment:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/d60e1960afe6bfa6cda8feb6ada37e601d191c6c/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-media-compat:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/c2b13e1e0d47cba6fee54c651bfa7ba25601946f/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-ui:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/71b648c7d29f5a04448833f5669fddb5d0fe224c/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-utils:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/cd6d38313a9657e585e233222a07b573cbc85c44/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-compat:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/5f74d4347c69e6477a5848cbbc3456d94d196008/output/AndroidManifest.xml:25:5-27:34
+ADDED from [com.android.support:design:25.3.1] C:\Users\Andrew\.android\build-cache\050b5074df9229a047cb2c13b7844139d7db31cb\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Andrew\.android\build-cache\7d91ef4d7041a2161d90968f1058d025783a0e06\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Andrew\.android\build-cache\0d67cf9d4dbfcd333f9622315ba34621c072adb5\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\Andrew\.android\build-cache\395af2c6c750175ad672abb54fefb0adc09a1142\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] C:\Users\Andrew\.android\build-cache\6890affb3ccd3a79a77b2e156ba977029cf5c8d4\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Andrew\.android\build-cache\fdd33709a324f45d03a514b86ad1c626fcf5ab78\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Andrew\.android\build-cache\d3f9fff5012fd0548285f7cfbc7cb407119f3441\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Andrew\.android\build-cache\55f27732127f4f06c1700f3a86f40bf8485057b9\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Andrew\.android\build-cache\994a92c75e7117df7e46ba50e995b49486c9ca95\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Andrew\.android\build-cache\39bddf465af7547142a5926b7854e77a1ddafd63\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Andrew\.android\build-cache\e34338b212a14001f0c79a013cc46bbc26a8d2c7\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Andrew\.android\build-cache\eb5d92712cee8212197a64343d1cdf66d84c2ec1\output\AndroidManifest.xml:25:5-27:34
 	android:value
-		ADDED from [com.android.support:design:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/115564912f09d6a43ea4bd0d6f100a5eab4ec854/output/AndroidManifest.xml:27:9-31
+		ADDED from [com.android.support:design:25.3.1] C:\Users\Andrew\.android\build-cache\050b5074df9229a047cb2c13b7844139d7db31cb\output\AndroidManifest.xml:27:9-31
 	android:name
-		ADDED from [com.android.support:design:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/115564912f09d6a43ea4bd0d6f100a5eab4ec854/output/AndroidManifest.xml:26:9-47
+		ADDED from [com.android.support:design:25.3.1] C:\Users\Andrew\.android\build-cache\050b5074df9229a047cb2c13b7844139d7db31cb\output\AndroidManifest.xml:26:9-47
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [com.google.android.gms:play-services-maps:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/4a852a6ce42579b971f759d9ae98a80d978a88cf/output/AndroidManifest.xml:19:5-78
+ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Andrew\.android\build-cache\4ae922e5a857f3ccff424a8eff044970541d1e87\output\AndroidManifest.xml:19:5-78
 	android:name
-		ADDED from [com.google.android.gms:play-services-maps:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/4a852a6ce42579b971f759d9ae98a80d978a88cf/output/AndroidManifest.xml:19:22-76
+		ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Andrew\.android\build-cache\4ae922e5a857f3ccff424a8eff044970541d1e87\output\AndroidManifest.xml:19:22-76
 uses-permission#android.permission.INTERNET
-ADDED from [com.google.android.gms:play-services-maps:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/4a852a6ce42579b971f759d9ae98a80d978a88cf/output/AndroidManifest.xml:20:5-66
+ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Andrew\.android\build-cache\4ae922e5a857f3ccff424a8eff044970541d1e87\output\AndroidManifest.xml:20:5-66
 	android:name
-		ADDED from [com.google.android.gms:play-services-maps:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/4a852a6ce42579b971f759d9ae98a80d978a88cf/output/AndroidManifest.xml:20:22-64
+		ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Andrew\.android\build-cache\4ae922e5a857f3ccff424a8eff044970541d1e87\output\AndroidManifest.xml:20:22-64
 uses-feature#0x00020000
-ADDED from [com.google.android.gms:play-services-maps:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/4a852a6ce42579b971f759d9ae98a80d978a88cf/output/AndroidManifest.xml:21:5-77
+ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Andrew\.android\build-cache\4ae922e5a857f3ccff424a8eff044970541d1e87\output\AndroidManifest.xml:21:5-77
 	android:glEsVersion
-		ADDED from [com.google.android.gms:play-services-maps:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/4a852a6ce42579b971f759d9ae98a80d978a88cf/output/AndroidManifest.xml:21:19-51
+		ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Andrew\.android\build-cache\4ae922e5a857f3ccff424a8eff044970541d1e87\output\AndroidManifest.xml:21:19-51
 	android:required
-		ADDED from [com.google.android.gms:play-services-maps:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/4a852a6ce42579b971f759d9ae98a80d978a88cf/output/AndroidManifest.xml:21:52-75
+		ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Andrew\.android\build-cache\4ae922e5a857f3ccff424a8eff044970541d1e87\output\AndroidManifest.xml:21:52-75
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/1672b863282c09f8997e80ae9078a617b6b3a43b/output/AndroidManifest.xml:19:9-172
+ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Andrew\.android\build-cache\6d642605a4c2a1102a1c20afbd2e50eda73b92df\output\AndroidManifest.xml:19:9-172
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/1672b863282c09f8997e80ae9078a617b6b3a43b/output/AndroidManifest.xml:19:146-170
+		ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Andrew\.android\build-cache\6d642605a4c2a1102a1c20afbd2e50eda73b92df\output\AndroidManifest.xml:19:146-170
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/1672b863282c09f8997e80ae9078a617b6b3a43b/output/AndroidManifest.xml:19:86-145
+		ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Andrew\.android\build-cache\6d642605a4c2a1102a1c20afbd2e50eda73b92df\output\AndroidManifest.xml:19:86-145
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/1672b863282c09f8997e80ae9078a617b6b3a43b/output/AndroidManifest.xml:19:19-85
+		ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Andrew\.android\build-cache\6d642605a4c2a1102a1c20afbd2e50eda73b92df\output\AndroidManifest.xml:19:19-85
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/c9544794bc09aef35e02b1941690bae4054835f7/output/AndroidManifest.xml:20:9-121
+ADDED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\Andrew\.android\build-cache\8a33812c511b1081f0e8992348b3016bbe5cc29a\output\AndroidManifest.xml:20:9-121
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/c9544794bc09aef35e02b1941690bae4054835f7/output/AndroidManifest.xml:20:66-119
+		ADDED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\Andrew\.android\build-cache\8a33812c511b1081f0e8992348b3016bbe5cc29a\output\AndroidManifest.xml:20:66-119
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.android/build-cache/c9544794bc09aef35e02b1941690bae4054835f7/output/AndroidManifest.xml:20:20-65
+		ADDED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\Andrew\.android\build-cache\8a33812c511b1081f0e8992348b3016bbe5cc29a\output\AndroidManifest.xml:20:20-65

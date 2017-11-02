@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="15"
+        android:minSdkVersion="23"
         android:targetSdkVersion="25" />
 
     <meta-data
@@ -32,13 +32,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="cmput301f17t09.goalsandhabits.MyHabits" />
         <activity android:name="cmput301f17t09.goalsandhabits.FollowActivity" />
         <activity android:name="cmput301f17t09.goalsandhabits.MapFiltersActivity" />
         <activity android:name="cmput301f17t09.goalsandhabits.HabitHistoryActivity" />
         <activity android:name="cmput301f17t09.goalsandhabits.NewHabit" />
         <activity android:name="cmput301f17t09.goalsandhabits.LoginActivity" />
         <activity android:name="cmput301f17t09.goalsandhabits.SignUpActivity" />
+        <activity android:name="cmput301f17t09.goalsandhabits.ProfileActivity" />
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"
