@@ -64,12 +64,12 @@
         "source": "C:\\Users\\chias\\.android\\build-cache\\3a7260e96c91c295b8d8f14ea7e8f188d4a01f20\\output\\res\\drawable\\abc_ic_ab_back_material.xml"
     },
     {
-        "merged": "F:\\UAlberta\\CMPUT301\\Project\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light_focused.xml",
-        "source": "C:\\Users\\Andrew\\.android\\build-cache\\6d642605a4c2a1102a1c20afbd2e50eda73b92df\\output\\res\\drawable\\common_google_signin_btn_icon_light_focused.xml"
-    },
-    {
         "merged": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
         "source": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\.android\\build-cache\\bd26c753c8ffa3d9d73cb2f08b87119655f7a94b\\output\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "F:\\UAlberta\\CMPUT301\\Project\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light_focused.xml",
+        "source": "C:\\Users\\Andrew\\.android\\build-cache\\6d642605a4c2a1102a1c20afbd2e50eda73b92df\\output\\res\\drawable\\common_google_signin_btn_icon_light_focused.xml"
     },
     {
         "merged": "C:\\Users\\chias\\Documents\\Year 4\\Fall\\CMPUT 301\\Projects\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light.xml",
@@ -96,12 +96,12 @@
         "source": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\.android\\build-cache\\1672b863282c09f8997e80ae9078a617b6b3a43b\\output\\res\\drawable\\common_google_signin_btn_icon_light_focused.xml"
     },
     {
-        "merged": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_dark.xml",
-        "source": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\C:\\Users\\Tony\\.android\\build-cache\\5fec705b5a2d69d19493507df2dc10cea5d9cafb\\output\\res\\drawable\\common_google_signin_btn_text_dark.xml"
-    },
-    {
         "merged": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
         "source": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\.android\\build-cache\\bd26c753c8ffa3d9d73cb2f08b87119655f7a94b\\output\\res\\drawable\\abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_dark.xml",
+        "source": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\C:\\Users\\Tony\\.android\\build-cache\\5fec705b5a2d69d19493507df2dc10cea5d9cafb\\output\\res\\drawable\\common_google_signin_btn_text_dark.xml"
     },
     {
         "merged": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light_normal.xml",
@@ -140,12 +140,12 @@
         "source": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\C:\\Users\\Tony\\.android\\build-cache\\5fec705b5a2d69d19493507df2dc10cea5d9cafb\\output\\res\\drawable\\common_google_signin_btn_icon_disabled.xml"
     },
     {
-        "merged": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_home_black_24dp.xml",
-        "source": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\src\\main\\res\\drawable\\ic_home_black_24dp.xml"
-    },
-    {
         "merged": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark.xml",
         "source": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\C:\\Users\\Tony\\.android\\build-cache\\5fec705b5a2d69d19493507df2dc10cea5d9cafb\\output\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
+    },
+    {
+        "merged": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_home_black_24dp.xml",
+        "source": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\src\\main\\res\\drawable\\ic_home_black_24dp.xml"
     },
     {
         "merged": "F:\\UAlberta\\CMPUT301\\Project\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_overflow_material.xml",
@@ -176,12 +176,12 @@
         "source": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\C:\\Users\\Tony\\.android\\build-cache\\e10ed1f59118548b1fa73d6e0c549884167999ed\\output\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
     },
     {
-        "merged": "C:\\Users\\chias\\Documents\\Year 4\\Fall\\CMPUT 301\\Projects\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light.xml",
-        "source": "C:\\Users\\chias\\.android\\build-cache\\adc3df55ebf2e454221e06c3fb165ebf250bb689\\output\\res\\drawable\\common_google_signin_btn_icon_light.xml"
-    },
-    {
         "merged": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg_low.xml",
         "source": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\.android\\build-cache\\bd26c753c8ffa3d9d73cb2f08b87119655f7a94b\\output\\res\\drawable\\notification_bg_low.xml"
+    },
+    {
+        "merged": "C:\\Users\\chias\\Documents\\Year 4\\Fall\\CMPUT 301\\Projects\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light.xml",
+        "source": "C:\\Users\\chias\\.android\\build-cache\\adc3df55ebf2e454221e06c3fb165ebf250bb689\\output\\res\\drawable\\common_google_signin_btn_icon_light.xml"
     },
     {
         "merged": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",

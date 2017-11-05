@@ -24,12 +24,12 @@
         "source": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\C:\\Users\\Tony\\.android\\build-cache\\e10ed1f59118548b1fa73d6e0c549884167999ed\\output\\res\\layout\\support_simple_spinner_dropdown_item.xml"
     },
     {
-        "merged": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
-        "source": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\C:\\Users\\Tony\\.android\\build-cache\\e10ed1f59118548b1fa73d6e0c549884167999ed\\output\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
-    },
-    {
         "merged": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
         "source": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\C:\\Users\\Tony\\.android\\build-cache\\e10ed1f59118548b1fa73d6e0c549884167999ed\\output\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
+        "source": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\C:\\Users\\Tony\\.android\\build-cache\\e10ed1f59118548b1fa73d6e0c549884167999ed\\output\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
     },
     {
         "merged": "C:\\Users\\chias\\Documents\\Year 4\\Fall\\CMPUT 301\\Projects\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_menu_item_action_area.xml",
@@ -88,12 +88,12 @@
         "source": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\.android\\build-cache\\bd26c753c8ffa3d9d73cb2f08b87119655f7a94b\\output\\res\\layout\\abc_action_mode_close_item_material.xml"
     },
     {
-        "merged": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
-        "source": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\.android\\build-cache\\bd26c753c8ffa3d9d73cb2f08b87119655f7a94b\\output\\res\\layout\\notification_template_part_time.xml"
-    },
-    {
         "merged": "C:\\Users\\chias\\Documents\\Year 4\\Fall\\CMPUT 301\\Projects\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
         "source": "C:\\Users\\chias\\.android\\build-cache\\3a7260e96c91c295b8d8f14ea7e8f188d4a01f20\\output\\res\\layout\\abc_screen_simple.xml"
+    },
+    {
+        "merged": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
+        "source": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\.android\\build-cache\\bd26c753c8ffa3d9d73cb2f08b87119655f7a94b\\output\\res\\layout\\notification_template_part_time.xml"
     },
     {
         "merged": "F:\\UAlberta\\CMPUT301\\Project\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item.xml",
@@ -108,32 +108,32 @@
         "source": "C:\\Users\\chias\\Documents\\Year 4\\Fall\\CMPUT 301\\Projects\\GoalsAndHabits\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_new_habit.xml",
-        "source": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\app\\src\\main\\res\\layout\\activity_new_habit.xml"
-    },
-    {
-        "merged": "F:\\UAlberta\\CMPUT301\\Project\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_new_habit.xml",
-        "source": "F:\\UAlberta\\CMPUT301\\Project\\GoalsAndHabits\\GoalsAndHabits\\app\\src\\main\\res\\layout\\activity_new_habit.xml"
-    },
-    {
-        "merged": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
-        "source": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\.android\\build-cache\\bd26c753c8ffa3d9d73cb2f08b87119655f7a94b\\output\\res\\layout\\select_dialog_singlechoice_material.xml"
+        "merged": "C:\\Users\\chias\\Documents\\Year 4\\Fall\\CMPUT 301\\Projects\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
+        "source": "C:\\Users\\chias\\.android\\build-cache\\3a7260e96c91c295b8d8f14ea7e8f188d4a01f20\\output\\res\\layout\\abc_list_menu_item_layout.xml"
     },
     {
         "merged": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media_custom.xml",
         "source": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\.android\\build-cache\\bd26c753c8ffa3d9d73cb2f08b87119655f7a94b\\output\\res\\layout\\notification_template_media_custom.xml"
     },
     {
-        "merged": "C:\\Users\\chias\\Documents\\Year 4\\Fall\\CMPUT 301\\Projects\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
-        "source": "C:\\Users\\chias\\.android\\build-cache\\3a7260e96c91c295b8d8f14ea7e8f188d4a01f20\\output\\res\\layout\\abc_list_menu_item_layout.xml"
+        "merged": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
+        "source": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\.android\\build-cache\\bd26c753c8ffa3d9d73cb2f08b87119655f7a94b\\output\\res\\layout\\select_dialog_singlechoice_material.xml"
     },
     {
-        "merged": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action.xml",
-        "source": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\C:\\Users\\Tony\\.android\\build-cache\\e10ed1f59118548b1fa73d6e0c549884167999ed\\output\\res\\layout\\notification_action.xml"
+        "merged": "F:\\UAlberta\\CMPUT301\\Project\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_new_habit.xml",
+        "source": "F:\\UAlberta\\CMPUT301\\Project\\GoalsAndHabits\\GoalsAndHabits\\app\\src\\main\\res\\layout\\activity_new_habit.xml"
+    },
+    {
+        "merged": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_new_habit.xml",
+        "source": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\app\\src\\main\\res\\layout\\activity_new_habit.xml"
     },
     {
         "merged": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_login.xml",
         "source": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action.xml",
+        "source": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\C:\\Users\\Tony\\.android\\build-cache\\e10ed1f59118548b1fa73d6e0c549884167999ed\\output\\res\\layout\\notification_action.xml"
     },
     {
         "merged": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu_item.xml",
@@ -188,12 +188,12 @@
         "source": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\C:\\Users\\Tony\\.android\\build-cache\\e10ed1f59118548b1fa73d6e0c549884167999ed\\output\\res\\layout\\abc_popup_menu_item_layout.xml"
     },
     {
-        "merged": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
-        "source": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\.android\\build-cache\\bd26c753c8ffa3d9d73cb2f08b87119655f7a94b\\output\\res\\layout\\notification_template_media.xml"
-    },
-    {
         "merged": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_follow.xml",
         "source": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\src\\main\\res\\layout\\activity_follow.xml"
+    },
+    {
+        "merged": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
+        "source": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\.android\\build-cache\\bd26c753c8ffa3d9d73cb2f08b87119655f7a94b\\output\\res\\layout\\notification_template_media.xml"
     },
     {
         "merged": "C:\\Users\\chias\\Documents\\Year 4\\Fall\\CMPUT 301\\Projects\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar.xml",
@@ -216,12 +216,12 @@
         "source": "C:\\Users\\chias\\Documents\\Year 4\\Fall\\CMPUT 301\\Projects\\GoalsAndHabits\\app\\src\\main\\res\\layout\\activity_profile.xml"
     },
     {
-        "merged": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
-        "source": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\C:\\Users\\Tony\\.android\\build-cache\\e10ed1f59118548b1fa73d6e0c549884167999ed\\output\\res\\layout\\abc_screen_simple.xml"
-    },
-    {
         "merged": "C:\\Users\\chias\\Documents\\Year 4\\Fall\\CMPUT 301\\Projects\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
         "source": "C:\\Users\\chias\\.android\\build-cache\\3a7260e96c91c295b8d8f14ea7e8f188d4a01f20\\output\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
+        "source": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\C:\\Users\\Tony\\.android\\build-cache\\e10ed1f59118548b1fa73d6e0c549884167999ed\\output\\res\\layout\\abc_screen_simple.xml"
     },
     {
         "merged": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
@@ -260,12 +260,12 @@
         "source": "C:\\Users\\Andrew\\.android\\build-cache\\7d91ef4d7041a2161d90968f1058d025783a0e06\\output\\res\\layout\\abc_action_menu_layout.xml"
     },
     {
-        "merged": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_menu_item_action_area.xml",
-        "source": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\.android\\build-cache\\115564912f09d6a43ea4bd0d6f100a5eab4ec854\\output\\res\\layout\\design_menu_item_action_area.xml"
-    },
-    {
         "merged": "F:\\UAlberta\\CMPUT301\\Project\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu_item.xml",
         "source": "C:\\Users\\Andrew\\.android\\build-cache\\050b5074df9229a047cb2c13b7844139d7db31cb\\output\\res\\layout\\design_navigation_menu_item.xml"
+    },
+    {
+        "merged": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_menu_item_action_area.xml",
+        "source": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\.android\\build-cache\\115564912f09d6a43ea4bd0d6f100a5eab4ec854\\output\\res\\layout\\design_menu_item_action_area.xml"
     },
     {
         "merged": "F:\\afs\\ualberta.ca\\home\\a\\t\\atsmith\\cmput301\\project\\GoalsAndHabits\\GoalsAndHabits\\C:\\Users\\Tony\\AndroidStudioProjects\\301\\GoalsAndHabits\\GoalsAndHabits\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_header_item_layout.xml",
