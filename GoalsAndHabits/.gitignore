@@ -5,5 +5,9 @@
 /.idea/libraries
 .DS_Store
 /*/build
+<<<<<<< Updated upstream
+=======
+!/app/build/outputs/apk
+>>>>>>> Stashed changes
 /captures
 .externalNativeBuild
