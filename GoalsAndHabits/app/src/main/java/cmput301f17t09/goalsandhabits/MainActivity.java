@@ -1,6 +1,8 @@
 package cmput301f17t09.goalsandhabits;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -24,10 +26,19 @@ public class MainActivity extends AppCompatActivity {
 
     public static final int REQUEST_CODE_NEW_HABIT = 1;
 
+    private static final String MY_PREFERENCES = "my_preferences";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Intent intent = new Intent(MainActivity.this, NewProfileActivity.class);
+        if (MainActivity.isFirst(MainActivity.this)) {
+            startActivity(intent);
+        }
+
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.actionbar);
         toolbar.setTitle("My Habits");
@@ -115,6 +126,17 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
+    }
+
+    public static boolean isFirst(Context context) {
+        final SharedPreferences reader = context.getSharedPreferences(MY_PREFERENCES,Context.MODE_PRIVATE);
+        final boolean first = reader.getBoolean("is_first",true);
+        if(first) {
+            final SharedPreferences.Editor editor = reader.edit();
+            editor.putBoolean("is_first", false);
+            editor.commit();
+        }
+        return first;
     }
 
 }
