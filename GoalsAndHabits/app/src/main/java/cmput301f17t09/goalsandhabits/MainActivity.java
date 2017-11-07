@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_HABIT_REASON = "cmput301f17t09.goalsandhabits.HABIT_REASON";
     public static final String EXTRA_HABIT_STARTDATE = "cmput301f17t09.goalsandhabits.HABIT_STARTDATE";
     public static final String EXTRA_HABIT_SCHEDULE = "cmput301f17t09.goalsandhabits.HABIT_SCHEDULE";
+    public static final String EXTRA_HABIT_SERIAL = "cmput301f17t09.goalsandhabits.HABIT_SERIAL";
 
     public static final String FILENAME = "data.sav";
 
@@ -103,13 +104,19 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 setResult(RESULT_OK);
                 Intent intent = new Intent(MainActivity.this, NewHabit.class);
-                startActivityForResult(intent, 1);
+                startActivityForResult(intent, REQUEST_CODE_NEW_HABIT);
             }
         });
 
         habitsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 setResult(RESULT_OK);
+                Habit h = habits.get(position);
+                if (h!=null) {
+                    Intent intent = new Intent(MainActivity.this, ViewHabitActivity.class);
+                    intent.putExtra(EXTRA_HABIT_SERIAL, h);
+                    startActivity(intent);
+                }
             }
         });
     }
@@ -146,6 +153,7 @@ public class MainActivity extends AppCompatActivity {
                     habitArrayAdapter.notifyDataSetChanged();
 
                     Toast.makeText(this, "Habit " + name + " created!", Toast.LENGTH_SHORT).show();
+                    break;
                 }
             }
         }
