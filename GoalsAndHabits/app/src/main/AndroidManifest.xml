@@ -20,6 +20,7 @@
         <activity android:name=".MapFiltersActivity" />
         <activity android:name=".HabitHistoryActivity" />
         <activity android:name=".NewHabit" />
+        <activity android:name=".ViewHabitActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".SignUpActivity"/>
         <activity android:name=".ProfileActivity"/>

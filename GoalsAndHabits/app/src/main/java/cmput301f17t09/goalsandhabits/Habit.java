@@ -1,5 +1,6 @@
 package cmput301f17t09.goalsandhabits;
 
+import java.io.Serializable;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashSet;
@@ -8,7 +9,7 @@ import java.util.HashSet;
  * Created by atsmith on 10/31/17.
  */
 
-public class Habit {
+public class Habit implements Serializable{
 
     private static final int titleLength = 20;
     private static final int reasonLength = 30;
@@ -30,6 +31,13 @@ public class Habit {
         setTitle(title);
         setReason(reason);
         setStartDate(startDate);
+    }
+
+    public Habit(String title, String reason, Date startDate, HashSet<Integer> schedule){
+        setTitle(title);
+        setReason(reason);
+        setStartDate(startDate);
+        setSchedule(schedule);
     }
 
     /**
