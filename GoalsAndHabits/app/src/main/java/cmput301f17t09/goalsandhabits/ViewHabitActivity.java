@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 import android.widget.TextView;
 
 /**
@@ -14,7 +15,9 @@ import android.widget.TextView;
 
 public class ViewHabitActivity extends AppCompatActivity implements EditHabitDialog.EditHabitDialogListener{
 
-    Habit habit = null;
+    private Habit habit;
+    private TextView reason;
+    private TextView toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +34,7 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
         }
         if (habit==null) finish();
 
-        TextView reason = (TextView) findViewById(R.id.textReason);
+        reason = (TextView) findViewById(R.id.textReason);
         reason.setText(habit.getReason());
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.actionbar);
@@ -68,13 +71,15 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
     }
 
     public void showEditDialog() {
-        DialogFragment dialog = EditHabitDialog.newInstance(habit.getReason());
+        DialogFragment dialog = EditHabitDialog.newInstance(habit.getTitle(),habit.getReason());
         dialog.show(getFragmentManager(), "EditHabitDialog");
     }
 
     @Override
-    public void onDialogPositiveClick(DialogFragment dialog) {
+    public void onDialogPositiveClick(DialogFragment dialog, String newreason) {
         // User touched the dialog's positive button
+        reason.setText(newreason);
+        habit.setReason(newreason);
     }
 
     @Override

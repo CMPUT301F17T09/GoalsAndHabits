@@ -18,15 +18,16 @@ import android.widget.EditText;
 public class EditHabitDialog extends DialogFragment{
 
     public interface EditHabitDialogListener{
-        public void onDialogPositiveClick(DialogFragment dialog);
+        public void onDialogPositiveClick(DialogFragment dialog, String newreason);
         public void onDialogNegativeClick(DialogFragment dialog);
     }
 
     EditHabitDialogListener mListener;
 
-    public static EditHabitDialog newInstance(String reason) {
+    public static EditHabitDialog newInstance(String name, String reason) {
         EditHabitDialog frag = new EditHabitDialog();
         Bundle args = new Bundle();
+        args.putString("name", name);
         args.putString("reason", reason);
         frag.setArguments(args);
         return frag;
@@ -56,20 +57,24 @@ public class EditHabitDialog extends DialogFragment{
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState){
-       String reason = getArguments().getString("reason");
+        String name = getArguments().getString("name");
+        String reason = getArguments().getString("reason");
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = getActivity().getLayoutInflater();
-        View diaView = inflater.inflate(R.layout.activity_new_habit, null);
+        View diaView = inflater.inflate(R.layout.dialog_edit_habit, null);
 
-        EditText reason_field = (EditText) diaView.findViewById(R.id.reasonEditText);
+        final EditText reason_field = (EditText) diaView.findViewById(R.id.editDiaReason);
         reason_field.setText(reason);
+        final EditText name_field = (EditText) diaView.findViewById(R.id.editDiaName);
+        name_field.setText(name);
 
-        builder
+        builder.setTitle("Edit habit info")
                 .setView(diaView)
                 .setPositiveButton("accept", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        mListener.onDialogPositiveClick(EditHabitDialog.this);
+                        String newreason = reason_field.getText().toString();
+                        mListener.onDialogPositiveClick(EditHabitDialog.this, newreason);
                     }
                 })
                 .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
