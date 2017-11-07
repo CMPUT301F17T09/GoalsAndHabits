@@ -20,14 +20,14 @@ public class NewProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_profile);
 
-        Button submitButton = (Button) findViewById(R.id.submitButton);
-        submitButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setResult(RESULT_OK);
+        //Button submitButton = (Button) findViewById(R.id.submitButton);
+        //submitButton.setOnClickListener(new View.OnClickListener() {
+            //@Override
+            //public void onClick(View view) {
+                //setResult(RESULT_OK);
                 //TODO: Check the username is unique then create a Profile and save it to the online database.
-            }
-        });
+            //}
+        //});
     }
 
 
