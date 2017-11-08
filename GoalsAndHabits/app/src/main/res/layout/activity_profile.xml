@@ -56,6 +56,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/online" />
+
     <Button
     android:id="@+id/followerReqs"
     android:layout_width="350dp"

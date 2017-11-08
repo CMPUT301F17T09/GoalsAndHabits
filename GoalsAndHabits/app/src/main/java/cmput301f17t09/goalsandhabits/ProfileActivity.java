@@ -72,8 +72,8 @@ public class ProfileActivity extends AppCompatActivity {
 
             public void onClick(View v) {
                 setResult(RESULT_OK);
-                //Intent intent = new Intent(ProfileActivity.this, FollowRequests.class);
-                //startActivity(intent);
+                Intent intent = new Intent(ProfileActivity.this, followerRequestsActivity.class);
+                startActivity(intent);
             }
         });
 
