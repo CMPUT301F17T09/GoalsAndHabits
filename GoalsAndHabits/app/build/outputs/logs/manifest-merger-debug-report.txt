@@ -1,242 +1,242 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:2:1-30:12
-INJECTED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:2:1-30:12
-INJECTED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:2:1-30:12
-INJECTED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:2:1-30:12
-MERGED from [com.android.support:design:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\design-25.3.1.aar\0f24bfcd7cb9b4e3020b7d26c1b3a13f\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\a2b721e3400053cb89df42c9b5117de8\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\81f1f7b94a3c7398a0783aed2890ab1f\AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\ddb68d31a31642ee48f7b0a7bbb524f8\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\63a32bff096309628ee1c15fd4971da7\AndroidManifest.xml:17:1-28:12
-MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\play-services-maps-11.0.4.aar\1f2a1e08ca01f5df1a0e7079152b8e85\AndroidManifest.xml:16:1-25:12
-MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-25.3.1.aar\4ebab5830b7271cfd5cf4d5afc1017b4\AndroidManifest.xml:17:1-26:12
-MERGED from [com.android.support:transition:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\transition-25.3.1.aar\b04e4946f8298e092c9e0613bd0a8735\AndroidManifest.xml:17:1-28:12
-MERGED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\play-services-base-11.0.4.aar\8596747fbbf50a4821297cca8e786c5c\AndroidManifest.xml:16:1-21:12
-MERGED from [com.google.android.gms:play-services-tasks:11.0.4] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.0.4.aar\fff17d2bdcd60231b58aba0f403cdb4e\AndroidManifest.xml:2:1-5:12
-MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.0.4.aar\4b260cd78b6d9871090da149fc2d7f69\AndroidManifest.xml:16:1-23:12
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\b28b64d69dbdb45e54915d7e1a730ba2\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\ae2c95b69417bea7810afe43fa62cc43\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\24bc5caa6f95f3f82b3234b404e6a201\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\ea806668ab386fde715400f71af3e723\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\ce4f3c2fb19f0c20fae36999229d77fe\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\0fc24bccc3cfa78a3e099f2f92ec1551\AndroidManifest.xml:17:1-31:12
-INJECTED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:2:1-30:12
-INJECTED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:2:1-30:12
-INJECTED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:2:1-30:12
+ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:2:1-30:12
+MERGED from [com.android.support:design:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/476d3f93af5e4d15db0465e1227406f8/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:appcompat-v7:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/634fdb9de2725c4c1b4abbdbfe293599/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/f7fcd6550d3436170d6aec09048834e7/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.3.1.aar/fd4a2bb6ae32194a00a588e18c28d6f3/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.3.1.aar/677ff8de3f56796b0c705ab1f6031812/AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.0.4.aar/f6920256a9ac527f4e0eaee7abfe1949/AndroidManifest.xml:16:1-25:12
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-25.3.1.aar/6eefbd16710e4e7e80afa44c92a859d0/AndroidManifest.xml:17:1-26:12
+MERGED from [com.android.support:transition:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/transition-25.3.1.aar/e4a5f582a2893ef7675fe6381cbac5f0/AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-base:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/play-services-base-11.0.4.aar/414622182ba5af3633997b899f6b9f30/AndroidManifest.xml:16:1-21:12
+MERGED from [com.google.android.gms:play-services-tasks:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.0.4.aar/a4e91bee05e11f1d09ecba11054752f7/AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-basement:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.0.4.aar/3c20834b08f2a0c82be066e66b6c2b21/AndroidManifest.xml:16:1-23:12
+MERGED from [com.android.support:support-v4:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/3d945e4bea8490e64f14655f4d2cd32e/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/9ca6419034acdcdc4cd9fc9fa0e396d8/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/05e559f6dff3abec8c13a9ef88ca63df/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/e7ae0e14e08655f430ef5d669bd9fbe8/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/0acacb15e29d49580f2c15b454d52bb5/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/0e5e18b9aaf2e627cc37e8287dbc4c39/AndroidManifest.xml:17:1-31:12
+INJECTED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:2:1-30:12
 	package
-		ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:3:5-44
-		INJECTED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
+		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:3:5-44
+		INJECTED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml
+		INJECTED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:2:1-30:12
-		INJECTED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
+		INJECTED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml
+		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:2:1-30:12
+		INJECTED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:2:1-30:12
-		INJECTED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
+		INJECTED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml
+		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:2:1-30:12
+		INJECTED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:5:5-28:19
-MERGED from [com.android.support:design:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\design-25.3.1.aar\0f24bfcd7cb9b4e3020b7d26c1b3a13f\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:design:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\design-25.3.1.aar\0f24bfcd7cb9b4e3020b7d26c1b3a13f\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\a2b721e3400053cb89df42c9b5117de8\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\a2b721e3400053cb89df42c9b5117de8\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\81f1f7b94a3c7398a0783aed2890ab1f\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\81f1f7b94a3c7398a0783aed2890ab1f\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\ddb68d31a31642ee48f7b0a7bbb524f8\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\ddb68d31a31642ee48f7b0a7bbb524f8\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\63a32bff096309628ee1c15fd4971da7\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\63a32bff096309628ee1c15fd4971da7\AndroidManifest.xml:26:5-20
-MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\play-services-maps-11.0.4.aar\1f2a1e08ca01f5df1a0e7079152b8e85\AndroidManifest.xml:24:5-19
-MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\play-services-maps-11.0.4.aar\1f2a1e08ca01f5df1a0e7079152b8e85\AndroidManifest.xml:24:5-19
-MERGED from [com.android.support:transition:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\transition-25.3.1.aar\b04e4946f8298e092c9e0613bd0a8735\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:transition:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\transition-25.3.1.aar\b04e4946f8298e092c9e0613bd0a8735\AndroidManifest.xml:26:5-20
-MERGED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\play-services-base-11.0.4.aar\8596747fbbf50a4821297cca8e786c5c\AndroidManifest.xml:18:5-20:19
-MERGED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\play-services-base-11.0.4.aar\8596747fbbf50a4821297cca8e786c5c\AndroidManifest.xml:18:5-20:19
-MERGED from [com.google.android.gms:play-services-tasks:11.0.4] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.0.4.aar\fff17d2bdcd60231b58aba0f403cdb4e\AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-tasks:11.0.4] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.0.4.aar\fff17d2bdcd60231b58aba0f403cdb4e\AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.0.4.aar\4b260cd78b6d9871090da149fc2d7f69\AndroidManifest.xml:19:5-21:19
-MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.0.4.aar\4b260cd78b6d9871090da149fc2d7f69\AndroidManifest.xml:19:5-21:19
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\b28b64d69dbdb45e54915d7e1a730ba2\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\b28b64d69dbdb45e54915d7e1a730ba2\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\ae2c95b69417bea7810afe43fa62cc43\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\ae2c95b69417bea7810afe43fa62cc43\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\24bc5caa6f95f3f82b3234b404e6a201\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\24bc5caa6f95f3f82b3234b404e6a201\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\ea806668ab386fde715400f71af3e723\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\ea806668ab386fde715400f71af3e723\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\ce4f3c2fb19f0c20fae36999229d77fe\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\ce4f3c2fb19f0c20fae36999229d77fe\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\0fc24bccc3cfa78a3e099f2f92ec1551\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\0fc24bccc3cfa78a3e099f2f92ec1551\AndroidManifest.xml:29:5-20
+ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:5:5-28:19
+MERGED from [com.android.support:design:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/476d3f93af5e4d15db0465e1227406f8/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:design:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/476d3f93af5e4d15db0465e1227406f8/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/634fdb9de2725c4c1b4abbdbfe293599/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/634fdb9de2725c4c1b4abbdbfe293599/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/f7fcd6550d3436170d6aec09048834e7/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/f7fcd6550d3436170d6aec09048834e7/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.3.1.aar/fd4a2bb6ae32194a00a588e18c28d6f3/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.3.1.aar/fd4a2bb6ae32194a00a588e18c28d6f3/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.3.1.aar/677ff8de3f56796b0c705ab1f6031812/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.3.1.aar/677ff8de3f56796b0c705ab1f6031812/AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.0.4.aar/f6920256a9ac527f4e0eaee7abfe1949/AndroidManifest.xml:24:5-19
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.0.4.aar/f6920256a9ac527f4e0eaee7abfe1949/AndroidManifest.xml:24:5-19
+MERGED from [com.android.support:transition:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/transition-25.3.1.aar/e4a5f582a2893ef7675fe6381cbac5f0/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/transition-25.3.1.aar/e4a5f582a2893ef7675fe6381cbac5f0/AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-base:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/play-services-base-11.0.4.aar/414622182ba5af3633997b899f6b9f30/AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-base:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/play-services-base-11.0.4.aar/414622182ba5af3633997b899f6b9f30/AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-tasks:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.0.4.aar/a4e91bee05e11f1d09ecba11054752f7/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-tasks:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.0.4.aar/a4e91bee05e11f1d09ecba11054752f7/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.0.4.aar/3c20834b08f2a0c82be066e66b6c2b21/AndroidManifest.xml:19:5-21:19
+MERGED from [com.google.android.gms:play-services-basement:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.0.4.aar/3c20834b08f2a0c82be066e66b6c2b21/AndroidManifest.xml:19:5-21:19
+MERGED from [com.android.support:support-v4:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/3d945e4bea8490e64f14655f4d2cd32e/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/3d945e4bea8490e64f14655f4d2cd32e/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/9ca6419034acdcdc4cd9fc9fa0e396d8/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/9ca6419034acdcdc4cd9fc9fa0e396d8/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/05e559f6dff3abec8c13a9ef88ca63df/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/05e559f6dff3abec8c13a9ef88ca63df/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/e7ae0e14e08655f430ef5d669bd9fbe8/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/e7ae0e14e08655f430ef5d669bd9fbe8/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/0acacb15e29d49580f2c15b454d52bb5/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/0acacb15e29d49580f2c15b454d52bb5/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/0e5e18b9aaf2e627cc37e8287dbc4c39/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/0e5e18b9aaf2e627cc37e8287dbc4c39/AndroidManifest.xml:29:5-20
 	android:supportsRtl
-		ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:10:9-35
 	android:label
-		ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:8:9-41
+		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:8:9-41
 	android:roundIcon
-		ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:9:9-54
+		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:9:9-54
 	android:icon
-		ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:7:9-43
+		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:7:9-43
 	android:allowBackup
-		ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:6:9-35
 	android:theme
-		ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:11:9-40
+		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:11:9-40
 activity#cmput301f17t09.goalsandhabits.MainActivity
-ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:12:9-18:20
+ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:12:9-18:20
 	android:name
-		ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:12:19-47
+		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:12:19-47
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:13:13-17:29
+ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:13:13-17:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:14:17-69
+ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:14:17-69
 	android:name
-		ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:14:25-66
+		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:14:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:16:17-77
+ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:16:17-77
 	android:name
-		ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:16:27-74
+		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:16:27-74
 activity#cmput301f17t09.goalsandhabits.FollowActivity
-ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:19:9-52
+ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:19:9-52
 	android:name
-		ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:19:19-49
+		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:19:19-49
 activity#cmput301f17t09.goalsandhabits.MapFiltersActivity
-ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:20:9-56
+ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:20:9-56
 	android:name
-		ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:20:19-53
+		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:20:19-53
 activity#cmput301f17t09.goalsandhabits.HabitHistoryActivity
-ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:21:9-58
+ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:21:9-58
 	android:name
-		ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:21:19-55
+		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:21:19-55
 activity#cmput301f17t09.goalsandhabits.NewHabit
-ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:22:9-46
+ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:22:9-46
 	android:name
-		ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:22:19-43
+		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:22:19-43
 activity#cmput301f17t09.goalsandhabits.ViewHabitActivity
-ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:23:9-55
+ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:23:9-55
 	android:name
-		ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:23:19-52
+		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:23:19-52
 activity#cmput301f17t09.goalsandhabits.LoginActivity
-ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:24:9-51
+ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:24:9-51
 	android:name
-		ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:24:19-48
+		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:24:19-48
 activity#cmput301f17t09.goalsandhabits.SignUpActivity
-ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:25:9-51
+ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:25:9-51
 	android:name
-		ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:25:19-49
+		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:25:19-49
 activity#cmput301f17t09.goalsandhabits.ProfileActivity
-ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:26:9-52
+ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:26:9-52
 	android:name
-		ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:26:19-50
+		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:26:19-50
 activity#cmput301f17t09.goalsandhabits.NewProfileActivity
-ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:27:9-55
+ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:27:9-55
 	android:name
-		ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:27:19-53
+		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml:27:19-53
 uses-sdk
-INJECTED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
-MERGED from [com.android.support:design:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\design-25.3.1.aar\0f24bfcd7cb9b4e3020b7d26c1b3a13f\AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:design:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\design-25.3.1.aar\0f24bfcd7cb9b4e3020b7d26c1b3a13f\AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\a2b721e3400053cb89df42c9b5117de8\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\a2b721e3400053cb89df42c9b5117de8\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\81f1f7b94a3c7398a0783aed2890ab1f\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\81f1f7b94a3c7398a0783aed2890ab1f\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\ddb68d31a31642ee48f7b0a7bbb524f8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\ddb68d31a31642ee48f7b0a7bbb524f8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\63a32bff096309628ee1c15fd4971da7\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\63a32bff096309628ee1c15fd4971da7\AndroidManifest.xml:20:5-43
-MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\play-services-maps-11.0.4.aar\1f2a1e08ca01f5df1a0e7079152b8e85\AndroidManifest.xml:23:5-43
-MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\play-services-maps-11.0.4.aar\1f2a1e08ca01f5df1a0e7079152b8e85\AndroidManifest.xml:23:5-43
-MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-25.3.1.aar\4ebab5830b7271cfd5cf4d5afc1017b4\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-25.3.1.aar\4ebab5830b7271cfd5cf4d5afc1017b4\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:transition:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\transition-25.3.1.aar\b04e4946f8298e092c9e0613bd0a8735\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\transition-25.3.1.aar\b04e4946f8298e092c9e0613bd0a8735\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\play-services-base-11.0.4.aar\8596747fbbf50a4821297cca8e786c5c\AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\play-services-base-11.0.4.aar\8596747fbbf50a4821297cca8e786c5c\AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-tasks:11.0.4] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.0.4.aar\fff17d2bdcd60231b58aba0f403cdb4e\AndroidManifest.xml:3:5-43
-MERGED from [com.google.android.gms:play-services-tasks:11.0.4] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.0.4.aar\fff17d2bdcd60231b58aba0f403cdb4e\AndroidManifest.xml:3:5-43
-MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.0.4.aar\4b260cd78b6d9871090da149fc2d7f69\AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.0.4.aar\4b260cd78b6d9871090da149fc2d7f69\AndroidManifest.xml:17:5-43
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\b28b64d69dbdb45e54915d7e1a730ba2\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\b28b64d69dbdb45e54915d7e1a730ba2\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\ae2c95b69417bea7810afe43fa62cc43\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\ae2c95b69417bea7810afe43fa62cc43\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\24bc5caa6f95f3f82b3234b404e6a201\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\24bc5caa6f95f3f82b3234b404e6a201\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\ea806668ab386fde715400f71af3e723\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\ea806668ab386fde715400f71af3e723\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\ce4f3c2fb19f0c20fae36999229d77fe\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\ce4f3c2fb19f0c20fae36999229d77fe\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\0fc24bccc3cfa78a3e099f2f92ec1551\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\0fc24bccc3cfa78a3e099f2f92ec1551\AndroidManifest.xml:21:5-23:58
-INJECTED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
+INJECTED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml
+INJECTED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:design:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/476d3f93af5e4d15db0465e1227406f8/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/476d3f93af5e4d15db0465e1227406f8/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/634fdb9de2725c4c1b4abbdbfe293599/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/634fdb9de2725c4c1b4abbdbfe293599/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/f7fcd6550d3436170d6aec09048834e7/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/f7fcd6550d3436170d6aec09048834e7/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.3.1.aar/fd4a2bb6ae32194a00a588e18c28d6f3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.3.1.aar/fd4a2bb6ae32194a00a588e18c28d6f3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.3.1.aar/677ff8de3f56796b0c705ab1f6031812/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.3.1.aar/677ff8de3f56796b0c705ab1f6031812/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.0.4.aar/f6920256a9ac527f4e0eaee7abfe1949/AndroidManifest.xml:23:5-43
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.0.4.aar/f6920256a9ac527f4e0eaee7abfe1949/AndroidManifest.xml:23:5-43
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-25.3.1.aar/6eefbd16710e4e7e80afa44c92a859d0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-25.3.1.aar/6eefbd16710e4e7e80afa44c92a859d0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/transition-25.3.1.aar/e4a5f582a2893ef7675fe6381cbac5f0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/transition-25.3.1.aar/e4a5f582a2893ef7675fe6381cbac5f0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/play-services-base-11.0.4.aar/414622182ba5af3633997b899f6b9f30/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-base:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/play-services-base-11.0.4.aar/414622182ba5af3633997b899f6b9f30/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tasks:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.0.4.aar/a4e91bee05e11f1d09ecba11054752f7/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-tasks:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.0.4.aar/a4e91bee05e11f1d09ecba11054752f7/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-basement:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.0.4.aar/3c20834b08f2a0c82be066e66b6c2b21/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-basement:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.0.4.aar/3c20834b08f2a0c82be066e66b6c2b21/AndroidManifest.xml:17:5-43
+MERGED from [com.android.support:support-v4:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/3d945e4bea8490e64f14655f4d2cd32e/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/3d945e4bea8490e64f14655f4d2cd32e/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/9ca6419034acdcdc4cd9fc9fa0e396d8/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/9ca6419034acdcdc4cd9fc9fa0e396d8/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-ui:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/05e559f6dff3abec8c13a9ef88ca63df/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/05e559f6dff3abec8c13a9ef88ca63df/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/e7ae0e14e08655f430ef5d669bd9fbe8/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/e7ae0e14e08655f430ef5d669bd9fbe8/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/0acacb15e29d49580f2c15b454d52bb5/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/0acacb15e29d49580f2c15b454d52bb5/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/0e5e18b9aaf2e627cc37e8287dbc4c39/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/0e5e18b9aaf2e627cc37e8287dbc4c39/AndroidManifest.xml:21:5-23:58
+INJECTED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml
+INJECTED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\design-25.3.1.aar\0f24bfcd7cb9b4e3020b7d26c1b3a13f\AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:design:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/476d3f93af5e4d15db0465e1227406f8/AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
-		INJECTED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
+		INJECTED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml
+		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml
+		INJECTED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Ken\Cmput301Workspace\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
+		INJECTED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml
+		ADDED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml
+		INJECTED from /afs/ualberta.ca/home/a/t/atsmith/cmput301/project/GoalsAndHabits/GoalsAndHabits/app/src/main/AndroidManifest.xml
 meta-data#android.support.VERSION
-ADDED from [com.android.support:design:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\design-25.3.1.aar\0f24bfcd7cb9b4e3020b7d26c1b3a13f\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\a2b721e3400053cb89df42c9b5117de8\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\a2b721e3400053cb89df42c9b5117de8\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\ddb68d31a31642ee48f7b0a7bbb524f8\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\ddb68d31a31642ee48f7b0a7bbb524f8\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\63a32bff096309628ee1c15fd4971da7\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\63a32bff096309628ee1c15fd4971da7\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-25.3.1.aar\4ebab5830b7271cfd5cf4d5afc1017b4\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-25.3.1.aar\4ebab5830b7271cfd5cf4d5afc1017b4\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:transition:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\transition-25.3.1.aar\b04e4946f8298e092c9e0613bd0a8735\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:transition:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\transition-25.3.1.aar\b04e4946f8298e092c9e0613bd0a8735\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\b28b64d69dbdb45e54915d7e1a730ba2\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\b28b64d69dbdb45e54915d7e1a730ba2\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\ae2c95b69417bea7810afe43fa62cc43\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\ae2c95b69417bea7810afe43fa62cc43\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\24bc5caa6f95f3f82b3234b404e6a201\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\24bc5caa6f95f3f82b3234b404e6a201\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\ea806668ab386fde715400f71af3e723\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\ea806668ab386fde715400f71af3e723\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\ce4f3c2fb19f0c20fae36999229d77fe\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\ce4f3c2fb19f0c20fae36999229d77fe\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\0fc24bccc3cfa78a3e099f2f92ec1551\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\0fc24bccc3cfa78a3e099f2f92ec1551\AndroidManifest.xml:25:5-27:34
+ADDED from [com.android.support:design:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/476d3f93af5e4d15db0465e1227406f8/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/634fdb9de2725c4c1b4abbdbfe293599/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/634fdb9de2725c4c1b4abbdbfe293599/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.3.1.aar/fd4a2bb6ae32194a00a588e18c28d6f3/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.3.1.aar/fd4a2bb6ae32194a00a588e18c28d6f3/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.3.1.aar/677ff8de3f56796b0c705ab1f6031812/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.3.1.aar/677ff8de3f56796b0c705ab1f6031812/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-25.3.1.aar/6eefbd16710e4e7e80afa44c92a859d0/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-25.3.1.aar/6eefbd16710e4e7e80afa44c92a859d0/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/transition-25.3.1.aar/e4a5f582a2893ef7675fe6381cbac5f0/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/transition-25.3.1.aar/e4a5f582a2893ef7675fe6381cbac5f0/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/3d945e4bea8490e64f14655f4d2cd32e/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/3d945e4bea8490e64f14655f4d2cd32e/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/9ca6419034acdcdc4cd9fc9fa0e396d8/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/9ca6419034acdcdc4cd9fc9fa0e396d8/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/05e559f6dff3abec8c13a9ef88ca63df/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/05e559f6dff3abec8c13a9ef88ca63df/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/e7ae0e14e08655f430ef5d669bd9fbe8/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/e7ae0e14e08655f430ef5d669bd9fbe8/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/0acacb15e29d49580f2c15b454d52bb5/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/0acacb15e29d49580f2c15b454d52bb5/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/0e5e18b9aaf2e627cc37e8287dbc4c39/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/0e5e18b9aaf2e627cc37e8287dbc4c39/AndroidManifest.xml:25:5-27:34
 	android:value
-		ADDED from [com.android.support:design:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\design-25.3.1.aar\0f24bfcd7cb9b4e3020b7d26c1b3a13f\AndroidManifest.xml:27:9-31
+		ADDED from [com.android.support:design:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/476d3f93af5e4d15db0465e1227406f8/AndroidManifest.xml:27:9-31
 	android:name
-		ADDED from [com.android.support:design:25.3.1] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\design-25.3.1.aar\0f24bfcd7cb9b4e3020b7d26c1b3a13f\AndroidManifest.xml:26:9-47
+		ADDED from [com.android.support:design:25.3.1] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/476d3f93af5e4d15db0465e1227406f8/AndroidManifest.xml:26:9-47
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\play-services-maps-11.0.4.aar\1f2a1e08ca01f5df1a0e7079152b8e85\AndroidManifest.xml:19:5-78
+ADDED from [com.google.android.gms:play-services-maps:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.0.4.aar/f6920256a9ac527f4e0eaee7abfe1949/AndroidManifest.xml:19:5-78
 	android:name
-		ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\play-services-maps-11.0.4.aar\1f2a1e08ca01f5df1a0e7079152b8e85\AndroidManifest.xml:19:22-76
+		ADDED from [com.google.android.gms:play-services-maps:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.0.4.aar/f6920256a9ac527f4e0eaee7abfe1949/AndroidManifest.xml:19:22-76
 uses-permission#android.permission.INTERNET
-ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\play-services-maps-11.0.4.aar\1f2a1e08ca01f5df1a0e7079152b8e85\AndroidManifest.xml:20:5-66
+ADDED from [com.google.android.gms:play-services-maps:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.0.4.aar/f6920256a9ac527f4e0eaee7abfe1949/AndroidManifest.xml:20:5-66
 	android:name
-		ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\play-services-maps-11.0.4.aar\1f2a1e08ca01f5df1a0e7079152b8e85\AndroidManifest.xml:20:22-64
+		ADDED from [com.google.android.gms:play-services-maps:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.0.4.aar/f6920256a9ac527f4e0eaee7abfe1949/AndroidManifest.xml:20:22-64
 uses-feature#0x00020000
-ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\play-services-maps-11.0.4.aar\1f2a1e08ca01f5df1a0e7079152b8e85\AndroidManifest.xml:21:5-77
+ADDED from [com.google.android.gms:play-services-maps:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.0.4.aar/f6920256a9ac527f4e0eaee7abfe1949/AndroidManifest.xml:21:5-77
 	android:glEsVersion
-		ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\play-services-maps-11.0.4.aar\1f2a1e08ca01f5df1a0e7079152b8e85\AndroidManifest.xml:21:19-51
+		ADDED from [com.google.android.gms:play-services-maps:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.0.4.aar/f6920256a9ac527f4e0eaee7abfe1949/AndroidManifest.xml:21:19-51
 	android:required
-		ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\play-services-maps-11.0.4.aar\1f2a1e08ca01f5df1a0e7079152b8e85\AndroidManifest.xml:21:52-75
+		ADDED from [com.google.android.gms:play-services-maps:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.0.4.aar/f6920256a9ac527f4e0eaee7abfe1949/AndroidManifest.xml:21:52-75
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\play-services-base-11.0.4.aar\8596747fbbf50a4821297cca8e786c5c\AndroidManifest.xml:19:9-172
+ADDED from [com.google.android.gms:play-services-base:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/play-services-base-11.0.4.aar/414622182ba5af3633997b899f6b9f30/AndroidManifest.xml:19:9-172
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\play-services-base-11.0.4.aar\8596747fbbf50a4821297cca8e786c5c\AndroidManifest.xml:19:146-170
+		ADDED from [com.google.android.gms:play-services-base:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/play-services-base-11.0.4.aar/414622182ba5af3633997b899f6b9f30/AndroidManifest.xml:19:146-170
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\play-services-base-11.0.4.aar\8596747fbbf50a4821297cca8e786c5c\AndroidManifest.xml:19:86-145
+		ADDED from [com.google.android.gms:play-services-base:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/play-services-base-11.0.4.aar/414622182ba5af3633997b899f6b9f30/AndroidManifest.xml:19:86-145
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\play-services-base-11.0.4.aar\8596747fbbf50a4821297cca8e786c5c\AndroidManifest.xml:19:19-85
+		ADDED from [com.google.android.gms:play-services-base:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/play-services-base-11.0.4.aar/414622182ba5af3633997b899f6b9f30/AndroidManifest.xml:19:19-85
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.0.4.aar\4b260cd78b6d9871090da149fc2d7f69\AndroidManifest.xml:20:9-121
+ADDED from [com.google.android.gms:play-services-basement:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.0.4.aar/3c20834b08f2a0c82be066e66b6c2b21/AndroidManifest.xml:20:9-121
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.0.4.aar\4b260cd78b6d9871090da149fc2d7f69\AndroidManifest.xml:20:66-119
+		ADDED from [com.google.android.gms:play-services-basement:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.0.4.aar/3c20834b08f2a0c82be066e66b6c2b21/AndroidManifest.xml:20:66-119
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\Ken\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.0.4.aar\4b260cd78b6d9871090da149fc2d7f69\AndroidManifest.xml:20:20-65
+		ADDED from [com.google.android.gms:play-services-basement:11.0.4] /afs/ualberta.ca/home/a/t/atsmith/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.0.4.aar/3c20834b08f2a0c82be066e66b6c2b21/AndroidManifest.xml:20:20-65
