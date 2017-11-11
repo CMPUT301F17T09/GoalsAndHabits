@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String FILENAME = "data.sav";
 
     public static final int REQUEST_CODE_NEW_HABIT = 1;
+    public static final int REQUEST_CODE_NEW_HABIT_EVENT = 2;
 
     private static final String MY_PREFERENCES = "my_preferences";
 
