@@ -1,7 +1,6 @@
 package cmput301f17t09.goalsandhabits;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashSet;
@@ -19,7 +18,6 @@ public class Habit implements Serializable{
     private String reason;
     private Date startDate;
     private HashSet<Integer> schedule;
-    private ArrayList<HabitEvent> events;
 
 
     /**
@@ -33,7 +31,6 @@ public class Habit implements Serializable{
         setTitle(title);
         setReason(reason);
         setStartDate(startDate);
-        events = new ArrayList<>();
     }
 
     public Habit(String title, String reason, Date startDate, HashSet<Integer> schedule){
@@ -41,7 +38,6 @@ public class Habit implements Serializable{
         setReason(reason);
         setStartDate(startDate);
         setSchedule(schedule);
-        events = new ArrayList<>();
     }
 
     /**
@@ -91,17 +87,5 @@ public class Habit implements Serializable{
      */
     public HashSet<Integer> getSchedule(){
         return this.schedule;
-    }
-
-    public void setEvents(ArrayList<HabitEvent> events){
-        this.events = events;
-    }
-
-    public ArrayList<HabitEvent> getEvents(){
-        return events;
-    }
-
-    public void addHabitEvent(HabitEvent event){
-        events.add(event);
     }
 }

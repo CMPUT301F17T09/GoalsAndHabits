@@ -1,32 +1,20 @@
 package cmput301f17t09.goalsandhabits;
 
-import java.io.Serializable;
-import java.util.Date;
-
 /**
  * Created by atsmith on 10/31/17.
  */
 
-public class HabitEvent implements Serializable{
+public class HabitEvent {
+    private Habit habit;
     private String comment;
     private String photoPath;
-    private Date date;
 
-    public HabitEvent(Date date){
-        setDate(date);
+    public HabitEvent(Habit habit){
+        this.habit = habit;
     }
 
-    public HabitEvent(Date date, String comment){
-        setDate(date);
-        setComment(comment);
-    }
-
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
+    public Habit getHabit(){
+        return habit;
     }
 
     public String getComment(){
