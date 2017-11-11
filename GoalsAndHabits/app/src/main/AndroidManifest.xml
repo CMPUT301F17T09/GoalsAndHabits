@@ -18,13 +18,18 @@
         </activity>
         <activity android:name=".FollowActivity" />
         <activity android:name=".MapFiltersActivity" />
-        <activity android:name=".HabitHistoryActivity" />
+        <activity
+            android:name=".HabitHistoryActivity"
+            android:parentActivityName=".ProfileActivity" />
         <activity android:name=".NewHabit" />
         <activity android:name=".ViewHabitActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".SignUpActivity"/>
-        <activity android:name=".ProfileActivity"/>
-        <activity android:name=".NewProfileActivity"/>
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".NewProfileActivity" />
+        <activity
+            android:name=".followerRequestsActivity"
+            android:parentActivityName=".ProfileActivity"/>
     </application>
 
 </manifest>
