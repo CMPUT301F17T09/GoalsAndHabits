@@ -10,7 +10,7 @@
         android:id="@+id/editDiaName"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="Habit Name"
         android:inputType="textPersonName"
@@ -23,7 +23,7 @@
         android:id="@+id/editDiaReason"
         android:layout_width="wrap_content"
         android:layout_height="51dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="Habit Reason"
         android:inputType="textPersonName"
@@ -31,4 +31,14 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editDiaName" />
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editDiaReason" />
+
 </android.support.constraint.ConstraintLayout>
