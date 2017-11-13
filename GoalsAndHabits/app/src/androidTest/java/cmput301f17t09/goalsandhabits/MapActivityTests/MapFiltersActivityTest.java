@@ -1,4 +1,4 @@
-package cmput301f17t09.goalsandhabits;
+package cmput301f17t09.goalsandhabits.MapActivityTests;
 
 import android.app.Activity;
 import android.test.ActivityInstrumentationTestCase2;

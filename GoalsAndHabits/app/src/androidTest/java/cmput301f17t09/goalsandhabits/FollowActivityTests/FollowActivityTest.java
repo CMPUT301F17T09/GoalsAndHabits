@@ -1,4 +1,4 @@
-package cmput301f17t09.goalsandhabits;
+package cmput301f17t09.goalsandhabits.FollowActivityTests;
 
 import android.app.Activity;
 import android.test.ActivityInstrumentationTestCase2;
@@ -7,6 +7,7 @@ import android.view.View;
 import com.robotium.solo.Solo;
 
 import cmput301f17t09.goalsandhabits.Follow_Activity.FollowActivity;
+import cmput301f17t09.goalsandhabits.R;
 
 /**
  * Created by Ken on 22/10/2017.
@@ -33,6 +34,7 @@ public class FollowActivityTest extends ActivityInstrumentationTestCase2<FollowA
     }
 
     /**
+<<<<<<< HEAD:GoalsAndHabits/app/src/androidTest/java/cmput301f17t09/goalsandhabits/FollowActivityTest.java
      * This test requires that a different user has sent a follow request to the user being tested.
      */
     public void testRequestAcceptance() {
@@ -43,6 +45,8 @@ public class FollowActivityTest extends ActivityInstrumentationTestCase2<FollowA
     }
 
     /**
+=======
+>>>>>>> 620cd6d31c6bd7399fbd1f2c2ca88679f04d03b7:GoalsAndHabits/app/src/androidTest/java/cmput301f17t09/goalsandhabits/FollowActivityTests/FollowActivityTest.java
      * This test requires that the user is following another user and that the user they are
      * following has some habits added to their list.
      */
