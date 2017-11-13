@@ -29,7 +29,7 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
     private TextView reason;
     private Context context;
     private int position;
-    private TextView toolbar;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +48,7 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
         reason = (TextView) findViewById(R.id.textReason);
         reason.setText(habit.getReason());
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.actionbar);
+        toolbar = (Toolbar) findViewById(R.id.actionbar);
         toolbar.setTitle(habit.getTitle());
         toolbar.setNavigationIcon(R.drawable.ic_close_button);
         setSupportActionBar(toolbar);
@@ -126,18 +126,36 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
             }
     }
 
+    /**
+     * Creates a new instance of the edit habit dialog and displays it.
+     */
     public void showEditDialog() {
         DialogFragment dialog = EditHabitDialog.newInstance(habit.getTitle(),habit.getReason());
         dialog.show(getFragmentManager(), "EditHabitDialog");
     }
 
+    /**
+     * Receives new information from edit habit dialog and makes appropriate updates to the habit.
+     * Closes dialog.
+     * @param dialog Edit Habit Dialog Fragment
+     * @param newreason Updated habit reason string
+     * @param newtitle Updated habit name string
+     * @param newdate Updated habit date
+     */
     @Override
-    public void onDialogPositiveClick(DialogFragment dialog, String newreason) {
-        // User touched the dialog's positive button
+    public void onDialogPositiveClick(DialogFragment dialog, String newreason, String newtitle,
+                                      Date newdate) {
         reason.setText(newreason);
+        toolbar.setTitle(newtitle);
         habit.setReason(newreason);
+        habit.setTitle(newtitle);
+        habit.setStartDate(newdate); //Not updating, will have to make changes to main activity
     }
 
+    /**
+     * Exits out of edit habit dialog. Makes no changes to habit.
+     * @param dialog Edit Habit Dialog Fragment
+     */
     @Override
     public void onDialogNegativeClick(DialogFragment dialog) {
         // User touched the dialog's negative button
