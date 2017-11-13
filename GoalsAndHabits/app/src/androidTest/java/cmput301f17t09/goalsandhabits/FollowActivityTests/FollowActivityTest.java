@@ -34,6 +34,19 @@ public class FollowActivityTest extends ActivityInstrumentationTestCase2<FollowA
     }
 
     /**
+<<<<<<< HEAD:GoalsAndHabits/app/src/androidTest/java/cmput301f17t09/goalsandhabits/FollowActivityTest.java
+     * This test requires that a different user has sent a follow request to the user being tested.
+     */
+    public void testRequestAcceptance() {
+        solo.assertCurrentActivity("Wrong Activity", FollowActivity.class);
+        //View viewPending = getActivity().findViewById(R.id.ViewRequests);
+        //solo.clickOnView(viewPending);
+        //TODO: Click on accept of a follow request
+    }
+
+    /**
+=======
+>>>>>>> 620cd6d31c6bd7399fbd1f2c2ca88679f04d03b7:GoalsAndHabits/app/src/androidTest/java/cmput301f17t09/goalsandhabits/FollowActivityTests/FollowActivityTest.java
      * This test requires that the user is following another user and that the user they are
      * following has some habits added to their list.
      */

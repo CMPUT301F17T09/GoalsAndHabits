@@ -1,5 +1,6 @@
 package cmput301f17t09.goalsandhabits.Main_Habits;
 
+import android.app.DialogFragment;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -49,6 +50,7 @@ public class NewHabit extends AppCompatActivity {
 
                 //TODO: Better field checking.
                 //TODO: Use a better date picker.
+                //showDatePickerDialog();
 
                 if (name.getText().toString().isEmpty()){
                     Toast.makeText(this, "Enter a valid habit title!", Toast.LENGTH_SHORT).show();
@@ -102,5 +104,13 @@ public class NewHabit extends AppCompatActivity {
         }
         setResult(RESULT_OK, data);
         super.finish();
+    }
+
+    /**
+     * Creates a new date picker dialog fragment and displays it.
+     */
+    public void showDatePickerDialog(){
+        DialogFragment newFragment = new DatePickerFrag();
+        newFragment.show(getFragmentManager(), "DatePicker");
     }
 }
