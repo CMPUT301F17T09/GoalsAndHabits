@@ -21,8 +21,11 @@ import cmput301f17t09.goalsandhabits.R;
 
 /**
  * Created by Andrew on 11/6/2017.
+ *
+ * This activity allows the user to view the details of
+ * a specific habit. The user can also edit or delete the
+ * habit in this activity, as well as add habit events.
  */
-
 public class ViewHabitActivity extends AppCompatActivity implements EditHabitDialog.EditHabitDialogListener{
 
     private Habit habit;
@@ -75,12 +78,22 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
         });
     }
 
+    /**
+     * Inflates the action bar with buttons
+     * @param menu
+     * @return
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.menu_view_habit, menu);
         return true;
     }
 
+    /**
+     * Handles the buttons in the action bar
+     * @param item
+     * @return
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -102,6 +115,12 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
         }
     }
 
+    /**
+     * Called when an activity that was called for a result returns.
+     * @param requestCode
+     * @param resultCode
+     * @param data
+     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
         if (resultCode == RESULT_OK){
