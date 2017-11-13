@@ -22,6 +22,7 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.actionbar);
         toolbar.setTitle("My Profile");
         setSupportActionBar(toolbar);
@@ -64,7 +65,7 @@ public class ProfileActivity extends AppCompatActivity {
 
             public void onClick(View v) {
                 setResult(RESULT_OK);
-                Intent intent = new Intent(ProfileActivity.this,HabitHistoryActivity.class);
+                Intent intent = new Intent(ProfileActivity.this,MyHabitHistory.class);
                 startActivity(intent);
             }
         });

@@ -19,8 +19,7 @@
         <activity android:name=".FollowActivity" />
         <activity android:name=".MapFiltersActivity" />
         <activity
-            android:name=".HabitHistoryActivity"
-            android:parentActivityName=".ProfileActivity" />
+            android:name=".HabitHistoryActivity"/>
         <activity android:name=".NewHabit" />
         <activity android:name=".ViewHabitActivity" />
         <activity android:name=".LoginActivity" />
@@ -29,7 +28,9 @@
         <activity android:name=".NewProfileActivity" />
         <activity
             android:name=".followerRequestsActivity"
-            android:parentActivityName=".ProfileActivity"/>
+            android:parentActivityName=".ProfileActivity" />
+        <activity android:name=".MyHabitHistory"
+            android:parentActivityName=".ProfileActivity"></activity>
     </application>
 
 </manifest>

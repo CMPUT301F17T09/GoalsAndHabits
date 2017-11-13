@@ -16,23 +16,21 @@
         android:layout_height="144dp">
 
 
-
         <EditText
             android:id="@+id/loginid"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
-            android:hint="Log In ID"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:hint="User ID"
+            android:inputType="number" />
 
         <EditText
-            android:id="@+id/password"
+            android:id="@+id/loginname"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
-            android:hint="password"
             android:ems="10"
-            android:inputType="textPassword"
-            />
+            android:hint="Username"
+            android:inputType="text" />
 
 
 

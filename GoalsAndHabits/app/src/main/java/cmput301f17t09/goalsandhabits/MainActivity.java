@@ -49,16 +49,24 @@ public class MainActivity extends AppCompatActivity {
     private HabitArrayAdapter habitArrayAdapter;
     private ListView habitsList;
 
+    public Profile myProfile = new Profile();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        Context context = MainActivity.this;
+        final SharedPreferences reader = context.getSharedPreferences(MY_PREFERENCES,Context.MODE_PRIVATE);
+        final boolean first = reader.getBoolean("is_first",true);
         Intent intent = new Intent(MainActivity.this, NewProfileActivity.class);
-        if (MainActivity.isFirst(MainActivity.this)) {
+        if (first) {
             startActivity(intent);
+
         }
+        final SharedPreferences.Editor editor = reader.edit();
+        editor.putBoolean("is_first",false);
+        editor.commit();
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.actionbar);
@@ -166,16 +174,6 @@ public class MainActivity extends AppCompatActivity {
         super.onStop();
     }
 
-    public static boolean isFirst(Context context) {
-        final SharedPreferences reader = context.getSharedPreferences(MY_PREFERENCES,Context.MODE_PRIVATE);
-        final boolean first = reader.getBoolean("is_first",true);
-        if(first) {
-            final SharedPreferences.Editor editor = reader.edit();
-            editor.putBoolean("is_first", false);
-            editor.commit();
-        }
-        return first;
-    }
 
     private void loadData(){
         try {

@@ -12,7 +12,7 @@ public class followerRequestsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_follower_requests);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.actionbar);
-        toolbar.setTitle("My Habit Historty");
+        toolbar.setTitle("My Follower Requests");
         setSupportActionBar(toolbar);
     }
 }
