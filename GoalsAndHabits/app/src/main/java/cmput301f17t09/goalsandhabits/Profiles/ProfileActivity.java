@@ -16,6 +16,9 @@ import cmput301f17t09.goalsandhabits.R;
 
 /**
  * Created by Andrew on 11/1/2017.
+ *
+ * This activity allows the user to view their profile, enable/disable online capabilities,
+ * view their own habit history, and view follow requests
  */
 
 public class ProfileActivity extends AppCompatActivity {
@@ -46,6 +49,7 @@ public class ProfileActivity extends AppCompatActivity {
             public void onClick(View v) {
                 setResult(RESULT_OK);
                 Intent intent = new Intent(ProfileActivity.this,MainActivity.class);
+                finish();
                 startActivity(intent);
             }
         });
@@ -53,6 +57,7 @@ public class ProfileActivity extends AppCompatActivity {
             public void onClick(View v) {
                 setResult(RESULT_OK);
                 Intent intent = new Intent(ProfileActivity.this,FollowActivity.class);
+                finish();
                 startActivity(intent);
             }
         });
@@ -61,6 +66,7 @@ public class ProfileActivity extends AppCompatActivity {
             public void onClick(View v) {
                 setResult(RESULT_OK);
                 Intent intent = new Intent(ProfileActivity.this,MapFiltersActivity.class);
+                finish();
                 startActivity(intent);
             }
         });
@@ -69,6 +75,7 @@ public class ProfileActivity extends AppCompatActivity {
             public void onClick(View v) {
                 setResult(RESULT_OK);
                 Intent intent = new Intent(ProfileActivity.this,MyHabitHistory.class);
+                finish();
                 startActivity(intent);
             }
         });
@@ -76,7 +83,8 @@ public class ProfileActivity extends AppCompatActivity {
 
             public void onClick(View v) {
                 setResult(RESULT_OK);
-                Intent intent = new Intent(ProfileActivity.this, followerRequestsActivity.class);
+                Intent intent = new Intent(ProfileActivity.this, FollowerRequestsActivity.class);
+                //TODO: Display all requests received and allow user to accept/decline.
                 startActivity(intent);
             }
         });

@@ -12,6 +12,10 @@ import cmput301f17t09.goalsandhabits.Main_Habits.MainActivity;
 import cmput301f17t09.goalsandhabits.Profiles.ProfileActivity;
 import cmput301f17t09.goalsandhabits.R;
 
+
+/**
+ * This activity allows users to view habit events based on their locations, and can be filtered.
+ */
 public class MapFiltersActivity extends AppCompatActivity {
 
     @Override
@@ -34,6 +38,7 @@ public class MapFiltersActivity extends AppCompatActivity {
             public void onClick(View v) {
                 setResult(RESULT_OK);
                 Intent intent = new Intent(MapFiltersActivity.this,MainActivity.class);
+                finish();
                 startActivity(intent);
             }
         });
@@ -41,6 +46,7 @@ public class MapFiltersActivity extends AppCompatActivity {
             public void onClick(View v) {
                 setResult(RESULT_OK);
                 Intent intent = new Intent(MapFiltersActivity.this,FollowActivity.class);
+                finish();
                 startActivity(intent);
             }
         });
@@ -49,6 +55,7 @@ public class MapFiltersActivity extends AppCompatActivity {
             public void onClick(View v) {
                 setResult(RESULT_OK);
                 Intent intent = new Intent(MapFiltersActivity.this,ProfileActivity.class);
+                finish();
                 startActivity(intent);
             }
         });

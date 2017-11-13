@@ -36,6 +36,7 @@ public class FollowActivity extends AppCompatActivity {
             public void onClick(View v) {
                 setResult(RESULT_OK);
                 Intent intent = new Intent(FollowActivity.this,MainActivity.class);
+                finish();
                 startActivity(intent);
             }
         });
@@ -44,6 +45,7 @@ public class FollowActivity extends AppCompatActivity {
             public void onClick(View v) {
                 setResult(RESULT_OK);
                 Intent intent = new Intent(FollowActivity.this,ProfileActivity.class);
+                finish();
                 startActivity(intent);
             }
         });
@@ -52,12 +54,12 @@ public class FollowActivity extends AppCompatActivity {
             public void onClick(View v) {
                 setResult(RESULT_OK);
                 Intent intent = new Intent(FollowActivity.this,MapFiltersActivity.class);
+                finish();
                 startActivity(intent);
             }
         });
 
         Button newRequest = (Button) findViewById(R.id.SendRequest);
-        Button viewPending = (Button) findViewById(R.id.ViewRequests);
         ListView followList = (ListView) findViewById(R.id.FollowList);
 
         newRequest.setOnClickListener(new View.OnClickListener() {
@@ -65,14 +67,6 @@ public class FollowActivity extends AppCompatActivity {
             public void onClick(View v) {
                 setResult(RESULT_OK);
                 //TODO: Create a dialog and prompt user for id to add.
-            }
-        });
-
-        viewPending.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setResult(RESULT_OK);
-                //TODO: Display all requests received and allow user to accept/decline.
             }
         });
 
