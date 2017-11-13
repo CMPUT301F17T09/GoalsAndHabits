@@ -1,14 +1,14 @@
-package cmput301f17t09.goalsandhabits;
+package cmput301f17t09.goalsandhabits.Profiles;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import cmput301f17t09.goalsandhabits.R;
 
 /**
  * Created by Andrew on 10/22/2017.
@@ -50,6 +50,7 @@ public class NewProfileActivity extends AppCompatActivity {
             public void onClick(View view) {
                 setResult(RESULT_OK);
                 Intent intent = new Intent(NewProfileActivity.this,LoginActivity.class);
+                finish();
                 startActivity(intent);
             }
         });

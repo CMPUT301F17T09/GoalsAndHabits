@@ -1,9 +1,11 @@
-package cmput301f17t09.goalsandhabits;
+package cmput301f17t09.goalsandhabits.Main_Habits;
 
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+
+import cmput301f17t09.goalsandhabits.R;
 
 
 public class HabitHistoryActivity extends AppCompatActivity {

@@ -1,4 +1,4 @@
-package cmput301f17t09.goalsandhabits;
+package cmput301f17t09.goalsandhabits.Profiles;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import cmput301f17t09.goalsandhabits.R;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -37,6 +39,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LoginActivity.this,NewProfileActivity.class);
+                finish();
                 startActivity(intent);
             }
         });

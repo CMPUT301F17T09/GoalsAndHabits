@@ -1,4 +1,4 @@
-package cmput301f17t09.goalsandhabits;
+package cmput301f17t09.goalsandhabits.Main_Habits;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -10,6 +10,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
+
+import cmput301f17t09.goalsandhabits.R;
 
 /**
  * Created by Ken on 07/11/2017.

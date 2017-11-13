@@ -1,4 +1,4 @@
-package cmput301f17t09.goalsandhabits;
+package cmput301f17t09.goalsandhabits.Main_Habits;
 
 import android.app.DialogFragment;
 import android.content.Context;
@@ -11,8 +11,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
+
+import cmput301f17t09.goalsandhabits.R;
 
 /**
  * Created by Andrew on 11/6/2017.

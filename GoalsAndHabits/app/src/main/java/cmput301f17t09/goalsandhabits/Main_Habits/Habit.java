@@ -1,8 +1,7 @@
-package cmput301f17t09.goalsandhabits;
+package cmput301f17t09.goalsandhabits.Main_Habits;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.HashSet;
 

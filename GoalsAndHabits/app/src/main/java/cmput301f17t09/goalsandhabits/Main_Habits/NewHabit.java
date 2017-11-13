@@ -1,10 +1,9 @@
-package cmput301f17t09.goalsandhabits;
+package cmput301f17t09.goalsandhabits.Main_Habits;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.text.InputType;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.CheckBox;
@@ -12,6 +11,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+
+import cmput301f17t09.goalsandhabits.Main_Habits.MainActivity;
+import cmput301f17t09.goalsandhabits.R;
 
 public class NewHabit extends AppCompatActivity {
 

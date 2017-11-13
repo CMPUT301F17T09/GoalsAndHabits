@@ -1,4 +1,4 @@
-package cmput301f17t09.goalsandhabits;
+package cmput301f17t09.goalsandhabits.Main_Habits;
 
 import android.content.Context;
 import android.content.Intent;
@@ -26,9 +26,15 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.HashSet;
+
+import cmput301f17t09.goalsandhabits.Follow_Activity.FollowActivity;
+import cmput301f17t09.goalsandhabits.Maps.MapFiltersActivity;
+import cmput301f17t09.goalsandhabits.Profiles.NewProfileActivity;
+import cmput301f17t09.goalsandhabits.Profiles.Profile;
+import cmput301f17t09.goalsandhabits.Profiles.ProfileActivity;
+import cmput301f17t09.goalsandhabits.R;
 
 public class MainActivity extends AppCompatActivity {
 

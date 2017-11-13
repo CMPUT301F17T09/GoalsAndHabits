@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:2:1-36:12
+ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:2:1-35:12
 	package
 		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:3:5-44
 		INJECTED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml
@@ -14,7 +14,7 @@ ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabit
 		INJECTED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml
 application
-ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:5:5-34:19
+ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:5:5-33:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\chias\.android\build-cache\fed6e9aed53a736a677549eec5258b8ae7548d52\output\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:design:25.3.1] C:\Users\chias\.android\build-cache\14c0b45b38424a606c7ba583b0f8950d5bef5a62\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\chias\.android\build-cache\3a7260e96c91c295b8d8f14ea7e8f188d4a01f20\output\AndroidManifest.xml:29:5-20
@@ -43,10 +43,10 @@ MERGED from [com.android.support:support-compat:25.3.1] C:\Users\chias\.android\
 		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:7:9-43
 	android:theme
 		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:11:9-40
-activity#cmput301f17t09.goalsandhabits.MainActivity
+activity#cmput301f17t09.goalsandhabits.Main_Habits.MainActivity
 ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:12:9-18:20
 	android:name
-		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:12:19-47
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:12:19-59
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
 ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:13:13-17:29
 action#android.intent.action.MAIN
@@ -57,54 +57,50 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:16:17-77
 	android:name
 		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:16:27-74
-activity#cmput301f17t09.goalsandhabits.FollowActivity
-ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:19:9-52
+activity#cmput301f17t09.goalsandhabits.Follow_Activity.FollowActivity
+ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:19:9-68
 	android:name
-		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:19:19-49
-activity#cmput301f17t09.goalsandhabits.MapFiltersActivity
-ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:20:9-56
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:19:19-65
+activity#cmput301f17t09.goalsandhabits.Maps.MapFiltersActivity
+ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:20:9-61
 	android:name
-		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:20:19-53
-activity#cmput301f17t09.goalsandhabits.HabitHistoryActivity
-ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:21:9-22:51
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:20:19-58
+activity#cmput301f17t09.goalsandhabits.Main_Habits.HabitHistoryActivity
+ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:21:9-22:63
 	android:name
-		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:22:13-49
-activity#cmput301f17t09.goalsandhabits.NewHabit
-ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:23:9-46
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:22:13-61
+activity#cmput301f17t09.goalsandhabits.Main_Habits.NewHabit
+ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:23:9-58
 	android:name
-		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:23:19-43
-activity#cmput301f17t09.goalsandhabits.ViewHabitActivity
-ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:24:9-55
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:23:19-55
+activity#cmput301f17t09.goalsandhabits.Main_Habits.ViewHabitActivity
+ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:24:9-67
 	android:name
-		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:24:19-52
-activity#cmput301f17t09.goalsandhabits.LoginActivity
-ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:25:9-51
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:24:19-64
+activity#cmput301f17t09.goalsandhabits.Profiles.LoginActivity
+ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:25:9-60
 	android:name
-		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:25:19-48
-activity#cmput301f17t09.goalsandhabits.SignUpActivity
-ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:26:9-52
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:25:19-57
+activity#cmput301f17t09.goalsandhabits.Profiles.ProfileActivity
+ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:26:9-62
 	android:name
-		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:26:19-49
-activity#cmput301f17t09.goalsandhabits.ProfileActivity
-ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:27:9-53
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:26:19-59
+activity#cmput301f17t09.goalsandhabits.Profiles.NewProfileActivity
+ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:27:9-65
 	android:name
-		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:27:19-50
-activity#cmput301f17t09.goalsandhabits.NewProfileActivity
-ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:28:9-56
-	android:name
-		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:28:19-53
-activity#cmput301f17t09.goalsandhabits.followerRequestsActivity
-ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:29:9-31:61
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:27:19-62
+activity#cmput301f17t09.goalsandhabits.Profiles.followerRequestsActivity
+ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:28:9-30:70
 	android:parentActivityName
-		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:31:13-58
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:30:13-67
 	android:name
-		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:30:13-53
-activity#cmput301f17t09.goalsandhabits.MyHabitHistory
-ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:32:9-33:70
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:29:13-62
+activity#cmput301f17t09.goalsandhabits.Profiles.MyHabitHistory
+ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:31:9-32:79
 	android:parentActivityName
-		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:33:13-58
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:32:13-67
 	android:name
-		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:32:19-49
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:31:19-58
 uses-sdk
 INJECTED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\chias\.android\build-cache\fed6e9aed53a736a677549eec5258b8ae7548d52\output\AndroidManifest.xml:5:5-7:41
