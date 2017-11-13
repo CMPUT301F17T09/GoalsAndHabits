@@ -1,4 +1,4 @@
-package cmput301f17t09.goalsandhabits;
+package cmput301f17t09.goalsandhabits.MainHabitsTests;
 
 import android.app.Activity;
 import android.test.ActivityInstrumentationTestCase2;
@@ -8,6 +8,7 @@ import com.robotium.solo.Solo;
 
 import cmput301f17t09.goalsandhabits.Main_Habits.MainActivity;
 import cmput301f17t09.goalsandhabits.Main_Habits.NewHabit;
+import cmput301f17t09.goalsandhabits.R;
 
 /**
  * Created by chias on 2017-10-21.

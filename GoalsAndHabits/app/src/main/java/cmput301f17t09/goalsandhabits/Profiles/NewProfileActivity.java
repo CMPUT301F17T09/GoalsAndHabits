@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import cmput301f17t09.goalsandhabits.Main_Habits.MainActivity;
 import cmput301f17t09.goalsandhabits.R;
 
 /**
@@ -40,8 +41,10 @@ public class NewProfileActivity extends AppCompatActivity {
                 }
                 else {
                     //TODO: Check the username is unique then create a Profile and save it to the online database.
-
+                    Intent intent = new Intent(NewProfileActivity.this, MainActivity.class);
                     finish(); //sends user to MainActivity
+                    startActivity(intent);
+
                 }
             }
         });

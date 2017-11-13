@@ -1,4 +1,4 @@
-package cmput301f17t09.goalsandhabits;
+package cmput301f17t09.goalsandhabits.FollowActivityTests;
 
 import android.app.Activity;
 import android.test.ActivityInstrumentationTestCase2;
@@ -7,6 +7,7 @@ import android.view.View;
 import com.robotium.solo.Solo;
 
 import cmput301f17t09.goalsandhabits.Follow_Activity.FollowActivity;
+import cmput301f17t09.goalsandhabits.R;
 
 /**
  * Created by Ken on 22/10/2017.
@@ -30,16 +31,6 @@ public class FollowActivityTest extends ActivityInstrumentationTestCase2<FollowA
         View sendRequest = getActivity().findViewById(R.id.SendRequest);
         solo.clickOnView(sendRequest);
         //TODO: Enter in a valid user id and send a request
-    }
-
-    /**
-     * This test requires that a different user has sent a follow request to the user being tested.
-     */
-    public void testRequestAcceptance() {
-        solo.assertCurrentActivity("Wrong Activity", FollowActivity.class);
-        View viewPending = getActivity().findViewById(R.id.ViewRequests);
-        solo.clickOnView(viewPending);
-        //TODO: Click on accept of a follow request
     }
 
     /**
