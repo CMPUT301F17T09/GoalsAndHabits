@@ -8,7 +8,8 @@ import cmput301f17t09.goalsandhabits.R;
 
 
 /**
- * This activity allows user to view their follower requests and accept or decline them
+ * This activity allows user to view their follower requests and accept or decline them.
+ * Note: This can only be implemented after elasticsearch is implemented
  */
 public class FollowerRequestsActivity extends AppCompatActivity {
 
@@ -19,6 +20,7 @@ public class FollowerRequestsActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.actionbar);
         toolbar.setTitle("My Follower Requests");
+        toolbar.setNavigationIcon(R.drawable.ic_close_button);
         setSupportActionBar(toolbar);
     }
 }

@@ -9,7 +9,9 @@ import cmput301f17t09.goalsandhabits.R;
 
 /**
  * This activity allows the user to view their own habit history of all habits they have created,
- * sorted by date
+ * sorted by date.
+ * Note: have yet to determine how to use HabitEventArrayAdapter to access all habit events and sort
+ * them.
  *
  */
 public class MyHabitHistory extends AppCompatActivity {
@@ -21,5 +23,7 @@ public class MyHabitHistory extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.actionbar);
         toolbar.setTitle("My Habit History");
+        toolbar.setNavigationIcon(R.drawable.ic_close_button);
+        setSupportActionBar(toolbar);
     }
 }

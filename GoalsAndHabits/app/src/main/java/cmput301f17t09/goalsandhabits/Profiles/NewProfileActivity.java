@@ -15,7 +15,8 @@ import cmput301f17t09.goalsandhabits.R;
  * Created by Andrew on 10/22/2017.
  *
  * This activity should be called from the main activity upon first launching the app
- * and allows for creation of a new profile or for transfer to a login activity
+ * and allows for creation of a new profile or for transfer to a login activity.
+ * Note: Not yet able to check for uniqueness of ID or name, test ID is provided for the time being
  *
  */
 public class NewProfileActivity extends AppCompatActivity {

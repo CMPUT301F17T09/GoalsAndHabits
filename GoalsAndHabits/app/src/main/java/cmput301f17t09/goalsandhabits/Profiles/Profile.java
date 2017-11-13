@@ -10,6 +10,7 @@ import java.util.UUID;
  *
  * This class implements the user's profile and maps their user ID and username to their habits and
  * habit events, followers, and the users they follow.
+ * Note: as elasticSearch has not been implemented, Profile mapping is not yet possible.
  */
 
 public class Profile {
