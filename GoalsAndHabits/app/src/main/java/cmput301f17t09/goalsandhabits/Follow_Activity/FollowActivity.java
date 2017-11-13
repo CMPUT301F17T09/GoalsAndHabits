@@ -1,4 +1,4 @@
-package cmput301f17t09.goalsandhabits;
+package cmput301f17t09.goalsandhabits.Follow_Activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +9,11 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
+
+import cmput301f17t09.goalsandhabits.Main_Habits.MainActivity;
+import cmput301f17t09.goalsandhabits.Maps.MapFiltersActivity;
+import cmput301f17t09.goalsandhabits.Profiles.ProfileActivity;
+import cmput301f17t09.goalsandhabits.R;
 
 public class FollowActivity extends AppCompatActivity {
 

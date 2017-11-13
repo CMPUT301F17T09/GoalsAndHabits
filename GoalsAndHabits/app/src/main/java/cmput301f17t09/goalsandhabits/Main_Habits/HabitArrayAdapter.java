@@ -1,4 +1,4 @@
-package cmput301f17t09.goalsandhabits;
+package cmput301f17t09.goalsandhabits.Main_Habits;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,9 +7,10 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
+
+import cmput301f17t09.goalsandhabits.Main_Habits.Habit;
+import cmput301f17t09.goalsandhabits.R;
 
 /**
  * Created by Andrew on 11/6/2017.

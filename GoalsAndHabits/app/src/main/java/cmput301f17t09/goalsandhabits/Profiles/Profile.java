@@ -1,4 +1,4 @@
-package cmput301f17t09.goalsandhabits;
+package cmput301f17t09.goalsandhabits.Profiles;
 
 import java.util.ArrayList;
 import java.util.Collection;

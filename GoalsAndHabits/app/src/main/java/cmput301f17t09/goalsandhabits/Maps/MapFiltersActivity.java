@@ -1,4 +1,4 @@
-package cmput301f17t09.goalsandhabits;
+package cmput301f17t09.goalsandhabits.Maps;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,11 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageButton;
+
+import cmput301f17t09.goalsandhabits.Follow_Activity.FollowActivity;
+import cmput301f17t09.goalsandhabits.Main_Habits.MainActivity;
+import cmput301f17t09.goalsandhabits.Profiles.ProfileActivity;
+import cmput301f17t09.goalsandhabits.R;
 
 public class MapFiltersActivity extends AppCompatActivity {
 

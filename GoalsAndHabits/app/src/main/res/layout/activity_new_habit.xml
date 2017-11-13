@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="cmput301f17t09.goalsandhabits.NewHabit"
+    tools:context="cmput301f17t09.goalsandhabits.Main_Habits.NewHabit"
     android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar

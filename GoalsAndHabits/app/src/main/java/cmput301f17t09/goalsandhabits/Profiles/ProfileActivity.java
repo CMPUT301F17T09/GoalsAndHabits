@@ -1,4 +1,4 @@
-package cmput301f17t09.goalsandhabits;
+package cmput301f17t09.goalsandhabits.Profiles;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +9,10 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Switch;
 
-import static android.app.Activity.RESULT_OK;
+import cmput301f17t09.goalsandhabits.Follow_Activity.FollowActivity;
+import cmput301f17t09.goalsandhabits.Main_Habits.MainActivity;
+import cmput301f17t09.goalsandhabits.Maps.MapFiltersActivity;
+import cmput301f17t09.goalsandhabits.R;
 
 /**
  * Created by Andrew on 11/1/2017.
@@ -21,6 +24,7 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.actionbar);
         toolbar.setTitle("My Profile");
@@ -64,7 +68,7 @@ public class ProfileActivity extends AppCompatActivity {
 
             public void onClick(View v) {
                 setResult(RESULT_OK);
-                Intent intent = new Intent(ProfileActivity.this,HabitHistoryActivity.class);
+                Intent intent = new Intent(ProfileActivity.this,MyHabitHistory.class);
                 startActivity(intent);
             }
         });

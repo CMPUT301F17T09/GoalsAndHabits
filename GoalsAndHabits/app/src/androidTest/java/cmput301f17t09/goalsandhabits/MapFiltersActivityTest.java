@@ -5,6 +5,8 @@ import android.test.ActivityInstrumentationTestCase2;
 
 import com.robotium.solo.Solo;
 
+import cmput301f17t09.goalsandhabits.Maps.MapFiltersActivity;
+
 
 /**
  * Created by Tony on 2017/10/22.
@@ -13,7 +15,7 @@ import com.robotium.solo.Solo;
 public class MapFiltersActivityTest extends ActivityInstrumentationTestCase2 {
     private Solo solo;
     public MapFiltersActivityTest() {
-        super(cmput301f17t09.goalsandhabits.MapFiltersActivity.class);
+        super(MapFiltersActivity.class);
     }
     public void setUp() throws Exception{
         solo = new Solo(getInstrumentation(), getActivity());

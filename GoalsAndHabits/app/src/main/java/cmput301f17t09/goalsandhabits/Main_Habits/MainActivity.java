@@ -1,4 +1,4 @@
-package cmput301f17t09.goalsandhabits;
+package cmput301f17t09.goalsandhabits.Main_Habits;
 
 import android.content.Context;
 import android.content.Intent;
@@ -26,9 +26,15 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.HashSet;
+
+import cmput301f17t09.goalsandhabits.Follow_Activity.FollowActivity;
+import cmput301f17t09.goalsandhabits.Maps.MapFiltersActivity;
+import cmput301f17t09.goalsandhabits.Profiles.NewProfileActivity;
+import cmput301f17t09.goalsandhabits.Profiles.Profile;
+import cmput301f17t09.goalsandhabits.Profiles.ProfileActivity;
+import cmput301f17t09.goalsandhabits.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,11 +43,14 @@ public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_HABIT_STARTDATE = "cmput301f17t09.goalsandhabits.HABIT_STARTDATE";
     public static final String EXTRA_HABIT_SCHEDULE = "cmput301f17t09.goalsandhabits.HABIT_SCHEDULE";
     public static final String EXTRA_HABIT_SERIAL = "cmput301f17t09.goalsandhabits.HABIT_SERIAL";
+    public static final String EXTRA_HABIT_POSITION = "cmput301f17t09.goalsandhabits.HABIT_POSITION";
 
     public static final String FILENAME = "data.sav";
 
     public static final int REQUEST_CODE_NEW_HABIT = 1;
     public static final int REQUEST_CODE_NEW_HABIT_EVENT = 2;
+    public static final int REQUEST_CODE_VIEW_HABIT_HISTORY = 3;
+    public static final int REQUEST_CODE_VIEW_HABIT = 4;
 
     private static final String MY_PREFERENCES = "my_preferences";
 
@@ -49,16 +58,24 @@ public class MainActivity extends AppCompatActivity {
     private HabitArrayAdapter habitArrayAdapter;
     private ListView habitsList;
 
+    public Profile myProfile = new Profile();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        Context context = MainActivity.this;
+        final SharedPreferences reader = context.getSharedPreferences(MY_PREFERENCES,Context.MODE_PRIVATE);
+        final boolean first = reader.getBoolean("is_first",true);
         Intent intent = new Intent(MainActivity.this, NewProfileActivity.class);
-        if (MainActivity.isFirst(MainActivity.this)) {
+        if (first) {
             startActivity(intent);
+
         }
+        final SharedPreferences.Editor editor = reader.edit();
+        editor.putBoolean("is_first",false);
+        editor.commit();
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.actionbar);
@@ -116,7 +133,8 @@ public class MainActivity extends AppCompatActivity {
                 if (h!=null) {
                     Intent intent = new Intent(MainActivity.this, ViewHabitActivity.class);
                     intent.putExtra(EXTRA_HABIT_SERIAL, h);
-                    startActivity(intent);
+                    intent.putExtra(EXTRA_HABIT_POSITION, position);
+                    startActivityForResult(intent, REQUEST_CODE_VIEW_HABIT);
                 }
             }
         });
@@ -156,6 +174,14 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(this, "Habit " + name + " created!", Toast.LENGTH_SHORT).show();
                     break;
                 }
+                case REQUEST_CODE_VIEW_HABIT:{
+                    if (data.hasExtra(EXTRA_HABIT_POSITION) && data.hasExtra(EXTRA_HABIT_SERIAL)){
+                        int pos = (int) data.getSerializableExtra(EXTRA_HABIT_POSITION);
+                        habits.set(pos, (Habit) data.getSerializableExtra(EXTRA_HABIT_SERIAL));
+                        habitArrayAdapter.notifyDataSetChanged();
+                    }
+                    break;
+                }
             }
         }
     }
@@ -166,16 +192,6 @@ public class MainActivity extends AppCompatActivity {
         super.onStop();
     }
 
-    public static boolean isFirst(Context context) {
-        final SharedPreferences reader = context.getSharedPreferences(MY_PREFERENCES,Context.MODE_PRIVATE);
-        final boolean first = reader.getBoolean("is_first",true);
-        if(first) {
-            final SharedPreferences.Editor editor = reader.edit();
-            editor.putBoolean("is_first", false);
-            editor.commit();
-        }
-        return first;
-    }
 
     private void loadData(){
         try {
