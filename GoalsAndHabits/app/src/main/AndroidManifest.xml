@@ -30,6 +30,7 @@
             android:parentActivityName=".Profiles.ProfileActivity" />
         <activity android:name=".Profiles.MyHabitHistory"
             android:parentActivityName=".Profiles.ProfileActivity"></activity>
+        <activity android:name=".Main_Habits.NewHabitEventActivity" />
     </application>
 
 </manifest>
