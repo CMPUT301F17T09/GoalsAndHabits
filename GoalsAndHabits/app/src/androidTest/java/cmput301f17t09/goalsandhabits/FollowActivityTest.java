@@ -2,13 +2,12 @@ package cmput301f17t09.goalsandhabits;
 
 import android.app.Activity;
 import android.test.ActivityInstrumentationTestCase2;
-import android.text.Editable;
 import android.view.View;
-import android.widget.EditText;
 
 import com.robotium.solo.Solo;
 
-import junit.framework.TestCase;
+import cmput301f17t09.goalsandhabits.Follow_Activity.FollowActivity;
+
 /**
  * Created by Ken on 22/10/2017.
  */
@@ -16,7 +15,7 @@ import junit.framework.TestCase;
 public class FollowActivityTest extends ActivityInstrumentationTestCase2<FollowActivity> {
     private Solo solo;
 
-    public FollowActivityTest() {super(cmput301f17t09.goalsandhabits.FollowActivity.class);}
+    public FollowActivityTest() {super(FollowActivity.class);}
 
     public void setUp() throws Exception{
         solo = new Solo(getInstrumentation(), getActivity());

@@ -1,4 +1,4 @@
-package cmput301f17t09.goalsandhabits;
+package cmput301f17t09.goalsandhabits.Profiles;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -7,6 +7,9 @@ import java.util.UUID;
 
 /**
  * Created by Andrew on 10/22/2017.
+ *
+ * This class implements the user's profile and maps their user ID and username to their habits and
+ * habit events, followers, and the users they follow.
  */
 
 public class Profile {

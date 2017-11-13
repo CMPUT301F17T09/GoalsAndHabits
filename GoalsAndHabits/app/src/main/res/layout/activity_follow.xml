@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="cmput301f17t09.goalsandhabits.FollowActivity">
+    tools:context="cmput301f17t09.goalsandhabits.Follow_Activity.FollowActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/actionbar"
@@ -27,7 +27,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/ViewRequests" />
+        app:layout_constraintBottom_toTopOf="@+id/toolbar_nav" />
 
     <ListView
         android:id="@+id/FollowList"
@@ -41,17 +41,6 @@
         app:layout_constraintTop_toBottomOf="@+id/actionbar"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent" />
-
-    <Button
-        android:id="@+id/ViewRequests"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="View Pending Requests"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/toolbar_nav" />
 
     <include
         layout="@layout/toolbar_navigation"

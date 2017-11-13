@@ -2,10 +2,10 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion '26.0.2'
+    buildToolsVersion '26.0.1'
     defaultConfig {
         applicationId "cmput301f17t09.goalsandhabits"
-        minSdkVersion 23
+        minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -31,6 +31,6 @@ dependencies {
     compile 'com.android.support:support-vector-drawable:25.3.1'
     compile 'com.jayway.android.robotium:robotium-solo:5.6.3'
     compile 'com.google.android.gms:play-services-maps:11.0.4'
-    testCompile 'junit:junit:4.12'
     compile 'com.google.code.gson:gson:2.8.2'
+    testCompile 'junit:junit:4.12'
 }

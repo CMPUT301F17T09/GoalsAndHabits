@@ -1,4 +1,4 @@
-package cmput301f17t09.goalsandhabits;
+package cmput301f17t09.goalsandhabits.Follow_Activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +9,11 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
+
+import cmput301f17t09.goalsandhabits.Main_Habits.MainActivity;
+import cmput301f17t09.goalsandhabits.Maps.MapFiltersActivity;
+import cmput301f17t09.goalsandhabits.Profiles.ProfileActivity;
+import cmput301f17t09.goalsandhabits.R;
 
 public class FollowActivity extends AppCompatActivity {
 
@@ -31,6 +36,7 @@ public class FollowActivity extends AppCompatActivity {
             public void onClick(View v) {
                 setResult(RESULT_OK);
                 Intent intent = new Intent(FollowActivity.this,MainActivity.class);
+                finish();
                 startActivity(intent);
             }
         });
@@ -39,6 +45,7 @@ public class FollowActivity extends AppCompatActivity {
             public void onClick(View v) {
                 setResult(RESULT_OK);
                 Intent intent = new Intent(FollowActivity.this,ProfileActivity.class);
+                finish();
                 startActivity(intent);
             }
         });
@@ -47,12 +54,12 @@ public class FollowActivity extends AppCompatActivity {
             public void onClick(View v) {
                 setResult(RESULT_OK);
                 Intent intent = new Intent(FollowActivity.this,MapFiltersActivity.class);
+                finish();
                 startActivity(intent);
             }
         });
 
         Button newRequest = (Button) findViewById(R.id.SendRequest);
-        Button viewPending = (Button) findViewById(R.id.ViewRequests);
         ListView followList = (ListView) findViewById(R.id.FollowList);
 
         newRequest.setOnClickListener(new View.OnClickListener() {
@@ -60,14 +67,6 @@ public class FollowActivity extends AppCompatActivity {
             public void onClick(View v) {
                 setResult(RESULT_OK);
                 //TODO: Create a dialog and prompt user for id to add.
-            }
-        });
-
-        viewPending.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setResult(RESULT_OK);
-                //TODO: Display all requests received and allow user to accept/decline.
             }
         });
 

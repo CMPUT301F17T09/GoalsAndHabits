@@ -6,6 +6,9 @@ import android.view.View;
 
 import com.robotium.solo.Solo;
 
+import cmput301f17t09.goalsandhabits.Main_Habits.MainActivity;
+import cmput301f17t09.goalsandhabits.Main_Habits.NewHabit;
+
 /**
  * Created by chias on 2017-10-21.
  */
