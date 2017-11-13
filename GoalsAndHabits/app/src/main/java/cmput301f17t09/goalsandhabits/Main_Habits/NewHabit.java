@@ -106,6 +106,9 @@ public class NewHabit extends AppCompatActivity {
         super.finish();
     }
 
+    /**
+     * Creates a new date picker dialog fragment and displays it.
+     */
     public void showDatePickerDialog(){
         DialogFragment newFragment = new DatePickerFrag();
         newFragment.show(getFragmentManager(), "DatePicker");

@@ -11,10 +11,17 @@ import android.widget.DatePicker;
 
 /**
  * Created by Ken on 13/11/2017.
+ * This class represents a basic date picker. Taken from Android Documentation.
+ * Currently not used by the application.
  */
 
 public class DatePickerFrag extends DialogFragment implements DatePickerDialog.OnDateSetListener{
 
+    /**
+     * Instantiates a new date picker dialog fragment.
+     * @param savedInstanceState
+     * @return DatePickerDialog Fragment
+     */
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
