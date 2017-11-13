@@ -26,7 +26,7 @@
         <activity android:name=".Profiles.ProfileActivity" />
         <activity android:name=".Profiles.NewProfileActivity" />
         <activity
-            android:name=".Profiles.followerRequestsActivity"
+            android:name=".Profiles.FollowerRequestsActivity"
             android:parentActivityName=".Profiles.ProfileActivity" />
         <activity android:name=".Profiles.MyHabitHistory"
             android:parentActivityName=".Profiles.ProfileActivity"></activity>

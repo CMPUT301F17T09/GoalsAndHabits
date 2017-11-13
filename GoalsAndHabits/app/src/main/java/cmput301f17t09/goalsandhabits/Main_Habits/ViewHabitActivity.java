@@ -140,7 +140,7 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
 
     @Override
     public void onDialogNegativeClick(DialogFragment dialog) {
-        // User touched the dialog's positive button
+        // User touched the dialog's negative button
     }
 
     public void finish() {

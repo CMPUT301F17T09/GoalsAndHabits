@@ -6,7 +6,11 @@ import android.support.v7.widget.Toolbar;
 
 import cmput301f17t09.goalsandhabits.R;
 
-public class followerRequestsActivity extends AppCompatActivity {
+
+/**
+ * This activity allows user to view their follower requests and accept or decline them
+ */
+public class FollowerRequestsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

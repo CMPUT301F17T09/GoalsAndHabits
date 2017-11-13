@@ -6,6 +6,12 @@ import android.support.v7.widget.Toolbar;
 
 import cmput301f17t09.goalsandhabits.R;
 
+
+/**
+ * This activity allows the user to view their own habit history of all habits they have created,
+ * sorted by date
+ *
+ */
 public class MyHabitHistory extends AppCompatActivity {
 
     @Override

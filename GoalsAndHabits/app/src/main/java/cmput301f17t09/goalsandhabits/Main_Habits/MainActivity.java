@@ -69,9 +69,9 @@ public class MainActivity extends AppCompatActivity {
         final SharedPreferences reader = context.getSharedPreferences(MY_PREFERENCES,Context.MODE_PRIVATE);
         final boolean first = reader.getBoolean("is_first",true);
         Intent intent = new Intent(MainActivity.this, NewProfileActivity.class);
-        if (first) {
-            startActivity(intent);
 
+        if (first) {
+            startActivity(intent); //If this is the first startup of the app, run profile creation activity
         }
         final SharedPreferences.Editor editor = reader.edit();
         editor.putBoolean("is_first",false);
