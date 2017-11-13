@@ -89,7 +89,7 @@ activity#cmput301f17t09.goalsandhabits.Profiles.NewProfileActivity
 ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:27:9-65
 	android:name
 		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:27:19-62
-activity#cmput301f17t09.goalsandhabits.Profiles.followerRequestsActivity
+activity#cmput301f17t09.goalsandhabits.Profiles.FollowerRequestsActivity
 ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:28:9-30:70
 	android:parentActivityName
 		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:30:13-67
