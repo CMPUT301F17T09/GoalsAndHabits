@@ -13,7 +13,8 @@ import cmput301f17t09.goalsandhabits.R;
 
 /**
  * This activity allows users to log in using a pre-existing profile with a unique user ID and
- * username. Users can also return to the NewProfileActivity
+ * username. Users can also return to the NewProfileActivity.
+ * Note:
  */
 public class LoginActivity extends AppCompatActivity {
 

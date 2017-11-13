@@ -70,6 +70,9 @@ public class MainActivity extends AppCompatActivity {
         final boolean first = reader.getBoolean("is_first",true);
         Intent intent = new Intent(MainActivity.this, NewProfileActivity.class);
 
+
+        //adapted from https://stackoverflow.com/questions/7238532/how-to-launch-activity-only-once-when-app-is-opened-for-first-time
+        //as of Nov 13, 2017
         if (first) {
             startActivity(intent); //If this is the first startup of the app, run profile creation activity
         }
