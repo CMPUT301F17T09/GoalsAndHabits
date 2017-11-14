@@ -9,39 +9,27 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.CalendarView;
+import android.widget.CheckBox;
 import android.widget.EditText;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 import cmput301f17t09.goalsandhabits.R;
 
 /**
  * Created by Ken on 07/11/2017.
- * This class represents an interactive dialog that allows a user to change the different fields
- * of a selected habit.
  */
 
 public class EditHabitDialog extends DialogFragment{
 
-    /**
-     * An interface that must be implemented by the activity that creates this dialog.
-     * Allows the activity to handle the changes made by the dialog.
-     */
     public interface EditHabitDialogListener{
-        public void onDialogPositiveClick(DialogFragment dialog, String newreason,
-                                          String newtitle, Date newdate);
-        public void onDialogNegativeClick(DialogFragment dialog);
+        public void onDialogPositiveClick(DialogFragment dialog, String s, String newreason);
+        public void onDialogNegativeƒClick(DialogFragment dialog);
     }
 
     EditHabitDialogListener mListener;
 
-    /**
-     * Creates a new instance of the edit habit dialog with the passed parameters.
-     * @param name The name of the habit to be changed
-     * @param reason The reason of the habit to be changed
-     * @return A new dialog fragment
-     */
     public static EditHabitDialog newInstance(String name, String reason) {
         EditHabitDialog frag = new EditHabitDialog();
         Bundle args = new Bundle();
@@ -51,10 +39,6 @@ public class EditHabitDialog extends DialogFragment{
         return frag;
     }
 
-    /**
-     * Ensures that the dialog was created by an activity implementing it's interface.
-     * @param context Activity creating the dialog
-     */
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -77,15 +61,11 @@ public class EditHabitDialog extends DialogFragment{
         }
     }
 
-    /**
-     * Builds an alert dialog fragment
-     * @param savedInstanceState
-     * @return Dialog Fragment
-     */
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState){
         String name = getArguments().getString("name");
         String reason = getArguments().getString("reason");
+        String date = getArguments().getString("Start date");
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = getActivity().getLayoutInflater();
@@ -95,23 +75,41 @@ public class EditHabitDialog extends DialogFragment{
         reason_field.setText(reason);
         final EditText name_field = (EditText) diaView.findViewById(R.id.editDiaName);
         name_field.setText(name);
-        final CalendarView date_select = (CalendarView) diaView.findViewById(R.id.editDiaDate);
-        //TODO: set calendar to start date of habit
+
+        final EditText date_field = (EditText)diaView.findViewById(R.id.editStartDate);
+        date_field.setText(date);
+        ArrayList<CheckBox> days = new ArrayList<CheckBox>();
+        days.add((CheckBox) date_field.findViewById(R.id.sundayBox));
+        days.add((CheckBox) date_field.findViewById(R.id.mondayBox));
+        days.add((CheckBox) date_field.findViewById(R.id.tuesdayBox));
+        days.add((CheckBox) date_field.findViewById(R.id.wednesdayBox));
+        days.add((CheckBox) date_field.findViewById(R.id.thursdayBox));
+        days.add((CheckBox) date_field.findViewById(R.id.fridayBox));
+        days.add((CheckBox) date_field.findViewById(R.id.saturdayBox));
+        String schedule = "";
+        for (int i=0; i<days.size(); i++){
+            CheckBox b = days.get(i);
+            if (b != null){
+                if (b.isChecked()){
+                    schedule += "1";
+                }else{
+                    schedule += "0";
+                }
+            }
+        }
 
         builder.setTitle("Edit habit info")
                 .setView(diaView)
                 .setPositiveButton("accept", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         String newreason = reason_field.getText().toString();
-                        String newtitle = name_field.getText().toString();
-                        Date newdate = new Date(date_select.getDate());
-                        mListener.onDialogPositiveClick(EditHabitDialog.this, newreason, newtitle,
-                                newdate);
+                        String newStartDate = date_field.getText().toString();
+                        mListener.onDialogPositiveClick(EditHabitDialog.this, newreason,newStartDate);
                     }
                 })
                 .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        mListener.onDialogNegativeClick(EditHabitDialog.this);
+                        mListener.onDialogNegativeƒClick(EditHabitDialog.this);
                     }
                 });
         return builder.create();
