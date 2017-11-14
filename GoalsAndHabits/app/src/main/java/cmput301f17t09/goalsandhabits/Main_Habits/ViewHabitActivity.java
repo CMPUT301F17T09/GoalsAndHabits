@@ -10,14 +10,23 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ListView;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
+
+import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.Date;
 
 import cmput301f17t09.goalsandhabits.R;
+
+import static cmput301f17t09.goalsandhabits.Main_Habits.MainActivity.FILENAME;
 
 /**
  * Created by Andrew on 11/6/2017.
@@ -33,7 +42,8 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
     private Context context;
     private int position;
     private Toolbar toolbar;
-
+    private ArrayList<HabitEvent> habits;
+    habits = habit.getEvents();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -107,7 +117,7 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
                 return true;
             }
             case R.id.deleteButton:{
-                finish();
+                deleteHabit();
                 return true;
             }
             default:
@@ -151,6 +161,40 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
     public void showEditDialog() {
         DialogFragment dialog = EditHabitDialog.newInstance(habit.getTitle(),habit.getReason());
         dialog.show(getFragmentManager(), "EditHabitDialog");
+    }
+    /**
+    * delete from file
+    **/
+    public void deleteHabit(){
+        Button delete = (Button) findViewById(R.id.deleteButton);
+        delete.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                setResult(RESULT_OK);
+                habits.remove(position);
+                saveToFile();
+                Intent backToMain = new Intent(ViewHabitActivity.this, MainActivity.class);
+                startActivity(backToMain);
+            }
+        }
+    }
+    /**
+    *commit changes of delete
+    */
+     private void saveToFile(){
+        try {
+            FileOutputStream fos = openFileOutput(FILENAME, Context.MODE_PRIVATE);
+            BufferedWriter out = new BufferedWriter(new OutputStreamWriter(fos));
+
+            Gson gson = new Gson();
+            gson.toJson(habits, out);
+            out.flush();
+            fos.close();
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException();
+        } catch (IOException e) {
+            throw new RuntimeException();
+        }
     }
 
     /**
