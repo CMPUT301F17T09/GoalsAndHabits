@@ -172,17 +172,11 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
     **/
     public void deleteHabit(){
         habits = habit.getEvents();
-        Button delete = (Button) findViewById(R.id.deleteButton);
-        delete.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View v) {
-                setResult(RESULT_OK);
-                habits.remove(position);
-                saveToFile();
-                Intent backToMain = new Intent(ViewHabitActivity.this, MainActivity.class);
-                startActivity(backToMain);
-            }
-        });
+        setResult(RESULT_OK);
+        habits.remove(position);
+        saveToFile();
+        Intent backToMain = new Intent(ViewHabitActivity.this, MainActivity.class);
+        startActivity(backToMain);
     }
     private void loadFromFile() {
         try {
