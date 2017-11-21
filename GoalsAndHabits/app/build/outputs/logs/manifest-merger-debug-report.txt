@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:2:1-37:12
+ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:2:1-36:12
 	package
 		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:3:5-44
 		INJECTED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml
@@ -14,7 +14,7 @@ ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabit
 		INJECTED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml
 application
-ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:5:5-35:19
+ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:5:5-34:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\chias\.android\build-cache\fed6e9aed53a736a677549eec5258b8ae7548d52\output\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:design:25.3.1] C:\Users\chias\.android\build-cache\14c0b45b38424a606c7ba583b0f8950d5bef5a62\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\chias\.android\build-cache\3a7260e96c91c295b8d8f14ea7e8f188d4a01f20\output\AndroidManifest.xml:29:5-20
@@ -105,10 +105,6 @@ activity#cmput301f17t09.goalsandhabits.Main_Habits.NewHabitEventActivity
 ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:33:9-71
 	android:name
 		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:33:19-68
-activity#cmput301f17t09.goalsandhabits.Profiles.FiltersActivity
-ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:34:9-71
-	android:name
-		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:34:19-59
 uses-sdk
 INJECTED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\chias\.android\build-cache\fed6e9aed53a736a677549eec5258b8ae7548d52\output\AndroidManifest.xml:5:5-7:41
