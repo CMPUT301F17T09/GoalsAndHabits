@@ -9,6 +9,7 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
@@ -76,6 +77,14 @@ public class EditHabitDialog extends DialogFragment{
         final EditText name_field = (EditText) diaView.findViewById(R.id.editDiaName);
         name_field.setText(name);
 
+        Button date_button = (Button) diaView.findViewById(R.id.editDateButton);
+
+        date_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDatePickerDialog();
+            }
+        });
         //final EditText date_field = (EditText)diaView.findViewById(R.id.editStartDate);
         //date_field.setText(date);
         ArrayList<CheckBox> days = new ArrayList<CheckBox>();
@@ -114,6 +123,11 @@ public class EditHabitDialog extends DialogFragment{
                     }
                 });
         return builder.create();
+    }
+
+    public void showDatePickerDialog(){
+        DialogFragment newFragment = new DatePickerFrag();
+        newFragment.show(getFragmentManager(), "DatePicker");
     }
 
 }
