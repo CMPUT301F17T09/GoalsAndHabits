@@ -24,8 +24,8 @@ import cmput301f17t09.goalsandhabits.R;
 public class EditHabitDialog extends DialogFragment{
 
     public interface EditHabitDialogListener{
-        public void onDialogPositiveClick(DialogFragment dialog, String s, String newreason);
-        public void onDialogNegativeƒClick(DialogFragment dialog);
+        public void onDialogPositiveClick(DialogFragment dialog, String newreason, String newtitle);
+        public void onDialogNegativeClick(DialogFragment dialog);
     }
 
     EditHabitDialogListener mListener;
@@ -65,7 +65,7 @@ public class EditHabitDialog extends DialogFragment{
     public Dialog onCreateDialog(Bundle savedInstanceState){
         String name = getArguments().getString("name");
         String reason = getArguments().getString("reason");
-        String date = getArguments().getString("Start date");
+        //String date = getArguments().getString("Start date");
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = getActivity().getLayoutInflater();
@@ -76,16 +76,16 @@ public class EditHabitDialog extends DialogFragment{
         final EditText name_field = (EditText) diaView.findViewById(R.id.editDiaName);
         name_field.setText(name);
 
-        final EditText date_field = (EditText)diaView.findViewById(R.id.editStartDate);
-        date_field.setText(date);
+        //final EditText date_field = (EditText)diaView.findViewById(R.id.editStartDate);
+        //date_field.setText(date);
         ArrayList<CheckBox> days = new ArrayList<CheckBox>();
-        days.add((CheckBox) date_field.findViewById(R.id.sundayBox));
-        days.add((CheckBox) date_field.findViewById(R.id.mondayBox));
-        days.add((CheckBox) date_field.findViewById(R.id.tuesdayBox));
-        days.add((CheckBox) date_field.findViewById(R.id.wednesdayBox));
-        days.add((CheckBox) date_field.findViewById(R.id.thursdayBox));
-        days.add((CheckBox) date_field.findViewById(R.id.fridayBox));
-        days.add((CheckBox) date_field.findViewById(R.id.saturdayBox));
+        days.add((CheckBox) diaView.findViewById(R.id.sundayBox));
+        days.add((CheckBox) diaView.findViewById(R.id.mondayBox));
+        days.add((CheckBox) diaView.findViewById(R.id.tuesdayBox));
+        days.add((CheckBox) diaView.findViewById(R.id.wednesdayBox));
+        days.add((CheckBox) diaView.findViewById(R.id.thursdayBox));
+        days.add((CheckBox) diaView.findViewById(R.id.fridayBox));
+        days.add((CheckBox) diaView.findViewById(R.id.saturdayBox));
         String schedule = "";
         for (int i=0; i<days.size(); i++){
             CheckBox b = days.get(i);
@@ -103,13 +103,14 @@ public class EditHabitDialog extends DialogFragment{
                 .setPositiveButton("accept", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         String newreason = reason_field.getText().toString();
-                        String newStartDate = date_field.getText().toString();
-                        mListener.onDialogPositiveClick(EditHabitDialog.this, newreason,newStartDate);
+                        String newtitle = name_field.getText().toString();
+                        //String newStartDate = date_field.getText().toString();
+                        mListener.onDialogPositiveClick(EditHabitDialog.this, newreason, newtitle);
                     }
                 })
                 .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        mListener.onDialogNegativeƒClick(EditHabitDialog.this);
+                        mListener.onDialogNegativeClick(EditHabitDialog.this);
                     }
                 });
         return builder.create();
