@@ -122,7 +122,7 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
                 return true;
             }
             case R.id.deleteButton:{
-                deleteHabit();
+                finish();
                 return true;
             }
             default:
@@ -166,53 +166,6 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
     public void showEditDialog() {
         DialogFragment dialog = EditHabitDialog.newInstance(habit.getTitle(),habit.getReason());
         dialog.show(getFragmentManager(), "EditHabitDialog");
-    }
-    /**
-    * delete from file
-    **/
-    public void deleteHabit(){
-        habits = habit.getEvents();
-        setResult(RESULT_OK);
-        habits.remove(position);
-        saveToFile();
-        Intent backToMain = new Intent(ViewHabitActivity.this, MainActivity.class);
-        startActivity(backToMain);
-    }
-    private void loadFromFile() {
-        try {
-            FileInputStream fis = openFileInput(FILENAME);
-            BufferedReader in = new BufferedReader(new InputStreamReader(fis));
-            Gson gson = new Gson();
-
-            // Taken from https://stackoverflow.com/question/12384064/gson-convert-from-json-into java
-            // 2017 01-26 17:53:59
-            habits = gson.fromJson(in, new TypeToken<ArrayList<HabitEvent>>(){}.getType());
-
-            fis.close();
-
-        } catch (FileNotFoundException e) {
-            habits = new ArrayList<HabitEvent>();
-        } catch (IOException e) {
-            throw new RuntimeException();
-        }
-    }
-    /**
-    *commit changes of delete
-    */
-     public void saveToFile(){
-        try {
-            FileOutputStream fos = openFileOutput(FILENAME, Context.MODE_PRIVATE);
-            BufferedWriter out = new BufferedWriter(new OutputStreamWriter(fos));
-
-            Gson gson = new Gson();
-            gson.toJson(habits, out);
-            out.flush();
-            fos.close();
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException();
-        } catch (IOException e) {
-            throw new RuntimeException();
-        }
     }
 
     /**
