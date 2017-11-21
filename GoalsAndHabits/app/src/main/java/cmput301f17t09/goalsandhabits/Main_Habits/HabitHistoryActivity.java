@@ -64,7 +64,7 @@ public class HabitHistoryActivity extends AppCompatActivity implements EditHabit
         });
     }
     public boolean onCreateOptionsMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.menu_view_habit_events, menu);
+        getMenuInflater().inflate(R.menu.menu_view_myhabitevents, menu);
         return true;
     }
 
