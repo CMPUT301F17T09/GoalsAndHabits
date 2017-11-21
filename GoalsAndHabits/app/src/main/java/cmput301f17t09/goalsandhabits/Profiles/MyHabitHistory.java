@@ -18,8 +18,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.Comparator;
 
 import cmput301f17t09.goalsandhabits.Main_Habits.Habit;
+import cmput301f17t09.goalsandhabits.Main_Habits.HabitEvent;
 import cmput301f17t09.goalsandhabits.Main_Habits.HabitEventArrayAdapter;
 import cmput301f17t09.goalsandhabits.R;
 
@@ -27,8 +29,7 @@ import cmput301f17t09.goalsandhabits.R;
 /**
  * This activity allows the user to view their own habit history of all habits they have created,
  * sorted by date.
- * Note: have yet to determine how to use HabitEventArrayAdapter to access all habit events and sort
- * them.
+ * Note: have yet to sort habit events by date and add filter and map options
  *
  */
 public class MyHabitHistory extends AppCompatActivity {
@@ -62,6 +63,13 @@ public class MyHabitHistory extends AppCompatActivity {
                 habitEventArrayAdapter.addAll(habits.get(i).getEvents());
             }
         }
+        Comparator<? super HabitEvent> dateCompare = new Comparator<HabitEvent>() {
+            @Override
+            public int compare(HabitEvent h1, HabitEvent h2) {
+                return -h1.getDate().compareTo(h2.getDate());
+            }
+        };
+        habitEventArrayAdapter.sort(dateCompare);
         habitEventsList.setAdapter(habitEventArrayAdapter);
 
     }
