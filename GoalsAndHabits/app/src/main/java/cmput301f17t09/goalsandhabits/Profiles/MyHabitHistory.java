@@ -1,6 +1,7 @@
 package cmput301f17t09.goalsandhabits.Profiles;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -81,7 +82,7 @@ public class MyHabitHistory extends AppCompatActivity {
      */
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.menu_view_habit, menu);
+        getMenuInflater().inflate(R.menu.menu_view_myhabitevents, menu);
         return true;
     }
 
@@ -97,13 +98,13 @@ public class MyHabitHistory extends AppCompatActivity {
                 finish();
                 return true;
             }
-            //TODO: Add filter by Habit
-            case R.id.editButton:{
-                //
+            //TODO: Add filters
+            case R.id.filter:{
+
                 return true;
             }
-            //TODO: Add filter by comment
-            case R.id.deleteButton:{
+            case R.id.viewOnMap:{
+
                 return true;
             }
             default:
