@@ -52,7 +52,7 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_habit);
-        loadFromFile();
+        //loadFromFile();
 
         Bundle extras = getIntent().getExtras();
         if (extras!=null){
