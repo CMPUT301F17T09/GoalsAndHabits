@@ -221,16 +221,15 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
      * @param dialog Edit Habit Dialog Fragment
      * @param newreason Updated habit reason string
      * @param newtitle Updated habit name string
-     * @param newdate Updated habit date
      */
 
-    public void onDialogPositiveClick(DialogFragment dialog, String newreason, String newtitle,
-                                      Date newdate) {
+    @Override
+    public void onDialogPositiveClick(DialogFragment dialog, String newreason, String newtitle) {
         reason.setText(newreason);
         toolbar.setTitle(newtitle);
         habit.setReason(newreason);
         habit.setTitle(newtitle);
-        habit.setStartDate(newdate); //Not updating, will have to make changes to main activity
+        //habit.setStartDate(newdate); //Not updating, will have to make changes to main activity
     }
 
     /**
@@ -250,13 +249,4 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
         super.finish();
     }
 
-    @Override
-    public void onDialogPositiveClick(DialogFragment dialog, String s, String newreason) {
-
-    }
-
-    @Override
-    public void onDialogNegativeƒClick(DialogFragment dialog) {
-
-    }
 }
