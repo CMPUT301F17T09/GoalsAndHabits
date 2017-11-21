@@ -59,8 +59,8 @@
         app:layout_constraintRight_toRightOf="@+id/titleEditText"
         tools:layout_constraintLeft_creator="1"
         app:layout_constraintLeft_toLeftOf="@+id/titleEditText"
-        app:layout_constraintHorizontal_bias="1.0"
-        android:layout_marginTop="0dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginTop="-85dp"
         app:layout_constraintTop_toBottomOf="@+id/titleEditText" />
 
     <EditText
@@ -94,14 +94,16 @@
 
     <EditText
         android:id="@+id/dateEditText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="276dp"
+        android:layout_height="42dp"
         android:layout_marginTop="0dp"
         android:ems="10"
         android:inputType="date"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dateTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/dateTextView"
+        app:layout_constraintRight_toLeftOf="@+id/newDateButton"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="8dp" />
 
     <TextView
         android:id="@+id/scheduleTextView"
@@ -182,5 +184,16 @@
         android:text="Saturdays"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fridayBox" />
+
+    <Button
+        android:id="@+id/newDateButton"
+        android:layout_width="89dp"
+        android:layout_height="42dp"
+        android:layout_marginRight="7dp"
+        android:text="New Date"
+        android:textSize="8sp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/dateTextView" />
 
 </android.support.constraint.ConstraintLayout>

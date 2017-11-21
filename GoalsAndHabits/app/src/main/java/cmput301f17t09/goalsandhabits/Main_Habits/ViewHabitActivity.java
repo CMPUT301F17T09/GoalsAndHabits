@@ -39,7 +39,8 @@ import static cmput301f17t09.goalsandhabits.Main_Habits.MainActivity.FILENAME;
  * a specific habit. The user can also edit or delete the
  * habit in this activity, as well as add habit events.
  */
-public class ViewHabitActivity extends AppCompatActivity implements EditHabitDialog.EditHabitDialogListener{
+public class ViewHabitActivity extends AppCompatActivity implements EditHabitDialog.EditHabitDialogListener,
+                                                            DatePickerFrag.DatePickerFragListener{
 
     private Habit habit;
     private TextView reason;
@@ -249,4 +250,12 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
         super.finish();
     }
 
+    public void showDatePickerDialog(){
+        DialogFragment newFragment = new DatePickerFrag();
+        newFragment.show(getFragmentManager(), "DatePicker");
+    }
+
+    @Override
+    public void onDatePicked(DialogFragment dialog, String date) {
+    }
 }

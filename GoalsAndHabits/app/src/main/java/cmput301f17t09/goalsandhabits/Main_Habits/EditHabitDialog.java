@@ -58,7 +58,7 @@ public class EditHabitDialog extends DialogFragment{
         } catch (ClassCastException e) {
             // The activity doesn't implement the interface, throw exception
             throw new ClassCastException(activity.toString()
-                    + " must implement NewHabitDialogListener");
+                    + " must implement EditHabitDialogListener");
         }
     }
 
@@ -77,16 +77,6 @@ public class EditHabitDialog extends DialogFragment{
         final EditText name_field = (EditText) diaView.findViewById(R.id.editDiaName);
         name_field.setText(name);
 
-        Button date_button = (Button) diaView.findViewById(R.id.editDateButton);
-
-        date_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showDatePickerDialog();
-            }
-        });
-        //final EditText date_field = (EditText)diaView.findViewById(R.id.editStartDate);
-        //date_field.setText(date);
         ArrayList<CheckBox> days = new ArrayList<CheckBox>();
         days.add((CheckBox) diaView.findViewById(R.id.sundayBox));
         days.add((CheckBox) diaView.findViewById(R.id.mondayBox));
@@ -123,11 +113,6 @@ public class EditHabitDialog extends DialogFragment{
                     }
                 });
         return builder.create();
-    }
-
-    public void showDatePickerDialog(){
-        DialogFragment newFragment = new DatePickerFrag();
-        newFragment.show(getFragmentManager(), "DatePicker");
     }
 
 }
