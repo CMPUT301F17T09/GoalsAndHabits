@@ -14,8 +14,10 @@ import cmput301f17t09.goalsandhabits.R;
 
 /**
  * Created by Andrew on 11/6/2017.
+ *
+ * This class extends ArrayAdapter in order to properly display the details
+ * of a habit in a ListView
  */
-
 public class HabitArrayAdapter extends ArrayAdapter<Habit> {
     private Context context;
 

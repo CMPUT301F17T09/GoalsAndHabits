@@ -17,8 +17,10 @@ import cmput301f17t09.goalsandhabits.R;
 
 /**
  * Created by Andrew on 11/12/2017.
+ *
+ * This activity is created when the user chooses to create a habit event
+ * for a specific habit.
  */
-
 public class NewHabitEventActivity extends AppCompatActivity {
 
     private boolean save = false;
@@ -35,12 +37,22 @@ public class NewHabitEventActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Inflates the action bar buttons
+     * @param menu
+     * @return
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.menu_new_habit_event, menu);
         return true;
     }
 
+    /**
+     * Handles interacting with the action bar buttons
+     * @param item
+     * @return
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
         switch (item.getItemId()) {
@@ -58,6 +70,11 @@ public class NewHabitEventActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Called when the activity is finished.
+     * This method returns the details of the new habit event to
+     * the calling activity in order to create the habit event.
+     */
     @Override
     public void finish() {
         Intent data = new Intent();

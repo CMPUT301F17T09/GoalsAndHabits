@@ -16,6 +16,10 @@ import java.util.ArrayList;
 import cmput301f17t09.goalsandhabits.Main_Habits.MainActivity;
 import cmput301f17t09.goalsandhabits.R;
 
+/**
+ * This activity allows the user to create a new habit
+ * by specifying the title, reason, start date, and schedule.
+ */
 public class NewHabit extends AppCompatActivity {
 
     private boolean save = false;
@@ -69,6 +73,10 @@ public class NewHabit extends AppCompatActivity {
         }
     }
 
+    /**
+     * Return the details of the new habit to the calling activity
+     * so that the habit can be created and added to the habit list.
+     */
     @Override
     public void finish(){
         Intent data = new Intent();
@@ -76,6 +84,9 @@ public class NewHabit extends AppCompatActivity {
             EditText name = (EditText) findViewById(R.id.titleEditText);
             EditText reason = (EditText) findViewById(R.id.reasonEditText);
             EditText date = (EditText) findViewById(R.id.dateEditText);
+
+            //Change days into a sequence of 1's and 0's
+            //ie 1001100 = Sunday, Wednesday, Thursday.
             ArrayList<CheckBox> days = new ArrayList<CheckBox>();
             days.add((CheckBox) findViewById(R.id.sundayBox));
             days.add((CheckBox) findViewById(R.id.mondayBox));

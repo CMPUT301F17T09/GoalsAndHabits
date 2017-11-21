@@ -5,8 +5,11 @@ import java.util.Date;
 
 /**
  * Created by atsmith on 10/31/17.
+ *
+ * This class implements a HabitEvent which contains
+ * an optional comment, a path to a photo, as well as
+ * a date on which the event occurred.
  */
-
 public class HabitEvent implements Serializable{
     private String comment;
     private String photoPath;

@@ -10,19 +10,35 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+
 import android.widget.Button;
-import android.widget.ListView;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.Date;
 
 import cmput301f17t09.goalsandhabits.R;
 
+import static cmput301f17t09.goalsandhabits.Main_Habits.MainActivity.FILENAME;
+
 /**
  * Created by Andrew on 11/6/2017.
+ *
+ * This activity allows the user to view the details of
+ * a specific habit. The user can also edit or delete the
+ * habit in this activity, as well as add habit events.
  */
-
 public class ViewHabitActivity extends AppCompatActivity implements EditHabitDialog.EditHabitDialogListener{
 
     private Habit habit;
@@ -30,11 +46,13 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
     private Context context;
     private int position;
     private Toolbar toolbar;
+    private ArrayList<HabitEvent> habits = new ArrayList<HabitEvent>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_habit);
+        loadFromFile();
 
         Bundle extras = getIntent().getExtras();
         if (extras!=null){
@@ -75,12 +93,22 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
         });
     }
 
+    /**
+     * Inflates the action bar with buttons
+     * @param menu
+     * @return
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.menu_view_habit, menu);
         return true;
     }
 
+    /**
+     * Handles the buttons in the action bar
+     * @param item
+     * @return
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -102,6 +130,12 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
         }
     }
 
+    /**
+     * Called when an activity that was called for a result returns.
+     * @param requestCode
+     * @param resultCode
+     * @param data
+     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
         if (resultCode == RESULT_OK){
@@ -140,23 +174,21 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
      * @param dialog Edit Habit Dialog Fragment
      * @param newreason Updated habit reason string
      * @param newtitle Updated habit name string
-     * @param newdate Updated habit date
      */
+
     @Override
-    public void onDialogPositiveClick(DialogFragment dialog, String newreason, String newtitle,
-                                      Date newdate) {
+    public void onDialogPositiveClick(DialogFragment dialog, String newreason, String newtitle) {
         reason.setText(newreason);
         toolbar.setTitle(newtitle);
         habit.setReason(newreason);
         habit.setTitle(newtitle);
-        habit.setStartDate(newdate); //Not updating, will have to make changes to main activity
+        //habit.setStartDate(newdate); //Not updating, will have to make changes to main activity
     }
 
     /**
      * Exits out of edit habit dialog. Makes no changes to habit.
      * @param dialog Edit Habit Dialog Fragment
      */
-    @Override
     public void onDialogNegativeClick(DialogFragment dialog) {
         // User touched the dialog's negative button
     }
@@ -169,4 +201,5 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
         setResult(RESULT_OK, data);
         super.finish();
     }
+
 }
