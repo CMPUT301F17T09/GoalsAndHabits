@@ -82,6 +82,14 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
             }
         });
 
+        Button habitDateButton = (Button) findViewById(R.id.changeDate);
+        habitDateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               showDatePickerDialog();
+            }
+        });
+
         context = this;
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.floatingAdd);
@@ -210,5 +218,7 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
 
     @Override
     public void onDatePicked(DialogFragment dialog, String date) {
+        TextView habitDate = (TextView) findViewById(R.id.textHabitDate);
+        habitDate.setText(date);
     }
 }
