@@ -254,7 +254,6 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
 
     }
 
-    @Override
     public void onDialogNegativeƒClick(DialogFragment dialog) {
 
     }

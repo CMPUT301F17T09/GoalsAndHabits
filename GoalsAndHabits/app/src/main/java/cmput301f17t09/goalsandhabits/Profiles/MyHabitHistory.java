@@ -100,7 +100,7 @@ public class MyHabitHistory extends AppCompatActivity {
             }
             //TODO: Add filters
             case R.id.filter:{
-
+                
                 return true;
             }
             case R.id.viewOnMap:{
