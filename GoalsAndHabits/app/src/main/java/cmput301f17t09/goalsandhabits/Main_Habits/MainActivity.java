@@ -58,8 +58,6 @@ public class MainActivity extends AppCompatActivity {
     private HabitArrayAdapter habitArrayAdapter;
     private ListView habitsList;
 
-    public Profile myProfile = new Profile();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
