@@ -5,6 +5,8 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.UUID;
 
+import io.searchbox.annotations.JestId;
+
 /**
  * Created by Andrew on 10/22/2017.
  *
@@ -14,16 +16,9 @@ import java.util.UUID;
  */
 
 public class Profile {
-    private Long userId;
+    @JestId
+    private String userId;
     private String username;
-
-    /**
-     * Profile constructor used for testing
-     */
-
-    public Profile(){
-        this.userId = 0L;
-    }
 
     /**
      * Profile Constructor
@@ -31,7 +26,6 @@ public class Profile {
      */
 
     public Profile(String username){
-        this.userId = 0L;
         setUsername(username);
         //TODO: check for uniqueness of username, assign unique userID
     }
@@ -40,7 +34,7 @@ public class Profile {
      * Gets userID
      * @return userId
      */
-    public Long getUserId(){
+    public String getUserId(){
         return this.userId;
     }
 
@@ -56,7 +50,7 @@ public class Profile {
      * Sets userID
      * @param userId
      */
-    public void setUserId(Long userId){
+    public void setUserId(String userId){
         this.userId = userId;
     }
 
