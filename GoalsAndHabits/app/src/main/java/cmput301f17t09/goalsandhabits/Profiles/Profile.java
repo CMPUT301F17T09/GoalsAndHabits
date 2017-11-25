@@ -1,5 +1,6 @@
 package cmput301f17t09.goalsandhabits.Profiles;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -15,10 +16,11 @@ import io.searchbox.annotations.JestId;
  * Note: as elasticSearch has not been implemented, Profile mapping is not yet possible.
  */
 
-public class Profile {
+public class Profile implements Serializable{
     @JestId
     private String userId;
     private String username;
+    private ArrayList<String> habitIds;
 
     /**
      * Profile Constructor
@@ -60,5 +62,16 @@ public class Profile {
      */
     public void setUsername(String username){
         this.username = username;
+    }
+
+    public ArrayList<String> getHabitIds() { return this.habitIds; }
+
+    public void setHabitIds(ArrayList<String> habitIds) { this.habitIds = habitIds; }
+
+    public void addHabitId(String habitId) {
+        if (habitIds==null){
+            habitIds = new ArrayList<>();
+        }
+        habitIds.add(habitId);
     }
 }

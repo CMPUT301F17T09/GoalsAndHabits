@@ -7,6 +7,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageButton;
@@ -26,11 +27,15 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.UUID;
 
+import cmput301f17t09.goalsandhabits.ElasticSearch.ElasticSearchController;
 import cmput301f17t09.goalsandhabits.Follow_Activity.FollowActivity;
 import cmput301f17t09.goalsandhabits.Maps.MapFiltersActivity;
+import cmput301f17t09.goalsandhabits.Profiles.LoginActivity;
 import cmput301f17t09.goalsandhabits.Profiles.NewProfileActivity;
 import cmput301f17t09.goalsandhabits.Profiles.Profile;
 import cmput301f17t09.goalsandhabits.Profiles.ProfileActivity;
@@ -44,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_HABIT_SCHEDULE = "cmput301f17t09.goalsandhabits.HABIT_SCHEDULE";
     public static final String EXTRA_HABIT_SERIAL = "cmput301f17t09.goalsandhabits.HABIT_SERIAL";
     public static final String EXTRA_HABIT_POSITION = "cmput301f17t09.goalsandhabits.HABIT_POSITION";
+    public static final String EXTRA_PROFILE_SERIAL = "cmput301f17t09.goalsandhabits.PROFILE_SERIAL";
 
     public static final String FILENAME = "data.sav";
 
@@ -51,33 +57,24 @@ public class MainActivity extends AppCompatActivity {
     public static final int REQUEST_CODE_NEW_HABIT_EVENT = 2;
     public static final int REQUEST_CODE_VIEW_HABIT_HISTORY = 3;
     public static final int REQUEST_CODE_VIEW_HABIT = 4;
+    public static final int REQUEST_CODE_LOGIN = 5;
+    public static final int REQUEST_CODE_SIGNUP = 6;
 
-    private static final String MY_PREFERENCES = "my_preferences";
+    public static final String MY_PREFERENCES = "my_preferences";
 
     private ArrayList<Habit> habits;
     private HabitArrayAdapter habitArrayAdapter;
     private ListView habitsList;
+
+    private Profile profile;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Context context = MainActivity.this;
-        final SharedPreferences reader = context.getSharedPreferences(MY_PREFERENCES,Context.MODE_PRIVATE);
-        final boolean first = reader.getBoolean("is_first",true);
-        Intent intent = new Intent(MainActivity.this, NewProfileActivity.class);
 
-
-        //adapted from https://stackoverflow.com/questions/7238532/how-to-launch-activity-only-once-when-app-is-opened-for-first-time
-        //as of Nov 13, 2017
-        if (first) {
-            startActivity(intent); //If this is the first startup of the app, run profile creation activity
-        }
-        final SharedPreferences.Editor editor = reader.edit();
-        editor.putBoolean("is_first",false);
-        editor.commit();
-
+        getProfile();
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.actionbar);
         toolbar.setTitle("My Habits");
@@ -168,6 +165,9 @@ public class MainActivity extends AppCompatActivity {
 
                     Habit habit = new Habit(name, reason, startdate);
                     habit.setSchedule(schedule);
+                    UUID uuid = UUID.randomUUID();
+                    habit.setId(uuid.toString());
+                    profile.addHabitId(habit.getId());
 
                     habits.add(habit);
                     habitArrayAdapter.notifyDataSetChanged();
@@ -183,6 +183,14 @@ public class MainActivity extends AppCompatActivity {
                     }
                     break;
                 }
+                case REQUEST_CODE_SIGNUP: {
+                    if (data.hasExtra(EXTRA_PROFILE_SERIAL)){
+                        profile = (Profile) data.getSerializableExtra(EXTRA_PROFILE_SERIAL);
+                    }else{
+                        Log.i("Error","No profile was passed from signup/login!");
+                    }
+                    break;
+                }
             }
         }
     }
@@ -195,41 +203,74 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void loadData(){
-        try {
-            FileInputStream fis = openFileInput(FILENAME);
-            BufferedReader in = new BufferedReader(new InputStreamReader(fis));
-
-            Gson gson = new Gson();
-
-            //Taken from https://stackoverflow.com/questions/12384064/gson-convert-from-json-to-a-typed-arraylistt
-            //2017-09-28
-            Type listType = new TypeToken<ArrayList<Habit>>(){}.getType();
-            habits = gson.fromJson(in,listType);
-            in.close();
-            fis.close();
-
-        } catch (FileNotFoundException e) {
-            habits = new ArrayList<Habit>();
-        } catch (IOException e) {
-            throw new RuntimeException();
+        habits = new ArrayList<>();
+        if (profile==null){
+            Log.i("Error","Failed to load habits: profile is null!");
+            return;
         }
-
+        if (profile.getHabitIds()==null){
+            Log.i("Error", "Failed to load habits: habit id list is null!");
+            return;
+        }
+        Log.i("Info","Fetching habits for profile id " + profile.getUserId());
+        ElasticSearchController.GetHabitsTask getHabitsTask
+                = new ElasticSearchController.GetHabitsTask();
+        ArrayList<String> ids = profile.getHabitIds();
+        getHabitsTask.execute(ids.toArray(new String[ids.size()]));
+        try {
+            habits = getHabitsTask.get();
+        }catch (Exception e) {
+            Log.i("Error","ElasticSearch failed to find habits for profile with id " + profile.getUserId());
+        }
     }
 
     private void saveData(){
-        try {
-            FileOutputStream fos = openFileOutput(FILENAME, Context.MODE_PRIVATE);
-            BufferedWriter out = new BufferedWriter(new OutputStreamWriter(fos));
-
-            Gson gson = new Gson();
-            gson.toJson(habits, out);
-            out.flush();
-            fos.close();
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException();
-        } catch (IOException e) {
-            throw new RuntimeException();
+        if (habits.size()>0) {
+            ElasticSearchController.AddHabitsTask addHabitsTask
+                    = new ElasticSearchController.AddHabitsTask();
+            Habit[] habitArr = habits.toArray(new Habit[habits.size()]);
+            addHabitsTask.execute(habitArr);
         }
+        if (profile != null) {
+            ElasticSearchController.UpdateProfileTask updateProfileTask
+                    = new ElasticSearchController.UpdateProfileTask();
+            updateProfileTask.execute(profile);
+        }
+    }
+
+    private void getProfile(){
+        Context context = MainActivity.this;
+        final SharedPreferences reader = context.getSharedPreferences(MY_PREFERENCES,Context.MODE_PRIVATE);
+        final boolean first = reader.getBoolean("is_first",true);
+        final String userId = reader.getString("userId","");
+        final SharedPreferences.Editor editor = reader.edit();
+        //adapted from https://stackoverflow.com/questions/7238532/how-to-launch-activity-only-once-when-app-is-opened-for-first-time
+        //as of Nov 13, 2017
+        if (first) {
+            Intent intent = new Intent(MainActivity.this, NewProfileActivity.class);
+            startActivityForResult(intent, REQUEST_CODE_SIGNUP); //If this is the first startup of the app, run profile creation activity
+        }else {
+            if (userId.isEmpty()) {
+                Intent intent = new Intent(MainActivity.this, NewProfileActivity.class);
+                startActivityForResult(intent, REQUEST_CODE_SIGNUP);
+            } else {
+                //Attempt to login with stored user ID
+                ElasticSearchController.GetProfileTask getProfileTask
+                        = new ElasticSearchController.GetProfileTask();
+                getProfileTask.execute(userId);
+                try {
+                    profile = getProfileTask.get();
+                } catch (Exception e) {
+                    Log.i("Error", "Failed to get profiles with id " + userId + " from async object");
+                    editor.remove("userId");
+                    Intent intent = new Intent(MainActivity.this, NewProfileActivity.class);
+                    startActivityForResult(intent, REQUEST_CODE_SIGNUP);
+                }
+            }
+
+        }
+        editor.putBoolean("is_first", false);
+        editor.commit();
     }
 
 }

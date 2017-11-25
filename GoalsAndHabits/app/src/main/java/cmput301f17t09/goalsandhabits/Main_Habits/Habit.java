@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashSet;
 
+import io.searchbox.annotations.JestId;
+
 /**
  * Created by atsmith on 10/31/17.
  */
@@ -14,6 +16,8 @@ public class Habit implements Serializable{
     private static final int titleLength = 20;
     private static final int reasonLength = 30;
 
+    @JestId
+    private String id;
     private String title;
     private String reason;
     private Date startDate;
@@ -103,4 +107,8 @@ public class Habit implements Serializable{
     public void addHabitEvent(HabitEvent event){
         events.add(event);
     }
+
+    public String getId() { return this.id; }
+
+    public void setId(String id) { this.id = id; }
 }
