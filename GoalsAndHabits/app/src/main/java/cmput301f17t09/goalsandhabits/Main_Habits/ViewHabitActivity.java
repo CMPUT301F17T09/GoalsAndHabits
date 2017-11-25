@@ -48,13 +48,12 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
     private Context context;
     private int position;
     private Toolbar toolbar;
-    private ArrayList<Habit> habits;
+    private boolean deleted = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_habit);
-        loadFromFile();
 
         Bundle extras = getIntent().getExtras();
         if (extras!=null){
@@ -124,11 +123,8 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
                 return true;
             }
             case R.id.deleteButton:{;
-                setResult(RESULT_OK);
-                habits.remove(position);
-                saveInFile();
-                Intent backToMain = new Intent(ViewHabitActivity.this, MainActivity.class);
-                startActivity(backToMain);
+                deleted=true;
+                finish();
                 return true;
 
             }
@@ -176,44 +172,6 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
     }
 
 
-
-    private void loadFromFile() {
-        try {
-            FileInputStream fis = openFileInput(FILENAME);
-            BufferedReader in = new BufferedReader(new InputStreamReader(fis));
-            Gson gson = new Gson();
-
-            // Taken from https://stackoverflow.com/question/12384064/gson-convert-from-json-into java
-            // 2017 01-26 17:53:59
-            habits = gson.fromJson(in, new TypeToken<ArrayList<Habit>>(){}.getType());
-
-            fis.close();
-
-        } catch (FileNotFoundException e) {
-            habits = new ArrayList<Habit>();
-        } catch (IOException e) {
-            throw new RuntimeException();
-        }
-    }
-    /**
-    *commit changes of delete
-    */
-    private void saveInFile() {
-        try {
-            FileOutputStream fos = openFileOutput(FILENAME,
-                    Context.MODE_PRIVATE);
-            BufferedWriter out = new BufferedWriter(new OutputStreamWriter(fos));
-            Gson gson = new Gson();
-            gson.toJson(habits, out);
-            out.flush();
-            fos.close();
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException();
-        } catch (IOException e) {
-            throw new RuntimeException();
-        }
-    }
-
     /**
      * Receives new information from edit habit dialog and makes appropriate updates to the habit.
      * Closes dialog.
@@ -243,6 +201,9 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
     public void finish() {
         //Pass back the habit and position
         Intent data = new Intent();
+        if (deleted){
+            data.putExtra(MainActivity.EXTRA_HABIT_DELETED,true);
+        }
         data.putExtra(MainActivity.EXTRA_HABIT_SERIAL, habit);
         data.putExtra(MainActivity.EXTRA_HABIT_POSITION, position);
         setResult(RESULT_OK, data);
