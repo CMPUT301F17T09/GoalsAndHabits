@@ -1,9 +1,12 @@
 package cmput301f17t09.goalsandhabits.Profiles;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.UUID;
+
+import io.searchbox.annotations.JestId;
 
 /**
  * Created by Andrew on 10/22/2017.
@@ -13,17 +16,11 @@ import java.util.UUID;
  * Note: as elasticSearch has not been implemented, Profile mapping is not yet possible.
  */
 
-public class Profile {
-    private Long userId;
+public class Profile implements Serializable{
+    @JestId
+    private String userId;
     private String username;
-
-    /**
-     * Profile constructor used for testing
-     */
-
-    public Profile(){
-        this.userId = 0L;
-    }
+    private ArrayList<String> habitIds;
 
     /**
      * Profile Constructor
@@ -31,7 +28,6 @@ public class Profile {
      */
 
     public Profile(String username){
-        this.userId = 0L;
         setUsername(username);
         //TODO: check for uniqueness of username, assign unique userID
     }
@@ -40,7 +36,7 @@ public class Profile {
      * Gets userID
      * @return userId
      */
-    public Long getUserId(){
+    public String getUserId(){
         return this.userId;
     }
 
@@ -56,7 +52,7 @@ public class Profile {
      * Sets userID
      * @param userId
      */
-    public void setUserId(Long userId){
+    public void setUserId(String userId){
         this.userId = userId;
     }
 
@@ -66,5 +62,16 @@ public class Profile {
      */
     public void setUsername(String username){
         this.username = username;
+    }
+
+    public ArrayList<String> getHabitIds() { return this.habitIds; }
+
+    public void setHabitIds(ArrayList<String> habitIds) { this.habitIds = habitIds; }
+
+    public void addHabitId(String habitId) {
+        if (habitIds==null){
+            habitIds = new ArrayList<>();
+        }
+        habitIds.add(habitId);
     }
 }

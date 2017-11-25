@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -19,6 +20,7 @@ import com.google.gson.reflect.TypeToken;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -46,13 +48,12 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
     private Context context;
     private int position;
     private Toolbar toolbar;
-    private ArrayList<HabitEvent> habits = new ArrayList<HabitEvent>();
+    private boolean deleted = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_habit);
-        loadFromFile();
 
         Bundle extras = getIntent().getExtras();
         if (extras!=null){
@@ -121,9 +122,11 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
                 //finish();
                 return true;
             }
-            case R.id.deleteButton:{
+            case R.id.deleteButton:{;
+                deleted=true;
                 finish();
                 return true;
+
             }
             default:
                 return super.onOptionsItemSelected(item);
@@ -168,21 +171,23 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
         dialog.show(getFragmentManager(), "EditHabitDialog");
     }
 
+
     /**
      * Receives new information from edit habit dialog and makes appropriate updates to the habit.
      * Closes dialog.
      * @param dialog Edit Habit Dialog Fragment
      * @param newreason Updated habit reason string
      * @param newtitle Updated habit name string
+     * @param newdate Updated habit date
      */
 
-    @Override
-    public void onDialogPositiveClick(DialogFragment dialog, String newreason, String newtitle) {
+    public void onDialogPositiveClick(DialogFragment dialog, String newreason, String newtitle,
+                                      Date newdate) {
         reason.setText(newreason);
         toolbar.setTitle(newtitle);
         habit.setReason(newreason);
         habit.setTitle(newtitle);
-        //habit.setStartDate(newdate); //Not updating, will have to make changes to main activity
+        habit.setStartDate(newdate); //Not updating, will have to make changes to main activity
     }
 
     /**
@@ -196,10 +201,21 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
     public void finish() {
         //Pass back the habit and position
         Intent data = new Intent();
+        if (deleted){
+            data.putExtra(MainActivity.EXTRA_HABIT_DELETED,true);
+        }
         data.putExtra(MainActivity.EXTRA_HABIT_SERIAL, habit);
         data.putExtra(MainActivity.EXTRA_HABIT_POSITION, position);
         setResult(RESULT_OK, data);
         super.finish();
     }
 
+    @Override
+    public void onDialogPositiveClick(DialogFragment dialog, String s, String newreason) {
+
+    }
+
+    public void onDialogNegativeƒClick(DialogFragment dialog) {
+
+    }
 }
