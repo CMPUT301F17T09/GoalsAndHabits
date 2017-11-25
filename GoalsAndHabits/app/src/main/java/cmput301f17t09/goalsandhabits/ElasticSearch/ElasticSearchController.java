@@ -16,6 +16,7 @@ import cmput301f17t09.goalsandhabits.Profiles.Profile;
 import io.searchbox.client.JestResult;
 import io.searchbox.client.JestResultHandler;
 import io.searchbox.core.Bulk;
+import io.searchbox.core.Delete;
 import io.searchbox.core.DocumentResult;
 import io.searchbox.core.Get;
 import io.searchbox.core.Index;
@@ -204,6 +205,41 @@ public class ElasticSearchController {
         }
     }
 
+    public static class DeleteHabitTask extends AsyncTask<Habit, Void, Void>{
+        @Override
+        protected Void doInBackground(Habit... habits){
+            verifySettings();
+
+            ArrayList<Delete> deletions = new ArrayList<>();
+
+            for (Habit habit : habits) {
+                if (habit.getId()!=null) {
+                    Delete delete = new Delete.Builder(habit.getId()).index(appESIndex).type("habit").build();
+                    deletions.add(delete);
+                }
+            }
+            if (!deletions.isEmpty()){
+                Bulk bulk = new Bulk.Builder()
+                        .defaultIndex(appESIndex)
+                        .defaultType("habit")
+                        .addAction(deletions)
+                        .build();
+
+                try{
+                    JestResult result = client.execute(bulk);
+                    if (result.isSucceeded()){
+                        Log.i("Info","Successfully deleted habits");
+                    }
+                }catch (Exception e){
+                    Log.i("Error","Failed to delete habits");
+                    e.printStackTrace();
+                }
+            }
+
+            return null;
+        }
+    }
+
     public static class GetProfilesTask extends AsyncTask<String, Void, ArrayList<Profile>>{
         @Override
         protected ArrayList<Profile> doInBackground(String... search_parameters){
@@ -216,7 +252,6 @@ public class ElasticSearchController {
                     + "        \"term\" : { \"username\" : \""+search_parameters[0]+"\"}\n"
                     + "    }\n"
                     + "}";
-            Log.i("Info","Query: \n" + query);
             Search search = new Search.Builder(query).addIndex(appESIndex).addType("profile").build();
 
             try{

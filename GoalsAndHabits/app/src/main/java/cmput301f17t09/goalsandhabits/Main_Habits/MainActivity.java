@@ -3,6 +3,8 @@ package cmput301f17t09.goalsandhabits.Main_Habits;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -49,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_HABIT_SCHEDULE = "cmput301f17t09.goalsandhabits.HABIT_SCHEDULE";
     public static final String EXTRA_HABIT_SERIAL = "cmput301f17t09.goalsandhabits.HABIT_SERIAL";
     public static final String EXTRA_HABIT_POSITION = "cmput301f17t09.goalsandhabits.HABIT_POSITION";
+    public static final String EXTRA_HABIT_DELETED = "cmput301f17t09.goalsandhabits.HABIT_DELETED";
     public static final String EXTRA_PROFILE_SERIAL = "cmput301f17t09.goalsandhabits.PROFILE_SERIAL";
 
     public static final String FILENAME = "data.sav";
@@ -178,7 +181,15 @@ public class MainActivity extends AppCompatActivity {
                 case REQUEST_CODE_VIEW_HABIT:{
                     if (data.hasExtra(EXTRA_HABIT_POSITION) && data.hasExtra(EXTRA_HABIT_SERIAL)){
                         int pos = (int) data.getSerializableExtra(EXTRA_HABIT_POSITION);
-                        habits.set(pos, (Habit) data.getSerializableExtra(EXTRA_HABIT_SERIAL));
+                        Habit habit = (Habit) data.getSerializableExtra(EXTRA_HABIT_SERIAL);
+                        if (data.hasExtra(EXTRA_HABIT_DELETED)){
+                            ElasticSearchController.DeleteHabitTask deleteHabitTask
+                                    = new ElasticSearchController.DeleteHabitTask();
+                            deleteHabitTask.execute(habit);
+                            habits.remove(pos);
+                        }else {
+                            habits.set(pos, habit);
+                        }
                         habitArrayAdapter.notifyDataSetChanged();
                     }
                     break;
@@ -186,6 +197,8 @@ public class MainActivity extends AppCompatActivity {
                 case REQUEST_CODE_SIGNUP: {
                     if (data.hasExtra(EXTRA_PROFILE_SERIAL)){
                         profile = (Profile) data.getSerializableExtra(EXTRA_PROFILE_SERIAL);
+                        loadData();
+                        habitArrayAdapter.notifyDataSetChanged();
                     }else{
                         Log.i("Error","No profile was passed from signup/login!");
                     }
@@ -204,23 +217,48 @@ public class MainActivity extends AppCompatActivity {
 
     private void loadData(){
         habits = new ArrayList<>();
-        if (profile==null){
-            Log.i("Error","Failed to load habits: profile is null!");
-            return;
-        }
-        if (profile.getHabitIds()==null){
-            Log.i("Error", "Failed to load habits: habit id list is null!");
-            return;
-        }
-        Log.i("Info","Fetching habits for profile id " + profile.getUserId());
-        ElasticSearchController.GetHabitsTask getHabitsTask
-                = new ElasticSearchController.GetHabitsTask();
-        ArrayList<String> ids = profile.getHabitIds();
-        getHabitsTask.execute(ids.toArray(new String[ids.size()]));
-        try {
-            habits = getHabitsTask.get();
-        }catch (Exception e) {
-            Log.i("Error","ElasticSearch failed to find habits for profile with id " + profile.getUserId());
+        if (isNetworkAvailable()) {
+            if (profile == null) {
+                Log.i("Error", "Failed to load habits: profile is null!");
+                return;
+            }
+            if (profile.getHabitIds() == null) {
+                Log.i("Error", "Failed to load habits: habit id list is null!");
+                return;
+            }
+            Log.i("Info", "Fetching habits for profile id " + profile.getUserId());
+            ElasticSearchController.GetHabitsTask getHabitsTask
+                    = new ElasticSearchController.GetHabitsTask();
+            ArrayList<String> ids = profile.getHabitIds();
+            getHabitsTask.execute(ids.toArray(new String[ids.size()]));
+            try {
+                habits = getHabitsTask.get();
+            } catch (Exception e) {
+                Log.i("Error", "ElasticSearch failed to find habits for profile with id " + profile.getUserId());
+            }
+        }else{
+            //Load from local storage
+            try {
+                FileInputStream fis = openFileInput(FILENAME);
+                BufferedReader in = new BufferedReader(new InputStreamReader(fis));
+
+                Gson gson = new Gson();
+
+                //Taken from https://stackoverflow.com/questions/12384064/gson-convert-from-json-to-a-typed-arraylistt
+                //2017-09-28
+                Type listType = new TypeToken<ArrayList<Habit>>(){}.getType();
+                habits = gson.fromJson(in,listType);
+                Type profileType = new TypeToken<Profile>(){}.getType();
+                profile = gson.fromJson(in,profileType);
+                in.close();
+                fis.close();
+
+            } catch (FileNotFoundException e) {
+                //We either need internet connection or previously stored data for the app to work
+                throw new RuntimeException();
+            } catch (IOException e) {
+                throw new RuntimeException();
+            }
         }
     }
 
@@ -236,6 +274,21 @@ public class MainActivity extends AppCompatActivity {
                     = new ElasticSearchController.UpdateProfileTask();
             updateProfileTask.execute(profile);
         }
+        //Save to local storage:
+        try {
+            FileOutputStream fos = openFileOutput(FILENAME, Context.MODE_PRIVATE);
+            BufferedWriter out = new BufferedWriter(new OutputStreamWriter(fos));
+
+            Gson gson = new Gson();
+            gson.toJson(habits, out);
+            gson.toJson(profile, out);
+            out.flush();
+            fos.close();
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException();
+        } catch (IOException e) {
+            throw new RuntimeException();
+        }
     }
 
     private void getProfile(){
@@ -247,6 +300,11 @@ public class MainActivity extends AppCompatActivity {
         //adapted from https://stackoverflow.com/questions/7238532/how-to-launch-activity-only-once-when-app-is-opened-for-first-time
         //as of Nov 13, 2017
         if (first) {
+            if (!isNetworkAvailable()){
+                //TODO: tell the user they need internet connection for the first run!
+                finish();
+                return;
+            }
             Intent intent = new Intent(MainActivity.this, NewProfileActivity.class);
             startActivityForResult(intent, REQUEST_CODE_SIGNUP); //If this is the first startup of the app, run profile creation activity
         }else {
@@ -271,6 +329,16 @@ public class MainActivity extends AppCompatActivity {
         }
         editor.putBoolean("is_first", false);
         editor.commit();
+    }
+
+
+    //adapted from https://stackoverflow.com/questions/4238921/detect-whether-there-is-an-internet-connection-available-on-android
+    //as of Nov 25, 2017
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 
 }
