@@ -87,7 +87,7 @@ public class MyHabitHistory extends AppCompatActivity {
                 return -h1.getDate().compareTo(h2.getDate());
             }
         };
-        if (!(habitEventArrayAdapter ==  null)) {
+        if (!((habitEventArrayAdapter ==  null)) && !(habitEventArrayAdapter.isEmpty())) {
             habitEventArrayAdapter.sort(dateCompare);
             habitEventsList.setAdapter(habitEventArrayAdapter);
         }
@@ -183,41 +183,18 @@ public class MyHabitHistory extends AppCompatActivity {
     private void getProfile(){
         Context context = MyHabitHistory.this;
         final SharedPreferences reader = context.getSharedPreferences(MY_PREFERENCES,Context.MODE_PRIVATE);
-        final boolean first = reader.getBoolean("is_first",true);
         final String userId = reader.getString("userId","");
-        final SharedPreferences.Editor editor = reader.edit();
-        //adapted from https://stackoverflow.com/questions/7238532/how-to-launch-activity-only-once-when-app-is-opened-for-first-time
-        //as of Nov 13, 2017
-        if (first) {
-            if (!isNetworkAvailable()){
-                //TODO: tell the user they need internet connection for the first run!
-                finish();
-                return;
-            }
+        ElasticSearchController.GetProfileTask getProfileTask
+                    = new ElasticSearchController.GetProfileTask();
+        getProfileTask.execute(userId);
+        try {
+            profile = getProfileTask.get();
+        } catch (Exception e) {
+            Log.i("Error", "Failed to get profiles with id " + userId + " from async object");
             Intent intent = new Intent(MyHabitHistory.this, NewProfileActivity.class);
-            startActivityForResult(intent, REQUEST_CODE_SIGNUP); //If this is the first startup of the app, run profile creation activity
-        }else {
-            if (userId.isEmpty()) {
-                Intent intent = new Intent(MyHabitHistory.this, NewProfileActivity.class);
-                startActivityForResult(intent, REQUEST_CODE_SIGNUP);
-            } else {
-                //Attempt to login with stored user ID
-                ElasticSearchController.GetProfileTask getProfileTask
-                        = new ElasticSearchController.GetProfileTask();
-                getProfileTask.execute(userId);
-                try {
-                    profile = getProfileTask.get();
-                } catch (Exception e) {
-                    Log.i("Error", "Failed to get profiles with id " + userId + " from async object");
-                    editor.remove("userId");
-                    Intent intent = new Intent(MyHabitHistory.this, NewProfileActivity.class);
-                    startActivityForResult(intent, REQUEST_CODE_SIGNUP);
-                }
-            }
-
+            startActivityForResult(intent, REQUEST_CODE_SIGNUP);
         }
-        editor.putBoolean("is_first", false);
-        editor.commit();
+
     }
 
 
