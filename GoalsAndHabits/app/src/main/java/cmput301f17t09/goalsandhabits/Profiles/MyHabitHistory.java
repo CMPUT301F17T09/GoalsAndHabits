@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -70,10 +71,8 @@ public class MyHabitHistory extends AppCompatActivity {
         loadData();
         //TODO: For each habit, add all events to array adapter
         //TODO: check for existence of at least 1 habit and at least 1 habit event
-        habitEventArrayAdapter = new HabitEventArrayAdapter(this,habits.get(0).getEvents());
-        if (habits.get(0).getId().isEmpty()) {
-            Log.i("Error", "Habits is empty");
-        }
+        if (!habits.isEmpty()) {habitEventArrayAdapter = new HabitEventArrayAdapter(this,habits.get(0).getEvents());}
+
         if (habits.size()>1) {
             for (int i=0;i<habits.size();i++) {
                 habitEventArrayAdapter.addAll(habits.get(i).getEvents());
@@ -88,10 +87,13 @@ public class MyHabitHistory extends AppCompatActivity {
                 return -h1.getDate().compareTo(h2.getDate());
             }
         };
-        //
-        habitEventArrayAdapter.sort(dateCompare);
-        habitEventsList.setAdapter(habitEventArrayAdapter);
-
+        if (!(habitEventArrayAdapter ==  null)) {
+            habitEventArrayAdapter.sort(dateCompare);
+            habitEventsList.setAdapter(habitEventArrayAdapter);
+        }
+        else {
+            Toast.makeText(MyHabitHistory.this,"No habit events to display!", Toast.LENGTH_SHORT).show();
+        }
     }
 
     /**
