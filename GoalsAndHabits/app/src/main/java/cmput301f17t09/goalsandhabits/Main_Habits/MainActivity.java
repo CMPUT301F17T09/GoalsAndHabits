@@ -186,6 +186,7 @@ public class MainActivity extends AppCompatActivity {
                             ElasticSearchController.DeleteHabitTask deleteHabitTask
                                     = new ElasticSearchController.DeleteHabitTask();
                             deleteHabitTask.execute(habit);
+                            profile.removeHabitId(habit.getId());
                             habits.remove(pos);
                         }else {
                             habits.set(pos, habit);
