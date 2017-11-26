@@ -74,4 +74,9 @@ public class Profile implements Serializable{
         }
         habitIds.add(habitId);
     }
+
+    public void removeHabitId(String habitId){
+        if (habitIds==null) return;
+        habitIds.remove(habitId);
+    }
 }
