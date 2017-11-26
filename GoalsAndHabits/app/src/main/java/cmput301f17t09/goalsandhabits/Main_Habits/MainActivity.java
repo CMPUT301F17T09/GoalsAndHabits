@@ -303,8 +303,7 @@ public class MainActivity extends AppCompatActivity {
                 fis.close();
 
             } catch (FileNotFoundException e) {
-                //We either need internet connection or previously stored data for the app to work
-                throw new RuntimeException();
+                habits = new ArrayList<>();
             } catch (IOException e) {
                 throw new RuntimeException();
             }
