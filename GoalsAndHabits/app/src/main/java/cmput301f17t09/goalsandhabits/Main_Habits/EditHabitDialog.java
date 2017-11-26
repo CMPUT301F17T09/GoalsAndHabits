@@ -103,7 +103,7 @@ public class EditHabitDialog extends DialogFragment{
                     public void onClick(DialogInterface dialog, int id) {
                         String newreason = reason_field.getText().toString();
                         String newtitle = name_field.getText().toString();
-                        //String newStartDate = date_field.getText().toString();
+                        //TODO:
                         mListener.onDialogPositiveClick(EditHabitDialog.this, newreason, newtitle);
                     }
                 })
