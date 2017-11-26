@@ -3,10 +3,13 @@ package cmput301f17t09.goalsandhabits.Main_Habits;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageButton;
@@ -26,11 +29,15 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.UUID;
 
+import cmput301f17t09.goalsandhabits.ElasticSearch.ElasticSearchController;
 import cmput301f17t09.goalsandhabits.Follow_Activity.FollowActivity;
 import cmput301f17t09.goalsandhabits.Maps.MapFiltersActivity;
+import cmput301f17t09.goalsandhabits.Profiles.LoginActivity;
 import cmput301f17t09.goalsandhabits.Profiles.NewProfileActivity;
 import cmput301f17t09.goalsandhabits.Profiles.Profile;
 import cmput301f17t09.goalsandhabits.Profiles.ProfileActivity;
@@ -44,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_HABIT_SCHEDULE = "cmput301f17t09.goalsandhabits.HABIT_SCHEDULE";
     public static final String EXTRA_HABIT_SERIAL = "cmput301f17t09.goalsandhabits.HABIT_SERIAL";
     public static final String EXTRA_HABIT_POSITION = "cmput301f17t09.goalsandhabits.HABIT_POSITION";
+    public static final String EXTRA_HABIT_DELETED = "cmput301f17t09.goalsandhabits.HABIT_DELETED";
+    public static final String EXTRA_PROFILE_SERIAL = "cmput301f17t09.goalsandhabits.PROFILE_SERIAL";
 
     public static final String FILENAME = "data.sav";
 
@@ -51,35 +60,24 @@ public class MainActivity extends AppCompatActivity {
     public static final int REQUEST_CODE_NEW_HABIT_EVENT = 2;
     public static final int REQUEST_CODE_VIEW_HABIT_HISTORY = 3;
     public static final int REQUEST_CODE_VIEW_HABIT = 4;
+    public static final int REQUEST_CODE_LOGIN = 5;
+    public static final int REQUEST_CODE_SIGNUP = 6;
 
-    private static final String MY_PREFERENCES = "my_preferences";
+    public static final String MY_PREFERENCES = "my_preferences";
 
     private ArrayList<Habit> habits;
     private HabitArrayAdapter habitArrayAdapter;
     private ListView habitsList;
 
-    public Profile myProfile = new Profile();
+    private Profile profile;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Context context = MainActivity.this;
-        final SharedPreferences reader = context.getSharedPreferences(MY_PREFERENCES,Context.MODE_PRIVATE);
-        final boolean first = reader.getBoolean("is_first",true);
-        Intent intent = new Intent(MainActivity.this, NewProfileActivity.class);
 
-
-        //adapted from https://stackoverflow.com/questions/7238532/how-to-launch-activity-only-once-when-app-is-opened-for-first-time
-        //as of Nov 13, 2017
-        if (first) {
-            startActivity(intent); //If this is the first startup of the app, run profile creation activity
-        }
-        final SharedPreferences.Editor editor = reader.edit();
-        editor.putBoolean("is_first",false);
-        editor.commit();
-
+        getProfile();
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.actionbar);
         toolbar.setTitle("My Habits");
@@ -170,6 +168,9 @@ public class MainActivity extends AppCompatActivity {
 
                     Habit habit = new Habit(name, reason, startdate);
                     habit.setSchedule(schedule);
+                    UUID uuid = UUID.randomUUID();
+                    habit.setId(uuid.toString());
+                    profile.addHabitId(habit.getId());
 
                     habits.add(habit);
                     habitArrayAdapter.notifyDataSetChanged();
@@ -180,8 +181,27 @@ public class MainActivity extends AppCompatActivity {
                 case REQUEST_CODE_VIEW_HABIT:{
                     if (data.hasExtra(EXTRA_HABIT_POSITION) && data.hasExtra(EXTRA_HABIT_SERIAL)){
                         int pos = (int) data.getSerializableExtra(EXTRA_HABIT_POSITION);
-                        habits.set(pos, (Habit) data.getSerializableExtra(EXTRA_HABIT_SERIAL));
+                        Habit habit = (Habit) data.getSerializableExtra(EXTRA_HABIT_SERIAL);
+                        if (data.hasExtra(EXTRA_HABIT_DELETED)){
+                            ElasticSearchController.DeleteHabitTask deleteHabitTask
+                                    = new ElasticSearchController.DeleteHabitTask();
+                            deleteHabitTask.execute(habit);
+                            profile.removeHabitId(habit.getId());
+                            habits.remove(pos);
+                        }else {
+                            habits.set(pos, habit);
+                        }
                         habitArrayAdapter.notifyDataSetChanged();
+                    }
+                    break;
+                }
+                case REQUEST_CODE_SIGNUP: {
+                    if (data.hasExtra(EXTRA_PROFILE_SERIAL)){
+                        profile = (Profile) data.getSerializableExtra(EXTRA_PROFILE_SERIAL);
+                        loadData();
+                        habitArrayAdapter.notifyDataSetChanged();
+                    }else{
+                        Log.i("Error","No profile was passed from signup/login!");
                     }
                     break;
                 }
@@ -197,34 +217,125 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void loadData(){
-        try {
-            FileInputStream fis = openFileInput(FILENAME);
-            BufferedReader in = new BufferedReader(new InputStreamReader(fis));
+        habits = new ArrayList<>();
+        if (isNetworkAvailable() && profile != null){
+            //Load local files first:
+            ArrayList<String> offlineIds = new ArrayList<>();
+            try {
+                FileInputStream fis = openFileInput(FILENAME);
+                BufferedReader in = new BufferedReader(new InputStreamReader(fis));
 
-            Gson gson = new Gson();
+                StringBuilder habitsJSON = new StringBuilder();
+                String line;
+                while ((line = in.readLine()) != null){
+                    if (line.equalsIgnoreCase("profile")) break;
+                    habitsJSON.append(line);
+                }
 
-            //Taken from https://stackoverflow.com/questions/12384064/gson-convert-from-json-to-a-typed-arraylistt
-            //2017-09-28
-            Type listType = new TypeToken<ArrayList<Habit>>(){}.getType();
-            habits = gson.fromJson(in,listType);
-            in.close();
-            fis.close();
+                Gson gson = new Gson();
+                //Taken from https://stackoverflow.com/questions/12384064/gson-convert-from-json-to-a-typed-arraylistt
+                //2017-09-28
+                Type listType = new TypeToken<ArrayList<Habit>>(){}.getType();
+                habits = gson.fromJson(habitsJSON.toString(),listType);
+                //Store the local habit ids in a list
+                for (Habit h : habits){
+                    offlineIds.add(h.getId());
+                }
+                in.close();
+                fis.close();
 
-        } catch (FileNotFoundException e) {
-            habits = new ArrayList<Habit>();
-        } catch (IOException e) {
-            throw new RuntimeException();
+            } catch (FileNotFoundException e) {
+                Log.i("Error","Data file not found!");
+            } catch (IOException e) {
+                throw new RuntimeException();
+            }
+
+            //Now load the habits from the elasticsearch server:
+            ArrayList<Habit> onlineHabits = new ArrayList<>();
+            if (profile.getHabitIds()!=null){
+                Log.i("Info", "Fetching habits for profile id " + profile.getUserId());
+                ElasticSearchController.GetHabitsTask getHabitsTask
+                        = new ElasticSearchController.GetHabitsTask();
+                ArrayList<String> ids = profile.getHabitIds();
+                if (!offlineIds.isEmpty()) {
+                    ids.removeAll(offlineIds);
+                }
+                getHabitsTask.execute(ids.toArray(new String[ids.size()]));
+                try {
+                    onlineHabits = getHabitsTask.get();
+                } catch (Exception e) {
+                    Log.i("Error", "ElasticSearch failed to find habits for profile with id " + profile.getUserId());
+                }
+            }
+            habits.addAll(onlineHabits);
+            //Add any offline habit ids to the profile.
+            if (offlineIds.isEmpty()==false) {
+                ArrayList<String> profileIds = profile.getHabitIds();
+                for (String id : offlineIds) {
+                    if (!profileIds.contains(id)){
+                        profile.addHabitId(id);
+                    }
+                }
+            }
+        }else{
+            //The network isn't available, so just load local:
+            try {
+                FileInputStream fis = openFileInput(FILENAME);
+                BufferedReader in = new BufferedReader(new InputStreamReader(fis));
+
+                StringBuilder habitsJSON = new StringBuilder();
+                StringBuilder profileJSON = new StringBuilder();
+                String line;
+                while ((line = in.readLine()) != null){
+                    if (line.equalsIgnoreCase("profile")) break;
+                    habitsJSON.append(line);
+                }
+                while ((line = in.readLine()) != null){
+                    profileJSON.append(line);
+                }
+
+                Gson gson = new Gson();
+                //Taken from https://stackoverflow.com/questions/12384064/gson-convert-from-json-to-a-typed-arraylistt
+                //2017-09-28
+                Type listType = new TypeToken<ArrayList<Habit>>(){}.getType();
+                habits = gson.fromJson(habitsJSON.toString(),listType);
+                Type profileType = new TypeToken<Profile>(){}.getType();
+                profile = gson.fromJson(profileJSON.toString(),profileType);
+                in.close();
+                fis.close();
+
+            } catch (FileNotFoundException e) {
+                //We either need internet connection or previously stored data for the app to work
+                throw new RuntimeException();
+            } catch (IOException e) {
+                throw new RuntimeException();
+            }
         }
-
     }
 
     private void saveData(){
+        if (habits.size()>0) {
+            ElasticSearchController.AddHabitsTask addHabitsTask
+                    = new ElasticSearchController.AddHabitsTask();
+            Habit[] habitArr = habits.toArray(new Habit[habits.size()]);
+            addHabitsTask.execute(habitArr);
+        }
+        if (profile != null) {
+            ElasticSearchController.UpdateProfileTask updateProfileTask
+                    = new ElasticSearchController.UpdateProfileTask();
+            updateProfileTask.execute(profile);
+        }
+        //Save to local storage:
         try {
             FileOutputStream fos = openFileOutput(FILENAME, Context.MODE_PRIVATE);
             BufferedWriter out = new BufferedWriter(new OutputStreamWriter(fos));
 
             Gson gson = new Gson();
             gson.toJson(habits, out);
+            out.newLine();
+            out.write("profile");
+            out.newLine();
+            gson.toJson(profile, out);
             out.flush();
             fos.close();
         } catch (FileNotFoundException e) {
@@ -232,6 +343,56 @@ public class MainActivity extends AppCompatActivity {
         } catch (IOException e) {
             throw new RuntimeException();
         }
+    }
+
+    private void getProfile(){
+        Context context = MainActivity.this;
+        final SharedPreferences reader = context.getSharedPreferences(MY_PREFERENCES,Context.MODE_PRIVATE);
+        final boolean first = reader.getBoolean("is_first",true);
+        final String userId = reader.getString("userId","");
+        final SharedPreferences.Editor editor = reader.edit();
+        //adapted from https://stackoverflow.com/questions/7238532/how-to-launch-activity-only-once-when-app-is-opened-for-first-time
+        //as of Nov 13, 2017
+        if (first) {
+            if (!isNetworkAvailable()){
+                //TODO: tell the user they need internet connection for the first run!
+                finish();
+                return;
+            }
+            Intent intent = new Intent(MainActivity.this, NewProfileActivity.class);
+            startActivityForResult(intent, REQUEST_CODE_SIGNUP); //If this is the first startup of the app, run profile creation activity
+        }else {
+            if (userId.isEmpty()) {
+                Intent intent = new Intent(MainActivity.this, NewProfileActivity.class);
+                startActivityForResult(intent, REQUEST_CODE_SIGNUP);
+            } else {
+                //Attempt to login with stored user ID
+                ElasticSearchController.GetProfileTask getProfileTask
+                        = new ElasticSearchController.GetProfileTask();
+                getProfileTask.execute(userId);
+                try {
+                    profile = getProfileTask.get();
+                } catch (Exception e) {
+                    Log.i("Error", "Failed to get profiles with id " + userId + " from async object");
+                    editor.remove("userId");
+                    Intent intent = new Intent(MainActivity.this, NewProfileActivity.class);
+                    startActivityForResult(intent, REQUEST_CODE_SIGNUP);
+                }
+            }
+
+        }
+        editor.putBoolean("is_first", false);
+        editor.commit();
+    }
+
+
+    //adapted from https://stackoverflow.com/questions/4238921/detect-whether-there-is-an-internet-connection-available-on-android
+    //as of Nov 25, 2017
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 
 }
