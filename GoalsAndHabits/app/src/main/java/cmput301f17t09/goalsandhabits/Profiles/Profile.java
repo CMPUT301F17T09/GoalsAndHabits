@@ -72,7 +72,11 @@ public class Profile implements Serializable{
         if (habitIds==null){
             habitIds = new ArrayList<>();
         }
-        habitIds.add(habitId);
+        if (habitId!=null) {
+            if (!habitId.isEmpty()) {
+                habitIds.add(habitId);
+            }
+        }
     }
 
     public void removeHabitId(String habitId){
