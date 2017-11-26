@@ -9,6 +9,7 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
@@ -57,7 +58,7 @@ public class EditHabitDialog extends DialogFragment{
         } catch (ClassCastException e) {
             // The activity doesn't implement the interface, throw exception
             throw new ClassCastException(activity.toString()
-                    + " must implement NewHabitDialogListener");
+                    + " must implement EditHabitDialogListener");
         }
     }
 
@@ -76,8 +77,6 @@ public class EditHabitDialog extends DialogFragment{
         final EditText name_field = (EditText) diaView.findViewById(R.id.editDiaName);
         name_field.setText(name);
 
-        //final EditText date_field = (EditText)diaView.findViewById(R.id.editStartDate);
-        //date_field.setText(date);
         ArrayList<CheckBox> days = new ArrayList<CheckBox>();
         days.add((CheckBox) diaView.findViewById(R.id.sundayBox));
         days.add((CheckBox) diaView.findViewById(R.id.mondayBox));
@@ -104,7 +103,7 @@ public class EditHabitDialog extends DialogFragment{
                     public void onClick(DialogInterface dialog, int id) {
                         String newreason = reason_field.getText().toString();
                         String newtitle = name_field.getText().toString();
-                        //String newStartDate = date_field.getText().toString();
+                        //TODO: Pass changes to schedule
                         mListener.onDialogPositiveClick(EditHabitDialog.this, newreason, newtitle);
                     }
                 })

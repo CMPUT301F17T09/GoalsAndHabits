@@ -152,10 +152,8 @@ public class MainActivity extends AppCompatActivity {
                     if (!data.hasExtra(EXTRA_HABIT_SCHEDULE)) return;
                     String name = data.getExtras().getString(EXTRA_HABIT_NAME);
                     String reason = data.getExtras().getString(EXTRA_HABIT_REASON);
-                    String date_string = data.getExtras().getString(EXTRA_HABIT_STARTDATE);
                     String days = data.getExtras().getString(EXTRA_HABIT_SCHEDULE);
-                    //TODO: Extract Date from date string.
-                    Date startdate = new Date();
+                    Date startdate = new Date(data.getExtras().getLong(EXTRA_HABIT_STARTDATE));
 
                     HashSet<Integer> schedule = new HashSet<Integer>();
 
@@ -186,6 +184,7 @@ public class MainActivity extends AppCompatActivity {
                             ElasticSearchController.DeleteHabitTask deleteHabitTask
                                     = new ElasticSearchController.DeleteHabitTask();
                             deleteHabitTask.execute(habit);
+                            profile.removeHabitId(habit.getId());
                             habits.remove(pos);
                         }else {
                             habits.set(pos, habit);
@@ -217,45 +216,94 @@ public class MainActivity extends AppCompatActivity {
 
     private void loadData(){
         habits = new ArrayList<>();
-        if (isNetworkAvailable()) {
-            if (profile == null) {
-                Log.i("Error", "Failed to load habits: profile is null!");
-                return;
-            }
-            if (profile.getHabitIds() == null) {
-                Log.i("Error", "Failed to load habits: habit id list is null!");
-                return;
-            }
-            Log.i("Info", "Fetching habits for profile id " + profile.getUserId());
-            ElasticSearchController.GetHabitsTask getHabitsTask
-                    = new ElasticSearchController.GetHabitsTask();
-            ArrayList<String> ids = profile.getHabitIds();
-            getHabitsTask.execute(ids.toArray(new String[ids.size()]));
-            try {
-                habits = getHabitsTask.get();
-            } catch (Exception e) {
-                Log.i("Error", "ElasticSearch failed to find habits for profile with id " + profile.getUserId());
-            }
-        }else{
-            //Load from local storage
+        if (isNetworkAvailable() && profile != null){
+            //Load local files first:
+            ArrayList<String> offlineIds = new ArrayList<>();
             try {
                 FileInputStream fis = openFileInput(FILENAME);
                 BufferedReader in = new BufferedReader(new InputStreamReader(fis));
 
-                Gson gson = new Gson();
+                StringBuilder habitsJSON = new StringBuilder();
+                String line;
+                while ((line = in.readLine()) != null){
+                    if (line.equalsIgnoreCase("profile")) break;
+                    habitsJSON.append(line);
+                }
 
+                Gson gson = new Gson();
                 //Taken from https://stackoverflow.com/questions/12384064/gson-convert-from-json-to-a-typed-arraylistt
                 //2017-09-28
                 Type listType = new TypeToken<ArrayList<Habit>>(){}.getType();
-                habits = gson.fromJson(in,listType);
-                Type profileType = new TypeToken<Profile>(){}.getType();
-                profile = gson.fromJson(in,profileType);
+                habits = gson.fromJson(habitsJSON.toString(),listType);
+                //Store the local habit ids in a list
+                for (Habit h : habits){
+                    offlineIds.add(h.getId());
+                }
                 in.close();
                 fis.close();
 
             } catch (FileNotFoundException e) {
-                //We either need internet connection or previously stored data for the app to work
+                Log.i("Error","Data file not found!");
+            } catch (IOException e) {
                 throw new RuntimeException();
+            }
+
+            //Now load the habits from the elasticsearch server:
+            ArrayList<Habit> onlineHabits = new ArrayList<>();
+            if (profile.getHabitIds()!=null){
+                Log.i("Info", "Fetching habits for profile id " + profile.getUserId());
+                ElasticSearchController.GetHabitsTask getHabitsTask
+                        = new ElasticSearchController.GetHabitsTask();
+                ArrayList<String> ids = profile.getHabitIds();
+                if (!offlineIds.isEmpty()) {
+                    ids.removeAll(offlineIds);
+                }
+                getHabitsTask.execute(ids.toArray(new String[ids.size()]));
+                try {
+                    onlineHabits = getHabitsTask.get();
+                } catch (Exception e) {
+                    Log.i("Error", "ElasticSearch failed to find habits for profile with id " + profile.getUserId());
+                }
+            }
+            habits.addAll(onlineHabits);
+            //Add any offline habit ids to the profile.
+            if (offlineIds.isEmpty()==false) {
+                ArrayList<String> profileIds = profile.getHabitIds();
+                for (String id : offlineIds) {
+                    if (!profileIds.contains(id)){
+                        profile.addHabitId(id);
+                    }
+                }
+            }
+        }else{
+            //The network isn't available, so just load local:
+            try {
+                FileInputStream fis = openFileInput(FILENAME);
+                BufferedReader in = new BufferedReader(new InputStreamReader(fis));
+
+                StringBuilder habitsJSON = new StringBuilder();
+                StringBuilder profileJSON = new StringBuilder();
+                String line;
+                while ((line = in.readLine()) != null){
+                    if (line.equalsIgnoreCase("profile")) break;
+                    habitsJSON.append(line);
+                }
+                while ((line = in.readLine()) != null){
+                    profileJSON.append(line);
+                }
+
+                Gson gson = new Gson();
+                //Taken from https://stackoverflow.com/questions/12384064/gson-convert-from-json-to-a-typed-arraylistt
+                //2017-09-28
+                Type listType = new TypeToken<ArrayList<Habit>>(){}.getType();
+                habits = gson.fromJson(habitsJSON.toString(),listType);
+                Type profileType = new TypeToken<Profile>(){}.getType();
+                profile = gson.fromJson(profileJSON.toString(),profileType);
+                in.close();
+                fis.close();
+
+            } catch (FileNotFoundException e) {
+                habits = new ArrayList<>();
             } catch (IOException e) {
                 throw new RuntimeException();
             }
@@ -281,6 +329,9 @@ public class MainActivity extends AppCompatActivity {
 
             Gson gson = new Gson();
             gson.toJson(habits, out);
+            out.newLine();
+            out.write("profile");
+            out.newLine();
             gson.toJson(profile, out);
             out.flush();
             fos.close();

@@ -41,10 +41,12 @@ import static cmput301f17t09.goalsandhabits.Main_Habits.MainActivity.FILENAME;
  * a specific habit. The user can also edit or delete the
  * habit in this activity, as well as add habit events.
  */
-public class ViewHabitActivity extends AppCompatActivity implements EditHabitDialog.EditHabitDialogListener{
+public class ViewHabitActivity extends AppCompatActivity implements EditHabitDialog.EditHabitDialogListener,
+                                                            DatePickerFrag.DatePickerFragListener{
 
     private Habit habit;
     private TextView reason;
+    private TextView startdate;
     private Context context;
     private int position;
     private Toolbar toolbar;
@@ -66,6 +68,8 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
 
         reason = (TextView) findViewById(R.id.textReason);
         reason.setText(habit.getReason());
+        startdate = (TextView) findViewById(R.id.textHabitDate);
+        startdate.setText(habit.getStartDate().toString());
 
         toolbar = (Toolbar) findViewById(R.id.actionbar);
         toolbar.setTitle(habit.getTitle());
@@ -79,6 +83,14 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
                 Intent i = new Intent(ViewHabitActivity.this, HabitHistoryActivity.class);
                 i.putExtra(MainActivity.EXTRA_HABIT_SERIAL, habit);
                 startActivityForResult(i,MainActivity.REQUEST_CODE_VIEW_HABIT_HISTORY);
+            }
+        });
+
+        Button habitDateButton = (Button) findViewById(R.id.changeDate);
+        habitDateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               showDatePickerDialog();
             }
         });
 
@@ -178,16 +190,14 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
      * @param dialog Edit Habit Dialog Fragment
      * @param newreason Updated habit reason string
      * @param newtitle Updated habit name string
-     * @param newdate Updated habit date
      */
 
-    public void onDialogPositiveClick(DialogFragment dialog, String newreason, String newtitle,
-                                      Date newdate) {
+    @Override
+    public void onDialogPositiveClick(DialogFragment dialog, String newreason, String newtitle) {
         reason.setText(newreason);
         toolbar.setTitle(newtitle);
         habit.setReason(newreason);
         habit.setTitle(newtitle);
-        habit.setStartDate(newdate); //Not updating, will have to make changes to main activity
     }
 
     /**
@@ -210,12 +220,16 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
         super.finish();
     }
 
+    public void showDatePickerDialog(){
+        DialogFragment newFragment = new DatePickerFrag();
+        newFragment.show(getFragmentManager(), "DatePicker");
+    }
+
     @Override
-    public void onDialogPositiveClick(DialogFragment dialog, String s, String newreason) {
-
+    public void onDatePicked(DialogFragment dialog, Date date) {
+        TextView habitDate = (TextView) findViewById(R.id.textHabitDate);
+        habitDate.setText(date.toString());
+        habit.setStartDate(date);
     }
 
-    public void onDialogNegativeƒClick(DialogFragment dialog) {
-
-    }
 }

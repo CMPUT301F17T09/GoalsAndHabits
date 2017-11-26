@@ -7,11 +7,14 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 import cmput301f17t09.goalsandhabits.Main_Habits.MainActivity;
 import cmput301f17t09.goalsandhabits.R;
@@ -20,9 +23,10 @@ import cmput301f17t09.goalsandhabits.R;
  * This activity allows the user to create a new habit
  * by specifying the title, reason, start date, and schedule.
  */
-public class NewHabit extends AppCompatActivity {
+public class NewHabit extends AppCompatActivity implements DatePickerFrag.DatePickerFragListener {
 
     private boolean save = false;
+    private Date newdate = new Date();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +36,14 @@ public class NewHabit extends AppCompatActivity {
         toolbar.setTitle("New Habit");
         toolbar.setNavigationIcon(R.drawable.ic_close_button);
         setSupportActionBar(toolbar);
+        Button datePicker = (Button) findViewById(R.id.newDateButton);
+
+        datePicker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDatePickerDialog();
+            }
+        });
     }
 
     @Override
@@ -110,7 +122,7 @@ public class NewHabit extends AppCompatActivity {
 
             data.putExtra(MainActivity.EXTRA_HABIT_NAME, name.getText().toString());
             data.putExtra(MainActivity.EXTRA_HABIT_REASON, reason.getText().toString());
-            data.putExtra(MainActivity.EXTRA_HABIT_STARTDATE, date.getText().toString());
+            data.putExtra(MainActivity.EXTRA_HABIT_STARTDATE, newdate.getTime());
             data.putExtra(MainActivity.EXTRA_HABIT_SCHEDULE, schedule);
         }
         setResult(RESULT_OK, data);
@@ -123,5 +135,12 @@ public class NewHabit extends AppCompatActivity {
     public void showDatePickerDialog(){
         DialogFragment newFragment = new DatePickerFrag();
         newFragment.show(getFragmentManager(), "DatePicker");
+    }
+
+    @Override
+    public void onDatePicked(DialogFragment dialog, Date date) {
+        EditText date_field = (EditText) findViewById(R.id.dateEditText);
+        date_field.setText(date.toString());
+        newdate = date;
     }
 }
