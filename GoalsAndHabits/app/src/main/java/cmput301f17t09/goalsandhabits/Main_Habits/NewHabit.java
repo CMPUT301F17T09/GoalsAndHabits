@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 import cmput301f17t09.goalsandhabits.Main_Habits.MainActivity;
 import cmput301f17t09.goalsandhabits.R;
@@ -25,6 +26,7 @@ import cmput301f17t09.goalsandhabits.R;
 public class NewHabit extends AppCompatActivity implements DatePickerFrag.DatePickerFragListener {
 
     private boolean save = false;
+    private Date newdate = new Date();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,7 +122,7 @@ public class NewHabit extends AppCompatActivity implements DatePickerFrag.DatePi
 
             data.putExtra(MainActivity.EXTRA_HABIT_NAME, name.getText().toString());
             data.putExtra(MainActivity.EXTRA_HABIT_REASON, reason.getText().toString());
-            data.putExtra(MainActivity.EXTRA_HABIT_STARTDATE, date.getText().toString());
+            data.putExtra(MainActivity.EXTRA_HABIT_STARTDATE, newdate.getTime());
             data.putExtra(MainActivity.EXTRA_HABIT_SCHEDULE, schedule);
         }
         setResult(RESULT_OK, data);
@@ -136,8 +138,9 @@ public class NewHabit extends AppCompatActivity implements DatePickerFrag.DatePi
     }
 
     @Override
-    public void onDatePicked(DialogFragment dialog, String date) {
+    public void onDatePicked(DialogFragment dialog, Date date) {
         EditText date_field = (EditText) findViewById(R.id.dateEditText);
-        date_field.setText(date);
+        date_field.setText(date.toString());
+        newdate = date;
     }
 }

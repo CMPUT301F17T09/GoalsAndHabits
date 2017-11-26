@@ -22,7 +22,7 @@ import java.util.Date;
 public class DatePickerFrag extends DialogFragment implements DatePickerDialog.OnDateSetListener{
 
     public interface DatePickerFragListener{
-        public void onDatePicked(DialogFragment dialog, String date);
+        public void onDatePicked(DialogFragment dialog, Date date);
     }
 
     DatePickerFragListener mListener;
@@ -69,7 +69,9 @@ public class DatePickerFrag extends DialogFragment implements DatePickerDialog.O
 
     public void onDateSet(DatePicker view, int year, int month, int day) {
         // Do something with the date chosen by the user
-        Date newdate = new Date(year-1, month, day);
-        mListener.onDatePicked(DatePickerFrag.this, newdate.toString());
+        Calendar c = Calendar.getInstance();
+        c.set(year, month, day);
+        Date newdate = c.getTime();
+        mListener.onDatePicked(DatePickerFrag.this, newdate);
     }
 }

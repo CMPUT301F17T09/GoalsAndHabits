@@ -152,10 +152,8 @@ public class MainActivity extends AppCompatActivity {
                     if (!data.hasExtra(EXTRA_HABIT_SCHEDULE)) return;
                     String name = data.getExtras().getString(EXTRA_HABIT_NAME);
                     String reason = data.getExtras().getString(EXTRA_HABIT_REASON);
-                    String date_string = data.getExtras().getString(EXTRA_HABIT_STARTDATE);
                     String days = data.getExtras().getString(EXTRA_HABIT_SCHEDULE);
-                    //TODO: Extract Date from date string.
-                    Date startdate = new Date();
+                    Date startdate = new Date(data.getExtras().getLong(EXTRA_HABIT_STARTDATE));
 
                     HashSet<Integer> schedule = new HashSet<Integer>();
 

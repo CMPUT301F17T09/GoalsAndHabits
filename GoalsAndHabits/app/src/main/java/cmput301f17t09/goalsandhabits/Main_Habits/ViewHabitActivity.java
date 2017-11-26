@@ -46,6 +46,7 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
 
     private Habit habit;
     private TextView reason;
+    private TextView startdate;
     private Context context;
     private int position;
     private Toolbar toolbar;
@@ -67,6 +68,8 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
 
         reason = (TextView) findViewById(R.id.textReason);
         reason.setText(habit.getReason());
+        startdate = (TextView) findViewById(R.id.textHabitDate);
+        startdate.setText(habit.getStartDate().toString());
 
         toolbar = (Toolbar) findViewById(R.id.actionbar);
         toolbar.setTitle(habit.getTitle());
@@ -223,9 +226,10 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
     }
 
     @Override
-    public void onDatePicked(DialogFragment dialog, String date) {
+    public void onDatePicked(DialogFragment dialog, Date date) {
         TextView habitDate = (TextView) findViewById(R.id.textHabitDate);
-        habitDate.setText(date);
+        habitDate.setText(date.toString());
+        habit.setStartDate(date);
     }
 
 }
