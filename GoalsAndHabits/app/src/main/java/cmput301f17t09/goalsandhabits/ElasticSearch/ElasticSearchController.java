@@ -34,12 +34,17 @@ public class ElasticSearchController {
 
     private static JestDroidClient client;
 
-    public static class AddProfileTask extends AsyncTask<Profile, Void, Void> {
+    /**
+     * Add a profile to the elasticsearch server.
+     * Note: Only add one profile per task. (Shouldn't ever need to add more than one at a time anyways)
+     */
+    public static class AddProfileTask extends AsyncTask<Profile, Void, Profile> {
 
         @Override
-        protected Void doInBackground(Profile... profiles){
+        protected Profile doInBackground(Profile... profiles){
             verifySettings();
 
+            Profile retProfile = null;
             for (Profile profile: profiles){
                 Index index = new Index.Builder(profile).index(appESIndex).type("profile").build();
 
@@ -47,6 +52,7 @@ public class ElasticSearchController {
                     DocumentResult result = client.execute(index);
                     if (result.isSucceeded()){
                         profile.setUserId(result.getId());
+                        retProfile = profile;
                     }else{
                         Log.i("Error","Elasticsearch was unable to add profile");
                     }
@@ -56,7 +62,7 @@ public class ElasticSearchController {
                     //Log.i("Error", "The app failed to build and send profile " + e.getCause());
                 }
             }
-            return null;
+            return retProfile;
         }
     }
 
@@ -190,13 +196,25 @@ public class ElasticSearchController {
         protected ArrayList<Habit> doInBackground(String... search_parameters){
             verifySettings();
 
-            MultiGet mget = new MultiGet.Builder.ById(appESIndex, "habit").addId(Arrays.asList(search_parameters)).build();
+            //Make sure we don't send any null or empty string values.
+            ArrayList<String> ids = new ArrayList<>();
+            for (String p : search_parameters){
+                if (p != null){
+                    if (!p.isEmpty()){
+                        ids.add(p);
+                    }
+                }
+            }
+            MultiGet mget = new MultiGet.Builder.ById(appESIndex, "habit").addId(ids).build();
 
             ArrayList<Habit> habits = new ArrayList<>();
             try {
                 JestResult result = client.execute(mget);
                 if (result.isSucceeded()){
                     habits = new ArrayList<>(result.getSourceAsObjectList(Habit.class));
+                    Log.i("Info","Got " + habits.size() + " habits.");
+                }else{
+                    Log.i("Error","Getting habits failed due to: " + result.getErrorMessage());
                 }
             }catch (Exception e){
                 e.printStackTrace();

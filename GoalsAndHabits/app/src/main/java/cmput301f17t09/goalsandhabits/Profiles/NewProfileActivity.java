@@ -49,7 +49,6 @@ public class NewProfileActivity extends AppCompatActivity {
                     Toast.makeText(NewProfileActivity.this,"Please enter a username!",duration).show();
                 }
                 else {
-                    //TODO: Check the username is unique then create a Profile and save it to the online database.
                     String username = userName.getText().toString();
                     ArrayList<Profile> matches = new ArrayList<Profile>();
                     ElasticSearchController.GetProfilesTask getProfilesTask
@@ -68,7 +67,13 @@ public class NewProfileActivity extends AppCompatActivity {
                         ElasticSearchController.AddProfileTask addProfileTask
                                 = new ElasticSearchController.AddProfileTask();
                         addProfileTask.execute(profile);
+                        try {
+                            profile = addProfileTask.get();
+                        }catch (Exception e){
+                            Log.i("Error","Failed to get profile ID");
+                        }
                         if (profile.getUserId()!=null) {
+                            Log.i("Info","Writing userID");
                             Context context = NewProfileActivity.this;
                             final SharedPreferences reader = context.getSharedPreferences(MainActivity.MY_PREFERENCES, Context.MODE_PRIVATE);
                             final SharedPreferences.Editor editor = reader.edit();

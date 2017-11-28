@@ -198,6 +198,7 @@ public class MainActivity extends AppCompatActivity {
                         profile = (Profile) data.getSerializableExtra(EXTRA_PROFILE_SERIAL);
                         loadData();
                         habitArrayAdapter.notifyDataSetChanged();
+                        Log.i("Info","Profile created.");
                     }else{
                         Log.i("Error","No profile was passed from signup/login!");
                     }
@@ -258,6 +259,7 @@ public class MainActivity extends AppCompatActivity {
                 if (!offlineIds.isEmpty()) {
                     ids.removeAll(offlineIds);
                 }
+                Log.i("Info",ids.toString());
                 getHabitsTask.execute(ids.toArray(new String[ids.size()]));
                 try {
                     onlineHabits = getHabitsTask.get();
@@ -266,10 +268,12 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
             habits.addAll(onlineHabits);
+            Log.i("Info","Total habits: " + habits.size());
             //Add any offline habit ids to the profile.
             if (offlineIds.isEmpty()==false) {
                 ArrayList<String> profileIds = profile.getHabitIds();
                 for (String id : offlineIds) {
+                    if (id==null) continue;
                     if (!profileIds.contains(id)){
                         profile.addHabitId(id);
                     }
@@ -356,6 +360,7 @@ public class MainActivity extends AppCompatActivity {
                 finish();
                 return;
             }
+            Log.i("Info","Starting first time");
             Intent intent = new Intent(MainActivity.this, NewProfileActivity.class);
             startActivityForResult(intent, REQUEST_CODE_SIGNUP); //If this is the first startup of the app, run profile creation activity
         }else {
@@ -364,6 +369,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent, REQUEST_CODE_SIGNUP);
             } else {
                 //Attempt to login with stored user ID
+                Log.i("Info","Attempting to auto-login with ID: " + userId);
                 ElasticSearchController.GetProfileTask getProfileTask
                         = new ElasticSearchController.GetProfileTask();
                 getProfileTask.execute(userId);
