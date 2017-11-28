@@ -49,7 +49,6 @@ public class NewProfileActivity extends AppCompatActivity {
                     Toast.makeText(NewProfileActivity.this,"Please enter a username!",duration).show();
                 }
                 else {
-                    //TODO: Check the username is unique then create a Profile and save it to the online database.
                     String username = userName.getText().toString();
                     ArrayList<Profile> matches = new ArrayList<Profile>();
                     ElasticSearchController.GetProfilesTask getProfilesTask

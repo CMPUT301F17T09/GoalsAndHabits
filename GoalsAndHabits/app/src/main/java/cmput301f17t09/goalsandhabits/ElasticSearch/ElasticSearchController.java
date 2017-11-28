@@ -196,7 +196,16 @@ public class ElasticSearchController {
         protected ArrayList<Habit> doInBackground(String... search_parameters){
             verifySettings();
 
-            MultiGet mget = new MultiGet.Builder.ById(appESIndex, "habit").addId(Arrays.asList(search_parameters)).build();
+            //Make sure we don't send any null or empty string values.
+            ArrayList<String> ids = new ArrayList<>();
+            for (String p : search_parameters){
+                if (p != null){
+                    if (!p.isEmpty()){
+                        ids.add(p);
+                    }
+                }
+            }
+            MultiGet mget = new MultiGet.Builder.ById(appESIndex, "habit").addId(ids).build();
 
             ArrayList<Habit> habits = new ArrayList<>();
             try {

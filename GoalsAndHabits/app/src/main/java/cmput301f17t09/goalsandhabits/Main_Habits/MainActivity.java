@@ -273,6 +273,7 @@ public class MainActivity extends AppCompatActivity {
             if (offlineIds.isEmpty()==false) {
                 ArrayList<String> profileIds = profile.getHabitIds();
                 for (String id : offlineIds) {
+                    if (id==null) continue;
                     if (!profileIds.contains(id)){
                         profile.addHabitId(id);
                     }
