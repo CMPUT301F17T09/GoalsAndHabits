@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:2:1-40:12
+ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:2:1-46:12
 	package
 		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:3:5-44
 		INJECTED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml
@@ -24,7 +24,7 @@ MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\chias\.a
 	android:name
 		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:6:22-76
 application
-ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:8:5-38:19
+ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:8:5-44:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\chias\.android\build-cache\fed6e9aed53a736a677549eec5258b8ae7548d52\output\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:design:25.3.1] C:\Users\chias\.android\build-cache\14c0b45b38424a606c7ba583b0f8950d5bef5a62\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\chias\.android\build-cache\3a7260e96c91c295b8d8f14ea7e8f188d4a01f20\output\AndroidManifest.xml:29:5-20
@@ -119,6 +119,19 @@ activity#cmput301f17t09.goalsandhabits.Main_Habits.NewHabitEventActivity
 ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:37:9-71
 	android:name
 		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:37:19-68
+meta-data#com.google.android.gms.version
+ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:38:9-40:68
+MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\chias\.android\build-cache\bd86454ab4a2fe809b65a81af0b7f2c9a7d5ee55\output\AndroidManifest.xml:20:9-121
+	android:value
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:40:13-66
+	android:name
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:39:13-58
+meta-data#com.google.android.geo.API_KEY
+ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:41:9-43:70
+	android:value
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:43:13-68
+	android:name
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:42:13-58
 uses-sdk
 INJECTED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\chias\.android\build-cache\fed6e9aed53a736a677549eec5258b8ae7548d52\output\AndroidManifest.xml:5:5-7:41
@@ -177,9 +190,3 @@ ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\chias\.an
 		ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\chias\.android\build-cache\adc3df55ebf2e454221e06c3fb165ebf250bb689\output\AndroidManifest.xml:19:86-145
 	android:name
 		ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\chias\.android\build-cache\adc3df55ebf2e454221e06c3fb165ebf250bb689\output\AndroidManifest.xml:19:19-85
-meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\chias\.android\build-cache\bd86454ab4a2fe809b65a81af0b7f2c9a7d5ee55\output\AndroidManifest.xml:20:9-121
-	android:value
-		ADDED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\chias\.android\build-cache\bd86454ab4a2fe809b65a81af0b7f2c9a7d5ee55\output\AndroidManifest.xml:20:66-119
-	android:name
-		ADDED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\chias\.android\build-cache\bd86454ab4a2fe809b65a81af0b7f2c9a7d5ee55\output\AndroidManifest.xml:20:20-65
