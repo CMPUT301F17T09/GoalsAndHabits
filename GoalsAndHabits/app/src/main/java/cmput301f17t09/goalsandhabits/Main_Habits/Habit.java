@@ -107,6 +107,9 @@ public class Habit implements Serializable{
     public void addHabitEvent(HabitEvent event){
         events.add(event);
     }
+    //TODO: remove index of events
+    public void deleteHabitEvent(HabitEvent event,int index){events.remove(event);events.remove(index);}
+
 
     public String getId() { return this.id; }
 

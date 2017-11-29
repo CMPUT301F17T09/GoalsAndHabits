@@ -1,5 +1,8 @@
 package cmput301f17t09.goalsandhabits.Main_Habits;
 
+import android.location.Location;
+import android.util.Log;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -14,6 +17,9 @@ public class HabitEvent implements Serializable{
     private String comment;
     private String photoPath;
     private Date date;
+    private Location location;
+    private Double Lat;
+    private Double Long;
 
     public HabitEvent(Date date){
         setDate(date);
@@ -46,6 +52,20 @@ public class HabitEvent implements Serializable{
 
     public void setPhotoPath(String photoPath){
         this.photoPath = photoPath;
+    }
+    public Double getLat() {return Lat;}
+        public Double getLong() {        return Long;}
+    public void setLat(Double lat){        this.Lat=lat;}
+    public void setLong(Double Long){this.Long=Long;}
+    public boolean voidLocation(){
+        if( this.getLat()==null ){
+            return true;
+        }
+        return false;
+    }
+    public void setNullLocation(){
+        this.Long=null;
+        this.Lat=null;
     }
 
 }
