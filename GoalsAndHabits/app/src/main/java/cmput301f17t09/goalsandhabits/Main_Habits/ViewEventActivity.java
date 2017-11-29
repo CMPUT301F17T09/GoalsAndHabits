@@ -44,12 +44,12 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
     private int position;
     private Toolbar toolbar;
     private ArrayList<HabitEvent> events;
-
+    private boolean deleted = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_habit_events);
-        loadFromFile();
+//        loadFromFile();
 
         Bundle extras = getIntent().getExtras();
         if (extras!=null){
@@ -61,22 +61,23 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
         if (event==null) finish();
 
         comment = (TextView) findViewById(R.id.eventComment);
-        comment.setText(event.getComment());
+      //  if (comment == null){return;}
+      //  else{comment.setText(event.getComment());}
 
         toolbar = (Toolbar) findViewById(R.id.actionbar);
-        toolbar.setTitle(event.getComment());
+        //toolbar.setTitle(.getComment());
         toolbar.setNavigationIcon(R.drawable.ic_close_button);
         setSupportActionBar(toolbar);
 
-        Button habitEventsButton = (Button) findViewById(R.id.buttonHabitEvents);
-        habitEventsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(ViewEventActivity.this, HabitHistoryActivity.class);
-                i.putExtra(HabitHistoryActivity.EXTRA_EVENT_SERIAL, event);
-                startActivityForResult(i,HabitHistoryActivity.REQUEST_CODE_VIEW_EVENT);
-            }
-        });
+//        Button EventsButton = (Button) findViewById(R.id.buttonHabitEvents);
+//        EventsButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i = new Intent(ViewEventActivity.this, HabitHistoryActivity.class);
+//                i.putExtra(HabitHistoryActivity.EXTRA_EVENT_SERIAL, event);
+//                startActivityForResult(i,HabitHistoryActivity.REQUEST_CODE_VIEW_EVENT);
+//            }
+//        });
 
     }
     @Override
@@ -102,11 +103,8 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
                 return true;
             }
             case R.id.deleteButton:{;
-                setResult(RESULT_OK);
-                events.remove(position);
-                saveInFile();
-                Intent backToMain = new Intent(ViewEventActivity.this, HabitHistoryActivity.class);
-                startActivity(backToMain);
+                deleted=true;
+                finish();
                 return true;
 
             }
@@ -119,45 +117,6 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
     public void showEditDialog() {
         DialogFragment dialog = EditHabitEventDialog.newInstance(event.getComment(),event.getPhotoPath());
         dialog.show(getFragmentManager(), "EditHabitEventDialog");
-    }
-
-
-
-    private void loadFromFile() {
-        try {
-            FileInputStream fis = openFileInput(FILENAME);
-            BufferedReader in = new BufferedReader(new InputStreamReader(fis));
-            Gson gson = new Gson();
-
-            // Taken from https://stackoverflow.com/question/12384064/gson-convert-from-json-into java
-            // 2017 01-26 17:53:59
-            events= gson.fromJson(in, new TypeToken<ArrayList<HabitEvent>>(){}.getType());
-
-            fis.close();
-
-        } catch (FileNotFoundException e) {
-            events = new ArrayList<HabitEvent>();
-        } catch (IOException e) {
-            throw new RuntimeException();
-        }
-    }
-    /**
-     *commit changes of delete
-     */
-    private void saveInFile() {
-        try {
-            FileOutputStream fos = openFileOutput(FILENAME,
-                    Context.MODE_PRIVATE);
-            BufferedWriter out = new BufferedWriter(new OutputStreamWriter(fos));
-            Gson gson = new Gson();
-            gson.toJson(events, out);
-            out.flush();
-            fos.close();
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException();
-        } catch (IOException e) {
-            throw new RuntimeException();
-        }
     }
 
 
@@ -175,9 +134,14 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
         DialogFragment dialog = EditHabitDialog.newInstance(event.getComment(), event.getPhotoPath());
         dialog.show(getFragmentManager(), "EditHabitEventDialog");
     }
+
+    @Override
     public void finish() {
         //Pass back the habit and position
         Intent data = new Intent();
+        if (deleted){
+            data.putExtra(HabitHistoryActivity.EXTRA_EVENT_DELETED,true);
+        }
         data.putExtra(HabitHistoryActivity.EXTRA_EVENT_SERIAL, event);
         data.putExtra(HabitHistoryActivity.EXTRA_EVENT_POSITION, position);
         setResult(RESULT_OK, data);

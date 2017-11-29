@@ -75,8 +75,8 @@ public class HabitHistoryActivity extends AppCompatActivity {
                 if (he!=null) {
                     Intent intent = new Intent(HabitHistoryActivity.this, ViewEventActivity.class);
                     intent.putExtra(EXTRA_EVENT_SERIAL, he);
-                    Intent newintent = intent.putExtra(EXTRA_EVENT_POSITION, position);
-                    startActivityForResult(newintent, REQUEST_CODE_VIEW_EVENT);
+                    intent.putExtra(EXTRA_EVENT_POSITION, position);
+                    startActivityForResult(intent, REQUEST_CODE_VIEW_EVENT);
                 }
             }
         });
