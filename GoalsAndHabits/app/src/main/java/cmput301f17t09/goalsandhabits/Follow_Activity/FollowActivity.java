@@ -32,6 +32,10 @@ public class FollowActivity extends AppCompatActivity {
         ImageButton myHabits = (ImageButton) findViewById(R.id.navigation_myhabits);
         ImageButton profile = (ImageButton) findViewById(R.id.navigation_profile);
         ImageButton maps = (ImageButton) findViewById(R.id.navigation_map);
+
+        Button newRequest = (Button) findViewById(R.id.SendRequest);
+        ListView followList = (ListView) findViewById(R.id.FollowList);
+
         myHabits.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 setResult(RESULT_OK);
@@ -58,9 +62,6 @@ public class FollowActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-        Button newRequest = (Button) findViewById(R.id.SendRequest);
-        ListView followList = (ListView) findViewById(R.id.FollowList);
 
         newRequest.setOnClickListener(new View.OnClickListener() {
             @Override
