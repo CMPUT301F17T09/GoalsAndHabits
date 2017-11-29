@@ -108,6 +108,15 @@ public class Habit implements Serializable{
         events.add(event);
     }
 
+    public void deleteHabitEvent(int index){
+        events.remove(index);
+    }
+
+    public void deleteHabitEvent(HabitEvent event){
+        events.remove(event);
+    }
+
+
     public String getId() { return this.id; }
 
     public void setId(String id) { this.id = id; }
