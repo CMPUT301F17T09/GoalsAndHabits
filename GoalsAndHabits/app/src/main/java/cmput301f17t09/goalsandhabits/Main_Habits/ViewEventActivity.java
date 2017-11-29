@@ -43,7 +43,6 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
     private Context context;
     private int position;
     private Toolbar toolbar;
-    private ArrayList<HabitEvent> events;
     private boolean deleted = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +52,7 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
 
         Bundle extras = getIntent().getExtras();
         if (extras!=null){
-            if (extras.containsKey(MainActivity.EXTRA_HABIT_SERIAL)){
+            if (extras.containsKey(HabitHistoryActivity.EXTRA_EVENT_SERIAL)){
                 event = (HabitEvent) extras.getSerializable(HabitHistoryActivity.EXTRA_EVENT_SERIAL);
                 position = (int) extras.getSerializable(HabitHistoryActivity.EXTRA_EVENT_POSITION);
             }
@@ -65,7 +64,7 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
       //  else{comment.setText(event.getComment());}
 
         toolbar = (Toolbar) findViewById(R.id.actionbar);
-        //toolbar.setTitle(.getComment());
+        toolbar.setTitle("Habit Event");
         toolbar.setNavigationIcon(R.drawable.ic_close_button);
         setSupportActionBar(toolbar);
 
@@ -82,7 +81,7 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.menu_view_myhabitevents, menu);
+        getMenuInflater().inflate(R.menu.menu_view_habit, menu);
         return true;
     }
     /**

@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -31,15 +32,12 @@ public class HabitHistoryActivity extends AppCompatActivity {
 
     private HabitEventArrayAdapter habitEventArrayAdapter;
     private ListView habitEventsList;
-    private HabitEvent habitEvent;
-    private ArrayList<HabitEvent> helist;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_habit_history);
 
         Bundle extras = getIntent().getExtras();
-        habitEvent = (HabitEvent) extras.getSerializable("EVENT");
         if (extras!=null){
             if (extras.containsKey(MainActivity.EXTRA_HABIT_SERIAL)){
                 habit = (Habit) extras.getSerializable(MainActivity.EXTRA_HABIT_SERIAL);
@@ -48,7 +46,6 @@ public class HabitHistoryActivity extends AppCompatActivity {
         if (habit==null) finish();
 
         context = this;
-        helist = habit.getEvents();
 
         habitEventsList = (ListView) findViewById(R.id.habitEventList);
         habitEventArrayAdapter = new HabitEventArrayAdapter(this, habit.getEvents());
@@ -71,7 +68,7 @@ public class HabitHistoryActivity extends AppCompatActivity {
         habitEventsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 setResult(RESULT_OK);
-                HabitEvent he = helist.get(position);
+                HabitEvent he = habit.getEvents().get(position);
                 if (he!=null) {
                     Intent intent = new Intent(HabitHistoryActivity.this, ViewEventActivity.class);
                     intent.putExtra(EXTRA_EVENT_SERIAL, he);
@@ -102,16 +99,15 @@ public class HabitHistoryActivity extends AppCompatActivity {
                 case REQUEST_CODE_VIEW_EVENT:{
                     if (data.hasExtra(EXTRA_EVENT_POSITION) && data.hasExtra(EXTRA_EVENT_SERIAL)){
                         int pos = (int) data.getSerializableExtra(EXTRA_EVENT_POSITION);
-                         HabitEvent habitevent = (HabitEvent) data.getSerializableExtra(EXTRA_EVENT_SERIAL);
+                        HabitEvent habitevent = (HabitEvent) data.getSerializableExtra(EXTRA_EVENT_SERIAL);
                         if (data.hasExtra(EXTRA_EVENT_DELETED)){
-                            habit.deleteHabitEvent(habitevent,pos);
-                            //TODO: Remove habit event from habit and check whether it is removed
-                            helist.remove(habitevent);
-                            helist.remove(pos);
+                            habit.deleteHabitEvent(pos);
+                            habitEventArrayAdapter.notifyDataSetChanged();
                         }else {
-                            helist.set(pos, habitEvent);
+                            ArrayList<HabitEvent> habitEvents = habit.getEvents();
+                            habitEvents.set(pos,habitevent);
+                            habit.setEvents(habitEvents);
                         }
-                        habitEventArrayAdapter.notifyDataSetChanged();
                     }
                     break;
                 }
@@ -119,12 +115,22 @@ public class HabitHistoryActivity extends AppCompatActivity {
         }
     }
 
-
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home: {
+                finish();
+                return true;
+            }
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 
     @Override
     public void finish() {
         Intent data = new Intent();
-        data.putExtra(HabitHistoryActivity.EXTRA_EVENT_SERIAL, habitEvent);
+        data.putExtra(MainActivity.EXTRA_HABIT_SERIAL, habit);
         setResult(RESULT_OK, data);
         super.finish();
     }
