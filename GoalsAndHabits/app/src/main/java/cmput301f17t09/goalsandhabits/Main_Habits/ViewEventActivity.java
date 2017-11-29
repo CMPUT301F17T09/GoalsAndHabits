@@ -73,8 +73,8 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(ViewEventActivity.this, HabitHistoryActivity.class);
-                i.putExtra(MainActivity.EXTRA_HABIT_SERIAL, event);
-                startActivityForResult(i,MainActivity.REQUEST_CODE_VIEW_HABIT_HISTORY);
+                i.putExtra(HabitHistoryActivity.EXTRA_EVENT_SERIAL, event);
+                startActivityForResult(i,HabitHistoryActivity.REQUEST_CODE_VIEW_EVENT);
             }
         });
 
@@ -178,8 +178,8 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
     public void finish() {
         //Pass back the habit and position
         Intent data = new Intent();
-        data.putExtra(MainActivity.EXTRA_HABIT_SERIAL, event);
-        data.putExtra(MainActivity.EXTRA_HABIT_POSITION, position);
+        data.putExtra(HabitHistoryActivity.EXTRA_EVENT_SERIAL, event);
+        data.putExtra(HabitHistoryActivity.EXTRA_EVENT_POSITION, position);
         setResult(RESULT_OK, data);
         super.finish();
     }
