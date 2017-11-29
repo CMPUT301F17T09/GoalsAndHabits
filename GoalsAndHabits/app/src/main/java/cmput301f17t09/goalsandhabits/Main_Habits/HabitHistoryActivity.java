@@ -9,25 +9,30 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
-import android.view.MenuItem;
+
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.Date;
 
+import cmput301f17t09.goalsandhabits.ElasticSearch.ElasticSearchController;
 import cmput301f17t09.goalsandhabits.R;
 
 
-public class HabitHistoryActivity extends AppCompatActivity implements EditHabitEventDialog.EditHabitEventDialogListener {
-
+public class HabitHistoryActivity extends AppCompatActivity {
+    public static final int REQUEST_CODE_VIEW_EVENT = 7;
+    public static final String EXTRA_EVENT_SERIAL = "cmput301f17t09.goalsandhabits.EVENT_SERIAL";
+    public static final String EXTRA_EVENT_POSITION = "cmput301f17t09.goalsandhabits.EVENT_POSITION";
+    public static final String EXTRA_EVENT_DELETED = "cmput301f17t09.goalsandhabits.EVENT_DELETED";
     private Habit habit;
     Context context;
 
     private HabitEventArrayAdapter habitEventArrayAdapter;
     private ListView habitEventsList;
     private HabitEvent habitEvent;
-    protected static final int EVENT_DELETED_RESULT_CODE = 4;
+    private ArrayList<HabitEvent> helist;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +48,7 @@ public class HabitHistoryActivity extends AppCompatActivity implements EditHabit
         if (habit==null) finish();
 
         context = this;
+        helist = habit.getEvents();
 
         habitEventsList = (ListView) findViewById(R.id.habitEventList);
         habitEventArrayAdapter = new HabitEventArrayAdapter(this, habit.getEvents());
@@ -62,38 +68,22 @@ public class HabitHistoryActivity extends AppCompatActivity implements EditHabit
                 startActivityForResult(intent, MainActivity.REQUEST_CODE_NEW_HABIT_EVENT);
             }
         });
-    }
-    public boolean onCreateOptionsMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.menu_view_habit, menu);
-        return true;
+        habitEventsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                setResult(RESULT_OK);
+                HabitEvent he = helist.get(position);
+                if (he!=null) {
+                    Intent intent = new Intent(HabitHistoryActivity.this, ViewEventActivity.class);
+                    intent.putExtra(EXTRA_EVENT_SERIAL, he);
+                    Intent newintent = intent.putExtra(EXTRA_EVENT_POSITION, position);
+                    startActivityForResult(newintent, REQUEST_CODE_VIEW_EVENT);
+                }
+            }
+        });
     }
 
-    /**
-     * Handles the buttons in the action bar
-     * @param item
-     * @return
-     */
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home: {
-                finish();
-                return true;
-            }
-            case R.id.editButton:{
-                showEditDialog();
-                //finish();
-                return true;
-            }
-            case R.id.deleteButton:{
-                finish();
-                return true;
-            }
 
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
         if (resultCode == RESULT_OK){
@@ -109,30 +99,34 @@ public class HabitHistoryActivity extends AppCompatActivity implements EditHabit
                     habit.addHabitEvent(habitEvent);
                     habitEventArrayAdapter.notifyDataSetChanged();
                 }
+                case REQUEST_CODE_VIEW_EVENT:{
+                    if (data.hasExtra(EXTRA_EVENT_POSITION) && data.hasExtra(EXTRA_EVENT_SERIAL)){
+                        int pos = (int) data.getSerializableExtra(EXTRA_EVENT_POSITION);
+                         HabitEvent habitevent = (HabitEvent) data.getSerializableExtra(EXTRA_EVENT_SERIAL);
+                        if (data.hasExtra(EXTRA_EVENT_DELETED)){
+                            habit.deleteHabitEvent(habitevent,pos);
+                            //TODO: Remove habit event from habit and check whether it is removed
+                            helist.remove(habitevent);
+                            helist.remove(pos);
+                        }else {
+                            helist.set(pos, habitEvent);
+                        }
+                        habitEventArrayAdapter.notifyDataSetChanged();
+                    }
+                    break;
+                }
             }
         }
     }
-    public void showEditDialog() {
-      DialogFragment dialog = EditHabitDialog.newInstance(habitEvent.getComment(), habitEvent.getPhotoPath());
-      dialog.show(getFragmentManager(), "EditHabitEventDialog");
-    }
+
 
 
     @Override
     public void finish() {
         Intent data = new Intent();
-        data.putExtra(MainActivity.EXTRA_HABIT_SERIAL, habit);
+        data.putExtra(HabitHistoryActivity.EXTRA_EVENT_SERIAL, habitEvent);
         setResult(RESULT_OK, data);
         super.finish();
     }
 
-    @Override
-    public void onDialogPositiveClick(DialogFragment dialog, String s, String newComment, Date newDate) {
-
-    }
-
-    @Override
-    public void onDialogNegativeƒClick(DialogFragment dialog) {
-
-    }
 }
