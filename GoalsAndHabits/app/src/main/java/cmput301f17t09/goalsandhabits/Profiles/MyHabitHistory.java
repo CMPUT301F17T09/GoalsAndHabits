@@ -1,5 +1,6 @@
 package cmput301f17t09.goalsandhabits.Profiles;
 
+import android.app.DialogFragment;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -40,7 +41,7 @@ import cmput301f17t09.goalsandhabits.R;
  * Note: have yet to sort habit events by date and add filter and map options
  *
  */
-public class MyHabitHistory extends AppCompatActivity {
+public class MyHabitHistory extends AppCompatActivity implements FilterDialog.FilterDialogListener {
 
 
     public static final int REQUEST_CODE_SIGNUP = 6;
@@ -74,11 +75,11 @@ public class MyHabitHistory extends AppCompatActivity {
         if (!habits.isEmpty()) {habitEventArrayAdapter = new HabitEventArrayAdapter(this,habits.get(0).getEvents());}
 
         if (habits.size()>1) {
-            for (int i=0;i<habits.size();i++) {
+            for (int i=1;i<habits.size();i++) {
                 habitEventArrayAdapter.addAll(habits.get(i).getEvents());
             }
             if (habitEventArrayAdapter.isEmpty()) {
-                Log.i("Error", "Failed to load habits: habit events list is null!");
+                Log.i("Error", "Failed to load events: habit events list is null!");
             }
         }
         Comparator<? super HabitEvent> dateCompare = new Comparator<HabitEvent>() {
@@ -121,7 +122,7 @@ public class MyHabitHistory extends AppCompatActivity {
             }
             //TODO: Add filters
             case R.id.filter:{
-                
+                showFilterDialog();
                 return true;
             }
             case R.id.viewOnMap:{
@@ -131,6 +132,70 @@ public class MyHabitHistory extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    /**
+     * Creates a new instance of the filter dialog and displays it.
+     */
+    public void showFilterDialog() {
+        DialogFragment dialog = FilterDialog.newInstance();
+        dialog.show(getFragmentManager(), "FilterDialog");
+    }
+
+    /**
+     * Exits out of Filter Dialog and updates list to match search parameters
+     * @param dialog Filter Dialog Fragment
+     * @param habitType Habit Type search term
+     * @param commentSearch Habit Event Comment search term
+     */
+    @Override
+    public void onDialogPositiveClick(DialogFragment dialog, String habitType, String commentSearch) {
+        //TODO: search habit events for habits matching search parameters, notify data set changed?
+        //If there is something to search
+        if (!habits.isEmpty() && (!(habitType.equals("")) || !(commentSearch.equals("")))) {
+            habitEventArrayAdapter.clear();
+            for (Habit h : habits) {
+                if (!(habitType.equals("")) && h.getTitle().matches("(?i)(" + habitType + ")")) {
+                    if (h.getEvents().isEmpty()) {
+                        Log.i("Error", "getEvents() is empty for habit " + h.getTitle());
+                    }
+                    habitEventArrayAdapter.addAll(h.getEvents());
+                    if (habitEventArrayAdapter.isEmpty()) {
+                        Log.i("Error", "Failed to add events to Adapter!");
+                    }
+                }
+            }
+
+            if (habitEventArrayAdapter.isEmpty()) {
+                Log.i("Error", "Failed to load events: habit events adapter is empty!");
+            }
+            Comparator<? super HabitEvent> dateCompare = new Comparator<HabitEvent>() {
+                @Override
+                public int compare(HabitEvent h1, HabitEvent h2) {
+                    return -h1.getDate().compareTo(h2.getDate());
+                }
+            };
+            if (!((habitEventArrayAdapter ==  null)) && !(habitEventArrayAdapter.isEmpty())) {
+                habitEventArrayAdapter.sort(dateCompare);
+                habitEventsList.setAdapter(habitEventArrayAdapter);
+            }
+            else {
+                Toast.makeText(MyHabitHistory.this,"No habit events matched!", Toast.LENGTH_SHORT).show();
+            }
+        }
+        else {
+            Toast.makeText(MyHabitHistory.this,"Please enter search parameters!", Toast.LENGTH_SHORT).show();
+        }
+
+
+    }
+
+    /**
+     * Exits out of filter dialog. Makes no changes to list.
+     * @param dialog Filter Dialog Fragment
+     */
+    public void onDialogNegativeClick(DialogFragment dialog) {
+        // User touched the dialog's negative button
     }
 
     private void loadData(){

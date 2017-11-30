@@ -3,6 +3,9 @@ package cmput301f17t09.goalsandhabits.Profiles;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.widget.ListView;
+
+import java.util.List;
 
 import cmput301f17t09.goalsandhabits.R;
 
@@ -22,5 +25,8 @@ public class FollowerRequestsActivity extends AppCompatActivity {
         toolbar.setTitle("My Follower Requests");
         toolbar.setNavigationIcon(R.drawable.ic_close_button);
         setSupportActionBar(toolbar);
+        ListView followerReqs = (ListView) findViewById(R.id.followerReqs);
+
+
     }
 }

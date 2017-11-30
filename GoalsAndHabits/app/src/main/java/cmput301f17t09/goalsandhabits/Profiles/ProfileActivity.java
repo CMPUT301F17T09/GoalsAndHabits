@@ -40,8 +40,6 @@ public class ProfileActivity extends AppCompatActivity {
         Button habitHistory = (Button) findViewById(R.id.habitHistory);
         Button followerReqs = (Button) findViewById(R.id.followerReqs);
 
-        Switch online = (Switch) findViewById(R.id.online);
-        boolean isOnline = online.isChecked();
 
         ImageButton myHabits = (ImageButton) findViewById(R.id.navigation_myhabits);
         ImageButton activityFeed = (ImageButton) findViewById(R.id.navigation_activityfeed);
