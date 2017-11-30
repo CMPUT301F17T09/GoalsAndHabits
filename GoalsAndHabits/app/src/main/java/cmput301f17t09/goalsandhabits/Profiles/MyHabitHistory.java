@@ -151,31 +151,42 @@ public class MyHabitHistory extends AppCompatActivity implements FilterDialog.Fi
     @Override
     public void onDialogPositiveClick(DialogFragment dialog, String habitType, String commentSearch) {
         //TODO: search habit events for habits matching search parameters, notify data set changed?
-        habitEventArrayAdapter.clear();
-        for(Habit h: habits) {
-            if(h.getTitle().matches("(?i)("+habitType+")")) {
-                habitEventArrayAdapter.addAll(h.getEvents());
-                if (habitEventArrayAdapter.isEmpty()) {
-                    Log.i("Error", "Failed to add habits to Adapter!");
+        //If there is something to search
+        if (!habits.isEmpty() && (!(habitType.equals("")) || !(commentSearch.equals("")))) {
+            habitEventArrayAdapter.clear();
+            for (Habit h : habits) {
+                if (!(habitType.equals("")) && h.getTitle().matches("(?i)(" + habitType + ")")) {
+                    if (h.getEvents().isEmpty()) {
+                        Log.i("Error", "getEvents() is empty for habit " + h.getTitle());
+                    }
+                    habitEventArrayAdapter.addAll(h.getEvents());
+                    if (habitEventArrayAdapter.isEmpty()) {
+                        Log.i("Error", "Failed to add habits to Adapter!");
+                    }
                 }
             }
-        }
-        if (habitEventArrayAdapter.isEmpty()) {
-            Log.i("Error", "Failed to load habits: habit events list is null!");
-        }
-        Comparator<? super HabitEvent> dateCompare = new Comparator<HabitEvent>() {
-            @Override
-            public int compare(HabitEvent h1, HabitEvent h2) {
-                return -h1.getDate().compareTo(h2.getDate());
+
+            if (habitEventArrayAdapter.isEmpty()) {
+                Log.i("Error", "Failed to load habits: habit events list is null!");
             }
-        };
-        if (!((habitEventArrayAdapter ==  null)) && !(habitEventArrayAdapter.isEmpty())) {
-            habitEventArrayAdapter.sort(dateCompare);
-            habitEventsList.setAdapter(habitEventArrayAdapter);
+            Comparator<? super HabitEvent> dateCompare = new Comparator<HabitEvent>() {
+                @Override
+                public int compare(HabitEvent h1, HabitEvent h2) {
+                    return -h1.getDate().compareTo(h2.getDate());
+                }
+            };
+            if (!((habitEventArrayAdapter ==  null)) && !(habitEventArrayAdapter.isEmpty())) {
+                habitEventArrayAdapter.sort(dateCompare);
+                habitEventsList.setAdapter(habitEventArrayAdapter);
+            }
+            else {
+                Toast.makeText(MyHabitHistory.this,"No habit events matched!", Toast.LENGTH_SHORT).show();
+            }
         }
         else {
-            Toast.makeText(MyHabitHistory.this,"No habit events matched!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MyHabitHistory.this,"Please enter search parameters!", Toast.LENGTH_SHORT).show();
         }
+
 
     }
 
