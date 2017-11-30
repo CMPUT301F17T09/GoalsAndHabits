@@ -152,8 +152,9 @@ public class MyHabitHistory extends AppCompatActivity implements FilterDialog.Fi
     public void onDialogPositiveClick(DialogFragment dialog, String habitType, String commentSearch) {
         //TODO: search habit events for habits matching search parameters, notify data set changed?
         habitEventArrayAdapter.clear();
+        Log.i("Info", "HabitType: "+habitType);
         for(Habit h: habits) {
-            if(h.getTitle().matches("(?i)("+habitType+")")) {
+            if(h.getTitle().matches("\\(\\?i\\)\\("+habitType+"\\)")) {
                 habitEventArrayAdapter.addAll(h.getEvents());
             }
         }
