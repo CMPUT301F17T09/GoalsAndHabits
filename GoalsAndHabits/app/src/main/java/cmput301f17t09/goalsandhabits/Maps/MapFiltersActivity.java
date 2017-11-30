@@ -4,8 +4,12 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.ImageButton;
+import android.widget.Switch;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
@@ -25,6 +29,8 @@ import cmput301f17t09.goalsandhabits.R;
 public class MapFiltersActivity extends AppCompatActivity implements OnMapReadyCallback{
 
     private MapView map;
+    private GoogleMap gmap;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setTitle("MapFiltersActivity");
@@ -73,7 +79,43 @@ public class MapFiltersActivity extends AppCompatActivity implements OnMapReadyC
     }
 
     @Override
-    public void onMapReady(GoogleMap gmap) {
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menu_nearby_events, menu);
+        final MenuItem nearbyToggle = menu.findItem(R.id.nearbyEventSwitch);
+        final Switch actionView = (Switch) nearbyToggle.getActionView().findViewById(R.id.mapSwitch);
+        actionView.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){//Needs to call some method otherwise doesn't work
+                    addMarkers(gmap);
+                }
+                else{
+                    clearMap(gmap);
+                }
+
+            }
+        });
+        return super.onCreateOptionsMenu(menu);
+    }
+
+
+    private void clearMap(GoogleMap map) {
+        map.clear();
+        map.addMarker(new MarkerOptions()
+                .position(new LatLng(0, 0))
+                .title("Marker"));
+    }
+
+    private void addMarkers(GoogleMap map) {
+        map.addMarker(new MarkerOptions()
+                .position(new LatLng(10, 10))
+                .title("Marker"));
+    }
+
+    @Override
+    public void onMapReady(GoogleMap map) {
+        gmap = map;
         gmap.addMarker(new MarkerOptions()
                 .position(new LatLng(0, 0))
                 .title("Marker"));
