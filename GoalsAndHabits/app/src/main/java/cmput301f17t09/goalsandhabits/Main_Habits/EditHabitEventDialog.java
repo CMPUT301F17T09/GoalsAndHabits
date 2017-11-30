@@ -26,7 +26,7 @@ public class EditHabitEventDialog extends DialogFragment {
 
 
     public interface EditHabitEventDialogListener{
-        public void onDialogPositiveClick(DialogFragment dialog, String s, String newComment, Date newDate);
+        public void onDialogPositiveClick(DialogFragment dialog, String s, Date newDate);
         public void onDialogNegativeƒClick(DialogFragment dialog);
     }
     EditHabitEventDialog.EditHabitEventDialogListener mListener;
@@ -71,8 +71,8 @@ public class EditHabitEventDialog extends DialogFragment {
 
         final EditText comment_field = (EditText) diaView.findViewById(R.id.editComment);
         comment_field.setText(comment);
-        final EditText photo_field = (EditText) diaView.findViewById(R.id.editDiaName);
-        photo_field.setText(photoPath);
+  //      final EditText photo_field = (EditText) diaView.findViewById(R.id.editDiaName);
+  //      photo_field.setText(photoPath);
         final DatePicker datePicker = (DatePicker)diaView.findViewById(R.id.datePicker);
         int day = datePicker.getDayOfMonth();
         int month = datePicker.getMonth();
@@ -80,14 +80,14 @@ public class EditHabitEventDialog extends DialogFragment {
         final Calendar calendar = Calendar.getInstance();
         calendar.set(year,month,day);
 
-        builder.setTitle("Edit habit event info")
-                .setView(diaView)
+
+               builder .setView(diaView)
                 .setPositiveButton("accept", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         String newComment= comment_field.getText().toString();
-                        String newPhoto = photo_field.getText().toString();
+                       // String newPhoto = photo_field.getText().toString();
                         Date newDate = calendar.getTime();
-                        mListener.onDialogPositiveClick(EditHabitEventDialog.this, newComment,newPhoto, newDate);
+                        mListener.onDialogPositiveClick(EditHabitEventDialog.this, newComment, newDate);
                     }
                 })
                 .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
