@@ -118,8 +118,7 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
         dialog.show(getFragmentManager(), "EditHabitEventDialog");
     }
 
-
-
+    
     public void onDialogPositiveClick(DialogFragment dialog, String newComment, String newPhotoPath,
                                       Location newLocation) {
         comment.setText(newComment);
