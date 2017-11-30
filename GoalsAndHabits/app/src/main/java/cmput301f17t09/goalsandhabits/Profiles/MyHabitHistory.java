@@ -164,6 +164,11 @@ public class MyHabitHistory extends AppCompatActivity implements FilterDialog.Fi
                         Log.i("Error", "Failed to add events to Adapter!");
                     }
                 }
+//                if (!(commentSearch.equals("")) && h.) {
+//
+//                }
+
+
             }
 
             if (habitEventArrayAdapter.isEmpty()) {
