@@ -119,12 +119,15 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
     }
 
     
-    public void onDialogPositiveClick(DialogFragment dialog, String newComment, String newPhotoPath,
-                                      Location newLocation) {
+    public void onDialogPositiveClick(DialogFragment dialog, String newComment, Date newDate) {
         comment.setText(newComment);
         event.setComment(newComment);
-        event.setPhotoPath(newPhotoPath);
+        event.setDate(newDate);
          //Not updating, will have to make changes to main activity
+    }
+    @Override
+    public void onDialogNegativeƒClick(DialogFragment dialog) {
+
     }
 
 
@@ -147,13 +150,4 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
     }
 
 
-    @Override
-    public void onDialogPositiveClick(DialogFragment dialog, String s, String newComment, Date newDate) {
-
-    }
-
-    @Override
-    public void onDialogNegativeƒClick(DialogFragment dialog) {
-
-    }
 }
