@@ -147,9 +147,9 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
         super.finish();
     }
 
-
+    
     @Override
-    public void onDialogPositiveClick(DialogFragment dialog, String s, String newComment, Date newDate) {
+    public void onDialogPositiveClick(DialogFragment dialog, String s, Date newDate) {
 
     }
 
