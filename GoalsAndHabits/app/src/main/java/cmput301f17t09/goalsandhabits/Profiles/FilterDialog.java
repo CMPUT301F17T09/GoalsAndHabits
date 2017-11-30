@@ -72,10 +72,9 @@ public class FilterDialog extends DialogFragment {
         builder.setTitle("Filter Habit Events")
                 .setView(diaView)
                 .setPositiveButton("accept", new DialogInterface.OnClickListener() {
-                    String habitSearch = habit_field.getText().toString();
-                    String commentSearch = comment_field.getText().toString();
                     public void onClick(DialogInterface dialog, int id) {
-                        //TODO: Pass changes to schedule
+                        String habitSearch = habit_field.getText().toString();
+                        String commentSearch = comment_field.getText().toString();
                         mListener.onDialogPositiveClick(FilterDialog.this, habitSearch,commentSearch);
                     }
                 })
