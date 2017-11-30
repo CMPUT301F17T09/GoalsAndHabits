@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Locale;
 
 import cmput301f17t09.goalsandhabits.Main_Habits.Habit;
@@ -44,13 +45,47 @@ public class HabitArrayAdapter extends ArrayAdapter<Habit> {
         startDate.setText(dateFormat.format(h.getStartDate()));
         ImageView imageView = (ImageView) convertView.findViewById(R.id.habitImage);
         int missed = h.getEventsMissed();
-        if (missed==0){
-            imageView.setImageResource(R.drawable.ic_checkmark);
-        }else{
-            imageView.setImageResource(R.drawable.ic_offtrack);
+        Calendar c = Calendar.getInstance();
+        Calendar latest = getLatestHabitEventDate(h);
+        if ((h.getSchedule()!=null && h.getSchedule().contains(c.get(Calendar.DAY_OF_WEEK)) && latest!=null) && (h.getEvents()==null || !sameDay(c,latest))){
+            //Set alarm icon if the habit is schedule for today and
+            //if we either have no events, or the latest event wasn't today:
+            imageView.setImageResource(R.drawable.ic_alarm);
+        }else {
+            if (missed == 0) {
+                imageView.setImageResource(R.drawable.ic_checkmark);
+            } else {
+                imageView.setImageResource(R.drawable.ic_offtrack);
+            }
         }
 
 
+
         return convertView;
+    }
+
+    private Calendar getLatestHabitEventDate(Habit h){
+        ArrayList<HabitEvent> events = h.getEvents();
+        if (events==null) return null;
+        if (events.isEmpty()) return null;
+        Calendar latest = Calendar.getInstance();
+        latest.setTime(events.get(0).getDate());
+        if (events.size()==1) return latest;
+        Calendar test = Calendar.getInstance();
+        Calendar now = Calendar.getInstance();
+        for (HabitEvent event : events){
+            if (event.getDate()==null) continue;
+            test.setTime(event.getDate());
+            if (test.after(latest)){
+                if (!test.after(now)){
+                    latest.setTime(test.getTime());
+                }
+            }
+        }
+        return latest;
+    }
+
+    private boolean sameDay(Calendar c1, Calendar c2){
+        return (c1.get(Calendar.YEAR) == c2.get(Calendar.YEAR) && c1.get(Calendar.DAY_OF_YEAR) == c2.get(Calendar.DAY_OF_YEAR));
     }
 }

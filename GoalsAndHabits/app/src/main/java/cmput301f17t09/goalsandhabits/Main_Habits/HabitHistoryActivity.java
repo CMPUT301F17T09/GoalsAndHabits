@@ -14,8 +14,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 
 import cmput301f17t09.goalsandhabits.ElasticSearch.ElasticSearchController;
@@ -94,6 +96,14 @@ public class HabitHistoryActivity extends AppCompatActivity {
                         habitEvent.setComment(data.getStringExtra(MainActivity.EXTRA_HABIT_NAME));
                     }
                     habit.addHabitEvent(habitEvent);
+                    Calendar c = Calendar.getInstance();
+                    if (habit.getSchedule()!=null && habit.getSchedule().contains(c.get(Calendar.DAY_OF_WEEK))){
+                        habit.setEventsCompleted(habit.getEventsCompleted() + 1);
+                        if (habit.getEventsMissed()!=0) {
+                            habit.setEventsMissed(0);
+                            Toast.makeText(HabitHistoryActivity.this, "You are back on track!", Toast.LENGTH_SHORT);
+                        }
+                    }
                     habitEventArrayAdapter.notifyDataSetChanged();
                 }
                 case REQUEST_CODE_VIEW_EVENT:{
@@ -101,6 +111,10 @@ public class HabitHistoryActivity extends AppCompatActivity {
                         int pos = (int) data.getSerializableExtra(EXTRA_EVENT_POSITION);
                         HabitEvent habitevent = (HabitEvent) data.getSerializableExtra(EXTRA_EVENT_SERIAL);
                         if (data.hasExtra(EXTRA_EVENT_DELETED)){
+                            Calendar c = Calendar.getInstance();
+                            if (habit.getSchedule()!=null && habit.getSchedule().contains(c.get(Calendar.DAY_OF_WEEK))) {
+                                habit.setEventsCompleted(Math.max(0,habit.getEventsCompleted() - 1));
+                            }
                             habit.deleteHabitEvent(pos);
                             habitEventArrayAdapter.notifyDataSetChanged();
                         }else {
