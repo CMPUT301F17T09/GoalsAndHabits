@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -27,8 +28,11 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.HashSet;
 
 import cmput301f17t09.goalsandhabits.R;
 
@@ -47,10 +51,12 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
     private Habit habit;
     private TextView reason;
     private TextView startdate;
+    private TextView schedule;
     private Context context;
     private int position;
     private Toolbar toolbar;
     private boolean deleted = false;
+    private SimpleDateFormat dateFormat = new SimpleDateFormat("EEE MMM dd");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,7 +75,13 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
         reason = (TextView) findViewById(R.id.textReason);
         reason.setText(habit.getReason());
         startdate = (TextView) findViewById(R.id.textHabitDate);
-        startdate.setText(habit.getStartDate().toString());
+        startdate.setText(dateFormat.format(habit.getStartDate()));
+        schedule = (TextView) findViewById(R.id.textSchedule);
+        schedule.setText(getScheduleString(habit.getSchedule()));
+        TextView eventsMissed = (TextView) findViewById(R.id.textMissedEvents);
+        eventsMissed.setText(Integer.toString(habit.getEventsMissed()));
+        TextView daysSinceLastEvent = (TextView) findViewById(R.id.textDaysSinceLastEvent);
+        daysSinceLastEvent.setText(Integer.toString(getDaysFromLastEvent()));
 
         toolbar = (Toolbar) findViewById(R.id.actionbar);
         toolbar.setTitle(habit.getTitle());
@@ -169,6 +181,8 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
                 case MainActivity.REQUEST_CODE_VIEW_HABIT_HISTORY:{
                     if (data.hasExtra(MainActivity.EXTRA_HABIT_SERIAL)){
                         habit = (Habit) data.getSerializableExtra(MainActivity.EXTRA_HABIT_SERIAL);
+                        TextView daysSinceLastEvent = (TextView) findViewById(R.id.textDaysSinceLastEvent);
+                        daysSinceLastEvent.setText(Integer.toString(getDaysFromLastEvent()));
                     }
                 }
                 }
@@ -179,7 +193,7 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
      * Creates a new instance of the edit habit dialog and displays it.
      */
     public void showEditDialog() {
-        DialogFragment dialog = EditHabitDialog.newInstance(habit.getTitle(),habit.getReason());
+        DialogFragment dialog = EditHabitDialog.newInstance(habit.getTitle(),habit.getReason(),habit.getSchedule());
         dialog.show(getFragmentManager(), "EditHabitDialog");
     }
 
@@ -193,11 +207,13 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
      */
 
     @Override
-    public void onDialogPositiveClick(DialogFragment dialog, String newreason, String newtitle) {
+    public void onDialogPositiveClick(DialogFragment dialog, String newreason, String newtitle, HashSet<Integer> newschedule) {
         reason.setText(newreason);
         toolbar.setTitle(newtitle);
+        schedule.setText(getScheduleString(newschedule));
         habit.setReason(newreason);
         habit.setTitle(newtitle);
+        habit.setSchedule(newschedule);
     }
 
     /**
@@ -231,5 +247,45 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
         habitDate.setText(date.toString());
         habit.setStartDate(date);
     }
+
+    private int getDaysFromLastEvent(){
+        //TODO: Can this be more efficient?
+        if (habit.getEvents() != null){
+            ArrayList<HabitEvent> events = habit.getEvents();
+            if (!events.isEmpty()) {
+                Calendar c = Calendar.getInstance();
+                Calendar d = Calendar.getInstance();
+                c.setTime(events.get(0).getDate());
+                for (int i=1;i<events.size();i++){
+                    d.setTime(events.get(i).getDate());
+                    if (c.before(d)){
+                        c.setTime(d.getTime());
+                    }
+                }
+                return getDaysBetweenDates(c.getTime(),new Date());
+            }
+        }
+        return 0;
+    }
+
+    private int getDaysBetweenDates(Date before, Date after){
+        long dif = (after.getTime() - before.getTime());
+        return (int) (dif / (1000*60*60*24));
+    }
+
+    private String getScheduleString(HashSet<Integer> schedule){
+        String s = "";
+        if (schedule.size()==7) return "Daily";
+        if (schedule.contains(Calendar.SUNDAY)) s += "Sunday, ";
+        if (schedule.contains(Calendar.MONDAY)) s += "Monday, ";
+        if (schedule.contains(Calendar.TUESDAY)) s += "Tuesday, ";
+        if (schedule.contains(Calendar.WEDNESDAY)) s += "Wednesday, ";
+        if (schedule.contains(Calendar.THURSDAY)) s += "Thursday, ";
+        if (schedule.contains(Calendar.FRIDAY)) s += "Friday, ";
+        if (schedule.contains(Calendar.SATURDAY)) s += "Saturday, ";
+        s = s.substring(0,s.length()-2);
+        return s;
+    }
+
 
 }
