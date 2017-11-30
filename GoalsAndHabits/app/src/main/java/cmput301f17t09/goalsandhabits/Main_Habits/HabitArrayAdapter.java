@@ -5,9 +5,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Locale;
 
 import cmput301f17t09.goalsandhabits.Main_Habits.Habit;
 import cmput301f17t09.goalsandhabits.R;
@@ -37,7 +40,15 @@ public class HabitArrayAdapter extends ArrayAdapter<Habit> {
         TextView startDate = (TextView) convertView.findViewById(R.id.habitStartDate);
         title.setText(h.getTitle());
         reason.setText(h.getReason());
-        startDate.setText(h.getStartDate().toString());
+        SimpleDateFormat dateFormat = new SimpleDateFormat("EEE MMM dd", Locale.CANADA);
+        startDate.setText(dateFormat.format(h.getStartDate()));
+        ImageView imageView = (ImageView) convertView.findViewById(R.id.habitImage);
+        int missed = h.getEventsMissed();
+        if (missed==0){
+            imageView.setImageResource(R.drawable.ic_checkmark);
+        }else{
+            imageView.setImageResource(R.drawable.ic_offtrack);
+        }
 
 
         return convertView;
