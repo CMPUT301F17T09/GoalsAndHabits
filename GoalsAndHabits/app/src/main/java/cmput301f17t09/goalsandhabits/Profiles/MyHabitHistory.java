@@ -75,11 +75,11 @@ public class MyHabitHistory extends AppCompatActivity implements FilterDialog.Fi
         if (!habits.isEmpty()) {habitEventArrayAdapter = new HabitEventArrayAdapter(this,habits.get(0).getEvents());}
 
         if (habits.size()>1) {
-            for (int i=0;i<habits.size();i++) {
+            for (int i=1;i<habits.size();i++) {
                 habitEventArrayAdapter.addAll(habits.get(i).getEvents());
             }
             if (habitEventArrayAdapter.isEmpty()) {
-                Log.i("Error", "Failed to load habits: habit events list is null!");
+                Log.i("Error", "Failed to load events: habit events list is null!");
             }
         }
         Comparator<? super HabitEvent> dateCompare = new Comparator<HabitEvent>() {
@@ -161,13 +161,13 @@ public class MyHabitHistory extends AppCompatActivity implements FilterDialog.Fi
                     }
                     habitEventArrayAdapter.addAll(h.getEvents());
                     if (habitEventArrayAdapter.isEmpty()) {
-                        Log.i("Error", "Failed to add habits to Adapter!");
+                        Log.i("Error", "Failed to add events to Adapter!");
                     }
                 }
             }
 
             if (habitEventArrayAdapter.isEmpty()) {
-                Log.i("Error", "Failed to load habits: habit events list is null!");
+                Log.i("Error", "Failed to load events: habit events adapter is empty!");
             }
             Comparator<? super HabitEvent> dateCompare = new Comparator<HabitEvent>() {
                 @Override
