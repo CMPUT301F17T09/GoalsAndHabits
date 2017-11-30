@@ -130,8 +130,8 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
 
 
     public void showEditEventDialog() {
-        DialogFragment dialog = EditHabitDialog.newInstance(event.getComment(), event.getPhotoPath());
-        dialog.show(getFragmentManager(), "EditHabitEventDialog");
+        //DialogFragment dialog = EditHabitDialog.newInstance(event.getComment(), event.getPhotoPath());
+        //dialog.show(getFragmentManager(), "EditHabitEventDialog");
     }
 
     @Override

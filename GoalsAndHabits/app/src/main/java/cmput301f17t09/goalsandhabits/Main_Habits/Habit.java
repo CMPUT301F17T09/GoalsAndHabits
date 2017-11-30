@@ -23,6 +23,8 @@ public class Habit implements Serializable{
     private Date startDate;
     private HashSet<Integer> schedule;
     private ArrayList<HabitEvent> events;
+    private int eventsCompleted = 0;
+    private int eventsMissed = 0;
 
 
     /**
@@ -120,4 +122,12 @@ public class Habit implements Serializable{
     public String getId() { return this.id; }
 
     public void setId(String id) { this.id = id; }
+
+    public int getEventsCompleted() { return eventsCompleted; }
+
+    public void setEventsCompleted(int eventsCompleted) { this.eventsCompleted = eventsCompleted; }
+
+    public int getEventsMissed() { return eventsMissed; }
+
+    public void setEventsMissed(int eventsMissed) { this.eventsMissed = eventsMissed; }
 }
