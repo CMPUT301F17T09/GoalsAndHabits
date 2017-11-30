@@ -6,12 +6,20 @@ import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.location.Location;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.TextView;
 
+
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.tasks.OnSuccessListener;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -24,18 +32,24 @@ import cmput301f17t09.goalsandhabits.R;
 
 public class EditHabitEventDialog extends DialogFragment {
 
+    private Location currentloc;
 
     public interface EditHabitEventDialogListener{
-        public void onDialogPositiveClick(DialogFragment dialog, String s, Date newDate);
-        public void onDialogNegativeƒClick(DialogFragment dialog);
+        public void onDialogPositiveClick(DialogFragment dialog, String newcomment, Location newloc);
+        public void onDialogNegativeClick(DialogFragment dialog);
+        public Location onLocButtonClick(DialogFragment dialog);
     }
     EditHabitEventDialog.EditHabitEventDialogListener mListener;
 
-    public static EditHabitEventDialog newInstance(String comment, String photoPath ) {
+    public static EditHabitEventDialog newInstance(String comment, String photoPath, Location location ) {
         EditHabitEventDialog dialog= new EditHabitEventDialog();
         Bundle args = new Bundle();
         args.putString("Comments", comment);
         args.putString("photoPath", photoPath);
+        if (location != null){
+            args.putString("latitude", Location.convert(location.getLatitude(), Location.FORMAT_DEGREES));
+            args.putString("longitude", Location.convert(location.getLongitude(), Location.FORMAT_DEGREES));
+        }
         dialog.setArguments(args);
         return dialog;
     }
@@ -64,35 +78,47 @@ public class EditHabitEventDialog extends DialogFragment {
     public Dialog onCreateDialog(Bundle savedInstanceState){
         String comment = getArguments().getString("Comments");
         String photoPath = getArguments().getString("Photo Path");
+        String lat = getArguments().getString("latitude");
+        String lon = getArguments().getString("longitude");
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = getActivity().getLayoutInflater();
-        View diaView = inflater.inflate(R.layout.dialog_edit_habit_events, null);
+        final View diaView = inflater.inflate(R.layout.dialog_edit_habit_events, null);
 
         final EditText comment_field = (EditText) diaView.findViewById(R.id.editComment);
         comment_field.setText(comment);
-  //      final EditText photo_field = (EditText) diaView.findViewById(R.id.editDiaName);
-  //      photo_field.setText(photoPath);
-        final DatePicker datePicker = (DatePicker)diaView.findViewById(R.id.datePicker);
-        int day = datePicker.getDayOfMonth();
-        int month = datePicker.getMonth();
-        int year = datePicker.getYear();
-        final Calendar calendar = Calendar.getInstance();
-        calendar.set(year,month,day);
 
+        final TextView location_field = (TextView) diaView.findViewById(R.id.textLocation);
 
-               builder .setView(diaView)
+        if (lat != null && lon != null){
+            location_field.setText("("+lat+","+lon+")");
+        }
+
+        //TODO: Photo stuff
+
+        Button loc_button = (Button) diaView.findViewById(R.id.locButton);
+        loc_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                currentloc = mListener.onLocButtonClick(EditHabitEventDialog.this);
+                if (currentloc != null){
+                    location_field.setText("(" + Location.convert(currentloc.getLatitude(), Location.FORMAT_DEGREES)
+                            +","+Location.convert(currentloc.getLongitude(), Location.FORMAT_DEGREES)+")");
+                }
+            }
+        });
+
+        builder .setView(diaView)
                 .setPositiveButton("accept", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         String newComment= comment_field.getText().toString();
                        // String newPhoto = photo_field.getText().toString();
-                        Date newDate = calendar.getTime();
-                        mListener.onDialogPositiveClick(EditHabitEventDialog.this, newComment, newDate);
+                        mListener.onDialogPositiveClick(EditHabitEventDialog.this, newComment, currentloc);
                     }
                 })
                 .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        mListener.onDialogNegativeƒClick(EditHabitEventDialog.this);
+                        mListener.onDialogNegativeClick(EditHabitEventDialog.this);
                     }
                 });
         return builder.create();

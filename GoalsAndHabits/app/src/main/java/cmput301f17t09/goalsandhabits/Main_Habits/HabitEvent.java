@@ -53,10 +53,20 @@ public class HabitEvent implements Serializable{
     public void setPhotoPath(String photoPath){
         this.photoPath = photoPath;
     }
+
     public Double getLat() {return Lat;}
-        public Double getLong() {        return Long;}
-    public void setLat(Double lat){        this.Lat=lat;}
+    public Double getLong() {return Long;}
+    public void setLat(Double lat){this.Lat=lat;}
     public void setLong(Double Long){this.Long=Long;}
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
+
     public boolean voidLocation(){
         if( this.getLat()==null ){
             return true;
