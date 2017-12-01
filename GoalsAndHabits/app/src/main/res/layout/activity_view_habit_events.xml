@@ -6,70 +6,45 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/eventComment"
-        android:layout_width="0dp"
-        android:layout_height="62dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="192dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Comment"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageView
         android:id="@+id/eventPhoto"
         android:layout_width="362dp"
         android:layout_height="119dp"
+<<<<<<< HEAD
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toTopOf="@+id/eventHabit"
+=======
+        android:layout_marginTop="56dp"
+>>>>>>> ken_changes
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.372"
+        app:layout_constraintHorizontal_bias="0.272"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.953"
         app:srcCompat="@mipmap/ic_launcher" />
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="85dp"
-        android:layout_height="19dp"
-        android:layout_marginEnd="280dp"
+        android:layout_width="155dp"
+        android:layout_height="29dp"
+        android:layout_marginEnd="196dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginTop="32dp"
-        android:text="Date of Event"
+        android:layout_marginTop="16dp"
+        android:text="Date of Event:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/eventComment" />
-
-    <EditText
-        android:id="@+id/eventDate"
-        android:layout_width="215dp"
-        android:layout_height="46dp"
-        android:layout_marginEnd="140dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="date"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.024" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="236dp"
+        android:layout_marginEnd="256dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="60dp"
         android:text="According to plan"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -89,14 +64,51 @@
         android:layout_marginTop="0dp" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/trackPlan"
         android:layout_width="230dp"
         android:layout_height="30dp"
-        android:layout_marginEnd="116dp"
+        android:layout_marginEnd="136dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="4dp"
-        android:text="The event was late/ontime."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="196dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:text="Comments:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eventPhoto" />
+
+    <TextView
+        android:id="@+id/eventComment"
+        android:layout_width="357dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/eventDate"
+        android:layout_width="357dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 </android.support.constraint.ConstraintLayout>
