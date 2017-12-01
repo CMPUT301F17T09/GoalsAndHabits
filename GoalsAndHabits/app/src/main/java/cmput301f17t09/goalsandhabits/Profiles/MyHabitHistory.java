@@ -75,7 +75,7 @@ public class MyHabitHistory extends AppCompatActivity implements FilterDialog.Fi
         if (!habits.isEmpty()) {habitEventArrayAdapter = new HabitEventArrayAdapter(this,new ArrayList<HabitEvent>());}
 
         if (habits.size()>1) {
-            for (int i=1;i<habits.size();i++) {
+            for (int i=0;i<habits.size();i++) {
                 habitEventArrayAdapter.addAll(habits.get(i).getEvents());
             }
             if (habitEventArrayAdapter.isEmpty()) {

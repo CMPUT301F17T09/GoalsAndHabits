@@ -133,7 +133,6 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
         super.finish();
     }
 
-
     @Override
     public void onDialogPositiveClick(DialogFragment dialog, String newcomment, Location newloc) {
 
@@ -166,7 +165,6 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
                 });
         return currentLoc;
     }
-
 
     private Boolean checkLocationPermission(){
         int result = ContextCompat.checkSelfPermission(ViewEventActivity.this, Manifest.permission.ACCESS_FINE_LOCATION);
