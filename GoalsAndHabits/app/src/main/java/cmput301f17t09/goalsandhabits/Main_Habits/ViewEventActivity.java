@@ -36,6 +36,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -52,10 +53,13 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
     private static final int PERMISSION_REQUEST_CODE = 1;
     private HabitEvent event;
     private TextView comment;
+    private TextView statusText;
+    private TextView eventdate;
     private Context context;
     private int position;
     private Toolbar toolbar;
     private boolean deleted = false;
+    private SimpleDateFormat dateFormat = new SimpleDateFormat("EEE MMM dd");
     private Location currentLoc;
     private FusedLocationProviderClient mFusedLocationClient;
 
@@ -77,7 +81,12 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
 
 
         comment = (TextView) findViewById(R.id.eventComment);
-
+        comment = (TextView) findViewById(R.id.eventComment);
+        if (comment == null){return;}
+        else{comment.setText(event.getComment());}
+        eventdate = (TextView) findViewById(R.id.eventDate);
+        eventdate.setText(dateFormat.format(event.getDate()));
+        statusText = (TextView) findViewById(R.id.trackPlan);
         toolbar = (Toolbar) findViewById(R.id.actionbar);
         toolbar.setTitle("Habit Event");
         toolbar.setNavigationIcon(R.drawable.ic_close_button);
