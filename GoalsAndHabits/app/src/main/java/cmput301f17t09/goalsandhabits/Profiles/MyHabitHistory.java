@@ -155,12 +155,18 @@ public class MyHabitHistory extends AppCompatActivity implements FilterDialog.Fi
         //TODO: search habit events for habits matching search parameters, notify data set changed?
         //If there is something to search
         if (!habits.isEmpty() && (!(habitType.equals("")) || !(commentSearch.equals("")))) {
+            if (habitType.equals("*")) {
+                habitType=".*";
+            }
+            if (commentSearch.equals("*")) {
+                commentSearch=".*";
+            }
             habitEventArrayAdapter.clear();
             for (Habit h : habits) {
                 if (!(habitType.equals("")) && h.getTitle().matches("(?i)(" + habitType + ")")) {
                     if (!(commentSearch.equals("")) && !(h.getEvents().isEmpty())) {
                         for (HabitEvent e: h.getEvents()) {
-                            if((e.getComment()!=null) && e.getComment().matches("(?i)(.*"+commentSearch+".*)")) {
+                            if((e.getComment()!=null) && e.getComment().matches("(?i)(.*?"+commentSearch+".*)")) {
                                 habitEventArrayAdapter.add(e);
                             }
                         }
@@ -192,7 +198,7 @@ public class MyHabitHistory extends AppCompatActivity implements FilterDialog.Fi
             }
         }
         else {
-            Toast.makeText(MyHabitHistory.this,"Please enter search parameters!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MyHabitHistory.this,"Please enter search parameter(s)!", Toast.LENGTH_SHORT).show();
         }
 
 
