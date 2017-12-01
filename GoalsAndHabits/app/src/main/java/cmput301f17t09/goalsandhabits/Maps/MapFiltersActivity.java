@@ -54,21 +54,20 @@ public class MapFiltersActivity extends AppCompatActivity implements OnMapReadyC
 
         if (Build.VERSION.SDK_INT >= 23) {
             if (checkLocationPermission()){
-
+                mFusedLocationClient.getLastLocation()
+                        .addOnSuccessListener(this, new OnSuccessListener<Location>() {
+                            @Override
+                            public void onSuccess(Location location) {
+                                // Got last known location. In some rare situations this can be null.
+                                if (location != null) {
+                                    currentLoc = location;
+                                }
+                            }
+                        });
             }else{
                 requestPermission();
             }
         }
-        mFusedLocationClient.getLastLocation()
-                .addOnSuccessListener(this, new OnSuccessListener<Location>() {
-                    @Override
-                    public void onSuccess(Location location) {
-                        // Got last known location. In some rare situations this can be null.
-                        if (location != null) {
-                            currentLoc = location;
-                        }
-                    }
-                });
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.actionbar);
         toolbar.setTitle("Map");
@@ -151,12 +150,10 @@ public class MapFiltersActivity extends AppCompatActivity implements OnMapReadyC
             case PERMISSION_REQUEST_CODE:
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     Toast.makeText(MapFiltersActivity.this,
-                            "Permission accepted", Toast.LENGTH_SHORT).show();
+                            "Permission granted", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(MapFiltersActivity.this,
-                            "Permission required to continue", Toast.LENGTH_SHORT).show();
-                    requestPermission();
-
+                            "Permission required", Toast.LENGTH_SHORT).show();
                 }
                 break;
         }
@@ -182,13 +179,12 @@ public class MapFiltersActivity extends AppCompatActivity implements OnMapReadyC
         gmap = map;
         if (Build.VERSION.SDK_INT >= 23) {
             if (checkLocationPermission()){
-
+                gmap.setMyLocationEnabled(true);
+                gmap.setOnMyLocationButtonClickListener(this);
             }else{
                 requestPermission();
             }
         }
-        gmap.setMyLocationEnabled(true);
-        gmap.setOnMyLocationButtonClickListener(this);
     }
 
     /**

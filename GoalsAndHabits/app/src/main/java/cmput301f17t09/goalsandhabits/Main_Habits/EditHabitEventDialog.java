@@ -122,5 +122,5 @@ public class EditHabitEventDialog extends DialogFragment {
                     }
                 });
         return builder.create();
-}
+    }
 }

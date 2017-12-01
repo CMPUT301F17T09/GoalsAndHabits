@@ -14,11 +14,13 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
@@ -55,6 +57,7 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
     private Toolbar toolbar;
     private boolean deleted = false;
     private Location currentLoc;
+    private FusedLocationProviderClient mFusedLocationClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +72,23 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
             }
         }
         if (event==null) finish();
+
+
+        if (checkLocationPermission()){
+            mFusedLocationClient.getLastLocation()
+                    .addOnSuccessListener(this, new OnSuccessListener<Location>() {
+                        @Override
+                        public void onSuccess(Location location) {
+                                // Got last known location. In some rare situations this can be null.
+                            if (location != null) {
+                                currentLoc = location;
+                            }
+                        }
+                    });
+        }else{requestPermission();}
+
+        mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+
 
         comment = (TextView) findViewById(R.id.eventComment);
 
@@ -145,24 +165,19 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
 
     @Override
     public Location onLocButtonClick(DialogFragment dialog) {
-        if (Build.VERSION.SDK_INT >= 23) {
-            if (checkLocationPermission()){
-
-            }else{
-                requestPermission();
-            }
-        }
-        FusedLocationProviderClient mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
-                mFusedLocationClient.getLastLocation()
-                .addOnSuccessListener(this, new OnSuccessListener<Location>() {
-                    @Override
-                    public void onSuccess(Location location) {
-                        // Got last known location. In some rare situations this can be null.
-                        if (location != null) {
-                            currentLoc = location;
+        if (checkLocationPermission()){
+            mFusedLocationClient.getLastLocation()
+                    .addOnSuccessListener(this, new OnSuccessListener<Location>() {
+                        @Override
+                        public void onSuccess(Location location) {
+                                // Got last known location. In some rare situations this can be null.
+                            if (location != null) {
+                                currentLoc = location;
+                            }
                         }
-                    }
-                });
+                    });
+        }else{requestPermission();}
+
         return currentLoc;
     }
 
@@ -177,5 +192,20 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
 
     private void requestPermission() {
         ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, PERMISSION_REQUEST_CODE);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case PERMISSION_REQUEST_CODE:
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    Toast.makeText(ViewEventActivity.this,
+                            "Permission granted", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(ViewEventActivity.this,
+                            "Permission required", Toast.LENGTH_SHORT).show();
+                }
+                break;
+        }
     }
 }
