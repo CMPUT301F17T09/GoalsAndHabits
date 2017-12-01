@@ -156,25 +156,20 @@ public class MyHabitHistory extends AppCompatActivity implements FilterDialog.Fi
             habitEventArrayAdapter.clear();
             for (Habit h : habits) {
                 if (!(habitType.equals("")) && h.getTitle().matches("(?i)(" + habitType + ")")) {
-                    Log.i("Info","Habit type matches habit");
                     if (!(commentSearch.equals("")) && !(h.getEvents().isEmpty())) {
                         for (HabitEvent e: h.getEvents()) {
                             if((e.getComment()!=null) && e.getComment().matches("(?i)(.*"+commentSearch+".*)")) {
-                                Log.i("Info","Adding habit event from comment and habit search");
                                 habitEventArrayAdapter.add(e);
                             }
                         }
                     }
                     else {
-                        Log.i("Info","Adding all habit events");
                         habitEventArrayAdapter.addAll(h.getEvents());
                     }
                 }
                 else if(!(commentSearch.equals("")) && habitType.equals("")) {
-                    Log.i("Info","Commentsearch not empty and no habit type entered");
                     for (HabitEvent e: h.getEvents()) {
                         if ((e.getComment()!=null) && e.getComment().matches("(?i)(.*?"+commentSearch+".*)")) {
-                            Log.i("Info","Adding habit event from comment search");
                             habitEventArrayAdapter.add(e);
                         }
                     }
