@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import cmput301f17t09.goalsandhabits.Main_Habits.MainActivity;
 import cmput301f17t09.goalsandhabits.Maps.MapFiltersActivity;
@@ -68,7 +69,6 @@ public class FollowActivity extends AppCompatActivity implements UserSearchDialo
             @Override
             public void onClick(View v) {
                 setResult(RESULT_OK);
-                //TODO: Create a dialog and prompt user for id to add. Positive button starts search results activity
                 showSearchDialog();
 
             }
@@ -91,9 +91,14 @@ public class FollowActivity extends AppCompatActivity implements UserSearchDialo
 
     @Override
     public void onDialogPositiveClick(DialogFragment dialog, String userSearch) {
-        Intent results = new Intent(FollowActivity.this,SearchResultsActivity.class);
-        results.putExtra("search",userSearch);
-        startActivity(results);
+        if (userSearch.equals("")) {
+            Toast.makeText(FollowActivity.this,"Please enter a user to search for!", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            Intent results = new Intent(FollowActivity.this, SearchResultsActivity.class);
+            results.putExtra("search", userSearch);
+            startActivity(results);
+        }
 
     }
 
