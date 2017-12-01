@@ -36,7 +36,7 @@ public class UsersArrayAdapter extends ArrayAdapter<Profile> {
         TextView countNum = (TextView) convertView.findViewById(R.id.userHabitCount);
         name.setText(p.getUsername());
         countText.setText("Number of Habits:");
-        countNum.setText("0");
+        countNum.setText(Integer.toString(p.getHabitIds().size()));
 
         return convertView;
     }
