@@ -99,10 +99,6 @@ public class HabitHistoryActivity extends AppCompatActivity {
                     Calendar c = Calendar.getInstance();
                     if (habit.getSchedule()!=null && habit.getSchedule().contains(c.get(Calendar.DAY_OF_WEEK))){
                         habit.setEventsCompleted(habit.getEventsCompleted() + 1);
-                        if (habit.getEventsMissed()!=0) {
-                            habit.setEventsMissed(0);
-                            Toast.makeText(HabitHistoryActivity.this, "You are back on track!", Toast.LENGTH_SHORT);
-                        }
                     }
                     habitEventArrayAdapter.notifyDataSetChanged();
                 }

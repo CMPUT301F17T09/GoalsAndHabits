@@ -1,6 +1,8 @@
 package cmput301f17t09.goalsandhabits.Main_Habits;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,6 +26,7 @@ import cmput301f17t09.goalsandhabits.R;
  */
 public class HabitArrayAdapter extends ArrayAdapter<Habit> {
     private Context context;
+    private float statThreshold = 50;
 
     public HabitArrayAdapter(Context context, ArrayList<Habit> habits){
         super(context, 0, habits);
@@ -39,12 +42,21 @@ public class HabitArrayAdapter extends ArrayAdapter<Habit> {
         TextView title = (TextView) convertView.findViewById(R.id.habitTitle);
         TextView reason = (TextView) convertView.findViewById(R.id.habitReason);
         TextView startDate = (TextView) convertView.findViewById(R.id.habitStartDate);
+        TextView textStats = (TextView) convertView.findViewById(R.id.habitStats);
         title.setText(h.getTitle());
         reason.setText(h.getReason());
         SimpleDateFormat dateFormat = new SimpleDateFormat("EEE MMM dd", Locale.CANADA);
         startDate.setText(dateFormat.format(h.getStartDate()));
         ImageView imageView = (ImageView) convertView.findViewById(R.id.habitImage);
-        int missed = h.getEventsMissed();
+        float possibleEvents = h.getPossibleEvents();
+        float stats = ((h.getEventsCompleted()/possibleEvents)*100);
+        if (possibleEvents==0) stats=0;
+        textStats.setText(String.format("%.0f",stats) + "%");
+        if (stats<=statThreshold){
+            textStats.setTextColor(Color.parseColor("#D12121"));
+        }else{
+            textStats.setTextColor(Color.parseColor("#41C61F"));
+        }
         Calendar c = Calendar.getInstance();
         Calendar latest = getLatestHabitEventDate(h);
         if ((h.getSchedule()!=null && h.getSchedule().contains(c.get(Calendar.DAY_OF_WEEK)) && latest!=null) && (h.getEvents()==null || !sameDay(c,latest))){
@@ -52,7 +64,8 @@ public class HabitArrayAdapter extends ArrayAdapter<Habit> {
             //if we either have no events, or the latest event wasn't today:
             imageView.setImageResource(R.drawable.ic_alarm);
         }else {
-            if (missed == 0) {
+            //If over half of the possible events have been completed:
+            if (stats>statThreshold) {
                 imageView.setImageResource(R.drawable.ic_checkmark);
             } else {
                 imageView.setImageResource(R.drawable.ic_offtrack);
