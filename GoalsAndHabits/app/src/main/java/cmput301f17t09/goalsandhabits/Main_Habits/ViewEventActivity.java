@@ -73,7 +73,7 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
         }
         if (event==null) finish();
 
-
+/*
         if (checkLocationPermission()){
             mFusedLocationClient.getLastLocation()
                     .addOnSuccessListener(this, new OnSuccessListener<Location>() {
@@ -85,7 +85,7 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
                             }
                         }
                     });
-        }else{requestPermission();}
+        }else{requestPermission();}*/
 
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
