@@ -10,13 +10,7 @@
         android:id="@+id/eventPhoto"
         android:layout_width="362dp"
         android:layout_height="119dp"
-<<<<<<< HEAD
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/eventHabit"
-=======
         android:layout_marginTop="56dp"
->>>>>>> ken_changes
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.272"
         app:layout_constraintLeft_toLeftOf="parent"
