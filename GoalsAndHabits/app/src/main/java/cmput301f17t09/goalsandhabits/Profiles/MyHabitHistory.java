@@ -126,7 +126,9 @@ public class MyHabitHistory extends AppCompatActivity implements FilterDialog.Fi
                 return true;
             }
             case R.id.viewOnMap:{
+                Intent showmap = new Intent(MyHabitHistory.this,MyHabitsMapActivity.class);
 
+                startActivity(showmap);
                 return true;
             }
             default:
