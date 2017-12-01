@@ -1,34 +1,29 @@
 -- Merging decision tree log ---
 manifest
-<<<<<<< HEAD
 ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:2:1-51:12
-=======
-ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:2:1-49:12
->>>>>>> master
 	package
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:3:5-44
-		INJECTED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
-		INJECTED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:3:5-44
+		INJECTED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
-		INJECTED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:2:11-69
 	android:versionCode
-		INJECTED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
-		INJECTED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:5:5-67
-MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Andrew\.android\build-cache\4ae922e5a857f3ccff424a8eff044970541d1e87\output\AndroidManifest.xml:20:5-66
+ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:5:5-67
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\chias\.android\build-cache\29f4a5eb892c0d04cca044b1da99312aca30a7fd\output\AndroidManifest.xml:20:5-66
 	android:name
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:5:22-64
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:5:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:6:5-79
-MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Andrew\.android\build-cache\4ae922e5a857f3ccff424a8eff044970541d1e87\output\AndroidManifest.xml:19:5-78
+ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:6:5-79
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\chias\.android\build-cache\29f4a5eb892c0d04cca044b1da99312aca30a7fd\output\AndroidManifest.xml:19:5-78
 	android:name
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:6:22-76
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:6:22-76
 application
-<<<<<<< HEAD
 ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:8:5-49:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\chias\.android\build-cache\fed6e9aed53a736a677549eec5258b8ae7548d52\output\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:design:25.3.1] C:\Users\chias\.android\build-cache\14c0b45b38424a606c7ba583b0f8950d5bef5a62\output\AndroidManifest.xml:29:5-20
@@ -46,116 +41,96 @@ MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\chias\.an
 MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\chias\.android\build-cache\65046ef19ce233380444e7a765d66fd8e3d7c63f\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\chias\.android\build-cache\ae7ac7ce034fc9686aab82690748fe43fa94f6e3\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-compat:25.3.1] C:\Users\chias\.android\build-cache\c1b623a4f439a0ea03695451a623342e3af98fdf\output\AndroidManifest.xml:29:5-20
-=======
-ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:8:5-47:19
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Andrew\.android\build-cache\71f3ce621635cacdfd51537406409ae6e45e0d66\output\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:design:25.3.1] C:\Users\Andrew\.android\build-cache\050b5074df9229a047cb2c13b7844139d7db31cb\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Andrew\.android\build-cache\7d91ef4d7041a2161d90968f1058d025783a0e06\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Andrew\.android\build-cache\0d67cf9d4dbfcd333f9622315ba34621c072adb5\output\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:transition:25.3.1] C:\Users\Andrew\.android\build-cache\6890affb3ccd3a79a77b2e156ba977029cf5c8d4\output\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Andrew\.android\build-cache\fdd33709a324f45d03a514b86ad1c626fcf5ab78\output\AndroidManifest.xml:26:5-20
-MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Andrew\.android\build-cache\4ae922e5a857f3ccff424a8eff044970541d1e87\output\AndroidManifest.xml:24:5-19
-MERGED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Andrew\.android\build-cache\6d642605a4c2a1102a1c20afbd2e50eda73b92df\output\AndroidManifest.xml:18:5-20:19
-MERGED from [com.google.android.gms:play-services-tasks:11.0.4] C:\Users\Andrew\.android\build-cache\0bdea0c05781361d2d57127c2f276b4418e24705\output\AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\Andrew\.android\build-cache\8a33812c511b1081f0e8992348b3016bbe5cc29a\output\AndroidManifest.xml:19:5-21:19
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Andrew\.android\build-cache\d3f9fff5012fd0548285f7cfbc7cb407119f3441\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Andrew\.android\build-cache\55f27732127f4f06c1700f3a86f40bf8485057b9\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Andrew\.android\build-cache\994a92c75e7117df7e46ba50e995b49486c9ca95\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Andrew\.android\build-cache\39bddf465af7547142a5926b7854e77a1ddafd63\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Andrew\.android\build-cache\e34338b212a14001f0c79a013cc46bbc26a8d2c7\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Andrew\.android\build-cache\eb5d92712cee8212197a64343d1cdf66d84c2ec1\output\AndroidManifest.xml:29:5-20
->>>>>>> master
 	android:label
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:11:9-41
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:11:9-41
 	android:supportsRtl
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:13:9-35
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:13:9-35
 	android:roundIcon
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:12:9-54
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:12:9-54
 	android:allowBackup
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:9:9-35
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:9:9-35
 	android:icon
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:10:9-43
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:10:9-43
 	android:theme
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:14:9-40
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:14:9-40
 activity#cmput301f17t09.goalsandhabits.Main_Habits.MainActivity
-ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:15:9-21:20
+ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:15:9-21:20
 	android:name
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:15:19-59
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:15:19-59
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:16:13-20:29
+ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:16:13-20:29
 action#android.intent.action.MAIN
-ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:17:17-69
+ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:17:17-69
 	android:name
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:17:25-66
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:17:25-66
 category#android.intent.category.LAUNCHER
-ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:19:17-77
+ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:19:17-77
 	android:name
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:19:27-74
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:19:27-74
 activity#cmput301f17t09.goalsandhabits.Follow_Activity.FollowActivity
-ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:22:9-68
+ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:22:9-68
 	android:name
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:22:19-65
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:22:19-65
 activity#cmput301f17t09.goalsandhabits.Maps.MapFiltersActivity
-ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:23:9-61
+ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:23:9-61
 	android:name
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:23:19-58
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:23:19-58
 activity#cmput301f17t09.goalsandhabits.Main_Habits.HabitHistoryActivity
-ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:24:9-70
+ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:24:9-70
 	android:name
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:24:19-67
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:24:19-67
 activity#cmput301f17t09.goalsandhabits.Main_Habits.NewHabit
-ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:25:9-58
+ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:25:9-58
 	android:name
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:25:19-55
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:25:19-55
 activity#cmput301f17t09.goalsandhabits.Main_Habits.ViewHabitActivity
-ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:26:9-67
+ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:26:9-67
 	android:name
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:26:19-64
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:26:19-64
 activity#cmput301f17t09.goalsandhabits.Profiles.LoginActivity
-ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:27:9-60
+ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:27:9-60
 	android:name
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:27:19-57
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:27:19-57
 activity#cmput301f17t09.goalsandhabits.Profiles.ProfileActivity
-ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:28:9-62
+ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:28:9-62
 	android:name
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:28:19-59
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:28:19-59
 activity#cmput301f17t09.goalsandhabits.Profiles.NewProfileActivity
-ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:29:9-65
+ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:29:9-65
 	android:name
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:29:19-62
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:29:19-62
 activity#cmput301f17t09.goalsandhabits.Main_Habits.ViewEventActivity
-ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:30:9-67
+ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:30:9-67
 	android:name
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:30:19-64
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:30:19-64
 activity#cmput301f17t09.goalsandhabits.Profiles.FollowerRequestsActivity
-ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:31:9-33:70
+ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:31:9-33:70
 	android:parentActivityName
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:33:13-67
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:33:13-67
 	android:name
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:32:13-62
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:32:13-62
 activity#cmput301f17t09.goalsandhabits.Profiles.MyHabitHistory
-ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:34:9-36:70
+ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:34:9-36:70
 	android:parentActivityName
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:36:13-67
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:36:13-67
 	android:name
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:35:13-52
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:35:13-52
 activity#cmput301f17t09.goalsandhabits.Main_Habits.NewHabitEventActivity
-ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:37:9-71
+ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:37:9-71
 	android:name
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:37:19-68
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:37:19-68
 meta-data#com.google.android.gms.version
-ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:39:9-41:69
-MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\Andrew\.android\build-cache\8a33812c511b1081f0e8992348b3016bbe5cc29a\output\AndroidManifest.xml:20:9-121
+ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:39:9-41:69
+MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\chias\.android\build-cache\bd86454ab4a2fe809b65a81af0b7f2c9a7d5ee55\output\AndroidManifest.xml:20:9-121
 	android:value
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:41:13-66
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:41:13-66
 	android:name
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:40:13-58
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:40:13-58
 meta-data#com.google.android.geo.API_KEY
-ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:42:9-44:71
+ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:42:9-44:71
 	android:value
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:44:13-68
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:44:13-68
 	android:name
-<<<<<<< HEAD
 		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:43:13-58
 activity#cmput301f17t09.goalsandhabits.Profiles.MyHabitsMapActivity
 ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:46:9-48:69
@@ -163,68 +138,61 @@ ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabit
 		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:48:13-66
 	android:name
 		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:47:13-57
-=======
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:43:13-58
-activity#cmput301f17t09.goalsandhabits.Profiles.FilterDialog
-ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:46:9-68
-	android:name
-		ADDED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml:46:19-56
->>>>>>> master
 uses-sdk
-INJECTED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Andrew\.android\build-cache\71f3ce621635cacdfd51537406409ae6e45e0d66\output\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:design:25.3.1] C:\Users\Andrew\.android\build-cache\050b5074df9229a047cb2c13b7844139d7db31cb\output\AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Andrew\.android\build-cache\7d91ef4d7041a2161d90968f1058d025783a0e06\output\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Andrew\.android\build-cache\0d67cf9d4dbfcd333f9622315ba34621c072adb5\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\Andrew\.android\build-cache\395af2c6c750175ad672abb54fefb0adc09a1142\output\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:transition:25.3.1] C:\Users\Andrew\.android\build-cache\6890affb3ccd3a79a77b2e156ba977029cf5c8d4\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Andrew\.android\build-cache\fdd33709a324f45d03a514b86ad1c626fcf5ab78\output\AndroidManifest.xml:20:5-43
-MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Andrew\.android\build-cache\4ae922e5a857f3ccff424a8eff044970541d1e87\output\AndroidManifest.xml:23:5-43
-MERGED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Andrew\.android\build-cache\6d642605a4c2a1102a1c20afbd2e50eda73b92df\output\AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-tasks:11.0.4] C:\Users\Andrew\.android\build-cache\0bdea0c05781361d2d57127c2f276b4418e24705\output\AndroidManifest.xml:3:5-43
-MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\Andrew\.android\build-cache\8a33812c511b1081f0e8992348b3016bbe5cc29a\output\AndroidManifest.xml:17:5-43
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Andrew\.android\build-cache\d3f9fff5012fd0548285f7cfbc7cb407119f3441\output\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Andrew\.android\build-cache\55f27732127f4f06c1700f3a86f40bf8485057b9\output\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Andrew\.android\build-cache\994a92c75e7117df7e46ba50e995b49486c9ca95\output\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Andrew\.android\build-cache\39bddf465af7547142a5926b7854e77a1ddafd63\output\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Andrew\.android\build-cache\e34338b212a14001f0c79a013cc46bbc26a8d2c7\output\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Andrew\.android\build-cache\eb5d92712cee8212197a64343d1cdf66d84c2ec1\output\AndroidManifest.xml:21:5-23:58
+INJECTED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\chias\.android\build-cache\fed6e9aed53a736a677549eec5258b8ae7548d52\output\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:design:25.3.1] C:\Users\chias\.android\build-cache\14c0b45b38424a606c7ba583b0f8950d5bef5a62\output\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\chias\.android\build-cache\3a7260e96c91c295b8d8f14ea7e8f188d4a01f20\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\chias\.android\build-cache\b658f5c8fb635d7b8b055927c1bab53add3efd0e\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\chias\.android\build-cache\1b0956d6b4051bf8cd48167a36b802a3c805a051\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.3.1] C:\Users\chias\.android\build-cache\ac48dd5b5ab429dbb4783e37a850003c1211db13\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\chias\.android\build-cache\afde1e6ca0393aa88efdcd33579a46d068bfc9fb\output\AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\chias\.android\build-cache\29f4a5eb892c0d04cca044b1da99312aca30a7fd\output\AndroidManifest.xml:23:5-43
+MERGED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\chias\.android\build-cache\adc3df55ebf2e454221e06c3fb165ebf250bb689\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tasks:11.0.4] C:\Users\chias\.android\build-cache\157108e87a18202802ba6fe63fd4ead14090fca7\output\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\chias\.android\build-cache\bd86454ab4a2fe809b65a81af0b7f2c9a7d5ee55\output\AndroidManifest.xml:17:5-43
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\chias\.android\build-cache\5eca28aeb48eb36478417729e35e48481f083484\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\chias\.android\build-cache\c55a6042e72561d010b998a930e3a0396a7f5549\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\chias\.android\build-cache\da207f5c7e80f2dd792039fde125e4bff6ed7f8d\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\chias\.android\build-cache\65046ef19ce233380444e7a765d66fd8e3d7c63f\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\chias\.android\build-cache\ae7ac7ce034fc9686aab82690748fe43fa94f6e3\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\chias\.android\build-cache\c1b623a4f439a0ea03695451a623342e3af98fdf\output\AndroidManifest.xml:21:5-23:58
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:25.3.1] C:\Users\Andrew\.android\build-cache\050b5074df9229a047cb2c13b7844139d7db31cb\output\AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:design:25.3.1] C:\Users\chias\.android\build-cache\14c0b45b38424a606c7ba583b0f8950d5bef5a62\output\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
-		INJECTED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
-		INJECTED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
-		INJECTED from F:\UAlberta\CMPUT301\Project\GoalsAndHabits\GoalsAndHabits\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml
 meta-data#android.support.VERSION
-ADDED from [com.android.support:design:25.3.1] C:\Users\Andrew\.android\build-cache\050b5074df9229a047cb2c13b7844139d7db31cb\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Andrew\.android\build-cache\7d91ef4d7041a2161d90968f1058d025783a0e06\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Andrew\.android\build-cache\0d67cf9d4dbfcd333f9622315ba34621c072adb5\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\Andrew\.android\build-cache\395af2c6c750175ad672abb54fefb0adc09a1142\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:transition:25.3.1] C:\Users\Andrew\.android\build-cache\6890affb3ccd3a79a77b2e156ba977029cf5c8d4\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Andrew\.android\build-cache\fdd33709a324f45d03a514b86ad1c626fcf5ab78\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Andrew\.android\build-cache\d3f9fff5012fd0548285f7cfbc7cb407119f3441\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Andrew\.android\build-cache\55f27732127f4f06c1700f3a86f40bf8485057b9\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Andrew\.android\build-cache\994a92c75e7117df7e46ba50e995b49486c9ca95\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Andrew\.android\build-cache\39bddf465af7547142a5926b7854e77a1ddafd63\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Andrew\.android\build-cache\e34338b212a14001f0c79a013cc46bbc26a8d2c7\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Andrew\.android\build-cache\eb5d92712cee8212197a64343d1cdf66d84c2ec1\output\AndroidManifest.xml:25:5-27:34
+ADDED from [com.android.support:design:25.3.1] C:\Users\chias\.android\build-cache\14c0b45b38424a606c7ba583b0f8950d5bef5a62\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\chias\.android\build-cache\3a7260e96c91c295b8d8f14ea7e8f188d4a01f20\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\chias\.android\build-cache\b658f5c8fb635d7b8b055927c1bab53add3efd0e\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\chias\.android\build-cache\1b0956d6b4051bf8cd48167a36b802a3c805a051\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] C:\Users\chias\.android\build-cache\ac48dd5b5ab429dbb4783e37a850003c1211db13\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\chias\.android\build-cache\afde1e6ca0393aa88efdcd33579a46d068bfc9fb\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\chias\.android\build-cache\5eca28aeb48eb36478417729e35e48481f083484\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\chias\.android\build-cache\c55a6042e72561d010b998a930e3a0396a7f5549\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\chias\.android\build-cache\da207f5c7e80f2dd792039fde125e4bff6ed7f8d\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\chias\.android\build-cache\65046ef19ce233380444e7a765d66fd8e3d7c63f\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\chias\.android\build-cache\ae7ac7ce034fc9686aab82690748fe43fa94f6e3\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\chias\.android\build-cache\c1b623a4f439a0ea03695451a623342e3af98fdf\output\AndroidManifest.xml:25:5-27:34
 	android:value
-		ADDED from [com.android.support:design:25.3.1] C:\Users\Andrew\.android\build-cache\050b5074df9229a047cb2c13b7844139d7db31cb\output\AndroidManifest.xml:27:9-31
+		ADDED from [com.android.support:design:25.3.1] C:\Users\chias\.android\build-cache\14c0b45b38424a606c7ba583b0f8950d5bef5a62\output\AndroidManifest.xml:27:9-31
 	android:name
-		ADDED from [com.android.support:design:25.3.1] C:\Users\Andrew\.android\build-cache\050b5074df9229a047cb2c13b7844139d7db31cb\output\AndroidManifest.xml:26:9-47
+		ADDED from [com.android.support:design:25.3.1] C:\Users\chias\.android\build-cache\14c0b45b38424a606c7ba583b0f8950d5bef5a62\output\AndroidManifest.xml:26:9-47
 uses-feature#0x00020000
-ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Andrew\.android\build-cache\4ae922e5a857f3ccff424a8eff044970541d1e87\output\AndroidManifest.xml:21:5-77
+ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\chias\.android\build-cache\29f4a5eb892c0d04cca044b1da99312aca30a7fd\output\AndroidManifest.xml:21:5-77
 	android:glEsVersion
-		ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Andrew\.android\build-cache\4ae922e5a857f3ccff424a8eff044970541d1e87\output\AndroidManifest.xml:21:19-51
+		ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\chias\.android\build-cache\29f4a5eb892c0d04cca044b1da99312aca30a7fd\output\AndroidManifest.xml:21:19-51
 	android:required
-		ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Andrew\.android\build-cache\4ae922e5a857f3ccff424a8eff044970541d1e87\output\AndroidManifest.xml:21:52-75
+		ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\chias\.android\build-cache\29f4a5eb892c0d04cca044b1da99312aca30a7fd\output\AndroidManifest.xml:21:52-75
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Andrew\.android\build-cache\6d642605a4c2a1102a1c20afbd2e50eda73b92df\output\AndroidManifest.xml:19:9-172
+ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\chias\.android\build-cache\adc3df55ebf2e454221e06c3fb165ebf250bb689\output\AndroidManifest.xml:19:9-172
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Andrew\.android\build-cache\6d642605a4c2a1102a1c20afbd2e50eda73b92df\output\AndroidManifest.xml:19:146-170
+		ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\chias\.android\build-cache\adc3df55ebf2e454221e06c3fb165ebf250bb689\output\AndroidManifest.xml:19:146-170
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Andrew\.android\build-cache\6d642605a4c2a1102a1c20afbd2e50eda73b92df\output\AndroidManifest.xml:19:86-145
+		ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\chias\.android\build-cache\adc3df55ebf2e454221e06c3fb165ebf250bb689\output\AndroidManifest.xml:19:86-145
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Andrew\.android\build-cache\6d642605a4c2a1102a1c20afbd2e50eda73b92df\output\AndroidManifest.xml:19:19-85
+		ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\chias\.android\build-cache\adc3df55ebf2e454221e06c3fb165ebf250bb689\output\AndroidManifest.xml:19:19-85

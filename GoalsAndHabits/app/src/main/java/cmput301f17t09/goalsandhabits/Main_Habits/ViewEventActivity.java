@@ -60,8 +60,8 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
         if (event==null) finish();
 
         comment = (TextView) findViewById(R.id.eventComment);
-      //  if (comment == null){return;}
-      //  else{comment.setText(event.getComment());}
+        //  if (comment == null){return;}
+        //  else{comment.setText(event.getComment());}
 
         toolbar = (Toolbar) findViewById(R.id.actionbar);
         toolbar.setTitle("Habit Event");
@@ -118,16 +118,14 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
         dialog.show(getFragmentManager(), "EditHabitEventDialog");
     }
 
-    
-    public void onDialogPositiveClick(DialogFragment dialog, String newComment, Date newDate) {
+
+
+    public void onDialogPositiveClick(DialogFragment dialog, String newComment, String newPhotoPath,
+                                      Location newLocation) {
         comment.setText(newComment);
         event.setComment(newComment);
-        event.setDate(newDate);
-         //Not updating, will have to make changes to main activity
-    }
-    @Override
-    public void onDialogNegativeƒClick(DialogFragment dialog) {
-
+        event.setPhotoPath(newPhotoPath);
+        //Not updating, will have to make changes to main activity
     }
 
 
@@ -149,9 +147,6 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
         super.finish();
     }
 
-<<<<<<< HEAD
-
-=======
     @Override
     public void onDialogPositiveClick(DialogFragment dialog, String s, Date newDate) {
 
@@ -161,5 +156,4 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
     public void onDialogNegativeƒClick(DialogFragment dialog) {
 
     }
->>>>>>> master
 }
