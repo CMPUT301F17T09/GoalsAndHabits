@@ -44,7 +44,9 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBghIbQN-I1S-Ctiy8TfbFTpBT3hC_WsDE" />
 
-        <activity android:name=".Profiles.FilterDialog"></activity>
+        <activity
+            android:name=".Profiles.MyHabitsMapActivity"
+            android:parentActivityName=".Profiles.MyHabitHistory" />
     </application>
 
 </manifest>

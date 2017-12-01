@@ -47,8 +47,8 @@ public class EditHabitEventDialog extends DialogFragment {
         args.putString("Comments", comment);
         args.putString("photoPath", photoPath);
         if (location != null){
-            args.putString("latitude", Location.convert(location.getLatitude(), Location.FORMAT_DEGREES));
-            args.putString("longitude", Location.convert(location.getLongitude(), Location.FORMAT_DEGREES));
+            args.putDouble("latitude", location.getLatitude());
+            args.putDouble("longitude", location.getLongitude());
         }
         dialog.setArguments(args);
         return dialog;
@@ -78,8 +78,8 @@ public class EditHabitEventDialog extends DialogFragment {
     public Dialog onCreateDialog(Bundle savedInstanceState){
         String comment = getArguments().getString("Comments");
         String photoPath = getArguments().getString("Photo Path");
-        String lat = getArguments().getString("latitude");
-        String lon = getArguments().getString("longitude");
+        Double lat = getArguments().getDouble("latitude");
+        Double lon = getArguments().getDouble("longitude");
 
         final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = getActivity().getLayoutInflater();
@@ -91,7 +91,11 @@ public class EditHabitEventDialog extends DialogFragment {
         final TextView location_field = (TextView) diaView.findViewById(R.id.textLocation);
 
         if (lat != null && lon != null){
-            location_field.setText("("+lat+","+lon+")");
+            currentloc = new Location("");
+            currentloc.setLatitude(lat);
+            currentloc.setLongitude(lon);
+            location_field.setText("("+Location.convert(lat,Location.FORMAT_DEGREES)+","+
+                    Location.convert(lon,Location.FORMAT_DEGREES)+")");
         }
 
         //TODO: Photo stuff
