@@ -17,7 +17,7 @@ public class HabitEvent implements Serializable{
     private String comment;
     private String photoPath;
     private Date date;
-    private Location location;
+    //private Location location;
     private Double Lat;
     private Double Long;
 
@@ -60,11 +60,19 @@ public class HabitEvent implements Serializable{
     public void setLong(Double Long){this.Long=Long;}
 
     public Location getLocation() {
-        return location;
+        if (this.Lat == null || this.Long == null){
+            return null;
+        }else{
+            Location loc = new Location("");
+            loc.setLatitude(this.Lat);
+            loc.setLongitude(this.Long);
+            return loc;
+        }
     }
 
     public void setLocation(Location location) {
-        this.location = location;
+        this.Lat = location.getLatitude();
+        this.Long = location.getLongitude();
     }
 
     public boolean voidLocation(){

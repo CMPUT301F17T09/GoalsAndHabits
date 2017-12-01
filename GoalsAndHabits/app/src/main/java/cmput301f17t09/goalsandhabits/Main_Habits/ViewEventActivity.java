@@ -141,7 +141,9 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
 
     @Override
     public void onDialogPositiveClick(DialogFragment dialog, String newcomment, Location newloc) {
-
+        event.setLocation(newloc);
+        event.setComment(newcomment);
+        comment.setText(newcomment);
     }
 
     @Override
