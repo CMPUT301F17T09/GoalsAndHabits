@@ -26,7 +26,7 @@
         android:layout_height="119dp"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/eventComment"
+        app:layout_constraintBottom_toTopOf="@+id/eventHabit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.372"
         app:layout_constraintLeft_toLeftOf="parent"

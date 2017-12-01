@@ -46,6 +46,9 @@
         <activity
             android:name=".Profiles.MyHabitsMapActivity"
             android:parentActivityName=".Profiles.MyHabitHistory" />
+        <activity
+            android:name=".Follow_Activity.SearchResultsActivity"
+            android:parentActivityName=".Follow_Activity.FollowActivity" />
     </application>
 
 </manifest>

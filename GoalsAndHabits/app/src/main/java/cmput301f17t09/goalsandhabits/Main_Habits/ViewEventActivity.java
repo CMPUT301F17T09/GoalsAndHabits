@@ -1,37 +1,19 @@
 package cmput301f17t09.goalsandhabits.Main_Habits;
 
 import android.app.DialogFragment;
-import android.app.usage.UsageEvents;
 import android.content.Context;
 import android.content.Intent;
 import android.location.Location;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.util.ArrayList;
 import java.util.Date;
 
 import cmput301f17t09.goalsandhabits.R;
-
-import static cmput301f17t09.goalsandhabits.Main_Habits.MainActivity.FILENAME;
 
 /**
  * Created by Simone on 2017/11/22.

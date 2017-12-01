@@ -1,5 +1,6 @@
 package cmput301f17t09.goalsandhabits.Follow_Activity;
 
+import android.app.DialogFragment;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,7 +16,7 @@ import cmput301f17t09.goalsandhabits.Maps.MapFiltersActivity;
 import cmput301f17t09.goalsandhabits.Profiles.ProfileActivity;
 import cmput301f17t09.goalsandhabits.R;
 
-public class FollowActivity extends AppCompatActivity {
+public class FollowActivity extends AppCompatActivity implements UserSearchDialog.UserSearchDialogListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +68,9 @@ public class FollowActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 setResult(RESULT_OK);
-                //TODO: Create a dialog and prompt user for id to add.
+                //TODO: Create a dialog and prompt user for id to add. Positive button starts search results activity
+                showSearchDialog();
+
             }
         });
 
@@ -77,4 +80,29 @@ public class FollowActivity extends AppCompatActivity {
             }
         });
     }
+
+    /**
+     * Creates a new instance of the filter dialog and displays it.
+     */
+    public void showSearchDialog() {
+        DialogFragment dialog = UserSearchDialog.newInstance();
+        dialog.show(getFragmentManager(), "UserSearchDialog");
+    }
+
+    @Override
+    public void onDialogPositiveClick(DialogFragment dialog, String userSearch) {
+        Intent results = new Intent(FollowActivity.this,SearchResultsActivity.class);
+        results.putExtra("search",userSearch);
+        startActivity(results);
+
+    }
+
+    /**
+     * Exits out of filter dialog. Makes no changes to activity
+     * @param dialog Filter Dialog Fragment
+     */
+    public void onDialogNegativeClick(DialogFragment dialog) {
+        // User touched the dialog's negative button
+    }
+
 }
