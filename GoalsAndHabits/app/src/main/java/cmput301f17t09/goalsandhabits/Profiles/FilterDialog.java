@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -68,6 +69,8 @@ public class FilterDialog extends DialogFragment {
         habit_field.setText("");
         final EditText comment_field = (EditText) diaView.findViewById(R.id.editCommentSearch);
         comment_field.setText("");
+        final TextView hint = (TextView) diaView.findViewById(R.id.hint);
+        hint.setText("Hint: search * to search all habits or all non-null comments");
 
         builder.setTitle("Filter Habit Events")
                 .setView(diaView)

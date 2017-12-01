@@ -60,8 +60,8 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
         if (event==null) finish();
 
         comment = (TextView) findViewById(R.id.eventComment);
-      //  if (comment == null){return;}
-      //  else{comment.setText(event.getComment());}
+        //  if (comment == null){return;}
+        //  else{comment.setText(event.getComment());}
 
         toolbar = (Toolbar) findViewById(R.id.actionbar);
         toolbar.setTitle("Habit Event");
@@ -125,7 +125,7 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
         comment.setText(newComment);
         event.setComment(newComment);
         event.setPhotoPath(newPhotoPath);
-         //Not updating, will have to make changes to main activity
+        //Not updating, will have to make changes to main activity
     }
 
 

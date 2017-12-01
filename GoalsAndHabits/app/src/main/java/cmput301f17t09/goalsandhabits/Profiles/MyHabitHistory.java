@@ -126,7 +126,9 @@ public class MyHabitHistory extends AppCompatActivity implements FilterDialog.Fi
                 return true;
             }
             case R.id.viewOnMap:{
+                Intent showmap = new Intent(MyHabitHistory.this,MyHabitsMapActivity.class);
 
+                startActivity(showmap);
                 return true;
             }
             default:
@@ -153,21 +155,33 @@ public class MyHabitHistory extends AppCompatActivity implements FilterDialog.Fi
         //TODO: search habit events for habits matching search parameters, notify data set changed?
         //If there is something to search
         if (!habits.isEmpty() && (!(habitType.equals("")) || !(commentSearch.equals("")))) {
+            if (habitType.equals("*")) {
+                habitType=".*";
+            }
+            if (commentSearch.equals("*")) {
+                commentSearch=".*";
+            }
             habitEventArrayAdapter.clear();
             for (Habit h : habits) {
                 if (!(habitType.equals("")) && h.getTitle().matches("(?i)(" + habitType + ")")) {
-                    if (h.getEvents().isEmpty()) {
-                        Log.i("Error", "getEvents() is empty for habit " + h.getTitle());
+                    if (!(commentSearch.equals("")) && !(h.getEvents().isEmpty())) {
+                        for (HabitEvent e: h.getEvents()) {
+                            if((e.getComment()!=null) && e.getComment().matches("(?i)(.*?"+commentSearch+".*)")) {
+                                habitEventArrayAdapter.add(e);
+                            }
+                        }
                     }
-                    habitEventArrayAdapter.addAll(h.getEvents());
-                    if (habitEventArrayAdapter.isEmpty()) {
-                        Log.i("Error", "Failed to add events to Adapter!");
+                    else {
+                        habitEventArrayAdapter.addAll(h.getEvents());
                     }
                 }
-            }
-
-            if (habitEventArrayAdapter.isEmpty()) {
-                Log.i("Error", "Failed to load events: habit events adapter is empty!");
+                else if(!(commentSearch.equals("")) && habitType.equals("")) {
+                    for (HabitEvent e: h.getEvents()) {
+                        if ((e.getComment()!=null) && e.getComment().matches("(?i)(.*?"+commentSearch+".*)")) {
+                            habitEventArrayAdapter.add(e);
+                        }
+                    }
+                }
             }
             Comparator<? super HabitEvent> dateCompare = new Comparator<HabitEvent>() {
                 @Override
@@ -184,7 +198,7 @@ public class MyHabitHistory extends AppCompatActivity implements FilterDialog.Fi
             }
         }
         else {
-            Toast.makeText(MyHabitHistory.this,"Please enter search parameters!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MyHabitHistory.this,"Please enter search parameter(s)!", Toast.LENGTH_SHORT).show();
         }
 
 
