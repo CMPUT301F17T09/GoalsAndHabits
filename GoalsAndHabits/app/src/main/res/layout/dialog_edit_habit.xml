@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <CheckBox
+        android:id="@+id/thursdayBox"
+        android:layout_width="103dp"
+        android:layout_height="27dp"
+        android:text="Thursdays"
+        app:layout_constraintLeft_toLeftOf="@+id/fridayBox"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/wednesdayBox"
+        android:layout_marginLeft="0dp" />
+
+    <CheckBox
+        android:id="@+id/fridayBox"
+        android:layout_width="87dp"
+        android:layout_height="26dp"
+        android:text="Fridays"
+        app:layout_constraintLeft_toLeftOf="@+id/saturdayBox"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/thursdayBox"
+        android:layout_marginLeft="0dp" />
+
+    <CheckBox
+        android:id="@+id/wednesdayBox"
+        android:layout_width="128dp"
+        android:layout_height="31dp"
+        android:text="Wednesdays"
+        app:layout_constraintLeft_toLeftOf="@+id/thursdayBox"
+        android:layout_marginTop="-3dp"
+        app:layout_constraintTop_toBottomOf="@+id/tuesdayBox"
+        android:layout_marginLeft="1dp" />
+
+    <EditText
+        android:id="@+id/editDiaName"
+        android:layout_width="255dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:hint="Habit Name"
+        android:inputType="textPersonName"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:id="@+id/editDiaReason"
+        android:layout_width="251dp"
+        android:layout_height="39dp"
+        android:ems="10"
+        android:hint="Habit Reason"
+        android:inputType="textPersonName"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/editDiaName" />
+
+    <TextView
+        android:id="@+id/scheduleTextView"
+        android:layout_width="98dp"
+        android:layout_height="37dp"
+        android:text="Remind Me On:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="57dp"
+        app:layout_constraintRight_toLeftOf="@+id/mondayBox"
+        android:layout_marginRight="8dp"
+        app:layout_constraintHorizontal_bias="0.162"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/editDiaReason" />
+
+    <CheckBox
+        android:id="@+id/mondayBox"
+        android:layout_width="101dp"
+        android:layout_height="31dp"
+        android:text="Mondays"
+        app:layout_constraintLeft_toLeftOf="@+id/tuesdayBox"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/editDiaReason" />
+
+    <CheckBox
+        android:id="@+id/sundayBox"
+        android:layout_width="98dp"
+        android:layout_height="27dp"
+        android:text="Sundays"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/saturdayBox"
+        app:layout_constraintHorizontal_bias="0.716" />
+
+    <CheckBox
+        android:id="@+id/saturdayBox"
+        android:layout_width="104dp"
+        android:layout_height="29dp"
+        android:text="Saturdays"
+        app:layout_constraintLeft_toLeftOf="@+id/sundayBox"
+        app:layout_constraintTop_toBottomOf="@+id/fridayBox"
+        android:layout_marginLeft="-6dp"
+        android:layout_marginTop="0dp" />
+
+    <CheckBox
+        android:id="@+id/tuesdayBox"
+        android:layout_width="101dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="0dp"
+        android:text="Tuesdays"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/wednesdayBox"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mondayBox" />
+
+</android.support.constraint.ConstraintLayout>

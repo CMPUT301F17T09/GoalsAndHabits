@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cmput301f17t09.goalsandhabits">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,21 +13,40 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Main_Habits.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FollowActivity" />
-        <activity android:name=".MapFiltersActivity" />
-        <activity android:name=".HabitHistoryActivity" />
-        <activity android:name=".NewHabit" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".SignUpActivity"/>
-        <activity android:name=".ProfileActivity"/>
-        <activity android:name=".NewProfileActivity"/>
+        <activity android:name=".Follow_Activity.FollowActivity" />
+        <activity android:name=".Maps.MapFiltersActivity" />
+        <activity android:name=".Main_Habits.HabitHistoryActivity" />
+        <activity android:name=".Main_Habits.NewHabit" />
+        <activity android:name=".Main_Habits.ViewHabitActivity" />
+        <activity android:name=".Profiles.LoginActivity" />
+        <activity android:name=".Profiles.ProfileActivity" />
+        <activity android:name=".Profiles.NewProfileActivity" />
+        <activity android:name=".Main_Habits.ViewEventActivity" />
+        <activity
+            android:name=".Profiles.FollowerRequestsActivity"
+            android:parentActivityName=".Profiles.ProfileActivity" />
+        <activity
+            android:name=".Profiles.MyHabitHistory"
+            android:parentActivityName=".Profiles.ProfileActivity" />
+        <activity android:name=".Main_Habits.NewHabitEventActivity" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBghIbQN-I1S-Ctiy8TfbFTpBT3hC_WsDE" />
+
+        <activity
+            android:name=".Profiles.MyHabitsMapActivity"
+            android:parentActivityName=".Profiles.MyHabitHistory" />
     </application>
 
 </manifest>

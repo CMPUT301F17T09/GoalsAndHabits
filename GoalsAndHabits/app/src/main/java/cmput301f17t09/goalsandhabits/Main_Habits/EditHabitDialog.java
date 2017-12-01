@@ -9,11 +9,14 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.HashSet;
 
 import cmput301f17t09.goalsandhabits.R;
 
@@ -24,17 +27,18 @@ import cmput301f17t09.goalsandhabits.R;
 public class EditHabitDialog extends DialogFragment{
 
     public interface EditHabitDialogListener{
-        public void onDialogPositiveClick(DialogFragment dialog, String newreason, String newtitle);
+        public void onDialogPositiveClick(DialogFragment dialog, String newreason, String newtitle, HashSet<Integer> schedule);
         public void onDialogNegativeClick(DialogFragment dialog);
     }
 
     EditHabitDialogListener mListener;
 
-    public static EditHabitDialog newInstance(String name, String reason) {
+    public static EditHabitDialog newInstance(String name, String reason, HashSet<Integer> schedule) {
         EditHabitDialog frag = new EditHabitDialog();
         Bundle args = new Bundle();
         args.putString("name", name);
         args.putString("reason", reason);
+        args.putSerializable("schedule",schedule);
         frag.setArguments(args);
         return frag;
     }
@@ -57,7 +61,7 @@ public class EditHabitDialog extends DialogFragment{
         } catch (ClassCastException e) {
             // The activity doesn't implement the interface, throw exception
             throw new ClassCastException(activity.toString()
-                    + " must implement NewHabitDialogListener");
+                    + " must implement EditHabitDialogListener");
         }
     }
 
@@ -65,6 +69,7 @@ public class EditHabitDialog extends DialogFragment{
     public Dialog onCreateDialog(Bundle savedInstanceState){
         String name = getArguments().getString("name");
         String reason = getArguments().getString("reason");
+        HashSet<Integer> schedule = (HashSet<Integer>) getArguments().getSerializable("schedule");
         //String date = getArguments().getString("Start date");
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
@@ -76,9 +81,7 @@ public class EditHabitDialog extends DialogFragment{
         final EditText name_field = (EditText) diaView.findViewById(R.id.editDiaName);
         name_field.setText(name);
 
-        //final EditText date_field = (EditText)diaView.findViewById(R.id.editStartDate);
-        //date_field.setText(date);
-        ArrayList<CheckBox> days = new ArrayList<CheckBox>();
+        final ArrayList<CheckBox> days = new ArrayList<CheckBox>();
         days.add((CheckBox) diaView.findViewById(R.id.sundayBox));
         days.add((CheckBox) diaView.findViewById(R.id.mondayBox));
         days.add((CheckBox) diaView.findViewById(R.id.tuesdayBox));
@@ -86,15 +89,9 @@ public class EditHabitDialog extends DialogFragment{
         days.add((CheckBox) diaView.findViewById(R.id.thursdayBox));
         days.add((CheckBox) diaView.findViewById(R.id.fridayBox));
         days.add((CheckBox) diaView.findViewById(R.id.saturdayBox));
-        String schedule = "";
-        for (int i=0; i<days.size(); i++){
-            CheckBox b = days.get(i);
-            if (b != null){
-                if (b.isChecked()){
-                    schedule += "1";
-                }else{
-                    schedule += "0";
-                }
+        for (int i = 0; i<days.size(); i++){
+            if (schedule.contains(i+1)){
+                days.get(i).setChecked(true);
             }
         }
 
@@ -104,8 +101,14 @@ public class EditHabitDialog extends DialogFragment{
                     public void onClick(DialogInterface dialog, int id) {
                         String newreason = reason_field.getText().toString();
                         String newtitle = name_field.getText().toString();
-                        //String newStartDate = date_field.getText().toString();
-                        mListener.onDialogPositiveClick(EditHabitDialog.this, newreason, newtitle);
+                        HashSet<Integer> newschedule = new HashSet<>();
+                        for (int i=0;i<7;i++){
+                            if (days.get(i).isChecked()){
+                                newschedule.add(i+1);
+                            }
+                        }
+                        //TODO: Pass changes to schedule
+                        mListener.onDialogPositiveClick(EditHabitDialog.this, newreason, newtitle, newschedule);
                     }
                 })
                 .setNegativeButton("cancel", new DialogInterface.OnClickListener() {

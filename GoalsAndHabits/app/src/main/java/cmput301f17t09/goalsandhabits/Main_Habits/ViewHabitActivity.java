@@ -3,16 +3,19 @@ package cmput301f17t09.goalsandhabits.Main_Habits;
 import android.app.DialogFragment;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
@@ -27,8 +30,11 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.HashSet;
 
 import cmput301f17t09.goalsandhabits.R;
 
@@ -41,20 +47,26 @@ import static cmput301f17t09.goalsandhabits.Main_Habits.MainActivity.FILENAME;
  * a specific habit. The user can also edit or delete the
  * habit in this activity, as well as add habit events.
  */
-public class ViewHabitActivity extends AppCompatActivity implements EditHabitDialog.EditHabitDialogListener{
+public class ViewHabitActivity extends AppCompatActivity implements EditHabitDialog.EditHabitDialogListener,
+                                                            DatePickerFrag.DatePickerFragListener{
 
     private Habit habit;
     private TextView reason;
+    private TextView startdate;
+    private TextView schedule;
+    private ImageView imageView;
+    private TextView statusText;
     private Context context;
     private int position;
     private Toolbar toolbar;
-    private ArrayList<Habit> habits;
+    private boolean deleted = false;
+    private SimpleDateFormat dateFormat = new SimpleDateFormat("EEE MMM dd");
+    private float statThreshold = 50;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_habit);
-        loadFromFile();
 
         Bundle extras = getIntent().getExtras();
         if (extras!=null){
@@ -67,6 +79,28 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
 
         reason = (TextView) findViewById(R.id.textReason);
         reason.setText(habit.getReason());
+        startdate = (TextView) findViewById(R.id.textHabitDate);
+        startdate.setText(dateFormat.format(habit.getStartDate()));
+        schedule = (TextView) findViewById(R.id.textSchedule);
+        schedule.setText(getScheduleString(habit.getSchedule()));
+        imageView = (ImageView) findViewById(R.id.imageView);
+        statusText = (TextView) findViewById(R.id.imageText);
+        float possibleEvents = habit.getPossibleEvents();
+        float stats = ((habit.getEventsCompleted()/possibleEvents)*100);
+        if (possibleEvents==0) stats=0;
+        Log.i("Info","Possible events: " + possibleEvents);
+        statusText.setText("You are " + String.format("%.0f",stats) + "% consistent!");
+        if (stats>statThreshold){
+            imageView.setImageResource(R.drawable.ic_checkmark);
+        }else{
+            imageView.setImageResource(R.drawable.ic_offtrack);
+            statusText.setTextColor(Color.parseColor("#D12121"));
+        }
+
+        TextView eventsMissed = (TextView) findViewById(R.id.textMissedEvents);
+        eventsMissed.setText(String.format("%.0f",possibleEvents-habit.getEventsCompleted()));
+        TextView daysSinceLastEvent = (TextView) findViewById(R.id.textDaysSinceLastEvent);
+        daysSinceLastEvent.setText(Integer.toString(getDaysFromLastEvent()));
 
         toolbar = (Toolbar) findViewById(R.id.actionbar);
         toolbar.setTitle(habit.getTitle());
@@ -80,6 +114,14 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
                 Intent i = new Intent(ViewHabitActivity.this, HabitHistoryActivity.class);
                 i.putExtra(MainActivity.EXTRA_HABIT_SERIAL, habit);
                 startActivityForResult(i,MainActivity.REQUEST_CODE_VIEW_HABIT_HISTORY);
+            }
+        });
+
+        Button habitDateButton = (Button) findViewById(R.id.changeDate);
+        habitDateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               showDatePickerDialog();
             }
         });
 
@@ -124,11 +166,8 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
                 return true;
             }
             case R.id.deleteButton:{;
-                setResult(RESULT_OK);
-                habits.remove(position);
-                saveInFile();
-                Intent backToMain = new Intent(ViewHabitActivity.this, MainActivity.class);
-                startActivity(backToMain);
+                deleted=true;
+                finish();
                 return true;
 
             }
@@ -161,6 +200,8 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
                 case MainActivity.REQUEST_CODE_VIEW_HABIT_HISTORY:{
                     if (data.hasExtra(MainActivity.EXTRA_HABIT_SERIAL)){
                         habit = (Habit) data.getSerializableExtra(MainActivity.EXTRA_HABIT_SERIAL);
+                        TextView daysSinceLastEvent = (TextView) findViewById(R.id.textDaysSinceLastEvent);
+                        daysSinceLastEvent.setText(Integer.toString(getDaysFromLastEvent()));
                     }
                 }
                 }
@@ -171,48 +212,10 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
      * Creates a new instance of the edit habit dialog and displays it.
      */
     public void showEditDialog() {
-        DialogFragment dialog = EditHabitDialog.newInstance(habit.getTitle(),habit.getReason());
+        DialogFragment dialog = EditHabitDialog.newInstance(habit.getTitle(),habit.getReason(),habit.getSchedule());
         dialog.show(getFragmentManager(), "EditHabitDialog");
     }
 
-
-
-    private void loadFromFile() {
-        try {
-            FileInputStream fis = openFileInput(FILENAME);
-            BufferedReader in = new BufferedReader(new InputStreamReader(fis));
-            Gson gson = new Gson();
-
-            // Taken from https://stackoverflow.com/question/12384064/gson-convert-from-json-into java
-            // 2017 01-26 17:53:59
-            habits = gson.fromJson(in, new TypeToken<ArrayList<Habit>>(){}.getType());
-
-            fis.close();
-
-        } catch (FileNotFoundException e) {
-            habits = new ArrayList<Habit>();
-        } catch (IOException e) {
-            throw new RuntimeException();
-        }
-    }
-    /**
-    *commit changes of delete
-    */
-    private void saveInFile() {
-        try {
-            FileOutputStream fos = openFileOutput(FILENAME,
-                    Context.MODE_PRIVATE);
-            BufferedWriter out = new BufferedWriter(new OutputStreamWriter(fos));
-            Gson gson = new Gson();
-            gson.toJson(habits, out);
-            out.flush();
-            fos.close();
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException();
-        } catch (IOException e) {
-            throw new RuntimeException();
-        }
-    }
 
     /**
      * Receives new information from edit habit dialog and makes appropriate updates to the habit.
@@ -220,16 +223,16 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
      * @param dialog Edit Habit Dialog Fragment
      * @param newreason Updated habit reason string
      * @param newtitle Updated habit name string
-     * @param newdate Updated habit date
      */
 
-    public void onDialogPositiveClick(DialogFragment dialog, String newreason, String newtitle,
-                                      Date newdate) {
+    @Override
+    public void onDialogPositiveClick(DialogFragment dialog, String newreason, String newtitle, HashSet<Integer> newschedule) {
         reason.setText(newreason);
         toolbar.setTitle(newtitle);
+        schedule.setText(getScheduleString(newschedule));
         habit.setReason(newreason);
         habit.setTitle(newtitle);
-        habit.setStartDate(newdate); //Not updating, will have to make changes to main activity
+        habit.setSchedule(newschedule);
     }
 
     /**
@@ -243,18 +246,60 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
     public void finish() {
         //Pass back the habit and position
         Intent data = new Intent();
+        if (deleted){
+            data.putExtra(MainActivity.EXTRA_HABIT_DELETED,true);
+        }
         data.putExtra(MainActivity.EXTRA_HABIT_SERIAL, habit);
         data.putExtra(MainActivity.EXTRA_HABIT_POSITION, position);
         setResult(RESULT_OK, data);
         super.finish();
     }
 
+    public void showDatePickerDialog(){
+        DialogFragment newFragment = new DatePickerFrag();
+        newFragment.show(getFragmentManager(), "DatePicker");
+    }
+
     @Override
-    public void onDialogPositiveClick(DialogFragment dialog, String s, String newreason) {
-
+    public void onDatePicked(DialogFragment dialog, Date date) {
+        TextView habitDate = (TextView) findViewById(R.id.textHabitDate);
+        habitDate.setText(date.toString());
+        habit.setStartDate(date);
     }
 
-    public void onDialogNegativeƒClick(DialogFragment dialog) {
-
+    private int getDaysFromLastEvent(){
+        //TODO: Can this be more efficient?
+        if (habit.getEvents() != null){
+            ArrayList<HabitEvent> events = habit.getEvents();
+            if (!events.isEmpty()) {
+                Calendar c = Calendar.getInstance();
+                Calendar d = Calendar.getInstance();
+                c.setTime(events.get(0).getDate());
+                for (int i=1;i<events.size();i++){
+                    d.setTime(events.get(i).getDate());
+                    if (c.before(d)){
+                        c.setTime(d.getTime());
+                    }
+                }
+                return Util.getDaysBetweenDates(c.getTime(),new Date());
+            }
+        }
+        return 0;
     }
+
+    private String getScheduleString(HashSet<Integer> schedule){
+        String s = "";
+        if (schedule.size()==7) return "Daily";
+        if (schedule.contains(Calendar.SUNDAY)) s += "Sunday, ";
+        if (schedule.contains(Calendar.MONDAY)) s += "Monday, ";
+        if (schedule.contains(Calendar.TUESDAY)) s += "Tuesday, ";
+        if (schedule.contains(Calendar.WEDNESDAY)) s += "Wednesday, ";
+        if (schedule.contains(Calendar.THURSDAY)) s += "Thursday, ";
+        if (schedule.contains(Calendar.FRIDAY)) s += "Friday, ";
+        if (schedule.contains(Calendar.SATURDAY)) s += "Saturday, ";
+        s = s.substring(0,s.length()-2);
+        return s;
+    }
+
+
 }

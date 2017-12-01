@@ -1,9 +1,14 @@
 package cmput301f17t09.goalsandhabits.Main_Habits;
 
+import android.util.Log;
+
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashSet;
+
+import io.searchbox.annotations.JestId;
 
 /**
  * Created by atsmith on 10/31/17.
@@ -14,11 +19,15 @@ public class Habit implements Serializable{
     private static final int titleLength = 20;
     private static final int reasonLength = 30;
 
+    @JestId
+    private String id;
     private String title;
     private String reason;
     private Date startDate;
     private HashSet<Integer> schedule;
     private ArrayList<HabitEvent> events;
+    private int eventsCompleted = 0;
+    private int eventsMissed = 0;
 
 
     /**
@@ -103,4 +112,56 @@ public class Habit implements Serializable{
     public void addHabitEvent(HabitEvent event){
         events.add(event);
     }
+
+    public void deleteHabitEvent(int index){
+        events.remove(index);
+    }
+
+    public void deleteHabitEvent(HabitEvent event){
+        events.remove(event);
+    }
+
+
+    public String getId() { return this.id; }
+
+    public void setId(String id) { this.id = id; }
+
+    public int getEventsCompleted() { return eventsCompleted; }
+
+    public void setEventsCompleted(int eventsCompleted) { this.eventsCompleted = eventsCompleted; }
+
+    public int getEventsMissed() { return eventsMissed; }
+
+    public void setEventsMissed(int eventsMissed) { this.eventsMissed = eventsMissed; }
+
+    /**
+     * Gets the total number of schedule days that have passed since this habit's start date.
+     * @return int representing above.
+     */
+    public int getPossibleEvents(){
+        if (startDate==null) return 0;
+        if (schedule==null || schedule.isEmpty()) return 0;
+        Calendar now = Calendar.getInstance();
+        Calendar start = Calendar.getInstance();
+        start.setTime(this.startDate);
+        if (start.after(now)) return 0;
+        int span = Util.getDaysBetweenDates(start.getTime(),now.getTime());
+        Log.i("Info","Span: " + span);
+        int startDay = start.get(Calendar.DAY_OF_WEEK);
+        int events = 0;
+        if (span>=7){
+            for (int day : schedule){
+                if (day>=startDay) events++;
+            }
+            span-=7;
+            events += (span/7)*schedule.size();
+        }
+        for (int day : schedule){
+            if (day<startDay) day+=7;
+            if (day >= startDay && day<=(startDay + (span % 7))) events++;
+        }
+        return events;
+    }
+
+
 }

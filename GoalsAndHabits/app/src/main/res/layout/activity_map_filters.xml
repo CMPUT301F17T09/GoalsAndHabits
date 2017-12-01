@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="cmput301f17t09.goalsandhabits.MapFiltersActivity"
+    tools:context="cmput301f17t09.goalsandhabits.Maps.MapFiltersActivity"
     android:label="This is the MapFiltersActivity">
 
     <android.support.v7.widget.Toolbar
@@ -22,7 +22,7 @@
 
     <com.google.android.gms.maps.MapView
         android:id="@+id/mapView"
-        android:layout_width="416dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginLeft="0dp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -30,7 +30,9 @@
         android:layout_marginBottom="0dp"
         app:layout_constraintTop_toBottomOf="@+id/actionbar"
         app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintBottom_toTopOf="@+id/toolbar_nav" />
+        app:layout_constraintBottom_toTopOf="@+id/toolbar_nav"
+        android:layout_marginRight="0dp"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <include
         layout="@layout/toolbar_navigation"
