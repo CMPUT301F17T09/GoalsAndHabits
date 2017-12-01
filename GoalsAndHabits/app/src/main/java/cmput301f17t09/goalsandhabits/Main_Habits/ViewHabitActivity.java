@@ -3,6 +3,7 @@ package cmput301f17t09.goalsandhabits.Main_Habits;
 import android.app.DialogFragment;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +15,7 @@ import android.view.View;
 
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
@@ -52,11 +54,14 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
     private TextView reason;
     private TextView startdate;
     private TextView schedule;
+    private ImageView imageView;
+    private TextView statusText;
     private Context context;
     private int position;
     private Toolbar toolbar;
     private boolean deleted = false;
     private SimpleDateFormat dateFormat = new SimpleDateFormat("EEE MMM dd");
+    private float statThreshold = 50;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,8 +83,22 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
         startdate.setText(dateFormat.format(habit.getStartDate()));
         schedule = (TextView) findViewById(R.id.textSchedule);
         schedule.setText(getScheduleString(habit.getSchedule()));
+        imageView = (ImageView) findViewById(R.id.imageView);
+        statusText = (TextView) findViewById(R.id.imageText);
+        float possibleEvents = habit.getPossibleEvents();
+        float stats = ((habit.getEventsCompleted()/possibleEvents)*100);
+        if (possibleEvents==0) stats=0;
+        Log.i("Info","Possible events: " + possibleEvents);
+        statusText.setText("You are " + String.format("%.0f",stats) + "% consistent!");
+        if (stats>statThreshold){
+            imageView.setImageResource(R.drawable.ic_checkmark);
+        }else{
+            imageView.setImageResource(R.drawable.ic_offtrack);
+            statusText.setTextColor(Color.parseColor("#D12121"));
+        }
+
         TextView eventsMissed = (TextView) findViewById(R.id.textMissedEvents);
-        eventsMissed.setText(Integer.toString(habit.getEventsMissed()));
+        eventsMissed.setText(String.format("%.0f",possibleEvents-habit.getEventsCompleted()));
         TextView daysSinceLastEvent = (TextView) findViewById(R.id.textDaysSinceLastEvent);
         daysSinceLastEvent.setText(Integer.toString(getDaysFromLastEvent()));
 
@@ -262,15 +281,10 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
                         c.setTime(d.getTime());
                     }
                 }
-                return getDaysBetweenDates(c.getTime(),new Date());
+                return Util.getDaysBetweenDates(c.getTime(),new Date());
             }
         }
         return 0;
-    }
-
-    private int getDaysBetweenDates(Date before, Date after){
-        long dif = (after.getTime() - before.getTime());
-        return (int) (dif / (1000*60*60*24));
     }
 
     private String getScheduleString(HashSet<Integer> schedule){

@@ -1,7 +1,10 @@
 package cmput301f17t09.goalsandhabits.Main_Habits;
 
+import android.util.Log;
+
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashSet;
 
@@ -130,4 +133,35 @@ public class Habit implements Serializable{
     public int getEventsMissed() { return eventsMissed; }
 
     public void setEventsMissed(int eventsMissed) { this.eventsMissed = eventsMissed; }
+
+    /**
+     * Gets the total number of schedule days that have passed since this habit's start date.
+     * @return int representing above.
+     */
+    public int getPossibleEvents(){
+        if (startDate==null) return 0;
+        if (schedule==null || schedule.isEmpty()) return 0;
+        Calendar now = Calendar.getInstance();
+        Calendar start = Calendar.getInstance();
+        start.setTime(this.startDate);
+        if (start.after(now)) return 0;
+        int span = Util.getDaysBetweenDates(start.getTime(),now.getTime());
+        Log.i("Info","Span: " + span);
+        int startDay = start.get(Calendar.DAY_OF_WEEK);
+        int events = 0;
+        if (span>=7){
+            for (int day : schedule){
+                if (day>=startDay) events++;
+            }
+            span-=7;
+            events += (span/7)*schedule.size();
+        }
+        for (int day : schedule){
+            if (day<startDay) day+=7;
+            if (day >= startDay && day<=(startDay + (span % 7))) events++;
+        }
+        return events;
+    }
+
+
 }
