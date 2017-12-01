@@ -96,10 +96,6 @@ public class HabitHistoryActivity extends AppCompatActivity {
                         habitEvent.setComment(data.getStringExtra(MainActivity.EXTRA_HABIT_NAME));
                     }
                     habit.addHabitEvent(habitEvent);
-                    Calendar c = Calendar.getInstance();
-                    if (habit.getSchedule()!=null && habit.getSchedule().contains(c.get(Calendar.DAY_OF_WEEK))){
-                        habit.setEventsCompleted(habit.getEventsCompleted() + 1);
-                    }
                     habitEventArrayAdapter.notifyDataSetChanged();
                 }
                 case REQUEST_CODE_VIEW_EVENT:{
@@ -107,10 +103,6 @@ public class HabitHistoryActivity extends AppCompatActivity {
                         int pos = (int) data.getSerializableExtra(EXTRA_EVENT_POSITION);
                         HabitEvent habitevent = (HabitEvent) data.getSerializableExtra(EXTRA_EVENT_SERIAL);
                         if (data.hasExtra(EXTRA_EVENT_DELETED)){
-                            Calendar c = Calendar.getInstance();
-                            if (habit.getSchedule()!=null && habit.getSchedule().contains(c.get(Calendar.DAY_OF_WEEK))) {
-                                habit.setEventsCompleted(Math.max(0,habit.getEventsCompleted() - 1));
-                            }
                             habit.deleteHabitEvent(pos);
                             habitEventArrayAdapter.notifyDataSetChanged();
                         }else {

@@ -88,7 +88,6 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
         float possibleEvents = habit.getPossibleEvents();
         float stats = ((habit.getEventsCompleted()/possibleEvents)*100);
         if (possibleEvents==0) stats=0;
-        Log.i("Info","Possible events: " + possibleEvents);
         statusText.setText("You are " + String.format("%.0f",stats) + "% consistent!");
         if (stats>statThreshold){
             imageView.setImageResource(R.drawable.ic_checkmark);
