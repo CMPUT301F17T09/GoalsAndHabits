@@ -156,23 +156,29 @@ public class MyHabitHistory extends AppCompatActivity implements FilterDialog.Fi
             habitEventArrayAdapter.clear();
             for (Habit h : habits) {
                 if (!(habitType.equals("")) && h.getTitle().matches("(?i)(" + habitType + ")")) {
-                    if (h.getEvents().isEmpty()) {
-                        Log.i("Error", "getEvents() is empty for habit " + h.getTitle());
+                    Log.i("Info","Habit type matches habit");
+                    if (!(commentSearch.equals("")) && !(h.getEvents().isEmpty())) {
+                        for (HabitEvent e: h.getEvents()) {
+                            if((e.getComment()!=null) && e.getComment().matches("(?i)(.*"+commentSearch+".*)")) {
+                                Log.i("Info","Adding habit event from comment and habit search");
+                                habitEventArrayAdapter.add(e);
+                            }
+                        }
                     }
-                    habitEventArrayAdapter.addAll(h.getEvents());
-                    if (habitEventArrayAdapter.isEmpty()) {
-                        Log.i("Error", "Failed to add events to Adapter!");
+                    else {
+                        Log.i("Info","Adding all habit events");
+                        habitEventArrayAdapter.addAll(h.getEvents());
                     }
                 }
-//                if (!(commentSearch.equals("")) && h.) {
-//
-//                }
-
-
-            }
-
-            if (habitEventArrayAdapter.isEmpty()) {
-                Log.i("Error", "Failed to load events: habit events adapter is empty!");
+                else if(!(commentSearch.equals("")) && habitType.equals("")) {
+                    Log.i("Info","Commentsearch not empty and no habit type entered");
+                    for (HabitEvent e: h.getEvents()) {
+                        if ((e.getComment()!=null) && e.getComment().matches("(?i)(.*?"+commentSearch+".*)")) {
+                            Log.i("Info","Adding habit event from comment search");
+                            habitEventArrayAdapter.add(e);
+                        }
+                    }
+                }
             }
             Comparator<? super HabitEvent> dateCompare = new Comparator<HabitEvent>() {
                 @Override
