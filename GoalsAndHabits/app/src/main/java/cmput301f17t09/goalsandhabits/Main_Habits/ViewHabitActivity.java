@@ -77,29 +77,7 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
         }
         if (habit==null) finish();
 
-        reason = (TextView) findViewById(R.id.textReason);
-        reason.setText(habit.getReason());
-        startdate = (TextView) findViewById(R.id.textHabitDate);
-        startdate.setText(dateFormat.format(habit.getStartDate()));
-        schedule = (TextView) findViewById(R.id.textSchedule);
-        schedule.setText(getScheduleString(habit.getSchedule()));
-        imageView = (ImageView) findViewById(R.id.imageView);
-        statusText = (TextView) findViewById(R.id.imageText);
-        float possibleEvents = habit.getPossibleEvents();
-        float stats = ((habit.getEventsCompleted()/possibleEvents)*100);
-        if (possibleEvents==0) stats=0;
-        statusText.setText("You are " + String.format("%.0f",stats) + "% consistent!");
-        if (stats>statThreshold){
-            imageView.setImageResource(R.drawable.ic_checkmark);
-        }else{
-            imageView.setImageResource(R.drawable.ic_offtrack);
-            statusText.setTextColor(Color.parseColor("#D12121"));
-        }
-
-        TextView eventsMissed = (TextView) findViewById(R.id.textMissedEvents);
-        eventsMissed.setText(String.format("%.0f",possibleEvents-habit.getEventsCompleted()));
-        TextView daysSinceLastEvent = (TextView) findViewById(R.id.textDaysSinceLastEvent);
-        daysSinceLastEvent.setText(Integer.toString(getDaysFromLastEvent()));
+        refreshData();
 
         toolbar = (Toolbar) findViewById(R.id.actionbar);
         toolbar.setTitle(habit.getTitle());
@@ -199,8 +177,7 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
                 case MainActivity.REQUEST_CODE_VIEW_HABIT_HISTORY:{
                     if (data.hasExtra(MainActivity.EXTRA_HABIT_SERIAL)){
                         habit = (Habit) data.getSerializableExtra(MainActivity.EXTRA_HABIT_SERIAL);
-                        TextView daysSinceLastEvent = (TextView) findViewById(R.id.textDaysSinceLastEvent);
-                        daysSinceLastEvent.setText(Integer.toString(getDaysFromLastEvent()));
+                        refreshData();
                     }
                 }
                 }
@@ -298,6 +275,33 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
         if (schedule.contains(Calendar.SATURDAY)) s += "Saturday, ";
         s = s.substring(0,s.length()-2);
         return s;
+    }
+
+    private void refreshData(){
+        reason = (TextView) findViewById(R.id.textReason);
+        reason.setText(habit.getReason());
+        startdate = (TextView) findViewById(R.id.textHabitDate);
+        startdate.setText(dateFormat.format(habit.getStartDate()));
+        schedule = (TextView) findViewById(R.id.textSchedule);
+        schedule.setText(getScheduleString(habit.getSchedule()));
+        imageView = (ImageView) findViewById(R.id.imageView);
+        statusText = (TextView) findViewById(R.id.imageText);
+        float possibleEvents = habit.getPossibleEvents();
+        float stats = ((habit.getEventsCompleted()/possibleEvents)*100);
+        if (possibleEvents==0) stats=0;
+        statusText.setText("You are " + String.format("%.0f",stats) + "% consistent!");
+        if (stats>statThreshold){
+            imageView.setImageResource(R.drawable.ic_checkmark);
+            statusText.setTextColor(Color.parseColor("#41C61F"));
+        }else{
+            imageView.setImageResource(R.drawable.ic_offtrack);
+            statusText.setTextColor(Color.parseColor("#D12121"));
+        }
+
+        TextView eventsMissed = (TextView) findViewById(R.id.textMissedEvents);
+        eventsMissed.setText(String.format("%.0f",possibleEvents-habit.getEventsCompleted()));
+        TextView daysSinceLastEvent = (TextView) findViewById(R.id.textDaysSinceLastEvent);
+        daysSinceLastEvent.setText(Integer.toString(getDaysFromLastEvent()));
     }
 
 
