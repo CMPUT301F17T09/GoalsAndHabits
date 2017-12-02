@@ -17,6 +17,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -167,11 +168,16 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
                     Date date;
                     if (!data.hasExtra(MainActivity.EXTRA_HABIT_STARTDATE)) return;
                     date = (Date) data.getSerializableExtra(MainActivity.EXTRA_HABIT_STARTDATE);
+                    if (habit.checkEventExistsOnDate(date)){
+                        Toast.makeText(ViewHabitActivity.this,"You already have an event for that day!",Toast.LENGTH_LONG).show();
+                        break;
+                    }
                     HabitEvent habitEvent = new HabitEvent(date);
                     if (data.hasExtra(MainActivity.EXTRA_HABIT_NAME)){
                         habitEvent.setComment(data.getStringExtra(MainActivity.EXTRA_HABIT_NAME));
                     }
                     habit.addHabitEvent(habitEvent);
+                    refreshData();
                     break;
                 }
                 case MainActivity.REQUEST_CODE_VIEW_HABIT_HISTORY:{
@@ -179,6 +185,7 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
                         habit = (Habit) data.getSerializableExtra(MainActivity.EXTRA_HABIT_SERIAL);
                         refreshData();
                     }
+                    break;
                 }
                 }
             }

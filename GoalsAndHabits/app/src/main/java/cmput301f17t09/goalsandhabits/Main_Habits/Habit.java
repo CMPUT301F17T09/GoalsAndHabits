@@ -178,5 +178,23 @@ public class Habit implements Serializable{
         return total;
     }
 
+    public boolean checkEventExistsOnDate(Date date){
+        if (date==null) return true;
+        Calendar check = Calendar.getInstance();
+        check.setTime(date);
+        int day = check.get(Calendar.DAY_OF_YEAR);
+        int year = check.get(Calendar.YEAR);
+        if (events==null || events.isEmpty()) return false;
+        for (HabitEvent event : events){
+            Date d = event.getDate();
+            if (d==null) continue;
+            check.setTime(d);
+            if (day==check.get(Calendar.DAY_OF_YEAR) && year==check.get(Calendar.YEAR)){
+                return true;
+            }
+        }
+        return false;
+    }
+
 
 }
