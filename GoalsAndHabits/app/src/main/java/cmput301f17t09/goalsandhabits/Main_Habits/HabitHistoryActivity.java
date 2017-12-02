@@ -91,6 +91,10 @@ public class HabitHistoryActivity extends AppCompatActivity {
                     Date date;
                     if (!data.hasExtra(MainActivity.EXTRA_HABIT_STARTDATE)) return;
                     date = (Date) data.getSerializableExtra(MainActivity.EXTRA_HABIT_STARTDATE);
+                    if (habit.checkEventExistsOnDate(date)){
+                        Toast.makeText(HabitHistoryActivity.this,"You already have an event for that day!",Toast.LENGTH_LONG).show();
+                        break;
+                    }
                     HabitEvent habitEvent = new HabitEvent(date);
                     if (data.hasExtra(MainActivity.EXTRA_HABIT_NAME)){
                         habitEvent.setComment(data.getStringExtra(MainActivity.EXTRA_HABIT_NAME));
