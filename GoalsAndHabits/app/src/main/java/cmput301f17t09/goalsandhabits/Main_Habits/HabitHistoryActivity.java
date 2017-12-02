@@ -91,15 +91,15 @@ public class HabitHistoryActivity extends AppCompatActivity {
                     Date date;
                     if (!data.hasExtra(MainActivity.EXTRA_HABIT_STARTDATE)) return;
                     date = (Date) data.getSerializableExtra(MainActivity.EXTRA_HABIT_STARTDATE);
+                    if (habit.checkEventExistsOnDate(date)){
+                        Toast.makeText(HabitHistoryActivity.this,"You already have an event for that day!",Toast.LENGTH_LONG).show();
+                        break;
+                    }
                     HabitEvent habitEvent = new HabitEvent(date);
                     if (data.hasExtra(MainActivity.EXTRA_HABIT_NAME)){
                         habitEvent.setComment(data.getStringExtra(MainActivity.EXTRA_HABIT_NAME));
                     }
                     habit.addHabitEvent(habitEvent);
-                    Calendar c = Calendar.getInstance();
-                    if (habit.getSchedule()!=null && habit.getSchedule().contains(c.get(Calendar.DAY_OF_WEEK))){
-                        habit.setEventsCompleted(habit.getEventsCompleted() + 1);
-                    }
                     habitEventArrayAdapter.notifyDataSetChanged();
                 }
                 case REQUEST_CODE_VIEW_EVENT:{
@@ -107,10 +107,6 @@ public class HabitHistoryActivity extends AppCompatActivity {
                         int pos = (int) data.getSerializableExtra(EXTRA_EVENT_POSITION);
                         HabitEvent habitevent = (HabitEvent) data.getSerializableExtra(EXTRA_EVENT_SERIAL);
                         if (data.hasExtra(EXTRA_EVENT_DELETED)){
-                            Calendar c = Calendar.getInstance();
-                            if (habit.getSchedule()!=null && habit.getSchedule().contains(c.get(Calendar.DAY_OF_WEEK))) {
-                                habit.setEventsCompleted(Math.max(0,habit.getEventsCompleted() - 1));
-                            }
                             habit.deleteHabitEvent(pos);
                             habitEventArrayAdapter.notifyDataSetChanged();
                         }else {

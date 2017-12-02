@@ -1,15 +1,20 @@
 package cmput301f17t09.goalsandhabits.Maps;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Build;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -26,9 +31,25 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+
+import cmput301f17t09.goalsandhabits.ElasticSearch.ElasticSearchController;
 import cmput301f17t09.goalsandhabits.Follow_Activity.FollowActivity;
+import cmput301f17t09.goalsandhabits.Main_Habits.Habit;
+import cmput301f17t09.goalsandhabits.Main_Habits.HabitEvent;
 import cmput301f17t09.goalsandhabits.Main_Habits.MainActivity;
+import cmput301f17t09.goalsandhabits.Profiles.MyHabitHistory;
+import cmput301f17t09.goalsandhabits.Profiles.NewProfileActivity;
+import cmput301f17t09.goalsandhabits.Profiles.Profile;
 import cmput301f17t09.goalsandhabits.Profiles.ProfileActivity;
 import cmput301f17t09.goalsandhabits.R;
 
@@ -42,13 +63,23 @@ public class MapFiltersActivity extends AppCompatActivity implements OnMapReadyC
     private GoogleMap gmap;
     private static final int PERMISSION_REQUEST_CODE = 1;
     private FusedLocationProviderClient mFusedLocationClient;
-    Location currentLoc;
+    private Location currentLoc;
+    private ArrayList<Habit> habits;
+    private ArrayList<HabitEvent> events;
+    private Profile profile;
+    public static final int REQUEST_CODE_SIGNUP = 6;
+    public static final String FILENAME = "data.sav";
+    public static final String MY_PREFERENCES = "my_preferences";
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setTitle("MapFiltersActivity");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map_filters);
+        getProfile();
+        loadData();
 
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
@@ -120,10 +151,10 @@ public class MapFiltersActivity extends AppCompatActivity implements OnMapReadyC
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){//Needs to call some method otherwise doesn't work
-                    addMarkers(gmap);
+                    addNearbyMarkers(gmap);
                 }
                 else{
-                    clearMap(gmap);
+                    addAllMarkers(gmap);
                 }
 
             }
@@ -159,19 +190,41 @@ public class MapFiltersActivity extends AppCompatActivity implements OnMapReadyC
         }
     }
 
-    //Temporary method for testing marker stuff
-    private void clearMap(GoogleMap map) {
-        map.clear();
-        map.addMarker(new MarkerOptions()
-                .position(new LatLng(0, 0))
-                .title("Marker"));
+    //Add markers for events within 5km
+    private void addNearbyMarkers(GoogleMap map) {
+        if (currentLoc!=null) {
+            map.clear();
+            loadData();
+            for (Habit h : habits) {
+                events = h.getEvents();
+                for (HabitEvent e : events) {
+                    if ((e.getLat() != null && e.getLong() != null) && (e.getLat() != 0 && e.getLong() != 0)) {
+                        if (currentLoc.distanceTo(e.getLocation()) <=5000) {
+                            map.addMarker(new MarkerOptions()
+                                    .position(new LatLng(e.getLat(), e.getLong()))
+                                    .title(h.getTitle()));
+                        }
+                    }
+                }
+            }
+        }
     }
 
-    //Temporary method for testing marker stuff
-    private void addMarkers(GoogleMap map) {
-        map.addMarker(new MarkerOptions()
-                .position(new LatLng(currentLoc.getLatitude()+0.0005, currentLoc.getLongitude()+0.0005))
-                .title("Super Marker"));
+    //Add markers for all locations
+    private void addAllMarkers(GoogleMap map) {
+        map.clear();
+        loadData();
+        for (Habit h:habits){
+            events=h.getEvents();
+            for (HabitEvent e:events){
+                if ((e.getLat()!=null && e.getLong()!=null) && (e.getLat()!=0 && e.getLong()!=0)){
+                    map.addMarker(new MarkerOptions()
+                            .position(new LatLng(e.getLat(), e.getLong()))
+                            .title(h.getTitle()));
+                }
+            }
+        }
+        //TODO: add markers for followed events
     }
 
     @Override
@@ -185,6 +238,7 @@ public class MapFiltersActivity extends AppCompatActivity implements OnMapReadyC
                 requestPermission();
             }
         }
+        addAllMarkers(gmap);
     }
 
     /**
@@ -229,21 +283,94 @@ public class MapFiltersActivity extends AppCompatActivity implements OnMapReadyC
         //shouldn't be necessary but following method is complaining
         if (Build.VERSION.SDK_INT >= 23) {
             if (checkLocationPermission()){
-
+                mFusedLocationClient.getLastLocation()
+                        .addOnSuccessListener(this, new OnSuccessListener<Location>() {
+                            @Override
+                            public void onSuccess(Location location) {
+                                // Got last known location. In some rare situations this can be null.
+                                if (location != null) {
+                                    currentLoc = location;
+                                }
+                            }
+                        });
             }else{
                 requestPermission();
             }
         }
-        mFusedLocationClient.getLastLocation()
-                .addOnSuccessListener(this, new OnSuccessListener<Location>() {
-                    @Override
-                    public void onSuccess(Location location) {
-                        // Got last known location. In some rare situations this can be null.
-                        if (location != null) {
-                            currentLoc = location;
-                        }
-                    }
-                });
         return false;
+    }
+
+
+    //adapted from https://stackoverflow.com/questions/4238921/detect-whether-there-is-an-internet-connection-available-on-android
+    //as of Nov 25, 2017
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
+
+    private void loadData(){
+        habits = new ArrayList<>();
+        if (isNetworkAvailable()) {
+            if (profile == null) {
+                Log.i("Error", "Failed to load habits: profile is null!");
+                return;
+            }
+            if (profile.getHabitIds() == null) {
+                Log.i("Error", "Failed to load habits: habit id list is null!");
+                return;
+            }
+            Log.i("Info", "Fetching habits for profile id " + profile.getUserId());
+            ElasticSearchController.GetHabitsTask getHabitsTask
+                    = new ElasticSearchController.GetHabitsTask();
+            ArrayList<String> ids = profile.getHabitIds();
+            getHabitsTask.execute(ids.toArray(new String[ids.size()]));
+            try {
+                habits = getHabitsTask.get();
+            } catch (Exception e) {
+                Log.i("Error", "ElasticSearch failed to find habits for profile with id " + profile.getUserId());
+            }
+        }else{
+            //Load from local storage
+            try {
+                FileInputStream fis = openFileInput(FILENAME);
+                BufferedReader in = new BufferedReader(new InputStreamReader(fis));
+
+                Gson gson = new Gson();
+
+                //Taken from https://stackoverflow.com/questions/12384064/gson-convert-from-json-to-a-typed-arraylistt
+                //2017-09-28
+                Type listType = new TypeToken<ArrayList<Habit>>(){}.getType();
+                habits = gson.fromJson(in,listType);
+                Type profileType = new TypeToken<Profile>(){}.getType();
+                profile = gson.fromJson(in,profileType);
+                in.close();
+                fis.close();
+
+            } catch (FileNotFoundException e) {
+                //We either need internet connection or previously stored data for the app to work
+                throw new RuntimeException();
+            } catch (IOException e) {
+                throw new RuntimeException();
+            }
+        }
+    }
+
+    private void getProfile(){
+        Context context = MapFiltersActivity.this;
+        final SharedPreferences reader = context.getSharedPreferences(MY_PREFERENCES,Context.MODE_PRIVATE);
+        final String userId = reader.getString("userId","");
+        ElasticSearchController.GetProfileTask getProfileTask
+                = new ElasticSearchController.GetProfileTask();
+        getProfileTask.execute(userId);
+        try {
+            profile = getProfileTask.get();
+        } catch (Exception e) {
+            Log.i("Error", "Failed to get profiles with id " + userId + " from async object");
+            Intent intent = new Intent(MapFiltersActivity.this, NewProfileActivity.class);
+            startActivityForResult(intent, REQUEST_CODE_SIGNUP);
+        }
+
     }
 }

@@ -127,6 +127,12 @@ public class MyHabitHistory extends AppCompatActivity implements FilterDialog.Fi
             }
             case R.id.viewOnMap:{
                 Intent showmap = new Intent(MyHabitHistory.this,MyHabitsMapActivity.class);
+                ArrayList<HabitEvent> elist = new ArrayList<>();
+                //Workaround because there is no persistent event list
+                for (int i=0; i<habitEventArrayAdapter.getCount(); i++){
+                    elist.add(habitEventArrayAdapter.getItem(i));
+                }
+                showmap.putExtra("event list", elist);
 
                 startActivity(showmap);
                 return true;

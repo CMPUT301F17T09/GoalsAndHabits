@@ -26,8 +26,6 @@ public class Habit implements Serializable{
     private Date startDate;
     private HashSet<Integer> schedule;
     private ArrayList<HabitEvent> events;
-    private int eventsCompleted = 0;
-    private int eventsMissed = 0;
 
 
     /**
@@ -121,18 +119,9 @@ public class Habit implements Serializable{
         events.remove(event);
     }
 
-
     public String getId() { return this.id; }
 
     public void setId(String id) { this.id = id; }
-
-    public int getEventsCompleted() { return eventsCompleted; }
-
-    public void setEventsCompleted(int eventsCompleted) { this.eventsCompleted = eventsCompleted; }
-
-    public int getEventsMissed() { return eventsMissed; }
-
-    public void setEventsMissed(int eventsMissed) { this.eventsMissed = eventsMissed; }
 
     /**
      * Gets the total number of schedule days that have passed since this habit's start date.
@@ -146,7 +135,6 @@ public class Habit implements Serializable{
         start.setTime(this.startDate);
         if (start.after(now)) return 0;
         int span = Util.getDaysBetweenDates(start.getTime(),now.getTime());
-        Log.i("Info","Span: " + span);
         int startDay = start.get(Calendar.DAY_OF_WEEK);
         int events = 0;
         if (span>=7){
@@ -161,6 +149,51 @@ public class Habit implements Serializable{
             if (day >= startDay && day<=(startDay + (span % 7))) events++;
         }
         return events;
+    }
+
+    /**
+     * Gets the number of events that have been completed.
+     * That is, the number of events corresponding to the schedule that
+     * have occurred after the habit start date.
+     * Ex: Schedule = Mon,Tue,Wed. Events: Mon,Wed,Fri.
+     * Would return 2
+     * @return number of completed events.
+     */
+    public int getEventsCompleted(){
+        if (events==null || events.isEmpty()) return 0;
+        if (schedule==null || schedule.isEmpty()) return 0;
+        if (startDate==null) return 0;
+        int total = 0;
+        Calendar cal = Calendar.getInstance();
+        Calendar start = Calendar.getInstance();
+        start.setTime(startDate);
+        for (HabitEvent event : events){
+            Date d = event.getDate();
+            if (d==null) continue;
+            cal.setTime(d);
+            if(cal.after(start) && schedule.contains(cal.get(Calendar.DAY_OF_WEEK))){
+                total++;
+            }
+        }
+        return total;
+    }
+
+    public boolean checkEventExistsOnDate(Date date){
+        if (date==null) return true;
+        Calendar check = Calendar.getInstance();
+        check.setTime(date);
+        int day = check.get(Calendar.DAY_OF_YEAR);
+        int year = check.get(Calendar.YEAR);
+        if (events==null || events.isEmpty()) return false;
+        for (HabitEvent event : events){
+            Date d = event.getDate();
+            if (d==null) continue;
+            check.setTime(d);
+            if (day==check.get(Calendar.DAY_OF_YEAR) && year==check.get(Calendar.YEAR)){
+                return true;
+            }
+        }
+        return false;
     }
 
 
