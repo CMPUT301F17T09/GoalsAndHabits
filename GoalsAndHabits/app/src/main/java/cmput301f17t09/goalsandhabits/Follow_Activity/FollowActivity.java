@@ -17,10 +17,20 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
 import cmput301f17t09.goalsandhabits.ElasticSearch.ElasticSearchController;
+import cmput301f17t09.goalsandhabits.Main_Habits.Habit;
 import cmput301f17t09.goalsandhabits.Main_Habits.MainActivity;
 import cmput301f17t09.goalsandhabits.Maps.MapFiltersActivity;
 import cmput301f17t09.goalsandhabits.Profiles.FollowerRequestsActivity;
@@ -32,10 +42,12 @@ import static cmput301f17t09.goalsandhabits.Main_Habits.MainActivity.MY_PREFEREN
 
 public class FollowActivity extends AppCompatActivity implements UserSearchDialog.UserSearchDialogListener {
 
-    private UsersArrayAdapter usersFollowed;
+    private FollowedHabitsArrayAdapter usersFollowed;
     private ArrayList<Profile> followees;
+    private ArrayList<Habit> habitsFollowed;
     private ListView followList;
     private Profile me;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,22 +103,31 @@ public class FollowActivity extends AppCompatActivity implements UserSearchDialo
         else {
             getProfile();
             if (me.getUsersFollowed()==null) {
+                Log.i("Info", "usersfollowed is null");
                 me.setUsersFollowed(new ArrayList<Profile>());
                 Toast.makeText(FollowActivity.this,"You're not following anyone yet!", Toast.LENGTH_SHORT).show();
             }
+            habitsFollowed = new ArrayList<Habit>();
+            followees = me.getUsersFollowed();
+            for (Profile p: followees) {
+                loadData(p);
+                Log.i("Info","Getting habits of "+p.getUsername());
+            }
+            usersFollowed = new FollowedHabitsArrayAdapter(this,habitsFollowed);
+            followList.setAdapter(usersFollowed);
+
             newRequest.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     setResult(RESULT_OK);
                     showSearchDialog();
-
                 }
             });
 
             followList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     setResult(RESULT_OK);
-                    //Intent showEvents = new Intent(FollowActivity.this, FolloweeEvents.class)
+                    //Intent showEvent = new Intent(FollowActivity.this, FollowedEventActivity.class)
                 }
             });
         }
@@ -114,7 +135,7 @@ public class FollowActivity extends AppCompatActivity implements UserSearchDialo
     }
 
     /**
-     * Creates a new instance of the filter dialog and displays it.
+     * Creates a new instance of the search dialog and displays it.
      */
     public void showSearchDialog() {
         DialogFragment dialog = UserSearchDialog.newInstance();
@@ -160,5 +181,27 @@ public class FollowActivity extends AppCompatActivity implements UserSearchDialo
                 = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
+    private void loadData(Profile p){
+        habitsFollowed = new ArrayList<>();
+        if (isNetworkAvailable() && p != null){
+            //Now load the habits from the elasticsearch server:
+            ArrayList<Habit> onlineHabits = new ArrayList<>();
+            if (p.getHabitIds()!=null){
+                Log.i("Info", "Fetching habits for profile id " + p.getUserId());
+                ElasticSearchController.GetHabitsTask getHabitsTask
+                        = new ElasticSearchController.GetHabitsTask();
+                ArrayList<String> ids = p.getHabitIds();
+                Log.i("Info",ids.toString());
+                getHabitsTask.execute(ids.toArray(new String[ids.size()]));
+                try {
+                    onlineHabits = getHabitsTask.get();
+                } catch (Exception e) {
+                    Log.i("Error", "ElasticSearch failed to find habits for profile with id " + p.getUserId());
+                }
+            }
+            habitsFollowed.addAll(onlineHabits);
+            Log.i("Info","Total habits: " + habitsFollowed.size());
+        }
     }
 }

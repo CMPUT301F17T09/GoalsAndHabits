@@ -50,6 +50,9 @@
         <activity
             android:name=".Follow_Activity.SearchResultsActivity"
             android:parentActivityName=".Follow_Activity.FollowActivity" />
+        <activity
+            android:name=".Follow_Activity.FollowedEventActivity"
+            android:parentActivityName=".Follow_Activity.FollowActivity"></activity>
     </application>
 
 </manifest>

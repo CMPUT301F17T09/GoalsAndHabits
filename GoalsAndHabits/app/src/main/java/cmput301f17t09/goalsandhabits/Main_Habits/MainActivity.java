@@ -173,6 +173,7 @@ public class MainActivity extends AppCompatActivity {
 
                     habits.add(habit);
                     habitArrayAdapter.notifyDataSetChanged();
+                    saveData();
 
                     Toast.makeText(this, "Habit " + name + " created!", Toast.LENGTH_SHORT).show();
                     break;

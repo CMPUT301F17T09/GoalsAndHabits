@@ -1,6 +1,8 @@
 package cmput301f17t09.goalsandhabits.Profiles;
 
+import android.app.DialogFragment;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -26,12 +28,14 @@ import static cmput301f17t09.goalsandhabits.Main_Habits.MainActivity.MY_PREFEREN
  * This activity allows user to view their follower requests and accept or decline them.
  * Note: This can only be implemented after elasticsearch is implemented
  */
-public class FollowerRequestsActivity extends AppCompatActivity {
+public class FollowerRequestsActivity extends AppCompatActivity implements AcceptFollowerDialog.AcceptFollowerDialogListener {
 
     private ArrayList<Profile> followReqs;
+    private ArrayList<Profile> followers;
     private ListView followerList;
     private UsersArrayAdapter usersArrayAdapter;
     private Profile me;
+    private Profile follower;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +61,8 @@ public class FollowerRequestsActivity extends AppCompatActivity {
         followerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 setResult(RESULT_OK);
+                Profile p = followReqs.get(position);
+                showAcceptDialog(p);
 
             }
         });
@@ -64,6 +70,73 @@ public class FollowerRequestsActivity extends AppCompatActivity {
         }
 
     }
+
+    public void showAcceptDialog(Profile follower) {
+        DialogFragment dialog = AcceptFollowerDialog.newInstance(follower);
+        dialog.show(getFragmentManager(), "AcceptFollowerDialog");
+    }
+
+    @Override
+    public void onDialogPositiveClick(DialogFragment dialog, String followerName) {
+        Log.i("Info", "accepted follow from "+followerName);
+        ElasticSearchController.GetProfilesTask acceptFollow = new ElasticSearchController.GetProfilesTask();
+        acceptFollow.execute(followerName);
+        try {
+            followers = acceptFollow.get();
+        }catch (Exception e){
+            Log.i("Error", "Failed to get profiles from async object");
+        }
+        follower = followers.get(0);
+        if (follower.getUsersFollowed()==null) {
+            follower.setUsersFollowed(new ArrayList<Profile>());
+        }
+        follower.addFollowee(me);
+        if (!follower.getFollowRequests().isEmpty()) {
+            Log.i("Info", "Added " + me.getUsername() + " as user followed to " + follower.getUsername());
+        }
+        saveData();
+        me.removeFollowReq(follower);
+        followReqs.remove(follower);
+        saveProfile();
+        usersArrayAdapter.notifyDataSetChanged();
+    }
+
+    /**
+     * Exits out of Accept Follower dialog. Deletes follow request
+     * @param dialog Filter Dialog Fragment
+     */
+    public void onDialogNegativeClick(DialogFragment dialog, String followerName) {
+        // User touched the dialog's negative button
+        Log.i("Info", "rejected follow from "+followerName);
+        ElasticSearchController.GetProfilesTask rejectFollow = new ElasticSearchController.GetProfilesTask();
+        rejectFollow.execute(followerName);
+        try {
+            followers = rejectFollow.get();
+        }catch (Exception e){
+            Log.i("Error", "Failed to get profiles from async object");
+        }
+        follower = followers.get(0);
+        me.removeFollowReq(follower);
+        followReqs.remove(follower);
+        usersArrayAdapter.notifyDataSetChanged();
+        saveProfile();
+    }
+
+    private void saveData(){
+        if (follower != null) {
+            ElasticSearchController.UpdateProfileTask updateFollowerTask
+                    = new ElasticSearchController.UpdateProfileTask();
+            updateFollowerTask.execute(follower);
+        }
+    }
+    private void saveProfile() {
+        if (me!=null) {
+            ElasticSearchController.UpdateProfileTask updateProfileTask
+                    = new ElasticSearchController.UpdateProfileTask();
+            updateProfileTask.execute(me);
+        }
+    }
+
     private void getProfile(){
         Context context = FollowerRequestsActivity.this;
         final SharedPreferences reader = context.getSharedPreferences(MY_PREFERENCES,Context.MODE_PRIVATE);

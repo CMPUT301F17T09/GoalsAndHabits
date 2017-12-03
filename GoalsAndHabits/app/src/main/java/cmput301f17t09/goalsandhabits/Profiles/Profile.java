@@ -75,6 +75,10 @@ public class Profile implements Serializable{
         followRequests.add(follower);
     }
 
+    public void removeFollowReq(Profile follower) {
+        followRequests.remove(follower);
+    }
+
 
     /**
      * Sets userID

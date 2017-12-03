@@ -70,8 +70,6 @@ public class MyHabitHistory extends AppCompatActivity implements FilterDialog.Fi
 
         habitEventsList = (ListView) findViewById(R.id.myHabitEventList);
         loadData();
-        //TODO: For each habit, add all events to array adapter
-        //TODO: check for existence of at least 1 habit and at least 1 habit event
         if (!habits.isEmpty()) {myEventsArrayAdapter = new MyEventsArrayAdapter(this,new ArrayList<HabitEvent>());}
 
         if (habits.size()>0) {
