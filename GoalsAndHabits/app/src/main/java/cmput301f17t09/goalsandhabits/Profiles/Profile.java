@@ -1,6 +1,7 @@
 package cmput301f17t09.goalsandhabits.Profiles;
 
 import java.io.Serializable;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -21,6 +22,8 @@ public class Profile implements Serializable{
     private String userId;
     private String username;
     private ArrayList<String> habitIds;
+    private ArrayList<Profile> usersFollowed;
+    private ArrayList<Profile> followRequests;
 
     /**
      * Profile Constructor
@@ -47,6 +50,31 @@ public class Profile implements Serializable{
     public String getUsername(){
         return this.username;
     }
+
+    public ArrayList<Profile> getUsersFollowed() {
+        return usersFollowed;
+    }
+
+    public void addFollowee(Profile followee) {
+        usersFollowed.add(followee);
+    }
+
+    public void setUsersFollowed(ArrayList<Profile> usersFollowed) {
+        this.usersFollowed = usersFollowed;
+    }
+
+    public void setFollowRequests(ArrayList<Profile> followRequests) {
+        this.followRequests = followRequests;
+    }
+
+    public ArrayList<Profile> getFollowRequests() {
+        return followRequests;
+    }
+
+    public void addFollowReq(Profile follower) {
+        followRequests.add(follower);
+    }
+
 
     /**
      * Sets userID

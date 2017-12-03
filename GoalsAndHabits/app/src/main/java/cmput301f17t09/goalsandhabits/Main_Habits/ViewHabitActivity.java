@@ -177,6 +177,7 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
                         habitEvent.setComment(data.getStringExtra(MainActivity.EXTRA_HABIT_NAME));
                     }
                     habit.addHabitEvent(habitEvent);
+                    habitEvent.setHabitType(habit.getTitle());
                     refreshData();
                     break;
                 }

@@ -26,6 +26,9 @@ public class Habit implements Serializable{
     private Date startDate;
     private HashSet<Integer> schedule;
     private ArrayList<HabitEvent> events;
+    private String profile;
+
+
 
 
     /**
@@ -62,6 +65,14 @@ public class Habit implements Serializable{
 
     public String getTitle(){
         return title;
+    }
+
+    public String getProfile() {
+        return profile;
+    }
+
+    public void setProfile(String profile) {
+        this.profile = profile;
     }
 
     public String getReason() {
