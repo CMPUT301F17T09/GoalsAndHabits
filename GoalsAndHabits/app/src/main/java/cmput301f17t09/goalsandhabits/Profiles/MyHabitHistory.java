@@ -74,9 +74,10 @@ public class MyHabitHistory extends AppCompatActivity implements FilterDialog.Fi
         //TODO: check for existence of at least 1 habit and at least 1 habit event
         if (!habits.isEmpty()) {habitEventArrayAdapter = new HabitEventArrayAdapter(this,new ArrayList<HabitEvent>());}
 
-        if (habits.size()>1) {
+        if (habits.size()>0) {
             for (int i=0;i<habits.size();i++) {
                 habitEventArrayAdapter.addAll(habits.get(i).getEvents());
+                Log.i("Info", "Adding events");
             }
             if (habitEventArrayAdapter.isEmpty()) {
                 Log.i("Error", "Failed to load events: habit events list is null!");
@@ -89,6 +90,7 @@ public class MyHabitHistory extends AppCompatActivity implements FilterDialog.Fi
             }
         };
         if (!((habitEventArrayAdapter ==  null)) && !(habitEventArrayAdapter.isEmpty())) {
+            Log.i("Info", "Sorting");
             habitEventArrayAdapter.sort(dateCompare);
             habitEventsList.setAdapter(habitEventArrayAdapter);
         }
