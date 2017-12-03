@@ -59,7 +59,7 @@ public class HabitArrayAdapter extends ArrayAdapter<Habit> {
         }
         Calendar c = Calendar.getInstance();
         Calendar latest = getLatestHabitEventDate(h);
-        if ((h.getSchedule()!=null && h.getSchedule().contains(c.get(Calendar.DAY_OF_WEEK)) && latest!=null) && (h.getEvents()==null || !sameDay(c,latest))){
+        if ((h.getSchedule()!=null && h.getSchedule().contains(c.get(Calendar.DAY_OF_WEEK))) && (h.getEvents()==null || !sameDay(c,latest))){
             //Set alarm icon if the habit is schedule for today and
             //if we either have no events, or the latest event wasn't today:
             imageView.setImageResource(R.drawable.ic_alarm);
@@ -99,6 +99,7 @@ public class HabitArrayAdapter extends ArrayAdapter<Habit> {
     }
 
     private boolean sameDay(Calendar c1, Calendar c2){
+        if (c1==null || c2==null) return false;
         return (c1.get(Calendar.YEAR) == c2.get(Calendar.YEAR) && c1.get(Calendar.DAY_OF_YEAR) == c2.get(Calendar.DAY_OF_YEAR));
     }
 }
