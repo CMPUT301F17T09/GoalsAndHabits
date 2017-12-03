@@ -78,6 +78,9 @@ public class Profile implements Serializable{
     public void removeFollowReq(Profile follower) {
         followRequests.remove(follower);
     }
+    public void removeFollowReq(int position) {
+        followRequests.remove(position);
+    }
 
 
     /**

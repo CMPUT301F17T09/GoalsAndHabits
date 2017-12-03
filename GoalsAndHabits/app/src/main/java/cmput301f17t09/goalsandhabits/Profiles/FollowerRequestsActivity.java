@@ -62,6 +62,8 @@ public class FollowerRequestsActivity extends AppCompatActivity implements Accep
         followerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 setResult(RESULT_OK);
+                pos = position;
+                Log.i("info","pos: "+String.format("%d",pos));
                 Profile p = followReqs.get(position);
                 showAcceptDialog(p);
 
@@ -96,8 +98,8 @@ public class FollowerRequestsActivity extends AppCompatActivity implements Accep
             Log.i("Info", "Added " + me.getUsername() + " as user followed to " + follower.getUsername());
         }
         saveData();
-        me.removeFollowReq(follower);
-        followReqs.remove(pos);
+        me.removeFollowReq(pos);
+        //followReqs.remove(pos);
         saveProfile();
         usersArrayAdapter.notifyDataSetChanged();
     }
@@ -117,8 +119,8 @@ public class FollowerRequestsActivity extends AppCompatActivity implements Accep
             Log.i("Error", "Failed to get profiles from async object");
         }
         follower = followers.get(0);
-        me.removeFollowReq(follower);
-        followReqs.remove(follower);
+        me.removeFollowReq(pos);
+        //followReqs.remove(pos);
         usersArrayAdapter.notifyDataSetChanged();
         saveProfile();
     }
