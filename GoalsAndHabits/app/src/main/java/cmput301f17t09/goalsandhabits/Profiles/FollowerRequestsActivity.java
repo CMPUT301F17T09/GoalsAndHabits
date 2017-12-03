@@ -36,6 +36,7 @@ public class FollowerRequestsActivity extends AppCompatActivity implements Accep
     private UsersArrayAdapter usersArrayAdapter;
     private Profile me;
     private Profile follower;
+    private int pos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,7 +97,7 @@ public class FollowerRequestsActivity extends AppCompatActivity implements Accep
         }
         saveData();
         me.removeFollowReq(follower);
-        followReqs.remove(follower);
+        followReqs.remove(pos);
         saveProfile();
         usersArrayAdapter.notifyDataSetChanged();
     }
