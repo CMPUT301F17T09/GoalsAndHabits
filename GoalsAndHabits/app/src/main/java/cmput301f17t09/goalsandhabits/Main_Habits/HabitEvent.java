@@ -1,5 +1,6 @@
 package cmput301f17t09.goalsandhabits.Main_Habits;
 
+import android.graphics.Bitmap;
 import android.location.Location;
 import android.util.Log;
 
@@ -17,10 +18,12 @@ public class HabitEvent implements Serializable{
     private String comment;
     private String photoPath;
     private Date date;
+    private String encodedPhoto;                // compressed string representation of the photo
+    private Bitmap decodedPhoto;
     //private Location location;
     private Double Lat;
     private Double Long;
-
+    private Bitmap photo;
     public HabitEvent(Date date){
         setDate(date);
     }
@@ -44,6 +47,21 @@ public class HabitEvent implements Serializable{
 
     public String getPhotoPath(){
         return photoPath;
+    }
+    public String getEncodedPhoto() {
+        return encodedPhoto;
+    }
+
+    public void setEncodedPhoto(String encodedPhoto) {
+        this.encodedPhoto = encodedPhoto;
+    }
+
+    public Bitmap getDecodedPhoto() {
+        return decodedPhoto;
+    }
+
+    public void setDecodedPhoto(Bitmap decodedPhoto) {
+        this.decodedPhoto = decodedPhoto;
     }
 
     public void setComment(String comment){
@@ -73,6 +91,9 @@ public class HabitEvent implements Serializable{
     public void setLocation(Location location) {
         this.Lat = location.getLatitude();
         this.Long = location.getLongitude();
+    }
+    public String getPhoto() {
+        return this.encodedPhoto;
     }
 
     public boolean voidLocation(){
