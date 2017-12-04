@@ -117,6 +117,7 @@ public class HabitHistoryActivity extends AppCompatActivity {
                             ArrayList<HabitEvent> habitEvents = habit.getEvents();
                             habitEvents.set(pos,habitevent);
                             habit.setEvents(habitEvents);
+                            habitEventArrayAdapter.notifyDataSetChanged();
                         }
                     }
                     break;

@@ -1,6 +1,7 @@
 package cmput301f17t09.goalsandhabits.Main_Habits;
 
 import android.content.Context;
+import android.location.Location;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,7 +9,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Locale;
 
 import cmput301f17t09.goalsandhabits.R;
 
@@ -39,13 +42,18 @@ public class HabitEventArrayAdapter extends ArrayAdapter<HabitEvent> {
         if (h.getEncodedPhoto()!=null && !h.getEncodedPhoto().isEmpty()){
             image.setImageBitmap(ImageController.base64ToImage(h.getEncodedPhoto()));
         }
-        date.setText(h.getDate().toString());
+        SimpleDateFormat dateFormat = new SimpleDateFormat("EEE MMM dd", Locale.CANADA);
+        date.setText(dateFormat.format(h.getDate()));
         if (h.getComment()==null){
             comment.setVisibility(View.INVISIBLE);
         }else{
             comment.setText(h.getComment());
         }
-        location.setText("<<Location Here>>");
+        if(h.getLat()!=null && h.getLong() != null){
+            location.setText("("+ Location.convert(h.getLat(), Location.FORMAT_DEGREES)+","+Location.convert(h.getLong(), Location.FORMAT_DEGREES)+")");
+        }else{
+            location.setText("No Location Added");
+        }
 
         return convertView;
     }
