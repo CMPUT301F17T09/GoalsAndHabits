@@ -99,6 +99,9 @@ public class HabitHistoryActivity extends AppCompatActivity {
                     if (data.hasExtra(MainActivity.EXTRA_HABIT_NAME)){
                         habitEvent.setComment(data.getStringExtra(MainActivity.EXTRA_HABIT_NAME));
                     }
+                    if (data.hasExtra(MainActivity.EXTRA_HABIT_EVENT_PHOTO)){
+                        habitEvent.setEncodedPhoto(data.getStringExtra(MainActivity.EXTRA_HABIT_EVENT_PHOTO));
+                    }
                     habit.addHabitEvent(habitEvent);
                     habitEvent.setHabitType(habit.getTitle());
                     habitEventArrayAdapter.notifyDataSetChanged();

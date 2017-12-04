@@ -176,6 +176,10 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
                     if (data.hasExtra(MainActivity.EXTRA_HABIT_NAME)){
                         habitEvent.setComment(data.getStringExtra(MainActivity.EXTRA_HABIT_NAME));
                     }
+                    if (data.hasExtra(MainActivity.EXTRA_HABIT_EVENT_PHOTO)){
+                        habitEvent.setEncodedPhoto(data.getStringExtra(MainActivity.EXTRA_HABIT_EVENT_PHOTO));
+                        Log.i("Info","Added photo!");
+                    }
                     habit.addHabitEvent(habitEvent);
                     habitEvent.setHabitType(habit.getTitle());
                     refreshData();

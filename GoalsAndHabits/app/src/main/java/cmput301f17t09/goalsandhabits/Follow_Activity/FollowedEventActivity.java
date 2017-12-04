@@ -24,7 +24,6 @@ public class FollowedEventActivity extends AppCompatActivity {
     private static final int PERMISSION_REQUEST_CODE = 1;
     private HabitEvent event;
     private TextView comment;
-    private TextView statusText;
     private TextView eventdate;
     private Context context;
     private int position;
@@ -54,7 +53,6 @@ public class FollowedEventActivity extends AppCompatActivity {
         else{comment.setText(event.getComment());}
         eventdate = (TextView) findViewById(R.id.eventDate);
         eventdate.setText(dateFormat.format(event.getDate()));
-        statusText = (TextView) findViewById(R.id.trackPlan);
         toolbar = (Toolbar) findViewById(R.id.actionbar);
         toolbar.setTitle("Habit Event");
         toolbar.setNavigationIcon(R.drawable.ic_close_button);

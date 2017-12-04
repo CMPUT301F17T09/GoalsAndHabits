@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_HABIT_POSITION = "cmput301f17t09.goalsandhabits.HABIT_POSITION";
     public static final String EXTRA_HABIT_DELETED = "cmput301f17t09.goalsandhabits.HABIT_DELETED";
     public static final String EXTRA_PROFILE_SERIAL = "cmput301f17t09.goalsandhabits.PROFILE_SERIAL";
+    public static final String EXTRA_HABIT_EVENT_PHOTO = "cmput301f17t09.goalsandhabits.HABIT_EVENT_PHOTO";
 
     public static final String FILENAME = "data.sav";
 

@@ -5,6 +5,7 @@ import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.util.Base64;
 
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 
 /**
@@ -12,43 +13,55 @@ import java.io.ByteArrayOutputStream;
  */
 
 public class ImageController {
-    //public static class Compressor extends AsyncTask<Bitmap, Void, String> {
-    public static class Compressor extends AsyncTask<HabitEvent, Void, Void> {
-        private final int COMPRESSION_QUALITY = 100;
-        private String encodedImage;
-        ByteArrayOutputStream byteArrayBitmapStream = new ByteArrayOutputStream();
-
-        @Override
-        protected Void doInBackground(HabitEvent... habitEvents) {
-            for(HabitEvent he : habitEvents){
-                Bitmap photo = he.getDecodedPhoto();
-                he.setDecodedPhoto(null);
-                photo.compress(Bitmap.CompressFormat.PNG, COMPRESSION_QUALITY, byteArrayBitmapStream);
-                byte[] b = byteArrayBitmapStream.toByteArray();
-                encodedImage = Base64.encodeToString(b, Base64.DEFAULT);
-                he.setEncodedPhoto(encodedImage);
-            }
-            return null;
-        }
+    /**
+     * Convert an image to base64
+     * @param image the image to convert
+     * @return the image as a base64 string
+     */
+    public static String imageToBase64(Bitmap image){
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        // put image into the output stream
+        image.compress(Bitmap.CompressFormat.JPEG, 100, outputStream);
+        return Base64.encodeToString(outputStream.toByteArray(), Base64.DEFAULT);
     }
 
     /**
-     * Decompresses the image
+     * Convert a base64 string to an image
+     * @param base64 the string to decode
+     * @return the string as an image
      */
-    public static class Decompressor extends AsyncTask<String, Void, Bitmap>{
+    public static Bitmap base64ToImage(String base64){
+        byte[] data = Base64.decode(base64, Base64.DEFAULT);
+        ByteArrayInputStream is = new ByteArrayInputStream(data);
+        return BitmapFactory.decodeStream(is);
+    }
 
-        private Bitmap decodedByte;
+    /**
+     * Compress an image as much as possible until the size in bytes is no more than the specified amount
+     * @param image the image to compress
+     * @param maxBytes the maximum size of the image in bytes
+     * @return the compressed image if it was possible to get it to that size, or null otherwise
+     */
+    public static Bitmap compressImageToMax(Bitmap image, int maxBytes){
+        int oldSize = image.getByteCount();
 
-        // Code taken from: http://mobile.cs.fsu.edu/converting-images-to-json-objects/
-        @Override
-        protected Bitmap doInBackground(String... strings) {
-            for (String stringPicture : strings) {
-                byte[] decodedString = Base64.decode(stringPicture, Base64.DEFAULT);
+        // attempt to resize the image as much as possible while valid
+        while (image != null && image.getByteCount() > maxBytes){
 
-                decodedByte = BitmapFactory.decodeByteArray(decodedString,
-                        0, decodedString.length);
-            }
-            return decodedByte;
+            // Prevent image from becoming too small
+            if (image.getWidth() <= 20 || image.getHeight() <= 20)
+                return null;
+
+            // scale down the image by a factor of 2
+            image = Bitmap.createScaledBitmap(image, image.getWidth() / 2, image.getHeight() / 2, false);
+
+            // the byte count did not change for some reason, can not be made any smaller
+            if (image.getByteCount() == oldSize)
+                return null;
+
+            oldSize = image.getByteCount();
         }
+
+        return image;
     }
 }

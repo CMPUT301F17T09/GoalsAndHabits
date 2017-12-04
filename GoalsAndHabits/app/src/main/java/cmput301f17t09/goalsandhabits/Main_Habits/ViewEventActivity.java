@@ -1,14 +1,17 @@
 package cmput301f17t09.goalsandhabits.Main_Habits;
 
 import android.Manifest;
+import android.app.Dialog;
 import android.app.DialogFragment;
 import android.app.usage.UsageEvents;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
 import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -19,6 +22,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -51,9 +55,9 @@ import static cmput301f17t09.goalsandhabits.Main_Habits.MainActivity.FILENAME;
 
 public class ViewEventActivity extends AppCompatActivity implements EditHabitEventDialog.EditHabitEventDialogListener {
     private static final int PERMISSION_REQUEST_CODE = 1;
+    private static final int REQUEST_IMAGE_CAPTURE = 2;
     private HabitEvent event;
     private TextView comment;
-    private TextView statusText;
     private TextView eventdate;
     private Context context;
     private int position;
@@ -61,6 +65,8 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
     private boolean deleted = false;
     private SimpleDateFormat dateFormat = new SimpleDateFormat("EEE MMM dd");
     private Location currentLoc;
+    private ImageView image;
+    private Bitmap imageDisplay;
     private FusedLocationProviderClient mFusedLocationClient;
 
     @Override
@@ -75,26 +81,40 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
                 position = (int) extras.getSerializable(HabitHistoryActivity.EXTRA_EVENT_POSITION);
             }
         }
-        if (event==null) finish();
+        if (event==null){
+            finish();
+            return;
+        }
 
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
 
         comment = (TextView) findViewById(R.id.eventComment);
-        comment = (TextView) findViewById(R.id.eventComment);
-        if (comment == null){return;}
-        else{comment.setText(event.getComment());}
+        comment.setText(event.getComment());
+        image = (ImageView) findViewById(R.id.eventPhoto);
         eventdate = (TextView) findViewById(R.id.eventDate);
         eventdate.setText(dateFormat.format(event.getDate()));
-        statusText = (TextView) findViewById(R.id.trackPlan);
         toolbar = (Toolbar) findViewById(R.id.actionbar);
         toolbar.setTitle("Habit Event");
         toolbar.setNavigationIcon(R.drawable.ic_close_button);
         setSupportActionBar(toolbar);
 
-        comment.setText(event.getComment());
+        if (event.getEncodedPhoto()!=null){
+            imageDisplay = ImageController.base64ToImage(event.getEncodedPhoto());
+            image.setImageBitmap(imageDisplay);
+        }else{
+            imageDisplay = null;
+        }
 
+        image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dispatchTakePictureIntent();
+            }
+        });
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
@@ -203,6 +223,27 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
                             "Permission required", Toast.LENGTH_SHORT).show();
                 }
                 break;
+        }
+    }
+
+    //Adapted from https://developer.android.com/training/camera/photobasics.html
+    //Dec 4 2017
+    private void dispatchTakePictureIntent(){
+        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK){
+            Bundle extras = data.getExtras();
+            imageDisplay = (Bitmap) extras.get("data");
+            image.setImageBitmap(imageDisplay);
+            if (event!=null) {
+                event.setEncodedPhoto(ImageController.imageToBase64(imageDisplay));
+            }
         }
     }
 }

@@ -19,12 +19,9 @@ public class HabitEvent implements Serializable{
     private String photoPath;
     private Date date;
     private String encodedPhoto;                // compressed string representation of the photo
-    private Bitmap decodedPhoto;
-    //private Location location;
     private Double Lat;
     private Double Long;
     private String habitType;
-    private Bitmap photo;
 
     public HabitEvent(Date date){
         setDate(date);
@@ -64,14 +61,6 @@ public class HabitEvent implements Serializable{
 
     public void setEncodedPhoto(String encodedPhoto) {
         this.encodedPhoto = encodedPhoto;
-    }
-
-    public Bitmap getDecodedPhoto() {
-        return decodedPhoto;
-    }
-
-    public void setDecodedPhoto(Bitmap decodedPhoto) {
-        this.decodedPhoto = decodedPhoto;
     }
 
     public void setComment(String comment){

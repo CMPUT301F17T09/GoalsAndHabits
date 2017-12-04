@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -34,6 +35,10 @@ public class HabitEventArrayAdapter extends ArrayAdapter<HabitEvent> {
         TextView date = (TextView) convertView.findViewById(R.id.eventDate);
         TextView comment = (TextView) convertView.findViewById(R.id.eventComment);
         TextView location = (TextView) convertView.findViewById(R.id.eventLocation);
+        ImageView image = (ImageView) convertView.findViewById(R.id.eventPhoto);
+        if (h.getEncodedPhoto()!=null && !h.getEncodedPhoto().isEmpty()){
+            image.setImageBitmap(ImageController.base64ToImage(h.getEncodedPhoto()));
+        }
         date.setText(h.getDate().toString());
         if (h.getComment()==null){
             comment.setVisibility(View.INVISIBLE);
