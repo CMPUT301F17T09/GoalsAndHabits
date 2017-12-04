@@ -16,11 +16,19 @@ import java.util.ArrayList;
 import cmput301f17t09.goalsandhabits.Main_Habits.HabitEvent;
 import cmput301f17t09.goalsandhabits.R;
 
+/**
+ * This activity displays a map showing locations of habit events that are passed to this activity
+ */
 public class MyHabitsMapActivity extends AppCompatActivity implements OnMapReadyCallback{
     private MapView map;
     private GoogleMap gmap;
     private ArrayList<HabitEvent> events;
 
+
+    /**
+     * Called on activity start. Generates layout and button functionality.
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,22 +48,33 @@ public class MyHabitsMapActivity extends AppCompatActivity implements OnMapReady
         map.getMapAsync(this);
     }
 
+    /**
+     * Adds a marker for each event with a location.
+     * @param map
+     */
     private void addAllMarkers(GoogleMap map){
         for (HabitEvent e:events){
             if ((e.getLat()!=null && e.getLong()!=null) && (e.getLat()!=0 && e.getLong()!=0)){
                 map.addMarker(new MarkerOptions()
                         .position(new LatLng(e.getLat(), e.getLong()))
-                        .title("My Event"));
+                        .title(e.getHabitType()));
             }
         }
     }
 
+    /**
+     * Retrieves map object once synced
+     * @param googleMap
+     */
     @Override
     public void onMapReady(GoogleMap googleMap) {
         gmap = googleMap;
         addAllMarkers(gmap);
     }
 
+    /**
+     * Lifecycle method for mapview
+     */
     @Override
     public final void onDestroy()
     {
@@ -63,6 +82,9 @@ public class MyHabitsMapActivity extends AppCompatActivity implements OnMapReady
         super.onDestroy();
     }
 
+    /**
+     * Lifecycle method for mapview
+     */
     @Override
     public final void onLowMemory()
     {
@@ -70,6 +92,9 @@ public class MyHabitsMapActivity extends AppCompatActivity implements OnMapReady
         super.onLowMemory();
     }
 
+    /**
+     * Lifecycle method for mapview
+     */
     @Override
     public final void onPause()
     {
@@ -77,6 +102,9 @@ public class MyHabitsMapActivity extends AppCompatActivity implements OnMapReady
         super.onPause();
     }
 
+    /**
+     * Lifecycle method for mapview
+     */
     @Override
     protected void onResume()
     {

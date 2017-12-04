@@ -100,6 +100,7 @@ public class HabitHistoryActivity extends AppCompatActivity {
                         habitEvent.setComment(data.getStringExtra(MainActivity.EXTRA_HABIT_NAME));
                     }
                     habit.addHabitEvent(habitEvent);
+                    habitEvent.setHabitType(habit.getTitle());
                     habitEventArrayAdapter.notifyDataSetChanged();
                 }
                 case REQUEST_CODE_VIEW_EVENT:{

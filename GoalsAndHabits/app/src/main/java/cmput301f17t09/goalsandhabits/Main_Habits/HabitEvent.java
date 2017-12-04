@@ -23,7 +23,9 @@ public class HabitEvent implements Serializable{
     //private Location location;
     private Double Lat;
     private Double Long;
+    private String habitType;
     private Bitmap photo;
+
     public HabitEvent(Date date){
         setDate(date);
     }
@@ -31,6 +33,14 @@ public class HabitEvent implements Serializable{
     public HabitEvent(Date date, String comment){
         setDate(date);
         setComment(comment);
+    }
+
+    public String getHabitType() {
+        return habitType;
+    }
+
+    public void setHabitType(String habitType) {
+        this.habitType = habitType;
     }
 
     public Date getDate() {

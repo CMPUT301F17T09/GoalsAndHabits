@@ -167,7 +167,7 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
                     .addOnSuccessListener(this, new OnSuccessListener<Location>() {
                         @Override
                         public void onSuccess(Location location) {
-                                // Got last known location. In some rare situations this can be null.
+                            // Got last known location. In some rare situations this can be null.
                             if (location != null) {
                                 currentLoc = location;
                             }

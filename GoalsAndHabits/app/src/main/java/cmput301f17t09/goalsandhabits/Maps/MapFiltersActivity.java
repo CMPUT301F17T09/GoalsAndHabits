@@ -55,7 +55,8 @@ import cmput301f17t09.goalsandhabits.R;
 
 
 /**
- * This activity allows users to view habit events based on their locations, and can be filtered.
+ * This activity allows users to view habit events from themselves and followed profiles on a map.
+ * They can choose to display all locations or simply the ones within 5km of their current location.
  */
 public class MapFiltersActivity extends AppCompatActivity implements OnMapReadyCallback, GoogleMap.OnMyLocationButtonClickListener {
 
@@ -65,6 +66,7 @@ public class MapFiltersActivity extends AppCompatActivity implements OnMapReadyC
     private FusedLocationProviderClient mFusedLocationClient;
     private Location currentLoc;
     private ArrayList<Habit> habits;
+    private ArrayList<Habit> followedhabits;
     private ArrayList<HabitEvent> events;
     private Profile profile;
     public static final int REQUEST_CODE_SIGNUP = 6;
@@ -72,7 +74,10 @@ public class MapFiltersActivity extends AppCompatActivity implements OnMapReadyC
     public static final String MY_PREFERENCES = "my_preferences";
 
 
-
+    /**
+     * Called on activity start. Generates layout and button functionality.
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setTitle("MapFiltersActivity");
@@ -141,6 +146,11 @@ public class MapFiltersActivity extends AppCompatActivity implements OnMapReadyC
         });
     }
 
+    /**
+     * Creates menu functionality.
+     * @param menu
+     * @return
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.menu_nearby_events, menu);
@@ -162,6 +172,10 @@ public class MapFiltersActivity extends AppCompatActivity implements OnMapReadyC
         return super.onCreateOptionsMenu(menu);
     }
 
+    /**
+     * Checks to see if this app has permission to use the device's current location
+     * @return True if permitted, False otherwise
+     */
     private Boolean checkLocationPermission(){
         int result = ContextCompat.checkSelfPermission(MapFiltersActivity.this, Manifest.permission.ACCESS_FINE_LOCATION);
         if (result == PackageManager.PERMISSION_GRANTED) {
@@ -171,10 +185,19 @@ public class MapFiltersActivity extends AppCompatActivity implements OnMapReadyC
         }
     }
 
+    /**
+     * Calls permission dialog for fine location permission
+     */
     private void requestPermission() {
         ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, PERMISSION_REQUEST_CODE);
     }
 
+    /**
+     * Handles the result of the permission request dialog
+     * @param requestCode
+     * @param permissions
+     * @param grantResults
+     */
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
         switch (requestCode) {
@@ -190,11 +213,17 @@ public class MapFiltersActivity extends AppCompatActivity implements OnMapReadyC
         }
     }
 
-    //Add markers for events within 5km
+    /**
+     * Add markers for all habit events within 5km
+     * Followed events have a 50% opacity
+     * @param map
+     */
     private void addNearbyMarkers(GoogleMap map) {
+        Toast.makeText(MapFiltersActivity.this, "Displaying nearby events", Toast.LENGTH_SHORT).show();
         if (currentLoc!=null) {
             map.clear();
             loadData();
+
             for (Habit h : habits) {
                 events = h.getEvents();
                 for (HabitEvent e : events) {
@@ -207,11 +236,37 @@ public class MapFiltersActivity extends AppCompatActivity implements OnMapReadyC
                     }
                 }
             }
+
+            followedhabits = new ArrayList<>();
+            ArrayList<Profile> followees = profile.getUsersFollowed();
+            if (followees != null){
+                for (Profile p: followees) {
+                    loadData(p);
+                }
+                for (Habit h: followedhabits) {
+                    events = h.getEvents();
+                    for (HabitEvent e : events) {
+                        if ((e.getLat() != null && e.getLong() != null) && (e.getLat() != 0 && e.getLong() != 0)) {
+                            if (currentLoc.distanceTo(e.getLocation()) <= 5000) {
+                                map.addMarker(new MarkerOptions()
+                                        .position(new LatLng(e.getLat(), e.getLong()))
+                                        .title(h.getTitle()))
+                                        .setAlpha(0.5f);
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
-    //Add markers for all locations
+    /**
+     * Adds markers for all events
+     * Followed events have 50% opacity
+     * @param map
+     */
     private void addAllMarkers(GoogleMap map) {
+        Toast.makeText(MapFiltersActivity.this, "Displaying all events", Toast.LENGTH_SHORT).show();
         map.clear();
         loadData();
         for (Habit h:habits){
@@ -224,9 +279,32 @@ public class MapFiltersActivity extends AppCompatActivity implements OnMapReadyC
                 }
             }
         }
-        //TODO: add markers for followed events
+
+        followedhabits = new ArrayList<>();
+        ArrayList<Profile> followees = profile.getUsersFollowed();
+        if (followees != null){
+            for (Profile p: followees) {
+                loadData(p);
+            }
+            for (Habit h: followedhabits) {
+                events = h.getEvents();
+                for (HabitEvent e : events) {
+                    if ((e.getLat() != null && e.getLong() != null) && (e.getLat() != 0 && e.getLong() != 0)) {
+                        map.addMarker(new MarkerOptions()
+                                .position(new LatLng(e.getLat(), e.getLong()))
+                                .title(h.getTitle()))
+                                .setAlpha(0.5f);
+
+                    }
+                }
+            }
+        }
     }
 
+    /**
+     * Retrieves map object after syncing. Sets Location if permitted.
+     * @param map
+     */
     @Override
     public void onMapReady(GoogleMap map) {
         gmap = map;
@@ -242,14 +320,15 @@ public class MapFiltersActivity extends AppCompatActivity implements OnMapReadyC
     }
 
     /**
-     * May or may need to include the following methods
-     * Apparently you need to use these if using a map view instead of a fragment
-     * But some are optional
+     * Following 4 methods are included because we make use of a mapview
      * See: https://developers.google.com/maps/documentation/android-api/map
      * and https://developers.google.com/maps/documentation/android-api/lite#lifecycle
      * and https://stackoverflow.com/questions/28227127/cant-get-map-with-google-maps-v2-mapview
      */
 
+    /**
+     * Lifecycle method for map view
+     */
     @Override
     public final void onDestroy()
     {
@@ -257,6 +336,9 @@ public class MapFiltersActivity extends AppCompatActivity implements OnMapReadyC
         super.onDestroy();
     }
 
+    /**
+     * Lifecycle method for map view
+     */
     @Override
     public final void onLowMemory()
     {
@@ -264,6 +346,9 @@ public class MapFiltersActivity extends AppCompatActivity implements OnMapReadyC
         super.onLowMemory();
     }
 
+    /**
+     * Lifecycle method for map view
+     */
     @Override
     public final void onPause()
     {
@@ -271,6 +356,9 @@ public class MapFiltersActivity extends AppCompatActivity implements OnMapReadyC
         super.onPause();
     }
 
+    /**
+     * Lifecycle method for map view
+     */
     @Override
     protected void onResume()
     {
@@ -278,9 +366,12 @@ public class MapFiltersActivity extends AppCompatActivity implements OnMapReadyC
         map.onResume();
     }
 
+    /**
+     * Handles click of location button on map. Sets current location.
+     * @return
+     */
     @Override
     public boolean onMyLocationButtonClick() {
-        //shouldn't be necessary but following method is complaining
         if (Build.VERSION.SDK_INT >= 23) {
             if (checkLocationPermission()){
                 mFusedLocationClient.getLastLocation()
@@ -301,6 +392,10 @@ public class MapFiltersActivity extends AppCompatActivity implements OnMapReadyC
     }
 
 
+    /**
+     * Checks to see if a network connection is available
+     * @return True if available, false otherwise
+     */
     //adapted from https://stackoverflow.com/questions/4238921/detect-whether-there-is-an-internet-connection-available-on-android
     //as of Nov 25, 2017
     private boolean isNetworkAvailable() {
@@ -310,6 +405,9 @@ public class MapFiltersActivity extends AppCompatActivity implements OnMapReadyC
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 
+    /**
+     * Loads personal habit information
+     */
     private void loadData(){
         habits = new ArrayList<>();
         if (isNetworkAvailable()) {
@@ -357,6 +455,9 @@ public class MapFiltersActivity extends AppCompatActivity implements OnMapReadyC
         }
     }
 
+    /**
+     * Gets profile information from elasticsearch
+     */
     private void getProfile(){
         Context context = MapFiltersActivity.this;
         final SharedPreferences reader = context.getSharedPreferences(MY_PREFERENCES,Context.MODE_PRIVATE);
@@ -372,5 +473,40 @@ public class MapFiltersActivity extends AppCompatActivity implements OnMapReadyC
             startActivityForResult(intent, REQUEST_CODE_SIGNUP);
         }
 
+    }
+
+    /**
+     * Loads followed profile information
+     * @param p a followed profile
+     */
+    private void loadData(Profile p){
+        //habitsFollowed = new ArrayList<>();
+        if (isNetworkAvailable() && p != null){
+            ElasticSearchController.GetProfileTask getProfileTask
+                    = new ElasticSearchController.GetProfileTask();
+            getProfileTask.execute(p.getUserId());
+            try {
+                p = getProfileTask.get();
+            } catch (Exception e) {
+                Log.i("Error", "Failed to get profiles with id " + p.getUserId() + " from async object");
+            }
+            //Now load the habits from the elasticsearch server:
+            ArrayList<Habit> onlineHabits = new ArrayList<>();
+            if (p.getHabitIds()!=null){
+                Log.i("Info", "Fetching habits for profile id " + p.getUserId());
+                ElasticSearchController.GetHabitsTask getHabitsTask
+                        = new ElasticSearchController.GetHabitsTask();
+                ArrayList<String> ids = p.getHabitIds();
+                Log.i("Info",ids.toString());
+                getHabitsTask.execute(ids.toArray(new String[ids.size()]));
+                try {
+                    onlineHabits = getHabitsTask.get();
+                } catch (Exception e) {
+                    Log.i("Error", "ElasticSearch failed to find habits for profile with id " + p.getUserId());
+                }
+            }
+            followedhabits.addAll(onlineHabits);
+            Log.i("Info","Total habits: " + followedhabits.size());
+        }
     }
 }

@@ -166,12 +166,14 @@ public class MainActivity extends AppCompatActivity {
 
                     Habit habit = new Habit(name, reason, startdate);
                     habit.setSchedule(schedule);
+                    habit.setProfile(profile.getUsername());
                     UUID uuid = UUID.randomUUID();
                     habit.setId(uuid.toString());
                     profile.addHabitId(habit.getId());
 
                     habits.add(habit);
                     habitArrayAdapter.notifyDataSetChanged();
+                    saveData();
 
                     Toast.makeText(this, "Habit " + name + " created!", Toast.LENGTH_SHORT).show();
                     break;

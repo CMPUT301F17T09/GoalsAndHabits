@@ -47,7 +47,7 @@ public class MyHabitHistory extends AppCompatActivity implements FilterDialog.Fi
     public static final int REQUEST_CODE_SIGNUP = 6;
 
     public static final String MY_PREFERENCES = "my_preferences";
-    private HabitEventArrayAdapter habitEventArrayAdapter;
+    private MyEventsArrayAdapter myEventsArrayAdapter;
     private ListView habitEventsList;
     private ArrayList<Habit> habits;
     private ArrayList<HabitEvent> events;
@@ -70,15 +70,14 @@ public class MyHabitHistory extends AppCompatActivity implements FilterDialog.Fi
 
         habitEventsList = (ListView) findViewById(R.id.myHabitEventList);
         loadData();
-        //TODO: For each habit, add all events to array adapter
-        //TODO: check for existence of at least 1 habit and at least 1 habit event
-        if (!habits.isEmpty()) {habitEventArrayAdapter = new HabitEventArrayAdapter(this,new ArrayList<HabitEvent>());}
+        if (!habits.isEmpty()) {myEventsArrayAdapter = new MyEventsArrayAdapter(this,new ArrayList<HabitEvent>());}
 
-        if (habits.size()>1) {
+        if (habits.size()>0) {
             for (int i=0;i<habits.size();i++) {
-                habitEventArrayAdapter.addAll(habits.get(i).getEvents());
+                myEventsArrayAdapter.addAll(habits.get(i).getEvents());
+                Log.i("Info", "Adding events");
             }
-            if (habitEventArrayAdapter.isEmpty()) {
+            if (myEventsArrayAdapter.isEmpty()) {
                 Log.i("Error", "Failed to load events: habit events list is null!");
             }
         }
@@ -88,9 +87,10 @@ public class MyHabitHistory extends AppCompatActivity implements FilterDialog.Fi
                 return -h1.getDate().compareTo(h2.getDate());
             }
         };
-        if (!((habitEventArrayAdapter ==  null)) && !(habitEventArrayAdapter.isEmpty())) {
-            habitEventArrayAdapter.sort(dateCompare);
-            habitEventsList.setAdapter(habitEventArrayAdapter);
+        if (!((myEventsArrayAdapter ==  null)) && !(myEventsArrayAdapter.isEmpty())) {
+            Log.i("Info", "Sorting");
+            myEventsArrayAdapter.sort(dateCompare);
+            habitEventsList.setAdapter(myEventsArrayAdapter);
         }
         else {
             Toast.makeText(MyHabitHistory.this,"No habit events to display!", Toast.LENGTH_SHORT).show();
@@ -129,8 +129,8 @@ public class MyHabitHistory extends AppCompatActivity implements FilterDialog.Fi
                 Intent showmap = new Intent(MyHabitHistory.this,MyHabitsMapActivity.class);
                 ArrayList<HabitEvent> elist = new ArrayList<>();
                 //Workaround because there is no persistent event list
-                for (int i=0; i<habitEventArrayAdapter.getCount(); i++){
-                    elist.add(habitEventArrayAdapter.getItem(i));
+                for (int i=0; i<myEventsArrayAdapter.getCount(); i++){
+                    elist.add(myEventsArrayAdapter.getItem(i));
                 }
                 showmap.putExtra("event list", elist);
 
@@ -167,24 +167,24 @@ public class MyHabitHistory extends AppCompatActivity implements FilterDialog.Fi
             if (commentSearch.equals("*")) {
                 commentSearch=".*";
             }
-            habitEventArrayAdapter.clear();
+            myEventsArrayAdapter.clear();
             for (Habit h : habits) {
                 if (!(habitType.equals("")) && h.getTitle().matches("(?i)(" + habitType + ")")) {
                     if (!(commentSearch.equals("")) && !(h.getEvents().isEmpty())) {
                         for (HabitEvent e: h.getEvents()) {
                             if((e.getComment()!=null) && e.getComment().matches("(?i)(.*?"+commentSearch+".*)")) {
-                                habitEventArrayAdapter.add(e);
+                                myEventsArrayAdapter.add(e);
                             }
                         }
                     }
                     else {
-                        habitEventArrayAdapter.addAll(h.getEvents());
+                        myEventsArrayAdapter.addAll(h.getEvents());
                     }
                 }
                 else if(!(commentSearch.equals("")) && habitType.equals("")) {
                     for (HabitEvent e: h.getEvents()) {
                         if ((e.getComment()!=null) && e.getComment().matches("(?i)(.*?"+commentSearch+".*)")) {
-                            habitEventArrayAdapter.add(e);
+                            myEventsArrayAdapter.add(e);
                         }
                     }
                 }
@@ -195,9 +195,9 @@ public class MyHabitHistory extends AppCompatActivity implements FilterDialog.Fi
                     return -h1.getDate().compareTo(h2.getDate());
                 }
             };
-            if (!((habitEventArrayAdapter ==  null)) && !(habitEventArrayAdapter.isEmpty())) {
-                habitEventArrayAdapter.sort(dateCompare);
-                habitEventsList.setAdapter(habitEventArrayAdapter);
+            if (!((myEventsArrayAdapter ==  null)) && !(myEventsArrayAdapter.isEmpty())) {
+                myEventsArrayAdapter.sort(dateCompare);
+                habitEventsList.setAdapter(myEventsArrayAdapter);
             }
             else {
                 Toast.makeText(MyHabitHistory.this,"No habit events matched!", Toast.LENGTH_SHORT).show();
