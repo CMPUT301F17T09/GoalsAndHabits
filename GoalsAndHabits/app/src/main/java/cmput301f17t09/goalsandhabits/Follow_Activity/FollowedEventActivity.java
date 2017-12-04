@@ -46,7 +46,6 @@ public class FollowedEventActivity extends AppCompatActivity {
             finish();
         }
 
-        //mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_habit_events);
         comment = (TextView) findViewById(R.id.eventComment);

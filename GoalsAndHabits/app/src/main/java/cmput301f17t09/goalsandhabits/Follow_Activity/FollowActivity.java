@@ -46,7 +46,6 @@ import static cmput301f17t09.goalsandhabits.Main_Habits.MainActivity.MY_PREFEREN
 
 public class FollowActivity extends AppCompatActivity implements UserSearchDialog.UserSearchDialogListener {
 
-
     public static final int REQUEST_CODE_VIEW_EVENT = 7;
     public static final String EXTRA_EVENT_SERIAL = "cmput301f17t09.goalsandhabits.EVENT_SERIAL";
 
@@ -157,7 +156,6 @@ public class FollowActivity extends AppCompatActivity implements UserSearchDialo
                     else {
                         Toast.makeText(FollowActivity.this,"This habit has no events!",Toast.LENGTH_SHORT).show();
                     }
-
 
                 }
             });
