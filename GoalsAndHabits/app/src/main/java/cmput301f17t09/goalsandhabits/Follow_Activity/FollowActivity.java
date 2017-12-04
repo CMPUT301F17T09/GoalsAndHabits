@@ -127,7 +127,8 @@ public class FollowActivity extends AppCompatActivity implements UserSearchDialo
             followList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     setResult(RESULT_OK);
-                    //Intent showEvent = new Intent(FollowActivity.this, FollowedEventActivity.class)
+                    Intent showEvent = new Intent(FollowActivity.this, FollowedEventActivity.class);
+                    //showEvent.putExtra()
                 }
             });
         }
