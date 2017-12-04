@@ -25,6 +25,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -505,6 +506,17 @@ public class MapFiltersActivity extends AppCompatActivity implements OnMapReadyC
             }
             followedhabits.addAll(onlineHabits);
             Log.i("Info","Total habits: " + followedhabits.size());
+        }
+    }
+    public void onZoom(View view)
+    {
+        if(view.getId() == R.id.Bzoomin)
+        {
+            gmap.animateCamera(CameraUpdateFactory.zoomIn());
+        }
+        if(view.getId() == R.id.Bzoomout)
+        {
+            gmap.animateCamera(CameraUpdateFactory.zoomOut());
         }
     }
 }
