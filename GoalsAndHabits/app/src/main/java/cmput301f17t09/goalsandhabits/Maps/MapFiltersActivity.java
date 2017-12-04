@@ -47,6 +47,7 @@ import cmput301f17t09.goalsandhabits.Follow_Activity.FollowActivity;
 import cmput301f17t09.goalsandhabits.Main_Habits.Habit;
 import cmput301f17t09.goalsandhabits.Main_Habits.HabitEvent;
 import cmput301f17t09.goalsandhabits.Main_Habits.MainActivity;
+import cmput301f17t09.goalsandhabits.Main_Habits.Util;
 import cmput301f17t09.goalsandhabits.Profiles.MyHabitHistory;
 import cmput301f17t09.goalsandhabits.Profiles.NewProfileActivity;
 import cmput301f17t09.goalsandhabits.Profiles.Profile;
@@ -83,6 +84,15 @@ public class MapFiltersActivity extends AppCompatActivity implements OnMapReadyC
         setTitle("MapFiltersActivity");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map_filters);
+
+        if (!Util.isNetworkAvailable(MapFiltersActivity.this)){
+            Toast.makeText(MapFiltersActivity.this,"You need an internet connection for that!",Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(MapFiltersActivity.this,MainActivity.class);
+            finish();
+            startActivity(intent);
+            return;
+        }
+
         getProfile();
         loadData();
 
@@ -332,7 +342,9 @@ public class MapFiltersActivity extends AppCompatActivity implements OnMapReadyC
     @Override
     public final void onDestroy()
     {
-        map.onDestroy();
+        if (map!=null) {
+            map.onDestroy();
+        }
         super.onDestroy();
     }
 
@@ -391,26 +403,12 @@ public class MapFiltersActivity extends AppCompatActivity implements OnMapReadyC
         return false;
     }
 
-
-    /**
-     * Checks to see if a network connection is available
-     * @return True if available, false otherwise
-     */
-    //adapted from https://stackoverflow.com/questions/4238921/detect-whether-there-is-an-internet-connection-available-on-android
-    //as of Nov 25, 2017
-    private boolean isNetworkAvailable() {
-        ConnectivityManager connectivityManager
-                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
-        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
-    }
-
     /**
      * Loads personal habit information
      */
     private void loadData(){
         habits = new ArrayList<>();
-        if (isNetworkAvailable()) {
+        if (Util.isNetworkAvailable(MapFiltersActivity.this)) {
             if (profile == null) {
                 Log.i("Error", "Failed to load habits: profile is null!");
                 return;
@@ -481,7 +479,7 @@ public class MapFiltersActivity extends AppCompatActivity implements OnMapReadyC
      */
     private void loadData(Profile p){
         //habitsFollowed = new ArrayList<>();
-        if (isNetworkAvailable() && p != null){
+        if (Util.isNetworkAvailable(MapFiltersActivity.this) && p != null){
             ElasticSearchController.GetProfileTask getProfileTask
                     = new ElasticSearchController.GetProfileTask();
             getProfileTask.execute(p.getUserId());

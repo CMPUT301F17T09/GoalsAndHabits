@@ -36,6 +36,7 @@ import cmput301f17t09.goalsandhabits.ElasticSearch.ElasticSearchController;
 import cmput301f17t09.goalsandhabits.Main_Habits.Habit;
 import cmput301f17t09.goalsandhabits.Main_Habits.HabitEvent;
 import cmput301f17t09.goalsandhabits.Main_Habits.MainActivity;
+import cmput301f17t09.goalsandhabits.Main_Habits.Util;
 import cmput301f17t09.goalsandhabits.Maps.MapFiltersActivity;
 import cmput301f17t09.goalsandhabits.Profiles.FollowerRequestsActivity;
 import cmput301f17t09.goalsandhabits.Profiles.Profile;
@@ -64,6 +65,14 @@ public class FollowActivity extends AppCompatActivity implements UserSearchDialo
         Toolbar toolbar = (Toolbar) findViewById(R.id.actionbar);
         toolbar.setTitle("Activity Feed");
         setSupportActionBar(toolbar);
+
+        if (!Util.isNetworkAvailable(FollowActivity.this)){
+            Toast.makeText(FollowActivity.this,"You need an internet connection for that!",Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(FollowActivity.this,MainActivity.class);
+            finish();
+            startActivity(intent);
+            return;
+        }
 
         Toolbar nav_tb = (Toolbar) findViewById(R.id.toolbar_nav);
         nav_tb.setContentInsetsAbsolute(0,0);
@@ -104,7 +113,7 @@ public class FollowActivity extends AppCompatActivity implements UserSearchDialo
         });
 
 
-        if (!isNetworkAvailable()) {
+        if (!Util.isNetworkAvailable(FollowActivity.this)) {
             Toast.makeText(FollowActivity.this,"Connect to see activity!", Toast.LENGTH_SHORT).show();
         }
         else {
@@ -205,15 +214,9 @@ public class FollowActivity extends AppCompatActivity implements UserSearchDialo
         }
 
     }
-    private boolean isNetworkAvailable() {
-        ConnectivityManager connectivityManager
-                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
-        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
-    }
     private void loadData(Profile p){
         //habitsFollowed = new ArrayList<>();
-        if (isNetworkAvailable() && p != null){
+        if (Util.isNetworkAvailable(FollowActivity.this) && p != null){
             ElasticSearchController.GetProfileTask getProfileTask
                     = new ElasticSearchController.GetProfileTask();
             getProfileTask.execute(p.getUserId());

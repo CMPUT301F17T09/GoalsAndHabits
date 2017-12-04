@@ -224,7 +224,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void loadData(){
         habits = new ArrayList<>();
-        if (isNetworkAvailable() && profile != null){
+        if (Util.isNetworkAvailable(MainActivity.this) && profile != null){
             //Load local files first:
             ArrayList<String> offlineIds = new ArrayList<>();
             try {
@@ -360,7 +360,7 @@ public class MainActivity extends AppCompatActivity {
         //adapted from https://stackoverflow.com/questions/7238532/how-to-launch-activity-only-once-when-app-is-opened-for-first-time
         //as of Nov 13, 2017
         if (first) {
-            if (!isNetworkAvailable()){
+            if (!Util.isNetworkAvailable(MainActivity.this)){
                 Intent intent = new Intent(MainActivity.this, NoNetworkConnectionActivity.class);
                 startActivity(intent);
                 finish();
@@ -391,16 +391,6 @@ public class MainActivity extends AppCompatActivity {
 
         }
         editor.commit();
-    }
-
-
-    //adapted from https://stackoverflow.com/questions/4238921/detect-whether-there-is-an-internet-connection-available-on-android
-    //as of Nov 25, 2017
-    private boolean isNetworkAvailable() {
-        ConnectivityManager connectivityManager
-                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
-        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 
 }
