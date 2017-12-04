@@ -27,10 +27,14 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Date;
 import java.util.List;
 
 import cmput301f17t09.goalsandhabits.ElasticSearch.ElasticSearchController;
 import cmput301f17t09.goalsandhabits.Main_Habits.Habit;
+import cmput301f17t09.goalsandhabits.Main_Habits.HabitEvent;
 import cmput301f17t09.goalsandhabits.Main_Habits.MainActivity;
 import cmput301f17t09.goalsandhabits.Maps.MapFiltersActivity;
 import cmput301f17t09.goalsandhabits.Profiles.FollowerRequestsActivity;
@@ -41,6 +45,10 @@ import cmput301f17t09.goalsandhabits.R;
 import static cmput301f17t09.goalsandhabits.Main_Habits.MainActivity.MY_PREFERENCES;
 
 public class FollowActivity extends AppCompatActivity implements UserSearchDialog.UserSearchDialogListener {
+
+
+    public static final int REQUEST_CODE_VIEW_EVENT = 7;
+    public static final String EXTRA_EVENT_SERIAL = "cmput301f17t09.goalsandhabits.EVENT_SERIAL";
 
     private FollowedHabitsArrayAdapter usersFollowed;
     private ArrayList<Profile> followees;
@@ -127,8 +135,30 @@ public class FollowActivity extends AppCompatActivity implements UserSearchDialo
             followList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     setResult(RESULT_OK);
-                    Intent showEvent = new Intent(FollowActivity.this, FollowedEventActivity.class);
-                    //showEvent.putExtra()
+                    Intent showEvent = new Intent(FollowActivity.this, FollowedEventActivity.class);Habit habit = habitsFollowed.get(position);
+                    ArrayList<HabitEvent> events = new ArrayList<HabitEvent>();
+                    events.addAll(habit.getEvents());
+                    Comparator<? super HabitEvent> dateCompare = new Comparator<HabitEvent>() {
+                        @Override
+                        public int compare(HabitEvent h1, HabitEvent h2) {
+                            return -h1.getDate().compareTo(h2.getDate());
+                        }
+                    };
+                    Collections.sort(events,dateCompare);
+                    if (events.size()>0) {
+                        HabitEvent mostRecent = events.get(0);
+
+                        if (mostRecent != null) {
+//                        Log.i("Info")
+                            showEvent.putExtra(EXTRA_EVENT_SERIAL, mostRecent);
+                            startActivity(showEvent);
+                        }
+                    }
+                    else {
+                        Toast.makeText(FollowActivity.this,"This habit has no events!",Toast.LENGTH_SHORT).show();
+                    }
+
+
                 }
             });
         }
