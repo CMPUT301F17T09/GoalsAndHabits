@@ -21,7 +21,7 @@ public class Util {
      */
     public static int getDaysBetweenDates(Date before, Date after){
         long dif = (after.getTime() - before.getTime());
-        return (int) (dif / (1000*60*60*24));
+        return (int) (dif / (1000*60*60*24)) + 1;
     }
 
     //adapted from https://stackoverflow.com/questions/4238921/detect-whether-there-is-an-internet-connection-available-on-android
