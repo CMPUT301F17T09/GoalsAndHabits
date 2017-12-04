@@ -25,6 +25,13 @@ public class Util {
 
     //adapted from https://stackoverflow.com/questions/4238921/detect-whether-there-is-an-internet-connection-available-on-android
     //as of Nov 25, 2017
+    /**
+     * Gets the status of the network.
+     * Note: adapted from https://stackoverflow.com/questions/4238921/detect-whether-there-is-an-internet-connection-available-on-android
+     * as of Nov 25, 2017
+     * @param context the activity context calling the method.
+     * @return false if no connection, true if there is a connection.
+     */
     public static boolean isNetworkAvailable(Context context) {
         ConnectivityManager connectivityManager
                 = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);

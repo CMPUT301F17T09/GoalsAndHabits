@@ -140,6 +140,13 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Handle callbacks from other activities such as when
+     * creating a new habit, viewing a habit, or signing up.
+     * @param requestCode The request code used in the activity intent
+     * @param resultCode The result of the activity
+     * @param data Any attached data
+     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
         if (resultCode == RESULT_OK){
@@ -215,6 +222,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Save the data when the app is closed.
+     */
     @Override
     protected void onStop(){
         saveData();
@@ -222,6 +232,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    /**
+     * Loads habits. If there is a network connection, this method first
+     * loads the locally stored habits then, if there are any OTHER habits
+     * stored on the elasticsearch server, it loads them. In this way local
+     * habit modifications take precedence over online ones.
+     * If there is NO network connection, load both the habits AND the profile from
+     * local storage.
+     */
     private void loadData(){
         habits = new ArrayList<>();
         if (Util.isNetworkAvailable(MainActivity.this) && profile != null){
@@ -321,6 +339,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Saves the habits and profile to local storage, as well
+     * as attempting to save the data to the elasticsearch server.
+     */
     private void saveData(){
         if (habits.size()>0) {
             ElasticSearchController.AddHabitsTask addHabitsTask
@@ -351,6 +373,14 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Attempts to retrieve the user's profile in 3 ways:
+     * 1: If this is the first time running (ie no locally saved profile exists):
+     * Check for an internet connection, if there is one, go to the signup activity.
+     * Otherwise, notify the user they need a network connection for first run.
+     * 2: If this isn't the first time, attempt to load the profile that was last used.
+     * 3: If that should fail, go to the signup activity.
+     */
     private void getProfile(){
         Context context = MainActivity.this;
         final SharedPreferences reader = context.getSharedPreferences(MY_PREFERENCES,Context.MODE_PRIVATE);

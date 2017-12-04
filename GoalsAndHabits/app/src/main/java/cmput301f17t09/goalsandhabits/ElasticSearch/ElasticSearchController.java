@@ -26,17 +26,20 @@ import io.searchbox.core.SearchResult;
 
 /**
  * Created by Andrew on 11/23/2017.
+ *
+ * This class handles communication with the elasticsearch server
+ * where profiles and habits are stored.
  */
-
 public class ElasticSearchController {
-    public static final String appESURL = "http://cmput301.softwareprocess.es:8080/";
-    public static final String appESIndex = "cmput301f17t09_goalsandhabits";
+    private static final String appESURL = "http://cmput301.softwareprocess.es:8080/";
+    private static final String appESIndex = "cmput301f17t09_goalsandhabits";
 
     private static JestDroidClient client;
 
     /**
      * Add a profile to the elasticsearch server.
      * Note: Only add one profile per task. (Shouldn't ever need to add more than one at a time anyways)
+     * This is because only one profile will ever be returned, despite the number passed in as arguments.
      */
     public static class AddProfileTask extends AsyncTask<Profile, Void, Profile> {
 
@@ -66,6 +69,11 @@ public class ElasticSearchController {
         }
     }
 
+    /**
+     * Task for updating a profile's info
+     * Supply the profile object as a parameter.
+     * Can update multiple profiles at once, just pass as many as needed.
+     */
     public static class UpdateProfileTask extends AsyncTask<Profile, Void, Void> {
         @Override
         protected Void doInBackground(Profile... profiles){
@@ -92,6 +100,11 @@ public class ElasticSearchController {
         }
     }
 
+
+    /**
+     * Task for adding habits to the elasticsearch server.
+     * Supply habits as the parameters, or an array of habits.
+     */
     public static class AddHabitsTask extends AsyncTask<Habit, Void, Void> {
 
         @Override
@@ -120,51 +133,17 @@ public class ElasticSearchController {
                 if (result.isSucceeded()){
                     Log.i("Info","Successfully added habits.");
                 }
-                /*client.executeAsync(bulk, new JestResultHandler<JestResult>() {
-                    @Override
-                    public void completed(JestResult result){
-                        if (result.isSucceeded()){
-                            Log.i("Info","Successfully added habits.");
-                        }
-                    }
-                    @Override
-                    public void failed(Exception e){
-                        e.printStackTrace();
-                    }
-                });*/
             }catch (Exception e){
                 Log.i("Error", "The app failed to build and send habits");
             }
             return null;
         }
     }
-    /*
-    public static class UpdateHabitsTask extends AsyncTask<Habit, Void, Void> {
 
-        @Override
-        protected Void doInBackground(Habit... habits){
-            verifySettings();
-
-            for (Habit habit : habits){
-                if (habit.getId()!=null) {
-                    Index index = new Index.Builder(habit).index(appESIndex).type("habit").id(habit.getId()).build();
-
-                    try {
-                        DocumentResult result = client.execute(index);
-                        if (result.isSucceeded()){
-                            Log.i("Info", "Successfully updated habit " + habit.getId());
-                        }else{
-                            Log.i("Error", "Failed to update habit " + habit.getId());
-                        }
-                    }catch (Exception e){
-                        Log.i("Error", "The app failed to update habit");
-                    }
-                }
-            }
-            return null;
-        }
-    }*/
-
+    /**
+     * Task for getting individual profile from server.
+     * Supply the profile ID as the first (and only) parameter.
+     */
     public static class GetProfileTask extends AsyncTask<String, Void, Profile>{
         @Override
         protected Profile doInBackground(String... parameters){
@@ -223,6 +202,10 @@ public class ElasticSearchController {
         }
     }
 
+    /**
+     * Task to delete a habit or habits from the elasticsearch server
+     * Pass in habits as arguments or as an array of habits
+     */
     public static class DeleteHabitTask extends AsyncTask<Habit, Void, Void>{
         @Override
         protected Void doInBackground(Habit... habits){
@@ -258,6 +241,10 @@ public class ElasticSearchController {
         }
     }
 
+    /**
+     * Task to search for profiles containing the specified username.
+     * Pass in the desired username as the first parameter.
+     */
     public static class GetProfilesTask extends AsyncTask<String, Void, ArrayList<Profile>>{
         @Override
         protected ArrayList<Profile> doInBackground(String... search_parameters){
@@ -287,7 +274,10 @@ public class ElasticSearchController {
         }
     }
 
-    public static void verifySettings(){
+    /**
+     * Sets up the connection to the elasticsearch server.
+     */
+    private static void verifySettings(){
         if (client == null){
             DroidClientConfig.Builder builder = new DroidClientConfig.Builder(appESURL);
             DroidClientConfig config = builder.build();
