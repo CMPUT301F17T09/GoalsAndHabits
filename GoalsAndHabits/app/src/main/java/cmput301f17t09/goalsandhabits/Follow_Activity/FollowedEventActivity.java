@@ -93,4 +93,16 @@ public class FollowedEventActivity extends AppCompatActivity {
             }
         });
     }
+
+//    @Override
+//    public void finish() {
+//        //Pass back the habit and position
+//        Intent data = new Intent();
+//        if (deleted){
+//            data.putExtra(Habit.EXTRA_EVENT_DELETED,true);
+//        }
+//        data.putExtra(HabitHistoryActivity.EXTRA_EVENT_SERIAL, event);
+//        setResult(RESULT_OK, data);
+//        super.finish();
+//    }
 }

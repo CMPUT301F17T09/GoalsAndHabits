@@ -75,12 +75,25 @@ public class SearchResultsActivity extends AppCompatActivity implements SendRequ
                     setResult(RESULT_OK);
                     Profile p = matches.get(position);
                     if (p!=null) {
+
+                        boolean alreadyFollowed = false;
                         if (p.getUsername().equals(me.getUsername())) {
                             Toast.makeText(SearchResultsActivity.this,"You cannot follow yourself!",Toast.LENGTH_SHORT).show();
+                            alreadyFollowed=true;
                         }
                         else {
+                            for (Profile name : me.getUsersFollowed()) {
+                                if (name.getUsername().equals(p.getUsername())) {
+                                    Toast.makeText(SearchResultsActivity.this, "You have already followed that user!", Toast.LENGTH_SHORT).show();
+                                    alreadyFollowed = true;
+                                    break;
+                                }
+                            }
+                        }
+                        if (!alreadyFollowed) {
                             showRequestDialog(p);
                         }
+
                     }
                 }
             });
