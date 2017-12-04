@@ -185,6 +185,14 @@ public class FollowActivity extends AppCompatActivity implements UserSearchDialo
     private void loadData(Profile p){
         //habitsFollowed = new ArrayList<>();
         if (isNetworkAvailable() && p != null){
+            ElasticSearchController.GetProfileTask getProfileTask
+                    = new ElasticSearchController.GetProfileTask();
+            getProfileTask.execute(p.getUserId());
+            try {
+                p = getProfileTask.get();
+            } catch (Exception e) {
+                Log.i("Error", "Failed to get profiles with id " + p.getUserId() + " from async object");
+            }
             //Now load the habits from the elasticsearch server:
             ArrayList<Habit> onlineHabits = new ArrayList<>();
             if (p.getHabitIds()!=null){
