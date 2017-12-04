@@ -183,7 +183,7 @@ public class FollowActivity extends AppCompatActivity implements UserSearchDialo
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
     private void loadData(Profile p){
-        habitsFollowed = new ArrayList<>();
+        //habitsFollowed = new ArrayList<>();
         if (isNetworkAvailable() && p != null){
             //Now load the habits from the elasticsearch server:
             ArrayList<Habit> onlineHabits = new ArrayList<>();
