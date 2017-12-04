@@ -129,5 +129,8 @@ public class HabitEvent implements Serializable{
     public void addLike() {
         this.likes+=1;
     }
+    public void addComment(Comment comment) {
+        comments.add(comment);
+    }
 
 }
