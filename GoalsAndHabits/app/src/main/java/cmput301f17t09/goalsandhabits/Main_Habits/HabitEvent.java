@@ -5,7 +5,10 @@ import android.location.Location;
 import android.util.Log;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+
+import cmput301f17t09.goalsandhabits.Follow_Activity.Comment;
 
 /**
  * Created by atsmith on 10/31/17.
@@ -22,6 +25,8 @@ public class HabitEvent implements Serializable{
     private Double Lat;
     private Double Long;
     private String habitType;
+    private ArrayList<Comment> comments;
+    private int likes;
 
     public HabitEvent(Date date){
         setDate(date);
@@ -31,6 +36,7 @@ public class HabitEvent implements Serializable{
         setDate(date);
         setComment(comment);
     }
+
 
     public String getHabitType() {
         return habitType;
@@ -104,6 +110,27 @@ public class HabitEvent implements Serializable{
     public void setNullLocation(){
         this.Long=null;
         this.Lat=null;
+    }
+    public ArrayList<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(ArrayList<Comment> comments) {
+        this.comments = comments;
+    }
+
+    public int getLikes() {
+        return likes;
+    }
+
+    public void setLikes(int likes) {
+        this.likes = likes;
+    }
+    public void addLike() {
+        this.likes+=1;
+    }
+    public void addComment(Comment comment) {
+        comments.add(comment);
     }
 
 }
