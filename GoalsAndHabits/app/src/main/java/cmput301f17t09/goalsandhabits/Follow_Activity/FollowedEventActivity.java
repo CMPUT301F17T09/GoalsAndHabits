@@ -4,6 +4,7 @@ import android.app.DialogFragment;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
 import android.location.Location;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,6 +25,7 @@ import java.util.ArrayList;
 
 import cmput301f17t09.goalsandhabits.ElasticSearch.ElasticSearchController;
 import cmput301f17t09.goalsandhabits.Main_Habits.HabitEvent;
+import cmput301f17t09.goalsandhabits.Main_Habits.ImageController;
 import cmput301f17t09.goalsandhabits.Profiles.Profile;
 import cmput301f17t09.goalsandhabits.R;
 
@@ -43,6 +46,8 @@ public class FollowedEventActivity extends AppCompatActivity implements AddComme
     private ListView commentsList;
     private Toolbar toolbar;
     private SimpleDateFormat dateFormat = new SimpleDateFormat("EEE MMM dd");
+    private ImageView image;
+    private Bitmap imageDisplay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +68,7 @@ public class FollowedEventActivity extends AppCompatActivity implements AddComme
         likeButton = (Button) findViewById(R.id.like);
         commentButton = (Button) findViewById(R.id.addComment);
         commentsList = (ListView) findViewById(R.id.commentsList);
-
+        image = (ImageView) findViewById(R.id.eventPhoto);
         comment = (TextView) findViewById(R.id.eventComment);
         numOfLikes = (TextView) findViewById(R.id.numOfLikes);
         numOfLikes.setText(String.format("Likes: %d",event.getLikes()));
@@ -80,6 +85,13 @@ public class FollowedEventActivity extends AppCompatActivity implements AddComme
         if (event.getComments()==null) {
             event.setComments(new ArrayList<Comment>());
         }
+        if (event.getEncodedPhoto()!=null){
+            imageDisplay = ImageController.base64ToImage(event.getEncodedPhoto());
+            image.setImageBitmap(imageDisplay);
+        }else{
+            imageDisplay = null;
+        }
+
         eventComments = event.getComments();
         commentsArrayAdapter = new CommentsArrayAdapter(this,eventComments);
         commentsList.setAdapter(commentsArrayAdapter);

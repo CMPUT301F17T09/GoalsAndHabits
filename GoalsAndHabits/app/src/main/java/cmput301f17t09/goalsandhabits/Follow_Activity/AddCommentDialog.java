@@ -66,8 +66,8 @@ public class AddCommentDialog extends DialogFragment {
         builder.setTitle("Add a Comment")
                 .setView(diaView)
                 .setPositiveButton("accept", new DialogInterface.OnClickListener() {
-                    String comment = enteredComment.getText().toString();
                     public void onClick(DialogInterface dialog, int id) {
+                        String comment = enteredComment.getText().toString();
                         mListener.onDialogPositiveClick(AddCommentDialog.this, comment);
                     }
                 })
