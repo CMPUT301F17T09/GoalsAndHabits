@@ -21,6 +21,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 import cmput301f17t09.goalsandhabits.ElasticSearch.ElasticSearchController;
+import cmput301f17t09.goalsandhabits.Follow_Activity.Comment;
 import cmput301f17t09.goalsandhabits.R;
 
 
@@ -104,6 +105,8 @@ public class HabitHistoryActivity extends AppCompatActivity {
                     }
                     habit.addHabitEvent(habitEvent);
                     habitEvent.setHabitType(habit.getTitle());
+                    habitEvent.setComments(new ArrayList<Comment>());
+                    habitEvent.setLikes(0);
                     habitEventArrayAdapter.notifyDataSetChanged();
                 }
                 case REQUEST_CODE_VIEW_EVENT:{

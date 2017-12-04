@@ -75,7 +75,12 @@ public class SearchResultsActivity extends AppCompatActivity implements SendRequ
                     setResult(RESULT_OK);
                     Profile p = matches.get(position);
                     if (p!=null) {
-                    showRequestDialog(p);
+                        if (p.getUsername().equals(me.getUsername())) {
+                            Toast.makeText(SearchResultsActivity.this,"You cannot follow yourself!",Toast.LENGTH_SHORT).show();
+                        }
+                        else {
+                            showRequestDialog(p);
+                        }
                     }
                 }
             });

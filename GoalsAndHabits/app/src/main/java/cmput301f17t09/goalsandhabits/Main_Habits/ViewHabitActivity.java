@@ -37,6 +37,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashSet;
 
+import cmput301f17t09.goalsandhabits.Follow_Activity.Comment;
 import cmput301f17t09.goalsandhabits.R;
 
 import static cmput301f17t09.goalsandhabits.Main_Habits.MainActivity.FILENAME;
@@ -180,6 +181,8 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
                         habitEvent.setEncodedPhoto(data.getStringExtra(MainActivity.EXTRA_HABIT_EVENT_PHOTO));
                         Log.i("Info","Added photo!");
                     }
+                    habitEvent.setLikes(0);
+                    habitEvent.setComments(new ArrayList<Comment>());
                     habit.addHabitEvent(habitEvent);
                     habitEvent.setHabitType(habit.getTitle());
                     refreshData();
