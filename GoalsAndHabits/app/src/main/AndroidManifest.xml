@@ -29,6 +29,7 @@
         <activity android:name=".Profiles.ProfileActivity" />
         <activity android:name=".Profiles.NewProfileActivity" />
         <activity android:name=".Main_Habits.ViewEventActivity" />
+        <activity android:name=".Main_Habits.NoNetworkConnectionActivity"/>
         <activity
             android:name=".Profiles.FollowerRequestsActivity"
             android:parentActivityName=".Profiles.ProfileActivity" />

@@ -37,7 +37,6 @@ import java.util.UUID;
 import cmput301f17t09.goalsandhabits.ElasticSearch.ElasticSearchController;
 import cmput301f17t09.goalsandhabits.Follow_Activity.FollowActivity;
 import cmput301f17t09.goalsandhabits.Maps.MapFiltersActivity;
-import cmput301f17t09.goalsandhabits.Profiles.LoginActivity;
 import cmput301f17t09.goalsandhabits.Profiles.NewProfileActivity;
 import cmput301f17t09.goalsandhabits.Profiles.Profile;
 import cmput301f17t09.goalsandhabits.Profiles.ProfileActivity;
@@ -199,8 +198,14 @@ public class MainActivity extends AppCompatActivity {
                     if (data.hasExtra(EXTRA_PROFILE_SERIAL)){
                         profile = (Profile) data.getSerializableExtra(EXTRA_PROFILE_SERIAL);
                         loadData();
-                        habitArrayAdapter.notifyDataSetChanged();
+                        habitArrayAdapter = new HabitArrayAdapter(this, habits);
+                        habitsList.setAdapter(habitArrayAdapter);
                         Log.i("Info","Profile created.");
+                        Context context = MainActivity.this;
+                        final SharedPreferences reader = context.getSharedPreferences(MY_PREFERENCES,Context.MODE_PRIVATE);
+                        final SharedPreferences.Editor editor = reader.edit();
+                        editor.putBoolean("is_first", false);
+                        editor.commit();
                     }else{
                         Log.i("Error","No profile was passed from signup/login!");
                     }
@@ -341,8 +346,6 @@ public class MainActivity extends AppCompatActivity {
             gson.toJson(profile, out);
             out.flush();
             fos.close();
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException();
         } catch (IOException e) {
             throw new RuntimeException();
         }
@@ -358,7 +361,8 @@ public class MainActivity extends AppCompatActivity {
         //as of Nov 13, 2017
         if (first) {
             if (!isNetworkAvailable()){
-                //TODO: tell the user they need internet connection for the first run!
+                Intent intent = new Intent(MainActivity.this, NoNetworkConnectionActivity.class);
+                startActivity(intent);
                 finish();
                 return;
             }
@@ -386,7 +390,6 @@ public class MainActivity extends AppCompatActivity {
             }
 
         }
-        editor.putBoolean("is_first", false);
         editor.commit();
     }
 

@@ -66,6 +66,7 @@ public class LoginActivity extends AppCompatActivity {
                             final SharedPreferences.Editor editor = reader.edit();
                             editor.putString("userId", profile.getUserId());
                             editor.commit();
+                            Log.i("Info","Logged in as " + profile.getUserId());
                         }
                     }
                     finish(); //sends user to MainActivity
