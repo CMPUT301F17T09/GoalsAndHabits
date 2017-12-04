@@ -11,10 +11,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Locale;
 
 import cmput301f17t09.goalsandhabits.Main_Habits.MainActivity;
 import cmput301f17t09.goalsandhabits.R;
@@ -27,6 +30,7 @@ public class NewHabit extends AppCompatActivity implements DatePickerFrag.DatePi
 
     private boolean save = false;
     private Date newdate = new Date();
+    private SimpleDateFormat dateFormat = new SimpleDateFormat("EEE MMM dd", Locale.CANADA);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +41,8 @@ public class NewHabit extends AppCompatActivity implements DatePickerFrag.DatePi
         toolbar.setNavigationIcon(R.drawable.ic_close_button);
         setSupportActionBar(toolbar);
         Button datePicker = (Button) findViewById(R.id.newDateButton);
+        TextView date_field = (TextView) findViewById(R.id.dateEditText);
+        date_field.setText(dateFormat.format(newdate));
 
         datePicker.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,7 +68,6 @@ public class NewHabit extends AppCompatActivity implements DatePickerFrag.DatePi
             case R.id.saveButton:{
                 EditText name = (EditText) findViewById(R.id.titleEditText);
                 EditText reason = (EditText) findViewById(R.id.reasonEditText);
-                EditText date = (EditText) findViewById(R.id.dateEditText);
 
                 //TODO: Better field checking.
                 //TODO: Use a better date picker.
@@ -72,8 +77,6 @@ public class NewHabit extends AppCompatActivity implements DatePickerFrag.DatePi
                     Toast.makeText(this, "Enter a valid habit title!", Toast.LENGTH_SHORT).show();
                 }else if (reason.getText().toString().isEmpty()){
                     Toast.makeText(this, "Enter a valid habit reason!", Toast.LENGTH_SHORT).show();
-                }else if (date.getText().toString().isEmpty()){
-                    Toast.makeText(this, "Enter a valid start date!", Toast.LENGTH_SHORT).show();
                 }else {
                     save=true;
                     finish();
@@ -95,7 +98,6 @@ public class NewHabit extends AppCompatActivity implements DatePickerFrag.DatePi
         if (save){
             EditText name = (EditText) findViewById(R.id.titleEditText);
             EditText reason = (EditText) findViewById(R.id.reasonEditText);
-            EditText date = (EditText) findViewById(R.id.dateEditText);
 
             //Change days into a sequence of 1's and 0's
             //ie 1001100 = Sunday, Wednesday, Thursday.
@@ -139,8 +141,8 @@ public class NewHabit extends AppCompatActivity implements DatePickerFrag.DatePi
 
     @Override
     public void onDatePicked(DialogFragment dialog, Date date) {
-        EditText date_field = (EditText) findViewById(R.id.dateEditText);
-        date_field.setText(date.toString());
+        TextView date_field = (TextView) findViewById(R.id.dateEditText);
+        date_field.setText(dateFormat.format(date));
         newdate = date;
     }
 }
