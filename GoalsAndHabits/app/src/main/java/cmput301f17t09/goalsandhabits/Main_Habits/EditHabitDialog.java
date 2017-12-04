@@ -22,10 +22,13 @@ import cmput301f17t09.goalsandhabits.R;
 
 /**
  * Created by Ken on 07/11/2017.
+ * Creates a dialog to be used when editing habits
  */
-
 public class EditHabitDialog extends DialogFragment{
 
+    /**
+     * Allows passing of dialog results back to original caller
+     */
     public interface EditHabitDialogListener{
         public void onDialogPositiveClick(DialogFragment dialog, String newreason, String newtitle, HashSet<Integer> schedule);
         public void onDialogNegativeClick(DialogFragment dialog);
@@ -33,6 +36,13 @@ public class EditHabitDialog extends DialogFragment{
 
     EditHabitDialogListener mListener;
 
+    /**
+     * Creates a new instance of the Edit Habit Dialog with the given parameters
+     * @param name Habit Name
+     * @param reason Habit Reason
+     * @param schedule Habit Schedule
+     * @return
+     */
     public static EditHabitDialog newInstance(String name, String reason, HashSet<Integer> schedule) {
         EditHabitDialog frag = new EditHabitDialog();
         Bundle args = new Bundle();
@@ -43,6 +53,10 @@ public class EditHabitDialog extends DialogFragment{
         return frag;
     }
 
+    /**
+     * Verifies that the host activity implements the callback interface
+     * @param context
+     */
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -65,6 +79,11 @@ public class EditHabitDialog extends DialogFragment{
         }
     }
 
+    /**
+     * Called on creation of dialog. Creates layout and functionality for dialog window.
+     * @param savedInstanceState
+     * @return
+     */
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState){
         String name = getArguments().getString("name");
