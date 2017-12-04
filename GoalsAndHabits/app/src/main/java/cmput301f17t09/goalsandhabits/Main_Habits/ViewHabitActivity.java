@@ -246,9 +246,23 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
 
     @Override
     public void onDatePicked(DialogFragment dialog, Date date) {
-        TextView habitDate = (TextView) findViewById(R.id.textHabitDate);
-        habitDate.setText(dateFormat.format(date));
-        habit.setStartDate(date);
+        boolean allowed=true;
+        ArrayList<HabitEvent> events = habit.getEvents();
+        if (events!=null){
+            for (HabitEvent event : events){
+                if (Util.isDateAfter(event.getDate(),date)){
+                    allowed=false;
+                    break;
+                }
+            }
+        }
+        if (allowed) {
+            TextView habitDate = (TextView) findViewById(R.id.textHabitDate);
+            habitDate.setText(dateFormat.format(date));
+            habit.setStartDate(date);
+        }else{
+            Toast.makeText(ViewHabitActivity.this,"An event already exists prior to " + dateFormat.format(date) + "!",Toast.LENGTH_LONG).show();
+        }
     }
 
     private int getDaysFromLastEvent(){
