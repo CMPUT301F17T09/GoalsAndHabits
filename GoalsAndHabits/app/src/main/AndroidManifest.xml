@@ -54,7 +54,6 @@
         <activity
             android:name=".Follow_Activity.FollowedEventActivity"
             android:parentActivityName=".Follow_Activity.FollowActivity" />
-        <activity android:name=".Follow_Activity.AddCommentDialog"></activity>
     </application>
 
 </manifest>
