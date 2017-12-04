@@ -29,12 +29,15 @@ import cmput301f17t09.goalsandhabits.R;
 
 /**
  * Created by Simone on 2017/11/20.
+ * A dialog to be used when editting habit events
  */
-
 public class EditHabitEventDialog extends DialogFragment {
 
     private Location currentloc;
 
+    /**
+     * Allows passing of dialog results back to original caller
+     */
     public interface EditHabitEventDialogListener{
         public void onDialogPositiveClick(DialogFragment dialog, String newcomment, Location newloc);
         public void onDialogNegativeClick(DialogFragment dialog);
@@ -42,11 +45,16 @@ public class EditHabitEventDialog extends DialogFragment {
     }
     EditHabitEventDialog.EditHabitEventDialogListener mListener;
 
-    public static EditHabitEventDialog newInstance(String comment, String photoPath, Location location ) {
+    /**
+     * Creates a new instance of the edit event dialog with the given parameters
+     * @param comment Event Comment
+     * @param location
+     * @return
+     */
+    public static EditHabitEventDialog newInstance(String comment, Location location ) {
         EditHabitEventDialog dialog= new EditHabitEventDialog();
         Bundle args = new Bundle();
         args.putString("Comments", comment);
-        args.putString("photoPath", photoPath);
         if (location != null){
             args.putDouble("latitude", location.getLatitude());
             args.putDouble("longitude", location.getLongitude());
@@ -54,6 +62,11 @@ public class EditHabitEventDialog extends DialogFragment {
         dialog.setArguments(args);
         return dialog;
     }
+
+    /**
+     * Verifies that the host activity implements the callback interface
+     * @param context
+     */
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -75,10 +88,15 @@ public class EditHabitEventDialog extends DialogFragment {
                     + " must implement NewHabitEventDialogListener");
         }
     }
+
+    /**
+     * Called on creation of dialog. Creates layout and functionality for dialog window.
+     * @param savedInstanceState
+     * @return
+     */
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState){
         String comment = getArguments().getString("Comments");
-        String photoPath = getArguments().getString("Photo Path");
         Double lat = getArguments().getDouble("latitude");
         Double lon = getArguments().getDouble("longitude");
 
@@ -98,8 +116,6 @@ public class EditHabitEventDialog extends DialogFragment {
             location_field.setText("("+Location.convert(lat,Location.FORMAT_DEGREES)+","+
                     Location.convert(lon,Location.FORMAT_DEGREES)+")");
         }
-
-        //TODO: Photo stuff
 
         Button loc_button = (Button) diaView.findViewById(R.id.locButton);
         loc_button.setOnClickListener(new View.OnClickListener() {

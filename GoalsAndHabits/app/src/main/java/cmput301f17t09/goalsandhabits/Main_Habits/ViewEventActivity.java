@@ -151,7 +151,7 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
 
 
     public void showEditDialog() {
-        DialogFragment dialog = EditHabitEventDialog.newInstance(event.getComment(),event.getPhotoPath(),event.getLocation());
+        DialogFragment dialog = EditHabitEventDialog.newInstance(event.getComment(),event.getLocation());
         dialog.show(getFragmentManager(), "EditHabitEventDialog");
     }
 
@@ -242,6 +242,7 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK){
             Bundle extras = data.getExtras();
             imageDisplay = (Bitmap) extras.get("data");
+            imageDisplay = ImageController.compressImageToMax(imageDisplay, 65536);
             image.setImageBitmap(imageDisplay);
             if (event!=null) {
                 event.setEncodedPhoto(ImageController.imageToBase64(imageDisplay));
