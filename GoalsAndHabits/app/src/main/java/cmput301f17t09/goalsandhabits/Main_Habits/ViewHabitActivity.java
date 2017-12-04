@@ -247,7 +247,7 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
     @Override
     public void onDatePicked(DialogFragment dialog, Date date) {
         TextView habitDate = (TextView) findViewById(R.id.textHabitDate);
-        habitDate.setText(date.toString());
+        habitDate.setText(dateFormat.format(date));
         habit.setStartDate(date);
     }
 
@@ -281,7 +281,9 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
         if (schedule.contains(Calendar.THURSDAY)) s += "Thursday, ";
         if (schedule.contains(Calendar.FRIDAY)) s += "Friday, ";
         if (schedule.contains(Calendar.SATURDAY)) s += "Saturday, ";
-        s = s.substring(0,s.length()-2);
+        if (s.length()>2) {
+            s = s.substring(0, s.length() - 2);
+        }
         return s;
     }
 
