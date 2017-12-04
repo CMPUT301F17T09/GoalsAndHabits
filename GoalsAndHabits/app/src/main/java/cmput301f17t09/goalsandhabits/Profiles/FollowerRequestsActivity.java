@@ -94,7 +94,7 @@ public class FollowerRequestsActivity extends AppCompatActivity implements Accep
             follower.setUsersFollowed(new ArrayList<Profile>());
         }
         follower.addFollowee(me);
-        if (!follower.getFollowRequests().isEmpty()) {
+        if (follower.getUsersFollowed().get(follower.getUsersFollowed().size()-1).getUsername().equals(me.getUsername())) {
             Log.i("Info", "Added " + me.getUsername() + " as user followed to " + follower.getUsername());
         }
         saveData();
