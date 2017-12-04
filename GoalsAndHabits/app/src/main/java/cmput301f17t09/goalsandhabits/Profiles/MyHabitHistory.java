@@ -32,6 +32,7 @@ import cmput301f17t09.goalsandhabits.Main_Habits.Habit;
 import cmput301f17t09.goalsandhabits.Main_Habits.HabitEvent;
 import cmput301f17t09.goalsandhabits.Main_Habits.HabitEventArrayAdapter;
 import cmput301f17t09.goalsandhabits.Main_Habits.MainActivity;
+import cmput301f17t09.goalsandhabits.Main_Habits.Util;
 import cmput301f17t09.goalsandhabits.R;
 
 
@@ -220,7 +221,7 @@ public class MyHabitHistory extends AppCompatActivity implements FilterDialog.Fi
 
     private void loadData(){
         habits = new ArrayList<>();
-        if (isNetworkAvailable()) {
+        if (Util.isNetworkAvailable(MyHabitHistory.this)) {
             if (profile == null) {
                 Log.i("Error", "Failed to load habits: profile is null!");
                 return;
@@ -280,15 +281,5 @@ public class MyHabitHistory extends AppCompatActivity implements FilterDialog.Fi
             startActivityForResult(intent, REQUEST_CODE_SIGNUP);
         }
 
-    }
-
-
-    //adapted from https://stackoverflow.com/questions/4238921/detect-whether-there-is-an-internet-connection-available-on-android
-    //as of Nov 25, 2017
-    private boolean isNetworkAvailable() {
-        ConnectivityManager connectivityManager
-                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
-        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 }

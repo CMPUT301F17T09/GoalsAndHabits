@@ -37,7 +37,6 @@ import java.util.UUID;
 import cmput301f17t09.goalsandhabits.ElasticSearch.ElasticSearchController;
 import cmput301f17t09.goalsandhabits.Follow_Activity.FollowActivity;
 import cmput301f17t09.goalsandhabits.Maps.MapFiltersActivity;
-import cmput301f17t09.goalsandhabits.Profiles.LoginActivity;
 import cmput301f17t09.goalsandhabits.Profiles.NewProfileActivity;
 import cmput301f17t09.goalsandhabits.Profiles.Profile;
 import cmput301f17t09.goalsandhabits.Profiles.ProfileActivity;
@@ -53,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_HABIT_POSITION = "cmput301f17t09.goalsandhabits.HABIT_POSITION";
     public static final String EXTRA_HABIT_DELETED = "cmput301f17t09.goalsandhabits.HABIT_DELETED";
     public static final String EXTRA_PROFILE_SERIAL = "cmput301f17t09.goalsandhabits.PROFILE_SERIAL";
+    public static final String EXTRA_HABIT_EVENT_PHOTO = "cmput301f17t09.goalsandhabits.HABIT_EVENT_PHOTO";
 
     public static final String FILENAME = "data.sav";
 
@@ -141,6 +141,13 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Handle callbacks from other activities such as when
+     * creating a new habit, viewing a habit, or signing up.
+     * @param requestCode The request code used in the activity intent
+     * @param resultCode The result of the activity
+     * @param data Any attached data
+     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
         if (resultCode == RESULT_OK){
@@ -199,8 +206,14 @@ public class MainActivity extends AppCompatActivity {
                     if (data.hasExtra(EXTRA_PROFILE_SERIAL)){
                         profile = (Profile) data.getSerializableExtra(EXTRA_PROFILE_SERIAL);
                         loadData();
-                        habitArrayAdapter.notifyDataSetChanged();
+                        habitArrayAdapter = new HabitArrayAdapter(this, habits);
+                        habitsList.setAdapter(habitArrayAdapter);
                         Log.i("Info","Profile created.");
+                        Context context = MainActivity.this;
+                        final SharedPreferences reader = context.getSharedPreferences(MY_PREFERENCES,Context.MODE_PRIVATE);
+                        final SharedPreferences.Editor editor = reader.edit();
+                        editor.putBoolean("is_first", false);
+                        editor.commit();
                     }else{
                         Log.i("Error","No profile was passed from signup/login!");
                     }
@@ -210,6 +223,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Save the data when the app is closed.
+     */
     @Override
     protected void onStop(){
         saveData();
@@ -217,9 +233,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    /**
+     * Loads habits. If there is a network connection, this method first
+     * loads the locally stored habits then, if there are any OTHER habits
+     * stored on the elasticsearch server, it loads them. In this way local
+     * habit modifications take precedence over online ones.
+     * If there is NO network connection, load both the habits AND the profile from
+     * local storage.
+     */
     private void loadData(){
         habits = new ArrayList<>();
-        if (isNetworkAvailable() && profile != null){
+        if (Util.isNetworkAvailable(MainActivity.this) && profile != null){
             //Load local files first:
             ArrayList<String> offlineIds = new ArrayList<>();
             try {
@@ -316,6 +340,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Saves the habits and profile to local storage, as well
+     * as attempting to save the data to the elasticsearch server.
+     */
     private void saveData(){
         if (habits.size()>0) {
             ElasticSearchController.AddHabitsTask addHabitsTask
@@ -341,13 +369,19 @@ public class MainActivity extends AppCompatActivity {
             gson.toJson(profile, out);
             out.flush();
             fos.close();
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException();
         } catch (IOException e) {
             throw new RuntimeException();
         }
     }
 
+    /**
+     * Attempts to retrieve the user's profile in 3 ways:
+     * 1: If this is the first time running (ie no locally saved profile exists):
+     * Check for an internet connection, if there is one, go to the signup activity.
+     * Otherwise, notify the user they need a network connection for first run.
+     * 2: If this isn't the first time, attempt to load the profile that was last used.
+     * 3: If that should fail, go to the signup activity.
+     */
     private void getProfile(){
         Context context = MainActivity.this;
         final SharedPreferences reader = context.getSharedPreferences(MY_PREFERENCES,Context.MODE_PRIVATE);
@@ -357,8 +391,9 @@ public class MainActivity extends AppCompatActivity {
         //adapted from https://stackoverflow.com/questions/7238532/how-to-launch-activity-only-once-when-app-is-opened-for-first-time
         //as of Nov 13, 2017
         if (first) {
-            if (!isNetworkAvailable()){
-                //TODO: tell the user they need internet connection for the first run!
+            if (!Util.isNetworkAvailable(MainActivity.this)){
+                Intent intent = new Intent(MainActivity.this, NoNetworkConnectionActivity.class);
+                startActivity(intent);
                 finish();
                 return;
             }
@@ -386,18 +421,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
         }
-        editor.putBoolean("is_first", false);
         editor.commit();
-    }
-
-
-    //adapted from https://stackoverflow.com/questions/4238921/detect-whether-there-is-an-internet-connection-available-on-android
-    //as of Nov 25, 2017
-    private boolean isNetworkAvailable() {
-        ConnectivityManager connectivityManager
-                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
-        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 
 }

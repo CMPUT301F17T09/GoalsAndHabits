@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -32,6 +33,7 @@ import cmput301f17t09.goalsandhabits.ElasticSearch.ElasticSearchController;
 import cmput301f17t09.goalsandhabits.Follow_Activity.FollowActivity;
 import cmput301f17t09.goalsandhabits.Main_Habits.Habit;
 import cmput301f17t09.goalsandhabits.Main_Habits.MainActivity;
+import cmput301f17t09.goalsandhabits.Main_Habits.Util;
 import cmput301f17t09.goalsandhabits.Maps.MapFiltersActivity;
 import cmput301f17t09.goalsandhabits.R;
 
@@ -57,6 +59,15 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+        if (!Util.isNetworkAvailable(ProfileActivity.this)){
+            Toast.makeText(ProfileActivity.this,"You need an internet connection for that!",Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(ProfileActivity.this,MainActivity.class);
+            finish();
+            startActivity(intent);
+            return;
+        }
+
         getProfile();
         loadData();
 
@@ -142,7 +153,7 @@ public class ProfileActivity extends AppCompatActivity {
     }
     private void loadData(){
         habits = new ArrayList<>();
-        if (isNetworkAvailable()) {
+        if (Util.isNetworkAvailable(ProfileActivity.this)) {
             if (profile == null) {
                 Log.i("Error", "Failed to load habits: profile is null!");
                 return;
@@ -185,11 +196,5 @@ public class ProfileActivity extends AppCompatActivity {
                 throw new RuntimeException();
             }
         }
-    }
-    private boolean isNetworkAvailable() {
-        ConnectivityManager connectivityManager
-                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
-        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 }

@@ -176,6 +176,10 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
                     if (data.hasExtra(MainActivity.EXTRA_HABIT_NAME)){
                         habitEvent.setComment(data.getStringExtra(MainActivity.EXTRA_HABIT_NAME));
                     }
+                    if (data.hasExtra(MainActivity.EXTRA_HABIT_EVENT_PHOTO)){
+                        habitEvent.setEncodedPhoto(data.getStringExtra(MainActivity.EXTRA_HABIT_EVENT_PHOTO));
+                        Log.i("Info","Added photo!");
+                    }
                     habit.addHabitEvent(habitEvent);
                     habitEvent.setHabitType(habit.getTitle());
                     refreshData();
@@ -246,9 +250,23 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
 
     @Override
     public void onDatePicked(DialogFragment dialog, Date date) {
-        TextView habitDate = (TextView) findViewById(R.id.textHabitDate);
-        habitDate.setText(dateFormat.format(date));
-        habit.setStartDate(date);
+        boolean allowed=true;
+        ArrayList<HabitEvent> events = habit.getEvents();
+        if (events!=null){
+            for (HabitEvent event : events){
+                if (Util.isDateAfter(event.getDate(),date)){
+                    allowed=false;
+                    break;
+                }
+            }
+        }
+        if (allowed) {
+            TextView habitDate = (TextView) findViewById(R.id.textHabitDate);
+            habitDate.setText(dateFormat.format(date));
+            habit.setStartDate(date);
+        }else{
+            Toast.makeText(ViewHabitActivity.this,"An event already exists prior to " + dateFormat.format(date) + "!",Toast.LENGTH_LONG).show();
+        }
     }
 
     private int getDaysFromLastEvent(){
