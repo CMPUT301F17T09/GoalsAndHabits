@@ -29,7 +29,9 @@ import cmput301f17t09.goalsandhabits.R;
 
 /**
  * Created by Simone on 2017/11/20.
- * A dialog to be used when editting habit events
+ * A dialog to be used when editing habit events
+ *
+ * OUSTANDING ISSUES: Editing a habit event will set its comment to non-null
  */
 public class EditHabitEventDialog extends DialogFragment {
 

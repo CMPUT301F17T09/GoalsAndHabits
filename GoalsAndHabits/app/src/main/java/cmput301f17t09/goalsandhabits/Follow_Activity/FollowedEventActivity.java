@@ -31,6 +31,9 @@ import static cmput301f17t09.goalsandhabits.Main_Habits.MainActivity.MY_PREFEREN
  * Created by chiasson.
  * This activity allows the user to view the latest habit event for a selected habit belonging to a followed user.
  * Users can also like these events or add comments.
+ *
+ *
+ * OUTSTANDING ISSUE: Likes and comments are displayed, but are not saved to the habit event
  */
 public class FollowedEventActivity extends AppCompatActivity implements AddCommentDialog.AddCommentDialogListener {
 

@@ -4,8 +4,6 @@ import android.app.DialogFragment;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -30,8 +28,6 @@ import java.util.Comparator;
 import cmput301f17t09.goalsandhabits.ElasticSearch.ElasticSearchController;
 import cmput301f17t09.goalsandhabits.Main_Habits.Habit;
 import cmput301f17t09.goalsandhabits.Main_Habits.HabitEvent;
-import cmput301f17t09.goalsandhabits.Main_Habits.HabitEventArrayAdapter;
-import cmput301f17t09.goalsandhabits.Main_Habits.MainActivity;
 import cmput301f17t09.goalsandhabits.Main_Habits.Util;
 import cmput301f17t09.goalsandhabits.R;
 
@@ -40,6 +36,8 @@ import cmput301f17t09.goalsandhabits.R;
  *
  * This activity allows the user to view their own habit history of all habits they have created,
  * sorted by date. The user may choose to filter the habit events by habit type and/or comment.
+ *
+ * OUSTANDING ISSUES: Because the filter uses regex, searching for special characters causes a crash
  */
 public class MyHabitHistory extends AppCompatActivity implements FilterDialog.FilterDialogListener {
 

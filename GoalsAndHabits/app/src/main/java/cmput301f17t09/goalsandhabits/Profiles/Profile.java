@@ -1,11 +1,7 @@
 package cmput301f17t09.goalsandhabits.Profiles;
 
 import java.io.Serializable;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.UUID;
 
 import io.searchbox.annotations.JestId;
 

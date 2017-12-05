@@ -16,6 +16,8 @@ import cmput301f17t09.goalsandhabits.R;
 /**
  * Created by chiasson on 2017-12-02.
  * This dialog prompts the user to search for profiles to follow
+ *
+ * OUSTANDING ISSUE: search only finds exact match of username
  */
 public class UserSearchDialog extends DialogFragment {
 

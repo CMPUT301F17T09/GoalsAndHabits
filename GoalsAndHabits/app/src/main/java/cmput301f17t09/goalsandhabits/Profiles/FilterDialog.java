@@ -17,6 +17,7 @@ import cmput301f17t09.goalsandhabits.R;
 /**
  * Created by chiasson on 2017-11-30.
  * This dialog prompts the user for habit type and/or comment filters for their total habit history
+ *
  */
 public class FilterDialog extends DialogFragment {
 
@@ -47,7 +48,6 @@ public class FilterDialog extends DialogFragment {
         }
         // Verify that the host activity implements the callback interface
         try {
-            // Instantiate the NoticeDialogListener so we can send events to the host
             mListener = (FilterDialogListener) activity;
         } catch (ClassCastException e) {
             // The activity doesn't implement the interface, throw exception
