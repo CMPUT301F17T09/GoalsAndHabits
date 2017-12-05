@@ -4,8 +4,6 @@ import android.app.DialogFragment;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -17,20 +15,10 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.Date;
-import java.util.List;
 
 import cmput301f17t09.goalsandhabits.ElasticSearch.ElasticSearchController;
 import cmput301f17t09.goalsandhabits.Main_Habits.Habit;
@@ -38,16 +26,20 @@ import cmput301f17t09.goalsandhabits.Main_Habits.HabitEvent;
 import cmput301f17t09.goalsandhabits.Main_Habits.MainActivity;
 import cmput301f17t09.goalsandhabits.Main_Habits.Util;
 import cmput301f17t09.goalsandhabits.Maps.MapFiltersActivity;
-import cmput301f17t09.goalsandhabits.Profiles.FollowerRequestsActivity;
 import cmput301f17t09.goalsandhabits.Profiles.Profile;
 import cmput301f17t09.goalsandhabits.Profiles.ProfileActivity;
 import cmput301f17t09.goalsandhabits.R;
 
 import static cmput301f17t09.goalsandhabits.Main_Habits.MainActivity.MY_PREFERENCES;
 
+/**
+ * Created by chiasson on 2017-10-30.
+ * This activity displays all habits for each user followed, along with their statuses. The user may
+ * click on a habit to see its most recent habit event, or may search for users to follow, opening
+ * up a search dialog.
+ */
 public class FollowActivity extends AppCompatActivity implements UserSearchDialog.UserSearchDialogListener {
 
-    public static final int REQUEST_CODE_VIEW_EVENT = 7;
     public static final String EXTRA_EVENT_SERIAL = "cmput301f17t09.goalsandhabits.EVENT_SERIAL";
 
     private FollowedHabitsArrayAdapter usersFollowed;
@@ -180,6 +172,11 @@ public class FollowActivity extends AppCompatActivity implements UserSearchDialo
         dialog.show(getFragmentManager(), "UserSearchDialog");
     }
 
+    /**
+     * User clicked the positive option of the dialog, and the app searches for the requested user
+     * @param dialog User Search Dialog Fragment
+     * @param userSearch Username input
+     */
     @Override
     public void onDialogPositiveClick(DialogFragment dialog, String userSearch) {
         if (userSearch.equals("")) {
@@ -194,12 +191,16 @@ public class FollowActivity extends AppCompatActivity implements UserSearchDialo
     }
 
     /**
-     * Exits out of filter dialog. Makes no changes to activity
-     * @param dialog Filter Dialog Fragment
+     * Exits out of search dialog. Makes no changes to activity
+     * @param dialog User Search Dialog Fragment
      */
     public void onDialogNegativeClick(DialogFragment dialog) {
         // User touched the dialog's negative button
     }
+
+    /**
+     * Gets an instance of the user to obtain those profiles followed
+     */
     private void getProfile(){
         Context context = FollowActivity.this;
         final SharedPreferences reader = context.getSharedPreferences(MY_PREFERENCES,Context.MODE_PRIVATE);
@@ -214,6 +215,11 @@ public class FollowActivity extends AppCompatActivity implements UserSearchDialo
         }
 
     }
+
+    /**
+     * Gets the habits of each profile followed
+     * @param p Profile to find
+     */
     private void loadData(Profile p){
         //habitsFollowed = new ArrayList<>();
         if (Util.isNetworkAvailable(FollowActivity.this) && p != null){
@@ -225,7 +231,7 @@ public class FollowActivity extends AppCompatActivity implements UserSearchDialo
             } catch (Exception e) {
                 Log.i("Error", "Failed to get profiles with id " + p.getUserId() + " from async object");
             }
-            //Now load the habits from the elasticsearch server:
+            //Load the habits from the elasticsearch server:
             ArrayList<Habit> onlineHabits = new ArrayList<>();
             if (p.getHabitIds()!=null){
                 Log.i("Info", "Fetching habits for profile id " + p.getUserId());

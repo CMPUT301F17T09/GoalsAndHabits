@@ -2,10 +2,8 @@ package cmput301f17t09.goalsandhabits.Follow_Activity;
 
 import android.app.DialogFragment;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
-import android.location.Location;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -15,10 +13,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.google.android.gms.location.FusedLocationProviderClient;
-import com.google.android.gms.location.LocationServices;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -32,6 +26,12 @@ import cmput301f17t09.goalsandhabits.R;
 import static cmput301f17t09.goalsandhabits.Follow_Activity.FollowActivity.EXTRA_EVENT_SERIAL;
 import static cmput301f17t09.goalsandhabits.Main_Habits.MainActivity.MY_PREFERENCES;
 
+
+/**
+ * Created by chiasson.
+ * This activity allows the user to view the latest habit event for a selected habit belonging to a followed user.
+ * Users can also like these events or add comments.
+ */
 public class FollowedEventActivity extends AppCompatActivity implements AddCommentDialog.AddCommentDialogListener {
 
     private Profile me;
@@ -111,11 +111,19 @@ public class FollowedEventActivity extends AppCompatActivity implements AddComme
         });
     }
 
+    /**
+     * Displays the comment dialog
+     */
     public void showCommentDialog() {
         DialogFragment dialog = AddCommentDialog.newInstance();
         dialog.show(getFragmentManager(), "AddCommentDialog");
     }
 
+    /**
+     * Exits out of add comment dialog and add comment to event
+     * @param dialog Add Comment Fragment
+     * @param commentText Comment text
+     */
     @Override
     public void onDialogPositiveClick(DialogFragment dialog, String commentText) {
         event.addComment(new Comment(me.getUsername(),commentText));
@@ -123,13 +131,15 @@ public class FollowedEventActivity extends AppCompatActivity implements AddComme
     }
 
     /**
-     * Exits out of filter dialog. Makes no changes to activity
-     * @param dialog Filter Dialog Fragment
+     * Exits out of add comment dialog. Makes no changes to activity
+     * @param dialog Add Comment Fragment
      */
     public void onDialogNegativeClick(DialogFragment dialog) {
-        // User touched the dialog's negative button
     }
 
+    /**
+     * Gets an instance of the user's own profile in order to assign username to comments added
+     */
     private void getProfile(){
         Context context = FollowedEventActivity.this;
         final SharedPreferences reader = context.getSharedPreferences(MY_PREFERENCES,Context.MODE_PRIVATE);
@@ -142,18 +152,5 @@ public class FollowedEventActivity extends AppCompatActivity implements AddComme
         } catch (Exception e) {
             Log.i("Error", "Failed to get profiles with id " + userId + " from async object");
         }
-
     }
-
-//    @Override
-//    public void finish() {
-//        //Pass back the habit and position
-//        Intent data = new Intent();
-//        if (deleted){
-//            data.putExtra(HabitEvent.EXTRA_EVENT_DELETED,true);
-//        }
-//        data.putExtra(FollowActivity.EXTRA_EVENT_SERIAL, event);
-//        setResult(RESULT_OK, data);
-//        super.finish();
-//    }
 }

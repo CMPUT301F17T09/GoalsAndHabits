@@ -10,10 +10,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import cmput301f17t09.goalsandhabits.R;
 
+/**
+ * Created by chiasson on 2017-12-04.
+ * This dialog allows the user to input a comment on a followed user's most recent habit event for
+ *  a selected habit.
+ */
 public class AddCommentDialog extends DialogFragment {
 
     public interface AddCommentDialogListener{
@@ -43,7 +47,6 @@ public class AddCommentDialog extends DialogFragment {
         if (context instanceof Activity){
             activity =(Activity) context;
         }
-        // Verify that the host activity implements the callback interface
         try {
             mListener = (AddCommentDialogListener) activity;
         } catch (ClassCastException e) {
@@ -58,7 +61,6 @@ public class AddCommentDialog extends DialogFragment {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = getActivity().getLayoutInflater();
         View diaView = inflater.inflate(R.layout.dialog_add_comment, null);
-        //final String request = getArguments().getString("request");
         enteredComment = (EditText) diaView.findViewById(R.id.commentText);
 
 

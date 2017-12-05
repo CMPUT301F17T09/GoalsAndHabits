@@ -1,21 +1,22 @@
 package cmput301f17t09.goalsandhabits.Follow_Activity;
 
-import android.app.Activity;
 import android.content.Context;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 
 import cmput301f17t09.goalsandhabits.Profiles.Profile;
 import cmput301f17t09.goalsandhabits.R;
 
+/**
+ * Created by chiasson on 2017-12-02.
+ * This activity allows an ArrayList of profiles to be displayed in a ListView with their username
+ * and their total habit count
+ */
 public class UsersArrayAdapter extends ArrayAdapter<Profile> {
 
     private Context context;

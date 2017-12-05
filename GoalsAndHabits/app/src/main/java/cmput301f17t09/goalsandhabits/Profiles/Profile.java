@@ -12,9 +12,8 @@ import io.searchbox.annotations.JestId;
 /**
  * Created by Andrew on 10/22/2017.
  *
- * This class implements the user's profile and maps their user ID and username to their habits and
- * habit events, followers, and the users they follow.
- * Note: as elasticSearch has not been implemented, Profile mapping is not yet possible.
+ * This class implements the user's profile and maps their user ID and username to their habits,
+ * their followers requests, and the users they follow.
  */
 
 public class Profile implements Serializable{
@@ -32,7 +31,6 @@ public class Profile implements Serializable{
 
     public Profile(String username){
         setUsername(username);
-        //TODO: check for uniqueness of username, assign unique userID
     }
 
     /**

@@ -3,8 +3,6 @@ package cmput301f17t09.goalsandhabits.Profiles;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -12,14 +10,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-
-import org.w3c.dom.Text;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -40,14 +35,11 @@ import cmput301f17t09.goalsandhabits.R;
 /**
  * Created by Andrew on 11/1/2017.
  *
- * This activity allows the user to view their profile, enable/disable online capabilities,
+ * This activity allows the user to view their profile,
  * view their own habit history, and view follow requests.
- * Note: Online capabilities not yet possible
  */
 
 public class ProfileActivity extends AppCompatActivity {
-
-
 
     public static final String FILENAME = "data.sav";
     public static final String MY_PREFERENCES = "my_preferences";
@@ -137,6 +129,9 @@ public class ProfileActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Gets an instance of the user's profile
+     */
     private void getProfile(){
         Context context = ProfileActivity.this;
         final SharedPreferences reader = context.getSharedPreferences(MY_PREFERENCES,Context.MODE_PRIVATE);
@@ -151,6 +146,10 @@ public class ProfileActivity extends AppCompatActivity {
         }
 
     }
+
+    /**
+     * Loads the user's habits to display the number of habits
+     */
     private void loadData(){
         habits = new ArrayList<>();
         if (Util.isNetworkAvailable(ProfileActivity.this)) {
@@ -173,7 +172,6 @@ public class ProfileActivity extends AppCompatActivity {
                 Log.i("Error", "ElasticSearch failed to find habits for profile with id " + profile.getUserId());
             }
         }else{
-            //Load from local storage
             try {
                 FileInputStream fis = openFileInput(FILENAME);
                 BufferedReader in = new BufferedReader(new InputStreamReader(fis));
@@ -190,7 +188,6 @@ public class ProfileActivity extends AppCompatActivity {
                 fis.close();
 
             } catch (FileNotFoundException e) {
-                //We either need internet connection or previously stored data for the app to work
                 throw new RuntimeException();
             } catch (IOException e) {
                 throw new RuntimeException();

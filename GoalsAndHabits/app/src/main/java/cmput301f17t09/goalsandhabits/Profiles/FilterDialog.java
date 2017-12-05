@@ -6,18 +6,18 @@ import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-
 import cmput301f17t09.goalsandhabits.R;
 
+/**
+ * Created by chiasson on 2017-11-30.
+ * This dialog prompts the user for habit type and/or comment filters for their total habit history
+ */
 public class FilterDialog extends DialogFragment {
 
     public interface FilterDialogListener{
@@ -30,8 +30,6 @@ public class FilterDialog extends DialogFragment {
     public static FilterDialog newInstance() {
         FilterDialog frag = new FilterDialog();
         Bundle args = new Bundle();
-//        args.putString("name", name);
-//        args.putString("reason", reason);
         frag.setArguments(args);
         return frag;
     }

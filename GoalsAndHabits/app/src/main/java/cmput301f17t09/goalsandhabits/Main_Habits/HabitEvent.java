@@ -15,7 +15,9 @@ import cmput301f17t09.goalsandhabits.Follow_Activity.Comment;
  *
  * This class implements a HabitEvent which contains
  * an optional comment, a path to a photo, as well as
- * a date on which the event occurred.
+ * a date on which the event occurred. It also contains
+ * a latitude, longitude, habit type, comments, and the
+ * number of likes received.
  */
 public class HabitEvent implements Serializable{
     private String comment;
@@ -61,6 +63,7 @@ public class HabitEvent implements Serializable{
     public String getPhotoPath(){
         return photoPath;
     }
+
     public String getEncodedPhoto() {
         return encodedPhoto;
     }
@@ -78,8 +81,11 @@ public class HabitEvent implements Serializable{
     }
 
     public Double getLat() {return Lat;}
+
     public Double getLong() {return Long;}
+
     public void setLat(Double lat){this.Lat=lat;}
+
     public void setLong(Double Long){this.Long=Long;}
 
     public Location getLocation() {
@@ -126,9 +132,11 @@ public class HabitEvent implements Serializable{
     public void setLikes(int likes) {
         this.likes = likes;
     }
+
     public void addLike() {
         this.likes+=1;
     }
+
     public void addComment(Comment comment) {
         comments.add(comment);
     }

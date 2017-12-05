@@ -6,13 +6,16 @@ import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 
 import cmput301f17t09.goalsandhabits.R;
 
+/**
+ * Created by chiasson on 2017-12-03.
+ * This dialog asks the user if they wish to allow the selected potential follower to follow them
+ */
 public class AcceptFollowerDialog extends DialogFragment {
 
     public interface AcceptFollowerDialogListener{
@@ -46,7 +49,7 @@ public class AcceptFollowerDialog extends DialogFragment {
             mListener = (AcceptFollowerDialogListener) activity;
         } catch (ClassCastException e) {
             throw new ClassCastException(activity.toString()
-                    + " must implement FilterDialogListener");
+                    + " must implement AcceptFollowerListener");
         }
     }
 

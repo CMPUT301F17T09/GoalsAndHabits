@@ -2,7 +2,6 @@ package cmput301f17t09.goalsandhabits.Profiles;
 
 import android.app.DialogFragment;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,10 +13,8 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import cmput301f17t09.goalsandhabits.ElasticSearch.ElasticSearchController;
-import cmput301f17t09.goalsandhabits.Follow_Activity.FollowActivity;
 import cmput301f17t09.goalsandhabits.Follow_Activity.UsersArrayAdapter;
 import cmput301f17t09.goalsandhabits.R;
 
@@ -25,8 +22,8 @@ import static cmput301f17t09.goalsandhabits.Main_Habits.MainActivity.MY_PREFEREN
 
 
 /**
- * This activity allows user to view their follower requests and accept or decline them.
- * Note: This can only be implemented after elasticsearch is implemented
+ * Created by chiasson on 17-11-10
+ * This activity allows a user to view their follower requests in a ListView and accept or decline them.
  */
 public class FollowerRequestsActivity extends AppCompatActivity implements AcceptFollowerDialog.AcceptFollowerDialogListener {
 
@@ -74,11 +71,21 @@ public class FollowerRequestsActivity extends AppCompatActivity implements Accep
 
     }
 
+    /**
+     * Displays the dialog to accept or decline a follower request
+     * @param follower Potential follower profile
+     */
     public void showAcceptDialog(Profile follower) {
         DialogFragment dialog = AcceptFollowerDialog.newInstance(follower);
         dialog.show(getFragmentManager(), "AcceptFollowerDialog");
     }
 
+    /**
+     * User clicked the Accept Follower Dialog's positive option. The follow request is deleted, and
+     * the follower adds the user to their users follower.
+     * @param dialog Accept Follower Dialog Fragment
+     * @param followerName Username of new follower profile
+     */
     @Override
     public void onDialogPositiveClick(DialogFragment dialog, String followerName) {
         Log.i("Info", "accepted follow from "+followerName);
@@ -99,14 +106,13 @@ public class FollowerRequestsActivity extends AppCompatActivity implements Accep
         }
         saveData();
         me.removeFollowReq(pos);
-        //followReqs.remove(pos);
         saveProfile();
         usersArrayAdapter.notifyDataSetChanged();
     }
 
     /**
      * Exits out of Accept Follower dialog. Deletes follow request
-     * @param dialog Filter Dialog Fragment
+     * @param dialog Accept Follower Dialog Fragment
      */
     public void onDialogNegativeClick(DialogFragment dialog, String followerName) {
         // User touched the dialog's negative button
@@ -120,11 +126,13 @@ public class FollowerRequestsActivity extends AppCompatActivity implements Accep
         }
         follower = followers.get(0);
         me.removeFollowReq(pos);
-        //followReqs.remove(pos);
         usersArrayAdapter.notifyDataSetChanged();
         saveProfile();
     }
 
+    /**
+     * Saves the follower's ArrayList of users followed in the ElasticSearch server
+     */
     private void saveData(){
         if (follower != null) {
             ElasticSearchController.UpdateProfileTask updateFollowerTask
@@ -132,6 +140,10 @@ public class FollowerRequestsActivity extends AppCompatActivity implements Accep
             updateFollowerTask.execute(follower);
         }
     }
+
+    /**
+     * Saves user's follow requests ArrayList in the ElasticSearch server
+     */
     private void saveProfile() {
         if (me!=null) {
             ElasticSearchController.UpdateProfileTask updateProfileTask
@@ -140,6 +152,9 @@ public class FollowerRequestsActivity extends AppCompatActivity implements Accep
         }
     }
 
+    /**
+     * Gets an instance of the user's profile
+     */
     private void getProfile(){
         Context context = FollowerRequestsActivity.this;
         final SharedPreferences reader = context.getSharedPreferences(MY_PREFERENCES,Context.MODE_PRIVATE);

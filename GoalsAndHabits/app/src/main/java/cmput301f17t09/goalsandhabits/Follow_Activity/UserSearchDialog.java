@@ -10,10 +10,13 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import cmput301f17t09.goalsandhabits.R;
 
+/**
+ * Created by chiasson on 2017-12-02.
+ * This dialog prompts the user to search for profiles to follow
+ */
 public class UserSearchDialog extends DialogFragment {
 
     public interface UserSearchDialogListener{
@@ -26,8 +29,6 @@ public class UserSearchDialog extends DialogFragment {
     public static UserSearchDialog newInstance() {
         UserSearchDialog frag = new UserSearchDialog();
         Bundle args = new Bundle();
-//        args.putString("name", name);
-//        args.putString("reason", reason);
         frag.setArguments(args);
         return frag;
     }

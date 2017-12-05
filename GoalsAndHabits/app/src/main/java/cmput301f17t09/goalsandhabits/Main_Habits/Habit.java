@@ -12,6 +12,7 @@ import io.searchbox.annotations.JestId;
 
 /**
  * Created by atsmith on 10/31/17.
+ * This class implements the Habit objects
  */
 
 public class Habit implements Serializable{
@@ -34,9 +35,9 @@ public class Habit implements Serializable{
     /**
      * Habit constructor.
      * If title or reason are longer than titleLength or reasonLength respectively they are truncated.
-     * @param title
-     * @param reason
-     * @param startDate
+     * @param title Habit title
+     * @param reason Habit reason
+     * @param startDate Habit start date
      */
     public Habit(String title, String reason, Date startDate){
         setTitle(title);
@@ -57,7 +58,7 @@ public class Habit implements Serializable{
      * Sets the schedule of the habit.
      * The schedule is a hash set of integers which are fields
      * from the Calendar class. IE Calendar.MONDAY, Calendar.TUESDAY, etc.
-     * @param schedule
+     * @param schedule Habit schedule
      */
     public void setSchedule(HashSet<Integer> schedule){
         this.schedule = schedule;
@@ -67,10 +68,18 @@ public class Habit implements Serializable{
         return title;
     }
 
+    /**
+     * Returns the username of the owner of the habit
+     * @return Profile username
+     */
     public String getProfile() {
         return profile;
     }
 
+    /**
+     * Sets the profile username of the owner of the habit
+     * @param profile Profile username
+     */
     public void setProfile(String profile) {
         this.profile = profile;
     }

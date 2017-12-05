@@ -37,10 +37,9 @@ import cmput301f17t09.goalsandhabits.R;
 
 
 /**
- * This activity allows the user to view their own habit history of all habits they have created,
- * sorted by date.
- * Note: have yet to sort habit events by date and add filter and map options
  *
+ * This activity allows the user to view their own habit history of all habits they have created,
+ * sorted by date. The user may choose to filter the habit events by habit type and/or comment.
  */
 public class MyHabitHistory extends AppCompatActivity implements FilterDialog.FilterDialogListener {
 
@@ -51,7 +50,6 @@ public class MyHabitHistory extends AppCompatActivity implements FilterDialog.Fi
     private MyEventsArrayAdapter myEventsArrayAdapter;
     private ListView habitEventsList;
     private ArrayList<Habit> habits;
-    private ArrayList<HabitEvent> events;
     public static final String FILENAME = "data.sav";
     Context context;
     private Profile profile;
@@ -100,8 +98,8 @@ public class MyHabitHistory extends AppCompatActivity implements FilterDialog.Fi
 
     /**
      * Inflates the action bar with buttons
-     * @param menu
-     * @return
+     * @param menu Menu for MyHabitHistory
+     * @return true
      */
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
@@ -110,9 +108,9 @@ public class MyHabitHistory extends AppCompatActivity implements FilterDialog.Fi
     }
 
     /**
-     * Handles the buttons in the action bar
-     * @param item
-     * @return
+     * Handles the filter and map buttons in the action bar
+     * @param item Menu item
+     * @return True for which button was selected
      */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -216,9 +214,11 @@ public class MyHabitHistory extends AppCompatActivity implements FilterDialog.Fi
      * @param dialog Filter Dialog Fragment
      */
     public void onDialogNegativeClick(DialogFragment dialog) {
-        // User touched the dialog's negative button
     }
 
+    /**
+     * Loads habits of user from ElasticSearch server or, if server is unavailable, local
+     */
     private void loadData(){
         habits = new ArrayList<>();
         if (Util.isNetworkAvailable(MyHabitHistory.this)) {
@@ -240,8 +240,8 @@ public class MyHabitHistory extends AppCompatActivity implements FilterDialog.Fi
             } catch (Exception e) {
                 Log.i("Error", "ElasticSearch failed to find habits for profile with id " + profile.getUserId());
             }
-        }else{
-            //Load from local storage
+        }
+        else{
             try {
                 FileInputStream fis = openFileInput(FILENAME);
                 BufferedReader in = new BufferedReader(new InputStreamReader(fis));
@@ -266,6 +266,9 @@ public class MyHabitHistory extends AppCompatActivity implements FilterDialog.Fi
         }
     }
 
+    /**
+     * Gets an instance of the user's profile
+     */
     private void getProfile(){
         Context context = MyHabitHistory.this;
         final SharedPreferences reader = context.getSharedPreferences(MY_PREFERENCES,Context.MODE_PRIVATE);

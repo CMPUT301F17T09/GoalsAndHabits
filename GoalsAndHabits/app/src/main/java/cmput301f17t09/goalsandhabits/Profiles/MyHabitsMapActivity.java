@@ -1,6 +1,5 @@
 package cmput301f17t09.goalsandhabits.Profiles;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -17,7 +16,8 @@ import cmput301f17t09.goalsandhabits.Main_Habits.HabitEvent;
 import cmput301f17t09.goalsandhabits.R;
 
 /**
- * This activity displays a map showing locations of habit events that are passed to this activity
+ * This activity displays a map showing locations of the user's own habit events that are passed to
+ * this activity
  */
 public class MyHabitsMapActivity extends AppCompatActivity implements OnMapReadyCallback{
     private MapView map;

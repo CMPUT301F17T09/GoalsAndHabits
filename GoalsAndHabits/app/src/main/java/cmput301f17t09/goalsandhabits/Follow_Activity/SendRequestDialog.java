@@ -9,12 +9,13 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 import cmput301f17t09.goalsandhabits.R;
 
+/**
+ * Created by chiasson on 2017-12-02.
+ * This dialog asks the user of they wish to send the selected profile a follow request
+ */
 public class SendRequestDialog extends DialogFragment {
 
     public interface SendRequestDialogListener{

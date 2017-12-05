@@ -1,8 +1,6 @@
 package cmput301f17t09.goalsandhabits.Profiles;
 
-import android.app.Activity;
 import android.content.Context;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +12,10 @@ import java.util.ArrayList;
 import cmput301f17t09.goalsandhabits.Main_Habits.HabitEvent;
 import cmput301f17t09.goalsandhabits.R;
 
+/**
+ * Created by chiasson on 2017-11-14.
+ * This ArrayAdapter allows a user's own habit events to be displayed in reverse chronological order
+ */
 public class MyEventsArrayAdapter extends ArrayAdapter<HabitEvent> {
     private Context context;
 

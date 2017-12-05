@@ -19,9 +19,9 @@ import cmput301f17t09.goalsandhabits.R;
 
 
 /**
- * This activity allows users to log in using a pre-existing profile with a unique user ID and
- * username. Users can also return to the NewProfileActivity.
- * Note:
+ * Created by chiasson on 17-11-10
+ * This activity allows users to log in using a pre-existing profile with a unique username.
+ * Users can also return to the NewProfileActivity to sign up.
  */
 public class LoginActivity extends AppCompatActivity {
 
@@ -59,6 +59,9 @@ public class LoginActivity extends AppCompatActivity {
                         //Grab the first profile (should only be 1 match anyways)
                         profile = matches.get(0);
                     }
+                    else {
+                        Toast.makeText(LoginActivity.this,"Invalid login",Toast.LENGTH_SHORT).show();
+                    }
                     if (profile!=null){
                         if (profile.getUserId()!=null) {
                             Context context = LoginActivity.this;
@@ -76,13 +79,15 @@ public class LoginActivity extends AppCompatActivity {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent intent = new Intent(LoginActivity.this,NewProfileActivity.class);
                 finish();
-                //startActivity(intent); //sends user back to NewProfileActivity
             }
         });
     }
 
+    /**
+     * Sends user to MainActivity if login was successful, or back to NewProfileActivity if
+     * signup was selected
+     */
     @Override
     public void finish(){
         Intent data = new Intent();

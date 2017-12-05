@@ -2,7 +2,6 @@ package cmput301f17t09.goalsandhabits.Follow_Activity;
 
 import android.app.DialogFragment;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,29 +12,25 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.google.gson.Gson;
-
-import java.io.BufferedWriter;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 
 import cmput301f17t09.goalsandhabits.ElasticSearch.ElasticSearchController;
 import cmput301f17t09.goalsandhabits.Profiles.Profile;
 import cmput301f17t09.goalsandhabits.R;
 
-import static cmput301f17t09.goalsandhabits.Main_Habits.MainActivity.FILENAME;
 import static cmput301f17t09.goalsandhabits.Main_Habits.MainActivity.MY_PREFERENCES;
 
+/**
+ * Created by chiasson on 2017-12-02.
+ * This activity displays the user's profile search results in a ListView. The user may click on a
+ * list item to open a dialog asking if the user wishes to send the selected profile a follow request.
+ */
 public class SearchResultsActivity extends AppCompatActivity implements SendRequestDialog.SendRequestDialogListener {
 
     private String search;
     private UsersArrayAdapter usersArrayAdapter;
     private ListView usersList;
     ArrayList<Profile> matches = new ArrayList<Profile>();
-    ArrayList<Profile> followees = new ArrayList<Profile>();
     private Profile me;
     private Profile followee;
 
@@ -102,11 +97,21 @@ public class SearchResultsActivity extends AppCompatActivity implements SendRequ
             finish();
         }
     }
+
+    /**
+     * Displays the dialog asking if the user wishes to send a follow request to the selected profile
+     * @param p Profile to be requested to follow
+     */
     public void showRequestDialog(Profile p) {
         DialogFragment dialog = SendRequestDialog.newInstance(p.getUsername());
         dialog.show(getFragmentManager(), "SendRequestDialog");
     }
 
+    /**
+     * User clicked the request dialog's positive option
+     * @param dialog Send Request Dialog Fragment
+     * @param userName Username of profile to follow
+     */
     public void onDialogPositiveClick(DialogFragment dialog, String userName) {
         Log.i("Info", "requested to follow "+userName);
         ElasticSearchController.GetProfilesTask sendARequest = new ElasticSearchController.GetProfilesTask();
@@ -128,13 +133,15 @@ public class SearchResultsActivity extends AppCompatActivity implements SendRequ
     }
 
     /**
-     * Exits out of filter dialog. Makes no changes to activity
-     * @param dialog Filter Dialog Fragment
+     * Exits out of request dialog. Makes no changes to activity
+     * @param dialog Send Request Dialog Fragment
      */
     public void onDialogNegativeClick(DialogFragment dialog) {
-        // User touched the dialog's negative button
     }
 
+    /**
+     * Saves the follow request to the requested profile in the ElasticSearch Server
+     */
     private void saveData(){
         if (followee != null) {
             ElasticSearchController.UpdateProfileTask updateProfileTask
@@ -142,6 +149,10 @@ public class SearchResultsActivity extends AppCompatActivity implements SendRequ
             updateProfileTask.execute(followee);
         }
     }
+
+    /**
+     * Gets an instance of the user's profile
+     */
     private void getProfile(){
         Context context = SearchResultsActivity.this;
         final SharedPreferences reader = context.getSharedPreferences(MY_PREFERENCES,Context.MODE_PRIVATE);
