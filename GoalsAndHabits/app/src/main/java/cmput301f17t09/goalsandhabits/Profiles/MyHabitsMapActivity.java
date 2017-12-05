@@ -18,6 +18,8 @@ import cmput301f17t09.goalsandhabits.R;
 /**
  * This activity displays a map showing locations of the user's own habit events that are passed to
  * this activity
+ * Please note that opening the map on an android emulator can be problematic. If you encounter any
+ * errors with the map display please try changing your emulator's openGLES settings.
  */
 public class MyHabitsMapActivity extends AppCompatActivity implements OnMapReadyCallback{
     private MapView map;

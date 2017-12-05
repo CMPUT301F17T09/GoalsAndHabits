@@ -59,6 +59,11 @@ import cmput301f17t09.goalsandhabits.R;
 /**
  * This activity allows users to view habit events from themselves and followed profiles on a map.
  * They can choose to display all locations or simply the ones within 5km of their current location.
+ *
+ * Please note that opening the map on an android emulator can be problematic. If you encounter any
+ * errors with the map display please try changing your emulator's openGLES settings.
+ * You may need to send a location to the emulator through it's settings in order to display said
+ * location on the map.
  */
 public class MapFiltersActivity extends AppCompatActivity implements OnMapReadyCallback, GoogleMap.OnMyLocationButtonClickListener {
 
@@ -508,6 +513,11 @@ public class MapFiltersActivity extends AppCompatActivity implements OnMapReadyC
             Log.i("Info","Total habits: " + followedhabits.size());
         }
     }
+
+    /**
+     * Handles zoom level of the GoogleMap through button press
+     * @param view
+     */
     public void onZoom(View view)
     {
         if(view.getId() == R.id.Bzoomin)
