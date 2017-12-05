@@ -77,11 +77,13 @@ public class SearchResultsActivity extends AppCompatActivity implements SendRequ
                             alreadyFollowed=true;
                         }
                         else {
-                            for (Profile name : me.getUsersFollowed()) {
-                                if (name.getUsername().equals(p.getUsername())) {
-                                    Toast.makeText(SearchResultsActivity.this, "You have already followed that user!", Toast.LENGTH_SHORT).show();
-                                    alreadyFollowed = true;
-                                    break;
+                            if (me.getUsersFollowed()!= null){
+                                for (Profile name : me.getUsersFollowed()) {
+                                    if (name.getUsername().equals(p.getUsername())) {
+                                        Toast.makeText(SearchResultsActivity.this, "You have already followed that user!", Toast.LENGTH_SHORT).show();
+                                        alreadyFollowed = true;
+                                        break;
+                                    }
                                 }
                             }
                         }
