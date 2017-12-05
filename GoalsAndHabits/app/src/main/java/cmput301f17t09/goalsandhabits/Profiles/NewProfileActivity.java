@@ -49,7 +49,7 @@ public class NewProfileActivity extends AppCompatActivity {
                     Toast.makeText(NewProfileActivity.this,"Please enter a username!",duration).show();
                 }
                 else {
-                    String username = userName.getText().toString();
+                    String username = userName.getText().toString().toLowerCase();
                     ArrayList<Profile> matches = new ArrayList<Profile>();
                     ElasticSearchController.GetProfilesTask getProfilesTask
                             = new ElasticSearchController.GetProfilesTask();

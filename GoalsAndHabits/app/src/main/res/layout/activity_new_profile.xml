@@ -7,7 +7,7 @@
         android:id="@+id/usernameTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Please choose a username:" />
+        android:text="Please choose a username (case insensitive):" />
 
     <EditText
         android:id="@+id/editUsername"
