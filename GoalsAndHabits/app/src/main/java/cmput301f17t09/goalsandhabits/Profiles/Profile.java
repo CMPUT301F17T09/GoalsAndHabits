@@ -17,6 +17,7 @@ import io.searchbox.annotations.JestId;
  */
 
 public class Profile implements Serializable{
+
     @JestId
     private String userId;
     private String username;
@@ -28,7 +29,6 @@ public class Profile implements Serializable{
      * Profile Constructor
      * @param username
      */
-
     public Profile(String username){
         setUsername(username);
     }
@@ -49,37 +49,69 @@ public class Profile implements Serializable{
         return this.username;
     }
 
+    /**
+     * Gets users followed
+     * @return Users followed
+     */
     public ArrayList<Profile> getUsersFollowed() {
         return usersFollowed;
     }
 
+    /**
+     * Adds a user to those followed
+     * @param followee New user followed
+     */
     public void addFollowee(Profile followee) {
         usersFollowed.add(followee);
     }
 
+    /**
+     * Sets users followed
+     * @param usersFollowed Users Followed
+     */
     public void setUsersFollowed(ArrayList<Profile> usersFollowed) {
         this.usersFollowed = usersFollowed;
     }
 
+    /**
+     * Sets follow requests
+     * @param followRequests Users requesting to follow
+     */
     public void setFollowRequests(ArrayList<Profile> followRequests) {
         this.followRequests = followRequests;
     }
 
+    /**
+     * Gets users requesting to follow
+     * @return Follow requests
+     */
     public ArrayList<Profile> getFollowRequests() {
         return followRequests;
     }
 
+    /**
+     * Adds a user requesting to folow
+     * @param follower Potential following user
+     */
     public void addFollowReq(Profile follower) {
         followRequests.add(follower);
     }
 
+    /**
+     * Removes follow request
+     * @param follower User requesting to follow
+     */
     public void removeFollowReq(Profile follower) {
         followRequests.remove(follower);
     }
+
+    /**
+     * Removes follow request
+     * @param position User position
+     */
     public void removeFollowReq(int position) {
         followRequests.remove(position);
     }
-
 
     /**
      * Sets userID
@@ -97,10 +129,22 @@ public class Profile implements Serializable{
         this.username = username;
     }
 
+    /**
+     * Gets Habit IDs
+     * @return Habit IDs
+     */
     public ArrayList<String> getHabitIds() { return this.habitIds; }
 
+    /**
+     * Sets Habit IDs
+     * @param habitIds Habit IDs
+     */
     public void setHabitIds(ArrayList<String> habitIds) { this.habitIds = habitIds; }
 
+    /**
+     * Adds new habit ID
+     * @param habitId Habit ID
+     */
     public void addHabitId(String habitId) {
         if (habitIds==null){
             habitIds = new ArrayList<>();
@@ -112,6 +156,10 @@ public class Profile implements Serializable{
         }
     }
 
+    /**
+     * Removes a habit ID
+     * @param habitId Habit ID
+     */
     public void removeHabitId(String habitId){
         if (habitIds==null) return;
         habitIds.remove(habitId);

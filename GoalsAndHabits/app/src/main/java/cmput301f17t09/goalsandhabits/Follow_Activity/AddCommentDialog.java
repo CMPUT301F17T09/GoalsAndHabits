@@ -31,7 +31,6 @@ public class AddCommentDialog extends DialogFragment {
     public static AddCommentDialog newInstance() {
         AddCommentDialog frag = new AddCommentDialog();
         Bundle args = new Bundle();
-//        args.putString("request",request);
         frag.setArguments(args);
         return frag;
     }
@@ -41,7 +40,7 @@ public class AddCommentDialog extends DialogFragment {
         super.onAttach(context);
 
         //https://stackoverflow.com/questions/32083053/android-fragment-onattach-deprecated
-        //Nov 7
+        //Nov 7 2017
         Activity activity=null;
 
         if (context instanceof Activity){
