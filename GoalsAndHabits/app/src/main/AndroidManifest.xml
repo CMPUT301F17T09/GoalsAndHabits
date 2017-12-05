@@ -43,7 +43,7 @@
             android:value="@integer/google_play_services_version" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBghIbQN-I1S-Ctiy8TfbFTpBT3hC_WsDE" />
+            android:value="AIzaSyDHvfD1lwr6phCB5iVGpmT40tJvJoblRFw" />
 
         <activity
             android:name=".Profiles.MyHabitsMapActivity"
