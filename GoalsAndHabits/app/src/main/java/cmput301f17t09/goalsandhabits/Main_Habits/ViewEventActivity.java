@@ -51,7 +51,9 @@ import static cmput301f17t09.goalsandhabits.Main_Habits.MainActivity.FILENAME;
 
 /**
  * Created by Simone on 2017/11/22.
+ * This class allows user to view events and edit them
  */
+
 
 public class ViewEventActivity extends AppCompatActivity implements EditHabitEventDialog.EditHabitEventDialogListener {
     private static final int PERMISSION_REQUEST_CODE = 1;
@@ -68,7 +70,10 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
     private ImageView image;
     private Bitmap imageDisplay;
     private FusedLocationProviderClient mFusedLocationClient;
-
+    /**
+     * Saving instant state for every action
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -115,7 +120,10 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
     }
 
 
-
+    /** Get view of menu
+     * @param menu
+     * @return boolean
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.menu_view_habit, menu);
@@ -124,8 +132,8 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
     /**
      * Handles the buttons in the action bar
      * @param item
-     * @return
-     */
+     * @return 
+     **/
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -149,15 +157,19 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
         }
     }
 
-
+    /**
+     *  Show edit dialog when editing
+     **/
     public void showEditDialog() {
         DialogFragment dialog = EditHabitEventDialog.newInstance(event.getComment(),event.getLocation());
         dialog.show(getFragmentManager(), "EditHabitEventDialog");
     }
-
+    /**
+     * Pass back the habit and position
+     **/
     @Override
     public void finish() {
-        //Pass back the habit and position
+
         Intent data = new Intent();
         if (deleted){
             data.putExtra(HabitHistoryActivity.EXTRA_EVENT_DELETED,true);
@@ -168,6 +180,12 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
         super.finish();
     }
 
+    /**
+     * When accept button clicked,save changes
+     * @param dialog
+     * @param newcomment
+     * @param newloc
+     */
     @Override
     public void onDialogPositiveClick(DialogFragment dialog, String newcomment, Location newloc) {
         if (newloc != null) {
@@ -177,11 +195,20 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
         comment.setText(newcomment);
     }
 
+    /**
+     * When cancel button clicked, do nothing
+     * @param dialog
+     */
     @Override
     public void onDialogNegativeClick(DialogFragment dialog) {
 
     }
 
+    /**
+     *  Location button clicked, record location.
+     * @param dialog
+     * @return currentLoc
+     */
     @Override
     public Location onLocButtonClick(DialogFragment dialog) {
         if (checkLocationPermission()){
@@ -213,6 +240,12 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
         ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, PERMISSION_REQUEST_CODE);
     }
 
+    /**
+     * Get the permission result
+     * @param requestCode
+     * @param permissions
+     * @param grantResults
+     */
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
         switch (requestCode) {
@@ -237,6 +270,12 @@ public class ViewEventActivity extends AppCompatActivity implements EditHabitEve
         }
     }
 
+    /**
+     * Action of clicking image button
+     * @param requestCode
+     * @param resultCode
+     * @param data
+     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK){

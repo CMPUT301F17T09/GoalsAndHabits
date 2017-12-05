@@ -33,6 +33,13 @@ public class HabitArrayAdapter extends ArrayAdapter<Habit> {
         this.context = context;
     }
 
+    /**
+     * Get list view of habits
+     * @param position
+     * @param convertView
+     * @param parent
+     * @return
+     */
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
         Habit h = getItem(position);
@@ -77,6 +84,11 @@ public class HabitArrayAdapter extends ArrayAdapter<Habit> {
         return convertView;
     }
 
+    /**
+     * Get habit date from calender
+     * @param h
+     * @return
+     */
     private Calendar getLatestHabitEventDate(Habit h){
         ArrayList<HabitEvent> events = h.getEvents();
         if (events==null) return null;
@@ -98,6 +110,12 @@ public class HabitArrayAdapter extends ArrayAdapter<Habit> {
         return latest;
     }
 
+    /**
+     * Check if habit date is same as today
+     * @param c1
+     * @param c2
+     * @return
+     */
     private boolean sameDay(Calendar c1, Calendar c2){
         if (c1==null || c2==null) return false;
         return (c1.get(Calendar.YEAR) == c2.get(Calendar.YEAR) && c1.get(Calendar.DAY_OF_YEAR) == c2.get(Calendar.DAY_OF_YEAR));

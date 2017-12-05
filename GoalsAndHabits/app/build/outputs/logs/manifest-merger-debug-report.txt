@@ -51,11 +51,11 @@ MERGED from [com.android.support:support-compat:25.3.1] C:\Users\chias\.android\
 	android:supportsRtl
 		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:14:9-35
 	android:roundIcon
-		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:13:9-54
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:13:9-60
 	android:allowBackup
 		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:10:9-35
 	android:icon
-		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:11:9-43
+		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:11:9-55
 	android:theme
 		ADDED from C:\Users\chias\Documents\Year 4\Fall\CMPUT 301\Projects\GoalsAndHabits\app\src\main\AndroidManifest.xml:15:9-40
 activity#cmput301f17t09.goalsandhabits.Main_Habits.MainActivity

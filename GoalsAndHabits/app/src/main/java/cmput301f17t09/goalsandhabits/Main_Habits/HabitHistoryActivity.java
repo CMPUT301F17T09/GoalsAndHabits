@@ -23,7 +23,10 @@ import java.util.Date;
 import cmput301f17t09.goalsandhabits.ElasticSearch.ElasticSearchController;
 import cmput301f17t09.goalsandhabits.Follow_Activity.Comment;
 import cmput301f17t09.goalsandhabits.R;
-
+/**
+ * This class implements AppCompatActivity that user can view habit events(history)
+ * order by ascending date
+ */
 
 public class HabitHistoryActivity extends AppCompatActivity {
     public static final int REQUEST_CODE_VIEW_EVENT = 7;
@@ -83,7 +86,12 @@ public class HabitHistoryActivity extends AppCompatActivity {
     }
 
 
-
+    /**
+     * Action of click view events
+     * @param requestCode
+     * @param resultCode
+     * @param data
+     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
         if (resultCode == RESULT_OK){
@@ -128,7 +136,11 @@ public class HabitHistoryActivity extends AppCompatActivity {
             }
         }
     }
-
+    /**
+     * View of clicking each item
+     * @param item
+     * @return
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -140,7 +152,9 @@ public class HabitHistoryActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
+   /**
+     * finishing state
+     */
     @Override
     public void finish() {
         Intent data = new Intent();
