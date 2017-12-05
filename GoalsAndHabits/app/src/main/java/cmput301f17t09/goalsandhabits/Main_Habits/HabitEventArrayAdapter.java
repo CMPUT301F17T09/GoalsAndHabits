@@ -29,6 +29,13 @@ public class HabitEventArrayAdapter extends ArrayAdapter<HabitEvent> {
         this.context = context;
     }
 
+    /**
+     * Values to deplay in list
+     * @param position
+     * @param convertView
+     * @param parent
+     * @return
+     */
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
         HabitEvent h = getItem(position);
