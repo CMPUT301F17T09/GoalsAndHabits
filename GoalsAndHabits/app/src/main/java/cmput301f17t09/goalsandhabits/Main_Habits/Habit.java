@@ -34,7 +34,6 @@ public class Habit implements Serializable{
 
     /**
      * Habit constructor.
-     * If title or reason are longer than titleLength or reasonLength respectively they are truncated.
      * @param title Habit title
      * @param reason Habit reason
      * @param startDate Habit start date
@@ -46,6 +45,13 @@ public class Habit implements Serializable{
         events = new ArrayList<>();
     }
 
+    /**
+     * Habit constructor.
+     * @param title Habit title
+     * @param reason Habit reason
+     * @param startDate Habit start date
+     * @param schedule Habit Schedule
+     */
     public Habit(String title, String reason, Date startDate, HashSet<Integer> schedule){
         setTitle(title);
         setReason(reason);
@@ -64,6 +70,10 @@ public class Habit implements Serializable{
         this.schedule = schedule;
     }
 
+    /**
+     * Returns the name of the habit object
+     * @return Habit title
+     */
     public String getTitle(){
         return title;
     }
@@ -84,14 +94,26 @@ public class Habit implements Serializable{
         this.profile = profile;
     }
 
+    /**
+     * Returns the reason of the habit object
+     * @return Habit reason
+     */
     public String getReason() {
         return reason;
     }
 
+    /**
+     * Returns the start date of the habit object
+     * @return Habit startDate
+     */
     public Date getStartDate(){
         return startDate;
     }
 
+    /**
+     * Sets the name of the habit object. If greater than required length it is truncated.
+     * @param title Habit name
+     */
     public void setTitle(String title){
         if (title.length()>titleLength){
             title = title.substring(0,titleLength);
@@ -99,6 +121,10 @@ public class Habit implements Serializable{
         this.title = title;
     }
 
+    /**
+     * Set the reason of the habit object. If greater than required length it is truncated.
+     * @param reason Habit reason
+     */
     public void setReason(String reason){
         if (reason.length()>reasonLength){
             reason = reason.substring(0,reasonLength);
@@ -106,6 +132,10 @@ public class Habit implements Serializable{
         this.reason = reason;
     }
 
+    /**
+     * Sets the the starting date of the habit object.
+     * @param startDate Habit startDate
+     */
     public void setStartDate(Date startDate){
         this.startDate = startDate;
     }
@@ -119,28 +149,56 @@ public class Habit implements Serializable{
         return this.schedule;
     }
 
+    /**
+     * Sets the habit events for this habit object
+     * @param events Habit Events
+     */
     public void setEvents(ArrayList<HabitEvent> events){
         this.events = events;
     }
 
+    /**
+     * Returns a list of the habit events for this habit object
+     * @return Habit Events
+     */
     public ArrayList<HabitEvent> getEvents(){
         return events;
     }
 
+    /**
+     * Adds a habit event to this object's list of habit events
+     * @param event Habit Event
+     */
     public void addHabitEvent(HabitEvent event){
         events.add(event);
     }
 
+    /**
+     * Deletes a habit event from this object's list at a given index
+     * @param index Index to Remove
+     */
     public void deleteHabitEvent(int index){
         events.remove(index);
     }
 
+    /**
+     * Deletes a given habit event from this object's list.
+     * @param event Habit Event
+     */
     public void deleteHabitEvent(HabitEvent event){
         events.remove(event);
     }
 
+    /**
+     * Returns this habit object's id number
+     * @return Habit ID
+     */
     public String getId() { return this.id; }
 
+    /**
+     * Sets this habit object's id number
+     * @param id Habit ID
+     */
     public void setId(String id) { this.id = id; }
 
     /**
@@ -198,6 +256,11 @@ public class Habit implements Serializable{
         return total;
     }
 
+    /**
+     * Checks to see if any habit events in the object's list appear on the given date.
+     * @param date Event Date
+     * @return True if any event lands on the given date, false otherwise
+     */
     public boolean checkEventExistsOnDate(Date date){
         if (date==null) return true;
         Calendar check = Calendar.getInstance();

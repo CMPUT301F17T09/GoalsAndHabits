@@ -65,6 +65,10 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
     private SimpleDateFormat dateFormat = new SimpleDateFormat("EEE MMM dd");
     private float statThreshold = 50;
 
+    /**
+     * Called on activity start. Generates layout and button functionality.
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -234,6 +238,9 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
         // User touched the dialog's negative button
     }
 
+    /**
+     * Called on activity finish. Passes any changes back to host activity.
+     */
     public void finish() {
         //Pass back the habit and position
         Intent data = new Intent();
@@ -246,11 +253,19 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
         super.finish();
     }
 
+    /**
+     * Calls a new instance of the date picker dialog
+     */
     public void showDatePickerDialog(){
         DialogFragment newFragment = new DatePickerFrag();
         newFragment.show(getFragmentManager(), "DatePicker");
     }
 
+    /**
+     * Handles the call back from the date picker
+     * @param dialog DatePicker
+     * @param date Habit Date
+     */
     @Override
     public void onDatePicked(DialogFragment dialog, Date date) {
         boolean allowed=true;
@@ -272,6 +287,10 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
         }
     }
 
+    /**
+     * Counts how many days it's been since the last event.
+     * @return Number of days since last event
+     */
     private int getDaysFromLastEvent(){
         //TODO: Can this be more efficient?
         if (habit.getEvents() != null){
@@ -292,6 +311,11 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
         return 0;
     }
 
+    /**
+     * Returns the habit schedule as a string.
+     * @param schedule
+     * @return String of habit schedule
+     */
     private String getScheduleString(HashSet<Integer> schedule){
         String s = "";
         if (schedule.size()==7) return "Daily";
@@ -308,6 +332,9 @@ public class ViewHabitActivity extends AppCompatActivity implements EditHabitDia
         return s;
     }
 
+    /**
+     * Reloads layout with habit data
+     */
     private void refreshData(){
         reason = (TextView) findViewById(R.id.textReason);
         reason.setText(habit.getReason());

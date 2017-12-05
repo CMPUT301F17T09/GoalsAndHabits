@@ -10,8 +10,8 @@ import java.io.ByteArrayOutputStream;
 
 /**
  * Created by Simone on 2017/12/2.
+ * This class implements a controller which handles the image files for our application.
  */
-
 public class ImageController {
     /**
      * Convert an image to base64

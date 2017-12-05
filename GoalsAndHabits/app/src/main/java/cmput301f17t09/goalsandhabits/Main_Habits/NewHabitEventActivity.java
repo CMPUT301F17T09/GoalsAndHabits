@@ -49,6 +49,10 @@ public class NewHabitEventActivity extends AppCompatActivity {
     private DatePicker editDate;
     private String photoEncoded;
 
+    /**
+     * Called on activity start. Generates layout and button functionality.
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -136,6 +140,9 @@ public class NewHabitEventActivity extends AppCompatActivity {
 
     //Adapted from https://developer.android.com/training/camera/photobasics.html
     //Dec 4 2017
+    /**
+     * Starts the photo taking activity
+     */
     private void dispatchTakePictureIntent(){
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
@@ -143,6 +150,12 @@ public class NewHabitEventActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Handles callback of photo taking activity
+     * @param requestCode
+     * @param resultCode
+     * @param data
+     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK){

@@ -32,6 +32,10 @@ public class NewHabit extends AppCompatActivity implements DatePickerFrag.DatePi
     private Date newdate = new Date();
     private SimpleDateFormat dateFormat = new SimpleDateFormat("EEE MMM dd", Locale.CANADA);
 
+    /**
+     * Called on activity start. Generates layout and button functionality.
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,12 +56,22 @@ public class NewHabit extends AppCompatActivity implements DatePickerFrag.DatePi
         });
     }
 
+    /**
+     * Creates Menu Layout
+     * @param menu
+     * @return
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.menu_new_habit, menu);
         return true;
     }
 
+    /**
+     * Creates menu button functionality
+     * @param item
+     * @return
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
         switch (item.getItemId()) {
@@ -68,10 +82,6 @@ public class NewHabit extends AppCompatActivity implements DatePickerFrag.DatePi
             case R.id.saveButton:{
                 EditText name = (EditText) findViewById(R.id.titleEditText);
                 EditText reason = (EditText) findViewById(R.id.reasonEditText);
-
-                //TODO: Better field checking.
-                //TODO: Use a better date picker.
-                //showDatePickerDialog();
 
                 if (name.getText().toString().isEmpty()){
                     Toast.makeText(this, "Enter a valid habit title!", Toast.LENGTH_SHORT).show();
@@ -139,6 +149,11 @@ public class NewHabit extends AppCompatActivity implements DatePickerFrag.DatePi
         newFragment.show(getFragmentManager(), "DatePicker");
     }
 
+    /**
+     * Handles callback from date picker dialog. Sets date attribute of habit object.
+     * @param dialog DatePicker
+     * @param date Habit Date
+     */
     @Override
     public void onDatePicked(DialogFragment dialog, Date date) {
         TextView date_field = (TextView) findViewById(R.id.dateEditText);

@@ -55,7 +55,7 @@ public class EditHabitDialog extends DialogFragment{
 
     /**
      * Verifies that the host activity implements the callback interface
-     * @param context
+     * @param context Host Activity
      */
     @Override
     public void onAttach(Context context) {
@@ -126,7 +126,6 @@ public class EditHabitDialog extends DialogFragment{
                                 newschedule.add(i+1);
                             }
                         }
-                        //TODO: Pass changes to schedule
                         mListener.onDialogPositiveClick(EditHabitDialog.this, newreason, newtitle, newschedule);
                     }
                 })

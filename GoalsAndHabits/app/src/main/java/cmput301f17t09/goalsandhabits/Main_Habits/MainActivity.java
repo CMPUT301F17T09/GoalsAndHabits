@@ -42,6 +42,11 @@ import cmput301f17t09.goalsandhabits.Profiles.Profile;
 import cmput301f17t09.goalsandhabits.Profiles.ProfileActivity;
 import cmput301f17t09.goalsandhabits.R;
 
+/**
+ * The main activity of our application. All sub activities eventually lead back to here.
+ * This activity features a list of all habit types created by the user. Habits to be completed today
+ * are displayed with an alarm icon.
+ */
 public class MainActivity extends AppCompatActivity {
 
     public static final String EXTRA_HABIT_NAME = "cmput301f17t09.goalsandhabits.HABIT_NAME";
@@ -72,6 +77,10 @@ public class MainActivity extends AppCompatActivity {
     private Profile profile;
 
 
+    /**
+     * Called on activity start. Generates layout and button functionality.
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

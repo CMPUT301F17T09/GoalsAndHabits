@@ -16,17 +16,22 @@ import java.util.Date;
 /**
  * Created by Ken on 13/11/2017.
  * This class represents a basic date picker. Taken from Android Documentation.
- * Currently not used by the application.
  */
-
 public class DatePickerFrag extends DialogFragment implements DatePickerDialog.OnDateSetListener{
 
+    /**
+     * Allows passing of dialog results back to host activity
+     */
     public interface DatePickerFragListener{
         public void onDatePicked(DialogFragment dialog, Date date);
     }
 
     DatePickerFragListener mListener;
 
+    /**
+     * Verifies that the host activity implements the callback interface.
+     * @param context Host Activity
+     */
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -67,6 +72,13 @@ public class DatePickerFrag extends DialogFragment implements DatePickerDialog.O
         return new DatePickerDialog(getActivity(), this, year, month, day);
     }
 
+    /**
+     * Passes date object to host activity once a date has been selected.
+     * @param view DatePicker
+     * @param year Year Field
+     * @param month Month Field
+     * @param day Day Field
+     */
     public void onDateSet(DatePicker view, int year, int month, int day) {
         // Do something with the date chosen by the user
         Calendar c = Calendar.getInstance();
